@@ -1,0 +1,30 @@
+.branding {
+  background-color: var(--skeleton-color-bg-primary-light);
+  padding-block: 2rem;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  &__logo {
+    inline-size: 50px;
+  }
+
+  &__sitename {
+    font-family: var(--skeleton-font-serif);
+    color: var(--skeleton-color-fg-primary);
+    font-size: calc(var(--skeleton-size-text-lrg) * 2);
+    line-height: 1.1;
+
+    a,
+    a:hover,
+    a:focus,
+    a:visited,
+    a:active {
+      font-size: inherit;
+      color: inherit;
+    }
+  }
+}

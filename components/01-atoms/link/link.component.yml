@@ -1,0 +1,34 @@
+name: link
+description: A hyperlink
+status: experimental
+group: "atoms"
+links:
+  - "https://emory.edu"
+
+variants:
+  default:
+    title: Default
+  quiet:
+    title: Quiet
+  cta:
+    title: CTA
+  external:
+    title: External
+
+props:
+  type: object
+
+  properties:
+    url:
+      title: URL
+      description: "The link URL."
+      $ref: "ui-patterns://url"
+
+slots:
+  label:
+    title: Label
+    description: 'Label text of the link'
+
+libraryOverrides:
+    css:
+      link.css: {}

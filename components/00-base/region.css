@@ -1,0 +1,16 @@
+.region--banner {
+  /* placeholder */
+  }
+  .region--content-top {
+    padding-block: 1rem;
+  }
+  .region--content-sidebars {
+    /* placeholder */
+  }
+  .region--content {
+    /* placeholder */
+  }
+  .region--footer {
+    background-color: var(--skeleton-color-bg-primary-light);
+    padding-block: 2rem;
+  }

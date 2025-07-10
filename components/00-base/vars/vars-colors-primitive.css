@@ -1,0 +1,64 @@
+/*!
+ * Primitive variables are named for their literal color and mapped to an HSL value
+ * H - hue
+ * S - saturation
+ * L - lightness
+ * Hues follow the color wheel from 0 360:
+ * red, orange, yellow, green, blue, purple, red
+ */
+
+:root {
+  /*** Neutral ***/
+  --skeleton-color-black: hsl(200, 5%, 0%);
+  --skeleton-color-gray-005: hsl(200, 5%, 5%);
+  --skeleton-color-gray-010: hsl(200, 5%, 10%);
+  --skeleton-color-gray-015: hsl(200, 5%, 15%);
+  --skeleton-color-gray-020: hsl(200, 5%, 20%);
+  --skeleton-color-gray-040: hsl(200, 5%, 40%);
+  --skeleton-color-gray-060: hsl(200, 5%, 60%);
+  --skeleton-color-gray-080: hsl(200, 5%, 80%);
+  --skeleton-color-gray-085: hsl(200, 5%, 85%);
+  --skeleton-color-gray-090: hsl(200, 5%, 90%);
+  --skeleton-color-gray-095: hsl(200, 5%, 95%);
+  --skeleton-color-white: hsl(200, 5%, 100%);
+  
+  /*** Red ***/
+  --skeleton-color-red-010: hsl(350, 71%, 10%);
+  --skeleton-color-red-020: hsl(350, 71%, 20%);
+  --skeleton-color-red-040: hsl(350, 71%, 40%);
+  --skeleton-color-red-060: hsl(350, 71%, 60%);
+  --skeleton-color-red-080: hsl(350, 71%, 80%);
+  --skeleton-color-red-090: hsl(350, 71%, 90%);
+  
+  /*** Yellow ***/
+  --skeleton-color-yellow-010: hsl(40, 100%, 10%);
+  --skeleton-color-yellow-020: hsl(40, 100%, 20%);
+  --skeleton-color-yellow-040: hsl(40, 100%, 40%);
+  --skeleton-color-yellow-060: hsl(40, 100%, 60%);
+  --skeleton-color-yellow-080: hsl(40, 100%, 80%);
+  --skeleton-color-yellow-090: hsl(40, 100%, 90%);
+  
+  /*** Green ***/
+  --skeleton-color-green-010: hsl(170, 80%, 10%);
+  --skeleton-color-green-020: hsl(170, 80%, 20%);
+  --skeleton-color-green-040: hsl(170, 80%, 40%);
+  --skeleton-color-green-060: hsl(170, 80%, 60%);
+  --skeleton-color-green-080: hsl(170, 80%, 80%);
+  --skeleton-color-green-090: hsl(170, 80%, 90%);
+  
+  /*** Blue ***/
+  --skeleton-color-blue-010: hsl(220, 100%, 10%);
+  --skeleton-color-blue-020: hsl(220, 100%, 20%);
+  --skeleton-color-blue-040: hsl(220, 100%, 40%);
+  --skeleton-color-blue-060: hsl(220, 100%, 60%);
+  --skeleton-color-blue-080: hsl(220, 100%, 80%);
+  --skeleton-color-blue-090: hsl(220, 100%, 90%);
+  
+  /*** Violet ***/
+  --skeleton-color-violet-010: hsl(260, 100%, 10%);
+  --skeleton-color-violet-020: hsl(260, 100%, 20%);
+  --skeleton-color-violet-040: hsl(260, 100%, 40%);
+  --skeleton-color-violet-060: hsl(260, 100%, 60%);
+  --skeleton-color-violet-080: hsl(260, 100%, 80%);
+  --skeleton-color-violet-090: hsl(260, 100%, 90%);
+}

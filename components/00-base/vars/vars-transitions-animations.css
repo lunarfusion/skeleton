@@ -1,0 +1,10 @@
+:root {
+  /*** Transitions ***/
+  /* --skeleton-transition-basic: all 0.3s cubic-bezier(0.17, 0.67, 0.83, 0.67); */
+  --skeleton-transition-basic: all .5s cubic-bezier(0.6, 0.5, 0.38, 1);
+  --skeleton-transition-boing: all 0.5s cubic-bezier(0.6, 0.5, 0.38, 1.35);
+  --skeleton-transition-smooth: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  
+  --skeleton-transition-ease-in: all 0.5s cubic-bezier(.24, 0, .42, .99);
+  --skeleton-transition-ease-out: all 0.5s cubic-bezier(.69, 0, .71, .99);
+}

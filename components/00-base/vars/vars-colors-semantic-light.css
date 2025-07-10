@@ -1,0 +1,69 @@
+/*!
+ * Each semantic variable maps to a primitive variable
+ * Semantic variables should follow a naming structure of genral-to-specific
+ * 1 - Design system name, 2 - the property of the variable, 3 - what the variable applies to (bg, fg, text), 4 - lastly, modifiers
+ * Example: --designsystemname-color-text-primary
+ * Example: --skeleton-color-border-primary
+ *
+ */
+:root {
+  /****************** BASE ******************/
+  /*** Base Foreground ***/
+  --skeleton-color-fg-base: var(--skeleton-color-black);
+  --skeleton-color-fg-subdued: var(--skeleton-color-gray-040);
+  
+  /*** Base Background ***/
+  --skeleton-color-bg-base: var(--skeleton-color-white);
+  
+  /*** Background - Neutral ***/
+  --skeleton-color-bg-neutral-extra-dark: var(--skeleton-color-gray-015);
+  --skeleton-color-bg-neutral-dark: var(--skeleton-color-gray-020);
+  --skeleton-color-bg-neutral: var(--skeleton-color-gray-080);
+  --skeleton-color-bg-neutral-light: var(--skeleton-color-gray-090);
+  --skeleton-color-bg-neutral-extra-light: var(--skeleton-color-gray-095);
+  
+  /*** Borders - Base Theme - Neutral ***/
+  --skeleton-color-border-neutral-dark: var(--skeleton-color-gray-060);
+  --skeleton-color-border-neutral: var(--skeleton-color-gray-080);
+  --skeleton-color-border-neutral-light: var(--skeleton-color-gray-090);
+  --skeleton-color-border-neutral-extra-light: var(--skeleton-color-gray-095);
+  
+  /****** Static ******/
+  --skeleton-color-fg-white-static: var(--skeleton-color-white);
+  --skeleton-color-fg-black-static: var(--skeleton-color-black);
+  --skeleton-color-bg-white-static: var(--skeleton-color-white);
+  --skeleton-color-bg-black-static: var(--skeleton-color-black);
+  
+  /****************** SYSTEM ******************/
+  /*** Focus Indicator ***/
+  --skeleton-color-focus-indicator: var(--skeleton-color-blue-060);
+  
+  /*** System accent color ***/
+  --skeleton-color-accent: var(--skeleton-color-violet-060);
+  
+  /*** Actions - Link Text ***/
+  --skeleton-color-link-default: var(--skeleton-color-violet-060);
+  --skeleton-color-link-hover: var(--skeleton-color-blue-060);
+  --skeleton-color-link-focus: var(--skeleton-color-blue-060);
+  --skeleton-color-link-active: var(--skeleton-color-violet-060);
+  --skeleton-color-link-visited: var(--skeleton-color-fg-base);
+  --skeleton-color-link-disabled: var(--skeleton-color-gray-060);
+  --skeleton-color-link-decoration: var(--skeleton-color-blue-080);
+  --skeleton-color-link-decoration-hover: var(--skeleton-color-violet-060);
+  
+  /*** Dark Background Class ***/
+  .inverted-background {
+    --skeleton-color-fg-base: var(--skeleton-color-white);
+    --skeleton-color-fg-subdued: var(--skeleton-color-gray-080);
+    
+    /*** Actions - Link Text ***/
+    --skeleton-color-link-default: var(--skeleton-color-violet-080);
+    --skeleton-color-link-hover: var(--skeleton-color-blue-080);
+    --skeleton-color-link-focus: var(--skeleton-color-blue-080);
+    --skeleton-color-link-active: var(--skeleton-color-violet-060);
+    --skeleton-color-link-visited: var(--skeleton-color-fg-base);
+    --skeleton-color-link-disabled: var(--skeleton-color-gray-080);
+    --skeleton-color-link-decoration: var(--skeleton-color-blue-080);
+    --skeleton-color-link-decoration-hover: var(--skeleton-color-violet-080);
+  }
+}

@@ -1,0 +1,14 @@
+{%
+  set classes = [
+    'link',
+    variant and variant != 'default' ? 'link--' ~ variant,
+  ]
+%}
+
+{% if url or attributes.href %}
+    {% set attributes = attributes.setAttribute('href', url) %}
+{% endif %}
+
+<a{{ attributes.addClass(classes)}}>
+  {{ label }}
+</a>

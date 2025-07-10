@@ -1,0 +1,7 @@
+name: Default
+
+props:
+  url: /
+
+slots:
+  label: "Link Label"

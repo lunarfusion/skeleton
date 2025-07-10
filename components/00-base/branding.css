@@ -1,0 +1,30 @@
+.branding {
+  background-color: var(--skeleton-color-bg-primary-light);
+  padding-block: 2rem;
+}
+
+  .branding__content {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .branding__logo {
+    inline-size: 50px;
+  }
+
+  .branding__sitename {
+    font-family: var(--skeleton-font-serif);
+    color: var(--skeleton-color-fg-primary);
+    font-size: calc(var(--skeleton-size-text-lrg) * 2);
+    line-height: 1.1;
+  }
+
+  .branding__sitename a,
+    .branding__sitename a:hover,
+    .branding__sitename a:focus,
+    .branding__sitename a:visited,
+    .branding__sitename a:active {
+      font-size: inherit;
+      color: inherit;
+    }

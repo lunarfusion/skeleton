@@ -1,0 +1,4 @@
+node_modules
+/.nova
+.DS_Store
+package-lock.json

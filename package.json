@@ -1,0 +1,43 @@
+{
+  "name": "skeleton",
+  "version": "1.0",
+  "description": "...",
+  "author": "Monet",
+  "main": "index.js",
+  "license": "ISC",
+  "dependencies": {
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.1",
+    "postcss-custom-media": "^10.0.6",
+    "postcss-import": "^16.1.0",
+    "postcss-nested": "^6.0.1",
+    "postcss-nesting": "^12.1.5",
+    "shelljs": "^0.8.5",
+    "stylelint": "^13.13.1",
+    "vite": "^5.4.10",
+    "vite-plugin-live-reload": "^3.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "nodemon": "^2.0.4",
+    "vite-plugin-twig-drupal": "^1.4.2"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "eslintConfig": {
+    "rules": {
+      "semi": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "semi": false
+        }
+      ]
+    },
+    "root": true
+  }
+}

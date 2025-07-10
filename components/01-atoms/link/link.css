@@ -1,0 +1,179 @@
+.link,
+p > a,
+li > a {
+  position: relative;
+  display: inline-block;
+  color: var(--skeleton-color-link-default);
+  -webkit-text-decoration: 11% underline var(--skeleton-color-link-decoration);
+          text-decoration: 11% underline var(--skeleton-color-link-decoration);
+  font-weight: 600;
+  transition: var(--skeleton-transition-basic);
+}
+
+  /*** Focus Indicator ***/
+  .link::before, p > a::before, li > a::before {
+    position: absolute;
+    margin: auto;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2));
+    block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2));
+    margin-block-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator)) * -1);
+    margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator)) * -1);
+    border: var(--skeleton-size-focus-indicator) solid var(--skeleton-color-focus-indicator);
+    border-radius: var(--skeleton-size-radius-sm);
+    opacity: 0;
+  }
+  .link:focus,
+  .link.focus,
+  p > a:focus,
+  p > a.focus,
+  li > a:focus,
+  li > a.focus {
+    color: var(--skeleton-color-link-focus);
+  }
+  .link:focus-visible,
+  .link.focus-visible,
+  p > a:focus-visible,
+  p > a.focus-visible,
+  li > a:focus-visible,
+  li > a.focus-visible {
+    color: var(--skeleton-color-link-focus);
+  }
+  .link:focus-visible::before, .link.focus-visible::before, p > a:focus-visible::before, p > a.focus-visible::before, li > a:focus-visible::before, li > a.focus-visible::before {
+      opacity: 1;
+    }
+  .link:hover,
+  .link.hover,
+  p > a:hover,
+  p > a.hover,
+  li > a:hover,
+  li > a.hover {
+    -webkit-text-decoration: 11% underline var(--skeleton-color-link-decoration-hover);
+            text-decoration: 11% underline var(--skeleton-color-link-decoration-hover);
+    color: var(--skeleton-color-link-hover);
+  }
+  .link:hover::before, .link.hover::before, p > a:hover::before, p > a.hover::before, li > a:hover::before, li > a.hover::before {
+      background-size: 100% 100%;
+    }
+  .link:active,
+  .link.active,
+  .link:focus:active,
+  .link:focus-visible:active,
+  .link:active:focus,
+  .link:active:focus-visible,
+  p > a:active,
+  p > a.active,
+  p > a:focus:active,
+  p > a:focus-visible:active,
+  p > a:active:focus,
+  p > a:active:focus-visible,
+  li > a:active,
+  li > a.active,
+  li > a:focus:active,
+  li > a:focus-visible:active,
+  li > a:active:focus,
+  li > a:active:focus-visible {
+    color: var(--skeleton-color-link-active);
+  }
+  .link.disabled,
+  .link.disabled:hover,
+  .link:disabled,
+  .link:disabled:hover,
+  p > a.disabled,
+  p > a.disabled:hover,
+  p > a:disabled,
+  p > a:disabled:hover,
+  li > a.disabled,
+  li > a.disabled:hover,
+  li > a:disabled,
+  li > a:disabled:hover {
+    color: var(--skeleton-color-link-disabled);
+    text-decoration-color: currentColor;
+  }
+  .link.disabled::before, .link.disabled:hover::before, .link:disabled::before, .link:disabled:hover::before, p > a.disabled::before, p > a.disabled:hover::before, p > a:disabled::before, p > a:disabled:hover::before, li > a.disabled::before, li > a.disabled:hover::before, li > a:disabled::before, li > a:disabled:hover::before {
+      display: none;
+    }
+  /*** prevent focus from firing on click ***/
+  .link:-webkit-focus-ring, p > a:-webkit-focus-ring, li > a:-webkit-focus-ring {
+    outline: none;
+  }
+  /*** VARIANT - Quiet ***/
+  .link--quiet, p > a--quiet, li > a--quiet {
+    text-decoration: none;
+  }
+  .link--quiet:hover, p > a--quiet:hover, li > a--quiet:hover {
+      text-decoration: none;
+    }
+  /*** VARIANT - CTA ***/
+  .link--cta, p > a--cta, li > a--cta {
+    --cta-icon-transform: 0.25rem;
+    --cta-icon-size: 1rem;
+    display: inline-block;
+    padding-inline-start: 0.125rem;
+    padding-inline-end: calc(var(--cta-icon-size) + 0.25rem);
+    font-weight: 600;
+    font-size: 120%;
+    transition: var(--skeleton-transition-boing);
+    text-decoration: none;
+    background: linear-gradient(var(--skeleton-color-link-decoration) 50%, transparent 51%);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 0% 4px;
+  }
+  .link--cta:hover, p > a--cta:hover, li > a--cta:hover {
+      text-decoration: none;
+      background-size: 100% 4px;
+    }
+  .link--cta::after, p > a--cta::after, li > a--cta::after {
+      content: "\f061";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-variant: normal;
+      font-style: normal;
+      text-rendering: auto;
+      font-size: var(--cta-icon-size);
+      width: var(--cta-icon-size);
+      height: var(--cta-icon-size);
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      margin-block: auto;
+      margin-inline-start: auto;
+      color: inherit;
+      transition: var(--skeleton-transition-boing);
+    }
+  .link--cta:hover::after, p > a--cta:hover::after, li > a--cta:hover::after {
+      transform: translateX(var(--cta-icon-transform)) scale(1.1);
+    }
+  .link--cta.disabled::after, p > a--cta.disabled::after, li > a--cta.disabled::after {
+      color: inherit;
+    }
+  /*** VARIANT - External ***/
+  .link--external, p > a--external, li > a--external {
+    padding-inline-end: 1.25rem;
+  }
+  .link--external::after, p > a--external::after, li > a--external::after {
+      content: "\f08e";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-variant: normal;
+      font-style: normal;
+      text-rendering: auto;
+      font-size: 80%;
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      margin-block: auto;
+      margin-inline-start: auto;
+      color: inherit;
+      transition: var(--skeleton-transition-basic);
+    }

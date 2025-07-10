@@ -1,0 +1,4 @@
+skeleton:
+  css:
+    theme:
+      dist/style.css: {}

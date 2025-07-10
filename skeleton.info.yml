@@ -1,0 +1,30 @@
+# These fields are required
+name: skeleton
+description:
+type: theme
+core_version_requirement: ^11
+base theme: false
+logo: dist/assets/logo.svg
+screenshot: dist/assets/screenshot.png
+
+# Libraries
+libraries:
+  - skeleton/skeleton
+  - skeleton/ui-patterns
+
+dependencies:
+  - ui_patterns:ui_patterns
+  - ui_icons:ui_icons
+
+regions:
+  header_top: 'Header Top'
+  header: 'Header'
+  header_bottom: 'Header Bottom'
+  content_top: 'Content Top'
+  content: 'Content'
+  sidebar_first: 'Left sidebar'
+  sidebar_second: 'Right sidebar'
+  content_bottom: 'Content Bottom'
+  footer_top: 'Footer Top'
+  footer: 'Footer'
+  footer_bottom: 'Footer Bottom'

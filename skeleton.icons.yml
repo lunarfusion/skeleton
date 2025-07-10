@@ -1,0 +1,47 @@
+skeleton_fontawesome_icons:
+  enabled: true
+  label: "skeleton Icon"
+  description: "skeleton Icons with their utility classes"
+  extractor: svg_sprite
+  config:
+    sources:
+      - "dist/icons/sprites/regular.svg"
+      - "dist/icons/sprites/solid.svg"
+      - "dist/icons/sprites/brands.svg"
+  settings:
+    icon_class:
+      title: "Icon Class"
+      type: "string"
+      default: "icon"
+    extra_class:
+      title: "Extra Class"
+      type: "string"
+      default: "icon--component"
+    width:
+      title: "Width"
+      type: "integer"
+      default: 20
+    height:
+      title: "Height"
+      type: "integer"
+      default: 20
+    icon_size:
+      title: "Icon size"
+      type: "string"
+      enum: ['XS', 'S', 'M', 'L', 'XL']
+      default: "M"
+  template: >-
+    <svg
+      class="icon icon--{{ icon_id|clean_class }} icon--{{ icon_size}} icon--{{ extra_class }}"
+      height="20"
+      width="20"
+      fill="currentColor"
+      {% if alt is empty %}
+        aria-hidden="true"
+      {% else %}
+        aria-label="{{ alt }}"
+      {% endif %}
+      role="img"
+      xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="{{ source }}#{{ icon_id }}" href="{{ source }}#{{ icon_id }}" />
+    </svg>

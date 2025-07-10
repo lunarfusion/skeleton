@@ -1,0 +1,27 @@
+{
+    "rules": {
+        "font-family-no-missing-generic-family-keyword": null,
+        "no-descending-specificity": null,
+        "block-no-empty": null,
+        "no-duplicate-selectors": null,
+        "font-family-no-duplicate-names": null,
+        "selector-class-pattern": null,
+        "indentation": 2,
+        "no-eol-whitespace": [ true, {
+            "ignore": "empty-lines",
+            "ignore": "comments"
+          } ],
+          "function-url-quotes": [ true, {
+            "string": "always"
+          } ],
+        "comment-empty-line-before": [ true, {
+            "string": "never"
+          } ],
+        "declaration-colon-newline-after": [ true, {
+            "string": "never"
+            } ],
+        "block-closing-brace-empty-line-before": ["never", {
+          "except": ["after-closing-brace"]
+        }],
+    }
+}

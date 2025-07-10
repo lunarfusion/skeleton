@@ -1,0 +1,58 @@
+/*** DARK THEME with inverted backgrounds ***/
+:root {
+  @media (prefers-color-scheme: dark) {
+    /****************** BASE ******************/
+    /*** Base Foreground ***/
+    --skeleton-color-fg-base: var(--skeleton-color-white);
+    --skeleton-color-fg-subdued: var(--skeleton-color-gray-060);
+    
+    /*** Base Background ***/
+    --skeleton-color-bg-base: var(--skeleton-color-black);
+    
+    /*** Background - Neutral ***/
+    --skeleton-color-bg-neutral-extra-dark: var(--skeleton-color-gray-090);
+    --skeleton-color-bg-neutral-dark: var(--skeleton-color-gray-080);
+    --skeleton-color-bg-neutral: var(--skeleton-color-gray-020);
+    --skeleton-color-bg-neutral-light: var(--skeleton-color-gray-010);
+    --skeleton-color-bg-neutral-extra-light: var(--skeleton-color-gray-005);
+    
+    /*** Borders - Base Theme - Neutral ***/
+    --skeleton-color-border-neutral-dark: var(--skeleton-color-gray-040);
+    --skeleton-color-border-neutral: var(--skeleton-color-gray-020);
+    --skeleton-color-border-neutral-light: var(--skeleton-color-gray-015);
+    --skeleton-color-border-neutral-extra-light: var(--skeleton-color-gray-010);
+    
+    /****************** SYSTEM ******************/
+    /*** Focus Indicator ***/
+    --skeleton-color-focus-indicator: var(--skeleton-color-blue-080);
+    
+    /*** System accent color ***/
+    --skeleton-color-accent: var(--skeleton-color-violet-080);
+    
+    /*** Actions - Link Text - copied from light mode, inverted background ***/
+    --skeleton-color-link-default: var(--skeleton-color-violet-080);
+    --skeleton-color-link-hover: var(--skeleton-color-blue-080);
+    --skeleton-color-link-focus: var(--skeleton-color-blue-080);
+    --skeleton-color-link-active: var(--skeleton-color-violet-060);
+    --skeleton-color-link-visited: var(--skeleton-color-fg-base);
+    --skeleton-color-link-disabled: var(--skeleton-color-gray-080);
+    --skeleton-color-link-decoration: var(--skeleton-color-blue-080);
+    --skeleton-color-link-decoration-hover: var(--skeleton-color-violet-080);
+    
+    /*** Inverted Background Class ***/
+    .inverted-background {
+      --skeleton-color-fg-base: var(--skeleton-color-black);
+      --skeleton-color-fg-subdued: var(--skeleton-color-gray-020);
+      
+      /*** Actions - Link Text - Copied from Light Mode ***/
+      --skeleton-color-link-default: var(--skeleton-color-violet-060);
+      --skeleton-color-link-hover: var(--skeleton-color-blue-060);
+      --skeleton-color-link-focus: var(--skeleton-color-blue-060);
+      --skeleton-color-link-active: var(--skeleton-color-violet-060);
+      --skeleton-color-link-visited: var(--skeleton-color-fg-base);
+      --skeleton-color-link-disabled: var(--skeleton-color-gray-060);
+      --skeleton-color-link-decoration: var(--skeleton-color-blue-080);
+      --skeleton-color-link-decoration-hover: var(--skeleton-color-violet-060);
+    }
+  }
+}
