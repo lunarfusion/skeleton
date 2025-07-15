@@ -1,0 +1,90 @@
+/********* BACKGROUND UTILITIES *********/
+.bg-base {
+  background-color: var(--skeleton-color-bg-base);
+}
+
+.bg-white-static {
+  background-color: var(--skeleton-color-bg-white-static);
+}
+
+.bg-black-static {
+  background-color: var(--skeleton-color-bg-black-static);
+}
+
+.bg-primary-dark {
+  background-color: var(--skeleton-color-bg-primary-dark);
+}
+
+.bg-primary {
+  background-color: var(--skeleton-color-bg-primary);
+}
+
+.bg-primary-light {
+  background-color: var(--skeleton-color-bg-primary-light);
+}
+
+.bg-alert-negative {
+  background-color: var(--skeleton-color-bg-negative);
+}
+
+.bg-alert-warning {
+  background-color: var(--skeleton-color-bg-warning);
+}
+
+.bg-alert-positive {
+  background-color: var(--skeleton-color-bg-positive);
+}
+
+.bg-alert-informative {
+  background-color: var(--skeleton-color-bg-informative);
+}
+
+
+/********* FOREGROUND UTILITIES *********/
+
+.fg-base {
+  color: var(--skeleton-color-fg-base);
+}
+
+.fg-white-static {
+  color: var(--skeleton-color-fg-white-static);
+}
+
+.fg-black-static {
+  color: var(--skeleton-color-fg-black-static);
+}
+
+.fg-primary-dark {
+  color: var(--skeleton-color-fg-primary-dark);
+}
+
+.fg-primary {
+  color: var(--skeleton-color-fg-primary);
+}
+
+.fg-primary-light {
+  color: var(--skeleton-color-fg-primary-light);
+}
+
+.fg-alert-negative {
+  color: var(--skeleton-color-fg-negative);
+}
+
+.fg-alert-warning {
+  color: var(--skeleton-color-fg-warning);
+}
+
+.fg-alert-positive {
+  color: var(--skeleton-color-fg-positive);
+}
+
+.fg-alert-informative {
+  color: var(--skeleton-color-fg-informative);
+}
+
+
+/********* BORDER UTILITIES *********/
+/* border-color: var(--skeleton-color-border-negative);
+border-color: var(--skeleton-color-border-warning);
+border-color: var(--skeleton-color-border-positive);
+border-color: var(--skeleton-color-border-informative); */

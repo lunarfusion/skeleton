@@ -2,11 +2,11 @@
 :root {
   @media (prefers-color-scheme: dark) {
     /****************** BASE ******************/
-    /*** Base Foreground ***/
+    /*** Foreground - Base ***/
     --skeleton-color-fg-base: var(--skeleton-color-white);
     --skeleton-color-fg-subdued: var(--skeleton-color-gray-060);
     
-    /*** Base Background ***/
+    /*** Background - Base ***/
     --skeleton-color-bg-base: var(--skeleton-color-black);
     
     /*** Background - Neutral ***/
@@ -21,6 +21,10 @@
     --skeleton-color-border-neutral: var(--skeleton-color-gray-020);
     --skeleton-color-border-neutral-light: var(--skeleton-color-gray-015);
     --skeleton-color-border-neutral-extra-light: var(--skeleton-color-gray-010);
+    
+    
+    /*** Background - Brand ***/
+    
     
     /****************** SYSTEM ******************/
     /*** Focus Indicator ***/
@@ -39,8 +43,30 @@
     --skeleton-color-link-decoration: var(--skeleton-color-blue-080);
     --skeleton-color-link-decoration-hover: var(--skeleton-color-violet-080);
     
-    /*** Inverted Background Class ***/
-    .inverted-background {
+    /********* SYSTEM ALERTS *********/
+    /*** Negative ***/
+    --skeleton-color-fg-negative: var(--skeleton-color-red-060);
+    --skeleton-color-border-negative: var(--skeleton-color-red-040);
+    --skeleton-color-bg-negative: var(--skeleton-color-red-010);
+    
+    /*** Warning ***/
+    --skeleton-color-fg-warning: var(--skeleton-color-yellow-060);
+    --skeleton-color-border-warning: var(--skeleton-color-yellow-060);
+    --skeleton-color-bg-warning: var(--skeleton-color-yellow-010);
+    
+    /*** Positive ***/
+    --skeleton-color-fg-positive: var(--skeleton-color-green-060);
+    --skeleton-color-border-positive: var(--skeleton-color-green-030);
+    --skeleton-color-bg-positive: var(--skeleton-color-green-010);
+    
+    /*** Informative ***/
+    --skeleton-color-fg-informative: var(--skeleton-color-blue-060);
+    --skeleton-color-border-informative: var(--skeleton-color-blue-040);
+    --skeleton-color-bg-informative: var(--skeleton-color-blue-010);
+    
+    
+    /*** Inverted Light Background Class ***/
+    .bg-inverted {
       --skeleton-color-fg-base: var(--skeleton-color-black);
       --skeleton-color-fg-subdued: var(--skeleton-color-gray-020);
       

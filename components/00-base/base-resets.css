@@ -43,6 +43,10 @@ p {
   font-family: var(--skeleton-font-primary);
 }
 
+a {
+  color: var(--skeleton-color-accent);
+}
+
 @viewport {
   width: device-width;
 }

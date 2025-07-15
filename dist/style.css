@@ -1,7 +1,7 @@
 /*** VARS ***/
 @import "../components/00-base/vars/vars-colors-primitive.css";
 @import "../components/00-base/vars/vars-colors-semantic-light.css";
-/* @import "../components/00-base/vars/vars-colors-semantic-dark.css"; */
+@import "../components/00-base/vars/vars-colors-semantic-dark.css";
 @import "../components/00-base/vars/vars-fonts.css";
 @import "../components/00-base/vars/vars-shadows.css";
 @import "../components/00-base/vars/vars-spacing.css";
@@ -13,10 +13,6 @@
 @import "../components/00-base/branding.css";
 @import "../components/00-base/region.css";
 
-
-/****** ⬇ TODO - remove files below when theme is built out ⬇ ******/
-
-/*** UI Patterns library display  ***/
-@import "../components/00-base/ui-patterns.css";
-/*** Temp Drupal admin display  ***/
-@import "temp.css";
+/*** BASE UTLITIES ***/
+@import "../components/00-base/utilities-color.css";
+@import "../components/00-base/utilities-space.css";

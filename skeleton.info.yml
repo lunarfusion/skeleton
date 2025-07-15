@@ -10,7 +10,6 @@ screenshot: dist/assets/screenshot.png
 # Libraries
 libraries:
   - skeleton/skeleton
-  - skeleton/ui-patterns
 
 dependencies:
   - ui_patterns:ui_patterns
