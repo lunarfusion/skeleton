@@ -1,0 +1,29 @@
+{% extends "block.html.twig" %}
+
+{% block content %}
+
+  <div class="branding">
+    <div class="branding__content">
+    {% if site_logo %}
+      <div class="branding__logo">
+        <a href="{{ path('<front>') }}" rel="home">
+          <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high" />
+        </a>
+      </div>
+    {% endif %}
+    {% if site_name %}
+
+      <div class="branding__sitename">
+        <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
+        {% if site_slogan %}
+          <div class="branding__siteslogan">
+            {{ site_slogan }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+    </div>
+
+  </div>
+{% endblock %}
+

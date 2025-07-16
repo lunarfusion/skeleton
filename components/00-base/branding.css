@@ -1,25 +1,29 @@
 .branding {
-  background-color: var(--skeleton-color-bg-primary-light);
-  padding-block: 2rem;
+  padding: 1rem;
 }
-
+  
   .branding__content {
     display: flex;
     flex-direction: row;
     gap: 1rem;
   }
-
+  
   .branding__logo {
-    inline-size: 50px;
+    inline-size: 150px;
   }
-
+  
   .branding__sitename {
     font-family: var(--skeleton-font-serif);
     color: var(--skeleton-color-fg-primary);
     font-size: calc(var(--skeleton-size-text-lrg) * 2);
+    font-weight: 500;
     line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.15rem;
   }
-
+  
   .branding__sitename a,
     .branding__sitename a:hover,
     .branding__sitename a:focus,
@@ -28,3 +32,9 @@
       font-size: inherit;
       color: inherit;
     }
+  
+  .branding__siteslogan {
+    font-size: var(--skeleton-size-text-lrg);
+    color: var(--skeleton-color-fg-base);
+    font-weight: 400;
+  }
