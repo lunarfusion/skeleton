@@ -1,0 +1,69 @@
+{#
+/**
+ * @file
+ * Styles page template, override this in your theme.
+ */
+#}
+
+<div class="row row--wrap">
+{% if styles is not empty %}
+  <div class="col col--3">
+  <h2>{{ 'Available styles'|t }}</h2>
+  {# List of available styles with anchor links. #}
+  {% for group_name, group_styles in styles %}
+    {% if styles|length > 1 %}
+      <h3>{{ group_name }}</h3>
+    {% endif %}
+    <ul>
+      {% for style in group_styles %}
+        <li>
+          {# Anchor link. #}
+          <a href="#{{ style.id }}" class="link">{{ style.label }}</a>
+          {# External documentation links. #}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+{% endif %}
+</div>
+
+<div class="col">
+  {% for group_styles in styles %}
+    {% for style in group_styles %}
+      <h2 id="{{ style.id }}">{{ style.label }}</h3>
+      {% if style.description %}
+        <p>{{ style.description }}</p>
+      {% endif %}
+      {% if style.render_links %}
+        <ul>
+          {% for renderLink in style.render_links %}
+            <li>
+              {{ renderLink|add_class('link') }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% for id, option in style.preview_options %}
+        {% set option_attributes = create_attribute()
+          .addClass(id)
+          .addClass(option.previewed_with) %}
+        {% set previewed_as = option.previewed_as %}
+        {% set label = option.label %}
+
+        {% if previewed_as == 'aside' %}
+          <p>{{ label }} ({{ id }})</p>
+          <div{{ option_attributes }}>{{ 'Example'|t }}</div>
+        {% elseif previewed_as == 'hidden' %}
+          <p>{{ label }} ({{ id }})</p>
+        {% else %}
+          <p{{ option_attributes }}>{{ label }} ({{ id }})</p>
+        {% endif %}
+
+        {% if option.description is not empty %}
+          <p>{{ option.description }}</p>
+        {% endif %}
+      {% endfor %}
+      <hr>
+    {% endfor %}
+  {% endfor %}
+</div>

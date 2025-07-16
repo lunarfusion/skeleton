@@ -41,11 +41,6 @@ body {
 p {
   color: var(--skeleton-color-fg-base);
   font-family: var(--skeleton-font-primary);
-  
-  .lead {
-    color: red;
-    font-size: 5rem;
-  }
 }
 
 a {
@@ -76,14 +71,19 @@ img {
   height: auto;
 }
 
-.page {
+.layout-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  
 }
 
-.main-content {
+main {
   flex: 1;
+}
+
+footer {
+  margin: 0;
 }
 
 /*** Typography resets ***/
