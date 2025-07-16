@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * UI Pattern meta information.
+ */
+#}
+{% if component.slots or component.props %}
+  <table class="table" style="width: 100%;">
+    <thead>
+      <tr>
+        <th>{{ 'Name'|t }}</th>
+        <th>{{ 'Label'|t }}</th>
+        <th>{{ 'Type'|t }}</th>
+        <th>{{ 'Description'|t }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for slot_id, slot in component.slots %}
+        <tr>
+          <td>
+            <code>{{ slot_id }}</code>
+          </td>
+          <td>{{ slot.title }}</td>
+          <td>{{ 'Slot'|t }}</td>
+          <td>{{ slot.description }}</td>
+        </tr>
+      {% endfor %}
+      {% for prop_id, prop in component.props.properties %}
+        {% if prop_id != 'attributes' and prop_id != 'variant' %}
+          <tr>
+            <td>
+              <code>{{ prop_id }}</code>
+            </td>
+            <td>{{ prop.title }}</td>
+            <td>{{ prop.ui_patterns.type_definition.label }}</td>
+            <td>
+              {%- for line in prop.ui_patterns.summary -%}
+                {{- line -}}
+                <br>
+              {%- endfor -%}
+            </td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}

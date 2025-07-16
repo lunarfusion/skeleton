@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * UI Patterns components menu.
+ */
+#}
+{% if groups %}
+  <div class="ui-patterns__menu">
+    <h2 class="title">{{ 'Components'|t }}</h2>
+
+    {% if groups|length > 1 %}
+      {% for group_name, components in groups %}
+        <div class="ui-patterns__menu-group">
+          <h3 class="title title--menu">{{ group_name }}</h3>
+          <ul class="menu menu--vertical">
+            {% for component in components %}
+              <li class="menu__item">
+                <a class="menu__link" href="#{{ component.id }}">{{ component.name }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+
+    {% else %}
+      <ul class="menu menu--vertical">
+        {% for component in components %}
+          <li class="menu__item">
+            <a class="menu__link" href="#{{ component.id }}">{{ component.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endif %}

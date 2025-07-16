@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * UI Patterns meta information.
+ */
+#}
+{% if component is not empty %}
+  <div class="ui-patterns__metadata">
+    <div class="ui-patterns__id">
+      <p><strong>ID:</strong> <code>{{ component.id }}</code></p>
+    </div>
+
+    {% if component.description %}
+      <div class="ui-patterns__description">
+        <p><strong>Description:</strong> {{ component.description }}</p>
+      </div>
+    {% endif %}
+
+    {% if component.status %}
+      <div class="ui-patterns__status ui-patterns__status--{{ component.status }}">
+        <p><strong>Status:</strong> {{ '@status'|t({'@status': component.status}) }}</p>
+      </div>
+    {% endif %}
+  </div><!--end metadata-->
+
+    {% if component.links %}
+      <div class="ui-patterns__links">
+        {% if component.links|length > 1 %}
+          {{ 'Links:'|t }}
+          <p><strong>Links:</strong></p>
+          <ul>
+            {% for link in component.links %}
+              <li>
+                <a href="{{ link.url }}" class="link">{{ link.title|default('External documentation'|t) }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p><strong>Links:</strong>
+            {% set link = component.links|first %}
+            <a href="{{ link.url }}" class="link">{{ link.title|default('External documentation'|t) }}</a>
+          </p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if component.replaces %}
+      <p>
+        {{ 'Replaces'|t }}: <a href="{{ url('ui_patterns_library.single', {provider: component.replaces|split(':')|first, machineName: component.replaces|split(':')|last}) }}" class="link">{{ component.replaces }}</a>
+      </p>
+    {% endif %}
+    {% if component.tags %}
+      <div class="ui-patterns__tags">
+        <p>{{ 'Tags: @tags'|t({'@tags': component.tags|join(', ')}) }}</p>
+      </div>
+    {% endif %}
+{% endif %}
