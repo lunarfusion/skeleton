@@ -1,0 +1,32 @@
+name: Details
+description: A single accordion item with a summary that opens to reveal additional content.
+group: "Atoms"
+status: experimental
+links:
+   - "https://emory.edu"
+
+variants:
+  default:
+    title: Default
+  fancy:
+    title: Fancy
+
+props:
+  type: object
+#   properties:
+#
+#   size:
+#     title: Size
+#     type: string
+#     description: 'Details size vaiants: large, medium, small.'
+#     enum:
+#       - small
+#       - medium
+#       - large
+#     default: medium
+
+slots:
+  summary_text:
+    title: Summary text
+  content:
+    title: Content of the details component

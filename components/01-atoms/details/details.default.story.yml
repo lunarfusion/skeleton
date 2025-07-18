@@ -1,0 +1,8 @@
+name: Default
+
+props:
+  size: M
+
+slots:
+  summary_text: "This is the Summary you can click"
+  content: "Gathered by gravity Drake Equation hearts of the stars hydrogen atoms permanence of the stars star stuff harvesting star light? Apollonius of Perga ship of the imagination tesseract concept of the number one globular star cluster citizens of distant epochs? Courage of our questions concept of the number one the ash of stellar alchemy something incredible is waiting to be known the only home we've ever known courage of our questions and billions upon billions upon billions upon billions upon billions upon billions upon billions."
