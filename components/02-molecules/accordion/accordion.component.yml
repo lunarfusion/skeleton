@@ -1,0 +1,14 @@
+name: Accordion
+description: A details group
+group: "Molecules"
+status: experimental
+links:
+  - "http://emory.edu"
+
+props:
+  type: object
+
+slots:
+  items:
+    title: Details Items
+    description: Details components which exist within the accordion

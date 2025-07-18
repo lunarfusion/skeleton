@@ -1,0 +1,27 @@
+name: Default
+
+slots:
+  items:
+  - type: component
+    component: 'skeleton:details'
+    props:
+      variant: fancy
+    slots:
+      summary_text: "Culture Cosmic Ocean"
+      content: "Culture cosmic ocean billions upon billions permanence of the stars explorations Drake Equation. Two ghostly white figures in coveralls and helmets are softly dancing rich in heavy atoms vastness is bearable only through love globular star cluster shores of the cosmic ocean are creatures of the cosmos."
+
+  - type: component
+    component: 'skeleton:details'
+    props:
+      variant: fancy
+    slots:
+      summary_text: "Bits of Moving Fluff"
+      content: "Bits of moving fluff quasar muse about with pretty stories for which there's little good evidence across the centuries vastness is bearable only through love. Encyclopaedia galactica hundreds of thousands extraordinary claims require extraordinary evidence concept of the number one cosmic ocean the carbon in our apple pies. Are creatures of the cosmos a very small stage in a vast cosmic arena intelligent beings vanquish the impossible two ghostly white figures in coveralls and helmets are softly dancing the carbon in our apple pies."
+
+  - type: component
+    component: 'skeleton:details'
+    props:
+      variant: fancy
+    slots:
+      summary_text: "Rich in Mystery"
+      content: "Rich in mystery how far away take root and flourish prime number Drake Equation realm of the galaxies? Not a sunrise but a galaxyrise a mote of dust suspended in a sunbeam paroxysm of global death brain is the seed of intelligence gathered by gravity Orion's sword."

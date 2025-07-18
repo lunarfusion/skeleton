@@ -1,0 +1,11 @@
+{%
+  set classes = [
+    'accordion'
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {% if items %}
+   {{ items }}
+  {% endif %}
+</div>
