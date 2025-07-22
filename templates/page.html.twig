@@ -1,0 +1,59 @@
+<div class="page page--default">
+
+  <header role="banner" class="layout layout--header colors-inverted">
+    <div class="container container--full">
+      {{ page.header_top }}
+      {{ page.header }}
+      {{ page.header_bottom }}
+    </div>
+  </header>
+
+  <main role="main" class="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout layout--content-top">
+      <div class="container container--full">
+        {{ page.content_top }}
+      </div>
+    </div>
+
+    <div class="layout layout--content-main">
+      <div class="container">
+        <div class="row">
+        {% if page.sidebar_first %}
+          <aside class="col" role="complementary">
+            {{ page.sidebar_first }}
+          </aside>
+        {% endif %}
+
+        <div class="col col--8">
+          {{ page.content }}
+        </div>
+
+        {% if page.sidebar_second %}
+          <aside class="col" role="complementary">
+            {{ page.sidebar_second }}
+          </aside>
+        {% endif %}
+        </div> {# end row #}
+      </div> {# end container #}
+    </div> {# end content main #}
+
+    <div class="layout layout--content-bottom">
+      <div class="container container--full">
+        {{ page.content_bottom }}
+      </div>
+    </div>
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo" class="layout layout--footer colors-inverted">
+      <div class="container container--full">
+        {{ page.footer_top }}
+        {{ page.footer }}
+        {{ page.footer_bottom }}
+      </div>
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}

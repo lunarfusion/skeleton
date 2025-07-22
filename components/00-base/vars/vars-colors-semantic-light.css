@@ -94,7 +94,7 @@
   --skeleton-color-bg-informative: var(--skeleton-color-blue-090);
   
   /*** Inverted Dark Background Class ***/
-  .bg-inverted {
+  .colors-inverted {
     --skeleton-color-fg-base: var(--skeleton-color-white);
     --skeleton-color-fg-subdued: var(--skeleton-color-gray-080);
     

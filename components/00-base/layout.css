@@ -1,0 +1,32 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+/* placeholder */
+
+.layout--header {
+    background-color: var(--skeleton-color-bg-primary-dark);
+  }
+
+.layout--content-top {
+    /* placeholder */
+  }
+
+.layout--content-main {
+    /* placeholder */
+  }
+
+.layout--content-bottom {
+    /* placeholder */
+  }
+
+.layout--footer {
+    margin: 0;
+    background-color: var(--skeleton-color-bg-primary-dark);
+  }

@@ -11,7 +11,8 @@
 @import "../components/00-base/base-resets.css";
 @import "../components/00-base/flexbox.css";
 @import "../components/00-base/branding.css";
-@import "../components/00-base/region.css";
+/* @import "../components/00-base/region.css"; */
+@import "../components/00-base/layout.css";
 
 /*** BASE UTLITIES ***/
 @import "../components/00-base/utilities-color.css";

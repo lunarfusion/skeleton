@@ -82,18 +82,18 @@
     
     
     /*** Inverted Light Background Class ***/
-    .bg-inverted {
+    .colors-inverted {
       --skeleton-color-fg-base: var(--skeleton-color-black);
       --skeleton-color-fg-subdued: var(--skeleton-color-gray-020);
       
       /*** Actions - Link Text - Copied from Light Mode ***/
-      --skeleton-color-link-default: var(--skeleton-color-violet-060);
-      --skeleton-color-link-hover: var(--skeleton-color-blue-060);
-      --skeleton-color-link-focus: var(--skeleton-color-blue-060);
+      --skeleton-color-link-default: var(--skeleton-color-violet-040);
+      --skeleton-color-link-hover: var(--skeleton-color-blue-040);
+      --skeleton-color-link-focus: var(--skeleton-color-blue-040);
       --skeleton-color-link-active: var(--skeleton-color-violet-060);
       --skeleton-color-link-visited: var(--skeleton-color-fg-base);
       --skeleton-color-link-disabled: var(--skeleton-color-gray-060);
-      --skeleton-color-link-decoration: var(--skeleton-color-blue-080);
+      --skeleton-color-link-decoration: var(--skeleton-color-blue-060);
       --skeleton-color-link-decoration-hover: var(--skeleton-color-violet-060);
     }
   }
