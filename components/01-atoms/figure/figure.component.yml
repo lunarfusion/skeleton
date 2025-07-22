@@ -1,0 +1,12 @@
+name: Figure
+status: experimental
+group: atoms
+
+props:
+  type: object
+
+slots:
+  image:
+    title: Image
+  caption:
+    title: Caption

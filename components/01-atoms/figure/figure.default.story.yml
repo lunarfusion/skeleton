@@ -1,0 +1,16 @@
+name: Default
+
+slots:
+  image:
+    theme: image
+    uri: "https://picsum.photos/600/400.jpg"
+    alt: image example
+  caption: "Figure caption text xxxxx xxxxxxxx xxxx xx xxxxxxx xxxxx."
+
+
+library_wrapper: >
+  <div class="node__content">
+    <div class="node__content-inner">
+      {{ _story }}
+    </div>
+  </div>
