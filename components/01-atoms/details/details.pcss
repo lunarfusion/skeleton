@@ -1,15 +1,12 @@
 .details {
-  position: relative;
-  display: inline-block;
-  inline-size: 100%;
   background-color: var(--skeleton-color-bg-neutral);
   border: 1px solid var(--skeleton-color-border-base);
   border-radius: var(--skeleton-size-radius-sm);
-  margin: 0.5rem 0;
+  margin: 0.125rem 0;
   
   &__summary {
     position: relative;
-    padding: 0.5rem;
+    padding: 0.75rem 1rem;
     font-size: 1.2rem;
     font-weight: 600;
   }
@@ -19,6 +16,7 @@
     background-color: var(--skeleton-color-bg-base);
     font-size: 1rem;
     line-height: 1.4;
+    display: block;
   }
   
   
@@ -35,19 +33,19 @@
       
       &::before {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0.5rem;
+        top: 40%;
+        bottom: 50%;
+        left: 0.75rem;
         margin: auto;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 0.5rem;
-        width: 0.5rem;
-        height: 0.5rem;
+        padding-inline: 0.25rem;
+        /* width: 0.5rem;
+        height: 0.5rem; */
         content: "›";
         font-size: 2rem;
-        line-height: 100%;
+        line-height: 0;
         color: currentcolor;
         transform-origin: 50% 50%;
         transition: var(--skeleton-transition-basic);
