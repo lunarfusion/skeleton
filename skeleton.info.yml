@@ -14,6 +14,7 @@ libraries:
 dependencies:
   - ui_patterns:ui_patterns
   - ui_icons:ui_icons
+  - paragraphs:paragraphs
 
 regions:
   header_top: 'Header Top'
