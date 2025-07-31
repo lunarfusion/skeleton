@@ -12,6 +12,7 @@
 
 .layout--header {
     background-color: var(--skeleton-color-bg-primary-dark);
+    margin-block-end: 2rem;
   }
 
 .layout--content-top {

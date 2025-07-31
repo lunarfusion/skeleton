@@ -1,0 +1,23 @@
+/* just so the awkward looks less awkward during build*/
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-block: 0.5rem;
+  }
+.contextual-region ul:not(.contextual-links) {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-block: 0.5rem;
+}
+.contextual-region ul:not(.contextual-links) li {
+    margin: 0;
+    padding: 0;
+  }

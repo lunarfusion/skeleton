@@ -14,7 +14,7 @@
   
   .branding__sitename {
     font-family: var(--skeleton-font-serif);
-    color: var(--skeleton-color-fg-primary);
+    color: var(--skeleton-color-fg-base);
     font-size: calc(var(--skeleton-size-text-lrg) * 2);
     font-weight: 500;
     line-height: 1.1;

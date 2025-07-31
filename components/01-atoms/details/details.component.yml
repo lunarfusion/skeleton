@@ -3,7 +3,7 @@ description: A single accordion item with a summary that opens to reveal additio
 group: "Atoms"
 status: experimental
 links:
-   - "https://emory.edu"
+   - "https://github.com/lunarfusion/skeleton"
 
 variants:
   default:
@@ -13,17 +13,6 @@ variants:
 
 props:
   type: object
-#   properties:
-#
-#   size:
-#     title: Size
-#     type: string
-#     description: 'Details size vaiants: large, medium, small.'
-#     enum:
-#       - small
-#       - medium
-#       - large
-#     default: medium
 
 slots:
   summary_text:
