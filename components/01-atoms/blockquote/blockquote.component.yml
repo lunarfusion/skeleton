@@ -1,0 +1,17 @@
+name: Blockquote
+description: A text excerpt from a publication, including a citation of the source.
+group: "Atoms"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+  type: object
+
+slots:
+  content:
+    title: Blockquote content
+  cite:
+    title: Citation of content source
+  url:
+    title: Citation URL

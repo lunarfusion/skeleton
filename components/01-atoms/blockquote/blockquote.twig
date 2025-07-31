@@ -1,0 +1,19 @@
+{%
+  set classes = [
+    'blockquote',
+    variant and variant != 'default' ? 'blockquote--' ~ variant
+  ]
+%}
+
+
+{% if url %}
+    {% set attributes = attributes.setAttribute('cite', url) %}
+{% endif %}
+
+<blockquote{{ attributes.addClass(classes) }}>
+  {{ content }}
+
+  <cite class="blockquote__cite">
+    {{ cite }}
+  </cite>
+</blockquote>
