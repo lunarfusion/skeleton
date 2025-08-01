@@ -1,0 +1,48 @@
+{%
+  set classes = [
+    'file',
+    variant and variant != 'default' ? 'file--' ~ variant,
+  ]
+%}
+
+
+{% set link_attributes = create_attribute() %}
+
+{% if url %}
+    {% set link_attributes = link_attributes.setAttribute('href', url) %}
+{% endif %}
+
+
+<div{{ attributes.addClass(classes) }}>
+  <span class="file__icon">
+    {% if variant == 'pdf' %}
+      <svg class="icon icon--M icon--file-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="/themes/custom/skeleton/dist/icons/sprites/solid.svg#file-pdf" href="/themes/custom/skeleton/dist/icons/sprites/solid.svg#file-pdf"></use>
+      </svg>
+
+    {% elseif variant == 'zip' %}
+      <svg class="icon icon--M icon--file-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="/themes/custom/skeleton/dist/icons/sprites/solid.svg#file-zipper" href="/themes/custom/skeleton/dist/icons/sprites/solid.svg#file-zipper"></use>
+      </svg>
+
+    {% elseif variant == 'image' %}
+      <svg class="icon icon--M icon--file-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="/themes/custom/skeleton/dist/icons/sprites/solid.svg#file-image" href="/themes/custom/skeleton/dist/icons/sprites/solid.svg#file-image"></use>
+      </svg>
+
+      {% else %}
+        <svg class="icon icon--M icon--file-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="/themes/custom/skeleton/dist/icons/sprites/solid.svg#file" href="/themes/custom/skeleton/dist/icons/sprites/solid.svg#file"></use>
+        </svg>
+    {% endif %}
+  </span>
+
+  <span class="file__label">
+    <a{{ link_attributes.addClass('link') }}>
+      {{ label }}
+    </a>
+  </span>
+
+  <div class="file__size">{{ size }}</div>
+  <div class="file__summary">{{ summary }}</div>
+</div>

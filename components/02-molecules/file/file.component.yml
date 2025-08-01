@@ -1,0 +1,43 @@
+name: file
+description: A file that can be downloaded. May contain information about the file.
+group: "Molecules"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+variants:
+  default:
+    title: default
+  pdf:
+    title: pdf
+  zip:
+    title: zip
+  image:
+    title: image
+
+props:
+  type: object
+  properties:
+
+      url:
+        title: URL
+        description: "The URL of the file."
+        $ref: "ui-patterns://url"
+
+slots:
+  label:
+    title: Label
+    description: 'Label text of the file'
+
+  size:
+    title: Size
+    description: 'File size of the download'
+
+  summary:
+    title: Summary
+    description: 'Summary of the file contents'
+
+libraryOverrides:
+    css:
+      theme:
+        file.css: {}
