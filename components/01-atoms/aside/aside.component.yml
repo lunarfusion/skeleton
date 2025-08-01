@@ -1,0 +1,33 @@
+name: Aside
+description: A portion of a document whose content is only indirectly related to the document's main content.
+group: "Atoms"
+status: experimental
+
+variants:
+  default:
+    title: Default
+  fancy:
+    title: Fancy
+
+props:
+  type: object
+  properties:
+
+    width:
+      type: string
+      enum:
+        - 'width-80'
+        - 'width-40'
+        - 'width-30'
+
+    float:
+      type: string
+      enum:
+        - 'float-left'
+        - 'float-right'
+
+slots:
+  title:
+    title: Aside title
+  content:
+    title: Aside content

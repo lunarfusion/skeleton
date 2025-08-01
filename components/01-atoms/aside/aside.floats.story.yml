@@ -1,0 +1,30 @@
+name: Floats
+
+props:
+  variant: Default
+  width: width-40
+
+slots:
+  title: "On a Related Note"
+  content: "Since we just mentioned an interesting subject matter in the main content, we thought you might like to know more about it. Here we summarize it briefly, perhaps sharing a link to learn more. Carry on as you were."
+
+
+library_wrapper: >
+  {% set floats = [
+    'float-left',
+    'float-right',
+  ] %}
+  {% for float in floats %}
+  <div class="ui-patterns__story-variant ui-patterns__story-variant--fullwidth">
+    {% set float_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['aside aside--width-40 aside--' ~ float]
+    })})} %}
+    <h4 class="title title--micro">{{ float }}</h4>
+    {% set float_slots = {'#slots': _story['#slots']|merge({
+      'title': "On a Related Note",
+      'content': "Since we just mentioned an interesting subject matter in the main content, we thought you might like to know more about it. Here we summarize it briefly, perhaps sharing a link to learn more. Carry on as you were.",
+    })} %}
+    {% set float_story = _story %}
+    {{ float_story|merge(float_props)|merge(float_slots) }}
+    </div>
+  {% endfor %}

@@ -1,0 +1,43 @@
+.aside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem;
+  background-color: var(--skeleton-color-bg-neutral);
+  border-radius: var(--skeleton-size-radius-med);
+}
+  
+  /*** Child Elements ***/
+  .aside__title {
+    margin-block: 0 0.5rem;
+    font-size: var(--skeleton-size-text-lrg);
+    font-weight: 600;
+  }
+  .aside__content {
+    font-size: var(--skeleton-size-text-small);
+    line-height: 1.6;
+  }
+  /*** VARIANTS - style ***/
+  .aside--fancy {
+    background-color: var(--skeleton-color-bg-primary-light);
+  }
+  /*** VARIANTS - float ***/
+  .aside--float-left {
+    float: left;
+    margin-inline-start: 0;
+  }
+  .aside--float-right {
+    float: right;
+    margin-inline-end: 0;
+  }
+  /*** VARIANTS - width ***/
+  .aside--width-60 {
+    inline-size: 60%;
+  }
+  .aside--width-40 {
+    inline-size: 40%;
+  }
+  .aside--width-30 {
+    inline-size: 30%;
+  }

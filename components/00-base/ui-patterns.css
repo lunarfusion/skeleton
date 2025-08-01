@@ -78,7 +78,6 @@ Update to remove CSS as the system implementation matures
 
 .ui-patterns__story-variant {
     min-inline-size: 180px;
-    
   }
 
 .ui-patterns__story-variant .title--micro {
@@ -90,6 +89,10 @@ Update to remove CSS as the system implementation matures
       margin-block-end: 20px;
       letter-spacing: .06em;
       text-transform: uppercase;
+    }
+
+.ui-patterns__story-variant--fullwidth {
+      inline-size: 100%;
     }
 
 .ui-patterns__metadata {

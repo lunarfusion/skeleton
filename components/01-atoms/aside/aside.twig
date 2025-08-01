@@ -1,0 +1,15 @@
+{%
+  set classes = [
+  'aside',
+  variant and variant != 'default' ? 'aside--' ~ variant,
+   width ? 'aside--' ~ width,
+   float ? 'aside--' ~ float,
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+<aside{{ attributes.addClass(classes) }}>
+  <span class="aside__title">{{ title }}</span>
+  <span class="aside__content">{{ content }}</span>
+</aside>
