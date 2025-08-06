@@ -9,7 +9,7 @@
 {% set link_attributes = create_attribute() %}
 
 {% if url %}
-    {% set link_attributes = link_attributes.setAttribute('href', url) %}
+  {% set link_attributes = link_attributes.setAttribute('href', url) %}
 {% endif %}
 
 
@@ -37,6 +37,8 @@
     {% endif %}
   </span>
 
+
+{# How do I use the file upload field in this template? #}
   <span class="file__label">
     <a{{ link_attributes.addClass('link') }}>
       {{ label }}

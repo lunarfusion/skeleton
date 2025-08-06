@@ -1,0 +1,23 @@
+
+{# Get the selected layout to provide below as a class #}
+{% set layout = content.field_flex_row_layout.0|render|lower|replace({' ': "-", '%': "", ",": ""}) %}
+{% set background = content.field_background.0|render|lower|replace({' ': "-", '%': "", ",": ""}) %}
+
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    'paragraph-flexrow-layout--' ~ layout,
+    background
+  ]
+%}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

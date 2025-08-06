@@ -11,7 +11,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 body {
@@ -37,11 +36,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-p {
-  color: var(--skeleton-color-fg-base);
-  font-family: var(--skeleton-font-primary);
 }
 
 a {
@@ -143,7 +137,7 @@ p {
   margin-block-end: 1rem;
   line-height: 1.5;
   color: var(--skeleton-color-fg-base);
-  max-inline-size: 75ch;
+  font-family: var(--skeleton-font-primary);
 }
 
 ul,
@@ -173,4 +167,13 @@ li {
   clip: rect(0, 0, 0, 0);
   border: 0;
   white-space: nowrap;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
 }

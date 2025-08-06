@@ -1,0 +1,42 @@
+<div class="page page--feature">
+
+  <header role="banner" class="layout layout--header colors-inverted">
+    <div class="container container--full">
+      {{ page.header_top }}
+      {{ page.header }}
+      {{ page.header_bottom }}
+    </div>
+  </header>
+
+  <main role="main" class="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout layout--content-top">
+      <div class="container container--full">
+        {{ page.content_top }}
+      </div>
+    </div>
+
+    {# Feature page is fullwidth - does not allow sidebars #}
+    <div class="layout layout--content-main">
+      {{ page.content }}
+    </div> {# end content main #}
+
+    <div class="layout layout--content-bottom">
+      <div class="container container--full">
+        {{ page.content_bottom }}
+      </div>
+    </div>
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo" class="layout layout--footer colors-inverted">
+      <div class="container container--full">
+        {{ page.footer_top }}
+        {{ page.footer }}
+        {{ page.footer_bottom }}
+      </div>
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}

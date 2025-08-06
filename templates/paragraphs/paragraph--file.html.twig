@@ -1,0 +1,8 @@
+ {{ include ('skeleton:file', {
+  attributes: attributes,
+  label: content.field_file_label,
+  summary: content.field_file_information,
+  url: field_file.entity.uri.value,
+}) }}
+
+{# how do I get the contents if the file upload in the paragraph type? #}

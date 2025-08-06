@@ -1,20 +1,6 @@
-/* just so the awkward looks less awkward during build*/
-nav {
-  ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    padding-block: 0.5rem;
-  }
-}
-
-.contextual-region ul:not(.contextual-links) {
+nav ul {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -23,5 +9,109 @@ nav {
   li {
     margin: 0;
     padding: 0;
+    border-inline-end: 1px solid hsla(260, 10%, 100%, 0.5);
+    
+    &:last-child {
+      border: none;
+    }
+  }
+  
+  a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    inline-size: 100%;
+    font-weight: 400;
+    
+    &:hover {
+      color: var(--skeleton-color-fg-inverted);
+      background-color: hsla(260, 10%, 100%, 0.125);
+      text-decoration: none;
+    }
+  }
+}
+
+
+/*** TODO - integrate menu component when it is added to the system ****/
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  
+  &__item {
+    inline-size: 100%;
+    margin: 0;
+  }
+  
+  &__link {
+    display: block;
+    padding: 0.5rem;
+    inline-size: 100%;
+    font-size: var(--skeleton-size-text-normal);
+    font-weight: 600;
+    color: var(--skeleton-color-link-default);
+    background-color: transparent;
+    
+    &:hover,
+    &:active {
+      background-color: var(--skeleton-color-bg-neutral-light);
+    }
+  }
+  
+  &--vertical {
+    flex-direction: column;
+  }
+  
+  &.menu--local-tasks {
+    gap: 1rem;
+  }
+}
+
+
+/*** TODO - integrate title component when it is added to the system ****/
+.title {
+  &--menu {
+    font-family: var(--skeleton-font-primary);
+    font-size: var(--skeleton-size-text-md);
+  }
+  
+  &--page {
+    margin-block: 1.5rem;
+  }
+}
+
+
+/*** TODO - integrate table component when it is added to the system ****/
+.table {
+  border: 4px solid solid var(--skeleton-color-border-neutral);
+  width: 100%;
+  /* border-spacing: 0; */
+  display: table;
+  box-sizing: border-box;
+  
+  thead {
+    background-color: var(--skeleton-color-bg-neutral);
+  }
+  
+  th {
+    text-align: start;
+    padding: 0.5rem;
+    font-size: var(--skeleton-size-text-normal);
+  }
+  
+  tr {
+    border-collapse: collapse;
+    border: 2px solid solid var(--skeleton-color-border-neutral);
+  }
+  
+  td {
+    background-color: var(--skeleton-color-bg-base);
+    border-block-end: 1px solid var(--skeleton-color-border-neutral);
+    padding: 0.5rem;
+    font-size: var(--skeleton-size-text-small);
+  }
+  
+  tr:nth-child(even) td {
+    background-color: var(--skeleton-color-bg-neutral-light);
   }
 }

@@ -1,12 +1,14 @@
 .details {
-  background-color: var(--skeleton-color-bg-neutral);
+  background-color: var(--skeleton-color-bg-base);
   border: 1px solid var(--skeleton-color-border-base);
   border-radius: var(--skeleton-size-radius-sm);
   margin: 0.125rem 0;
+  overflow: hidden;
   
 }
   
   .details__summary {
+    background-color: var(--skeleton-color-bg-neutral);
     position: relative;
     padding: 0.75rem 1rem;
     font-size: 1.2rem;
@@ -19,16 +21,19 @@
     font-size: 1rem;
     line-height: 1.4;
     display: block;
+    overflow: hidden;
   }
   
   /*** Variants ***/
   
   .details--fancy {
-    background-color: var(--skeleton-color-bg-primary);
+    border: 1px solid var(--skeleton-color-border-primary);
   }
   
   .details--fancy .details__summary {
+      background-color: var(--skeleton-color-bg-primary);
       padding: 0.5rem 1.5rem 0.5rem 2.5rem;
+      color: var(--skeleton-color-fg-inverted);
     }
   
   .details--fancy .details__summary::marker {

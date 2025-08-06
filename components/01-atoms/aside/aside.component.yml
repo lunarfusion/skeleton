@@ -19,6 +19,7 @@ props:
         - 'width-80'
         - 'width-40'
         - 'width-30'
+      default: 'width-40'
 
     float:
       type: string

@@ -1,5 +1,5 @@
 name: Blockquote
-description: A text excerpt from a publication, including a citation of the source.
+description: An exact text excerpt from a publication, including a citation of the source.
 group: "Atoms"
 status: experimental
 links:
@@ -8,10 +8,14 @@ links:
 props:
   type: object
 
+  properties:
+    url:
+      title: URL
+      description: "The citation URL."
+      $ref: "ui-patterns://url"
+
 slots:
   content:
     title: Blockquote content
   cite:
     title: Citation of content source
-  url:
-    title: Citation URL
