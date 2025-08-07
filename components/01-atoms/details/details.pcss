@@ -1,8 +1,6 @@
 .details {
   background-color: var(--skeleton-color-bg-base);
-  border: 1px solid var(--skeleton-color-border-base);
-  border-radius: var(--skeleton-size-radius-sm);
-  margin: 0.125rem 0;
+  border: 2px solid var(--skeleton-color-border-neutral);
   overflow: hidden;
   
   &__summary {
@@ -14,7 +12,7 @@
   }
   
   &__content {
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: var(--skeleton-color-bg-base);
     font-size: 1rem;
     line-height: 1.4;
@@ -22,15 +20,37 @@
     overflow: hidden;
   }
   
+  /* border radius only top and bottom */
+  &:first-of-type {
+    border-start-start-radius: var(--skeleton-size-radius-sm);
+    border-start-end-radius: var(--skeleton-size-radius-sm);
+    border-width: 2px;
+    border-block-end-width: 0.5px;
+  }
+  
+  &:last-of-type {
+    border-end-start-radius: var(--skeleton-size-radius-sm);
+    border-end-end-radius: var(--skeleton-size-radius-sm);
+    border-width: 2px;
+    border-block-start-width: 0.5px;
+  }
+  
+  &:not(:first-of-type):not(:last-of-type) {
+    border-block-width: 0.5px;
+    ;
+  }
+  
+  
   
   /*** Variants ***/
   &--fancy {
-    border: 1px solid var(--skeleton-color-border-primary);
+    border-color: var(--skeleton-color-border-primary);
     
     .details__summary {
       background-color: var(--skeleton-color-bg-primary);
-      padding: 0.5rem 1.5rem 0.5rem 2.5rem;
-      color: var(--skeleton-color-fg-inverted);
+      padding-inline-start: 2.5rem;
+      color: var(--skeleton-color-fg-base);
+      overflow: hidden;
       
       &::marker {
         content: " ";

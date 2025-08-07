@@ -6,9 +6,24 @@
   ]
 %}
 
+
+{% if multiple %}
+
+<div class="accordion">
+  <details{{ attributes .addClass(classes) }}>
+    <summary class="details__summary">{{ summary_text }}</summary>
+    <div class="details__content">
+      {{ content }}
+    </div>
+  </details>
+</div>
+
+{% else %}
 <details{{ attributes .addClass(classes) }}>
   <summary class="details__summary">{{ summary_text }}</summary>
   <div class="details__content">
     {{ content }}
   </div>
 </details>
+
+{% endif %}
