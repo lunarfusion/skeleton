@@ -1,6 +1,6 @@
-name: file
+name: Download
 description: A file that can be downloaded. May contain information about the file.
-group: "Molecules"
+group: "Atoms"
 status: experimental
 links:
    - "https://github.com/lunarfusion/skeleton"
@@ -19,25 +19,20 @@ props:
   type: object
   properties:
 
-      url:
-        title: URL
-        description: "The URL of the file."
-        $ref: "ui-patterns://url"
+  url:
+    title: "File URL"
+    type: string
+    description: "The URL of the file."
 
 slots:
   label:
-    title: Label
-    description: 'Label text of the file'
-
+    title: "File label"
   size:
-    title: Size
-    description: 'File size of the download'
-
-  summary:
-    title: Summary
-    description: 'Summary of the file contents'
+    title: "Size of file"
+  description:
+    title: "File description"
 
 libraryOverrides:
     css:
       theme:
-        file.css: {}
+        download.css: {}

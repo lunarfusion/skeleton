@@ -4,29 +4,31 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-block: 0.5rem;
+  padding-block: 1rem;
 }
-  
+
   nav ul li {
     margin: 0;
     padding: 0;
     border-inline-end: 1px solid hsla(260, 10%, 100%, 0.5);
   }
-  
+
   nav ul li:last-child {
       border: none;
     }
-  
+
   nav ul a {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     text-decoration: none;
     inline-size: 100%;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--skeleton-color-fg-inverted);
   }
-  
+
   nav ul a:hover {
       color: var(--skeleton-color-fg-inverted);
-      background-color: hsla(260, 10%, 100%, 0.125);
+      background-color: hsla(260, 10%, 100%, 0.25);
       text-decoration: none;
     }
 
@@ -86,6 +88,14 @@ nav ul {
 
 .title--page {
     margin-block: 1.5rem;
+  }
+
+
+/* center title on feature pages */
+
+
+.page--feature .title {
+    margin-inline: auto;
   }
 
 

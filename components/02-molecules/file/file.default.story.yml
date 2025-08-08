@@ -1,9 +1,0 @@
-name: Default
-
-props:
-  url: "https://github.com/lunarfusion/skeleton"
-
-slots:
-  label: "filename"
-  size: "124kb"
-  summary: "Assets for work that you may need to complete."

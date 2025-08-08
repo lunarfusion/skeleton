@@ -16,7 +16,6 @@
   ]
 %}
 
-
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass(classes)}}>
@@ -33,7 +32,7 @@
   <div{{ attributes }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-      <div{{ attributes.addClass(classes)}}>
+      <div{{ attributes.addClass(classes)}}></div>
     {% endif %}
     {% for item in items %}
       <div{{ item.attributes.addClass(col_classes) }}>{{ item.content }}</div>
@@ -43,3 +42,4 @@
     {% endif %}
   </div>
 {% endif %}
+

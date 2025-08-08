@@ -109,16 +109,23 @@
       max-inline-size: calc(50% - var(--skeleton-size-gap-x));
     }
     
-    .col:nth-child(2) {
-      flex: 0 0 calc(25% - var(--skeleton-size-gap-x));
-      max-inline-size: calc(25% - var(--skeleton-size-gap-x));
-    }
-    
+    .col:nth-child(2),
     .col:nth-child(3) {
       flex: 0 0 calc(25% - var(--skeleton-size-gap-x));
       max-inline-size: calc(25% - var(--skeleton-size-gap-x));
     }
+    
+    @media (max-width: 994px) {
+
+      .col:nth-child(2),
+      .col:nth-child(3) {
+        flex: 0 0 calc(50% - var(--skeleton-size-gap-x));
+        max-inline-size: calc(50% - var(--skeleton-size-gap-x));
+      }
+    }
   }
+  
+  
   
   
   
@@ -140,8 +147,17 @@
       flex: 0 0 calc(33.33333% - var(--skeleton-size-gap-x));
       max-inline-size: calc(33.33333% - var(--skeleton-size-gap-x));
     }
+    
+    @media (max-width: 994px) {
+      .col {
+        flex: 0 0 calc(50% - var(--skeleton-size-gap-x));
+        max-inline-size: calc(50% - var(--skeleton-size-gap-x));
+      }
+    }
   }
   
+  
+  /* all columns full width on small screen */
   @media (max-width: 776px) {
     
     &--50-50,

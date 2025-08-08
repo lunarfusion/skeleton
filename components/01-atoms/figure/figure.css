@@ -3,11 +3,13 @@
   flex-direction: column;
   gap: 0.5rem;
   border: var(--skeleton-color-border-primary);
-  margin-block: 2rem;
 }
-  
+
+  /* add margin when in main node content */
+  .field--body .figure {
+    margin-block: 2rem;
+  }
   .figure__image {}
-  
   .figure__caption {
     padding: 0.25rem 0.5rem;
     font-size: var(--skeleton-size-text-small);

@@ -1,0 +1,26 @@
+name: Download Group
+description: A group of file downloads.
+group: "Molecules"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+  type: object
+  properties:
+    title_tag:
+      title: "HTML tag for title"
+      type: string
+      enum:
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+
+slots:
+  title:
+    title: Title
+  downloads:
+    title: "Download items"
+    description: "Download link components."

@@ -1,6 +1,6 @@
 
 {# Get the selected layout to provide below as a class #}
-{% set layout = content.field_flex_row_layout.0|render|lower|replace({' ': "-", '%': "", ",": ""}) %}
+{% set layout = content.field_flex_row_layout.0|render|lower|replace({'_': "-",' ': "-", '%': "", ",": ""}) %}
 {% set background = content.field_background.0|render|lower|replace({' ': "-", '%': "", ",": ""}) %}
 
 {%
@@ -17,7 +17,7 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ content }}
+      {{ content.field_content_column }}
     {% endblock %}
   </div>
 {% endblock paragraph %}

@@ -1,20 +1,14 @@
 {%
   set classes = [
-    'file',
-    variant and variant != 'default' ? 'file--' ~ variant,
+    'download',
+    variant and variant != 'default' ? 'download--' ~ variant,
   ]
 %}
 
+{% set download_attributes = create_attribute() %}
 
-{% set link_attributes = create_attribute() %}
-
-{% if url %}
-  {% set link_attributes = link_attributes.setAttribute('href', url) %}
-{% endif %}
-
-
-<div{{ attributes.addClass(classes) }}>
-  <span class="file__icon">
+<div{{ download_attributes.addClass(classes) }}>
+  <span class="download__icon">
     {% if variant == 'pdf' %}
       <svg class="icon icon--M icon--file-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
         <use xlink:href="/themes/custom/skeleton/dist/icons/sprites/solid.svg#file-pdf" href="/themes/custom/skeleton/dist/icons/sprites/solid.svg#file-pdf"></use>
@@ -37,14 +31,23 @@
     {% endif %}
   </span>
 
+  {% if label %}
+    <span class="download__label">
+      {% if url %}
+        <a{{ attributes.setAttribute('href', url).addClass('link') }}>
+      {% endif %}
+        {{ label }}
+      {% if url %}
+        </a>
+      {% endif %}
+    </span>
 
-{# How do I use the file upload field in this template? #}
-  <span class="file__label">
-    <a{{ link_attributes.addClass('link') }}>
-      {{ label }}
-    </a>
-  </span>
+    {% if size %}
+      <span class="download__size">{{ size }}</span>
+    {% endif %}
 
-  <div class="file__size">{{ size }}</div>
-  <div class="file__summary">{{ summary }}</div>
+    {% if description %}
+      <span class="download__description">{{ description }}</span>
+    {% endif %}
+  {% endif %}
 </div>

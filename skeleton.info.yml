@@ -20,6 +20,7 @@ regions:
   header_top: 'Header Top'
   header: 'Header'
   header_bottom: 'Header Bottom'
+  banner: 'Banner'
   content_top: 'Content Top'
   content: 'Content'
   sidebar_first: 'Left sidebar'

@@ -1,0 +1,22 @@
+{%
+  set classes = [
+    'download-group',
+    variant and variant != 'default' ? 'download-group--' ~ variant,
+  ]
+%}
+
+{% set title_tag = title_tag|default('h4') %}
+
+{% if downloads %}
+  <div{{ attributes.addClass(classes) }}>
+    {% if title %}
+      <{{ title_tag }} class="fr-downloads-group__title">{{ title }}</{{ title_tag }}>
+    {% endif %}
+    <ul>
+      {% set downloads = downloads and downloads is not sequence ? [downloads] : downloads %}
+      {% for download in downloads %}
+        <li>{{ download }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

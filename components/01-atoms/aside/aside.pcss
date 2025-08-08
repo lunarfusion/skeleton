@@ -3,9 +3,13 @@
   display: flex;
   flex-direction: column;
   padding: 1.25rem 1.5rem;
-  margin: 1.5rem;
   background-color: var(--skeleton-color-bg-neutral);
   border-radius: var(--skeleton-size-radius-med);
+  
+  /* add margin when in main node content */
+  .field--body & {
+    margin: 1.5rem;
+  }
   
   /*** Child Elements ***/
   &__title {

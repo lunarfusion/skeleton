@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a link to a file.
+ *
+ * Available variables:
+ * - attributes: The HTML attributes for the containing element.
+ * - link: A link to the file.
+ * - file_size: The size of the file.
+ *
+ * @see template_preprocess_file_link()
+ *
+ * @ingroup themeable
+ */
+#}
+
+
+{{ include ('skeleton:download', {
+  attributes: attributes,
+  url: link['#url'].toString(),
+  label: link['#title'],
+  size: file_size,
+  description: description,
+}) }}

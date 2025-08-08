@@ -1,7 +1,9 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  border: 1px solid var(--skeleton-color-border-base);
-  margin: 1rem;
 }
+
+  /* add margin when in main node content */
+  .field--body .accordion {
+    margin: 1rem;
+  }
