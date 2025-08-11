@@ -1,4 +1,4 @@
 skeleton:
   css:
     theme:
-      dist/style.css: {}
+      assets/style.css: {}

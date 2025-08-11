@@ -82,7 +82,7 @@ function _vite_replace_library(array &$library, string $path, array $options): v
   }
 
   $local = Settings::get('hot_module_replacement');
-  $dir = 'dist';
+  $dir = 'dist/css';
 
   // Remove the old library info.
   unset($library[$path]);

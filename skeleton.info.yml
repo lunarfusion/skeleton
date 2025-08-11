@@ -4,8 +4,8 @@ description:
 type: theme
 core_version_requirement: ^11
 base theme: false
-logo: dist/assets/logo.svg
-screenshot: dist/assets/screenshot.png
+logo: assets/images/logo.svg
+screenshot: assets/images/screenshot.png
 
 # Libraries
 libraries:

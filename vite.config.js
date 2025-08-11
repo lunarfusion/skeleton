@@ -16,7 +16,7 @@ function drupalSDC() {
     async handleHotUpdate({ file, server }) {
       console.log('Hot update:', file);
       // Check if the changed file is a .pcss file
-      if (file.includes('components') && file.endsWith('.pcss')) {
+      if (file.includes('components') || file.includes('css') && file.endsWith('.pcss')) {
         try {
           const css = await readFile(file, 'utf-8');
           let result = await postcss([postcssImport(), postcssNested(), postcssCustomMedia(), autoprefixer()]).process(css, {
@@ -62,7 +62,7 @@ export default {
     manifest: true,
     rollupOptions: {
       // overwrite default .html entry
-      input: ['/dist/style.css', 'dist/js/main.js'],
+      input: ['/assets/style.css', 'assets/js/main.js'],
       // Remove the [hash] since Drupal will take care of that.
       output: {
         entryFileNames: `[name].js`,
