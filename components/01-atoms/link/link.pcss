@@ -2,12 +2,12 @@
 p > a,
 li > a {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
   color: var(--skeleton-color-link-default);
   text-decoration: 11% underline var(--skeleton-color-link-decoration);
   font-weight: 600;
   transition: var(--skeleton-transition-basic);
-  
+
   /*** Focus Indicator ***/
   &::before {
     position: absolute;
@@ -26,31 +26,31 @@ li > a {
     border-radius: var(--skeleton-size-radius-sm);
     opacity: 0;
   }
-  
+
   &:focus,
   &.focus {
     color: var(--skeleton-color-link-focus);
   }
-  
+
   &:focus-visible,
   &.focus-visible {
     color: var(--skeleton-color-link-focus);
-    
+
     &::before {
       opacity: 1;
     }
   }
-  
+
   &:hover,
   &.hover {
     text-decoration: 11% underline var(--skeleton-color-link-decoration-hover);
     color: var(--skeleton-color-link-hover);
-    
+
     &::before {
       background-size: 100% 100%;
     }
   }
-  
+
   &:active,
   &.active,
   &:focus:active,
@@ -59,33 +59,33 @@ li > a {
   &:active:focus-visible {
     color: var(--skeleton-color-link-active);
   }
-  
+
   &.disabled,
   &.disabled:hover,
   &:disabled,
   &:disabled:hover {
     color: var(--skeleton-color-link-disabled);
     text-decoration-color: currentColor;
-    
+
     &::before {
       display: none;
     }
   }
-  
+
   /*** prevent focus from firing on click ***/
   &:-webkit-focus-ring {
     outline: none;
   }
-  
+
   /*** VARIANT - Quiet ***/
   &--quiet {
     text-decoration: none;
-    
+
     &:hover {
       text-decoration: none;
     }
   }
-  
+
   /*** VARIANT - CTA ***/
   &--cta {
     --cta-icon-transform: 0.25rem;
@@ -101,12 +101,12 @@ li > a {
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: 0% 4px;
-    
+
     &:hover {
       text-decoration: none;
       background-size: 100% 4px;
     }
-    
+
     &::after {
       content: "\f061";
       font-family: "Font Awesome 5 Free";
@@ -126,20 +126,20 @@ li > a {
       color: inherit;
       transition: var(--skeleton-transition-boing);
     }
-    
+
     &:hover::after {
       transform: translateX(var(--cta-icon-transform)) scale(1.1);
     }
-    
+
     &.disabled::after {
       color: inherit;
     }
   }
-  
+
   /*** VARIANT - External ***/
   &--external {
     padding-inline-end: 1.25rem;
-    
+
     &::after {
       content: "\f08e";
       font-family: "Font Awesome 5 Free";

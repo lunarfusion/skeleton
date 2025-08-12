@@ -23,7 +23,7 @@
   }
   /*** VARIANTS - style ***/
   .aside--fancy {
-    background-color: var(--skeleton-color-bg-primary-light);
+    background-color: var(--skeleton-color-bg-primary);
   }
   /*** VARIANTS - float ***/
   .aside--float-left {

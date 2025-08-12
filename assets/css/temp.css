@@ -4,37 +4,39 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-block: 1rem;
+  padding: 0.75rem;
 }
-
+  
   nav ul li {
     margin: 0;
     padding: 0;
     border-inline-end: 1px solid hsla(260, 10%, 100%, 0.5);
   }
-
+  
   nav ul li:last-child {
       border: none;
     }
-
+  
   nav ul a {
     padding: 0.75rem 1rem;
     text-decoration: none;
     inline-size: 100%;
     font-weight: 500;
     font-size: 1.1rem;
-    color: var(--skeleton-color-fg-inverted);
+    color: var(--skeleton-color-fg-base);
   }
-
+  
   nav ul a:hover {
       color: var(--skeleton-color-fg-inverted);
       background-color: hsla(260, 10%, 100%, 0.25);
       text-decoration: none;
     }
 
+#block-skeleton-main-menu {
+  background-color: var(--skeleton-color-bg-primary-subdued);
+}
 
 /*** TODO - integrate menu component when it is added to the system ****/
-
 
 .menu {
   list-style-type: none;
@@ -43,12 +45,10 @@ nav ul {
   display: flex;
 }
 
-
 .menu__item {
     inline-size: 100%;
     margin: 0;
   }
-
 
 .menu__link {
     display: block;
@@ -60,47 +60,37 @@ nav ul {
     background-color: transparent;
   }
 
-
 .menu__link:hover,
     .menu__link:active {
       background-color: var(--skeleton-color-bg-neutral-light);
     }
 
-
 .menu--vertical {
     flex-direction: column;
   }
-
 
 .menu.menu--local-tasks {
     gap: 1rem;
   }
 
-
 /*** TODO - integrate title component when it is added to the system ****/
-
 
 .title--menu {
     font-family: var(--skeleton-font-primary);
     font-size: var(--skeleton-size-text-md);
   }
 
-
 .title--page {
     margin-block: 1.5rem;
   }
 
-
 /* center title on feature pages */
-
 
 .page--feature .title {
     margin-inline: auto;
   }
 
-
 /*** TODO - integrate table component when it is added to the system ****/
-
 
 .table {
   border: 4px solid solid var(--skeleton-color-border-neutral);
@@ -110,11 +100,9 @@ nav ul {
   box-sizing: border-box;
 }
 
-
 .table thead {
     background-color: var(--skeleton-color-bg-neutral);
   }
-
 
 .table th {
     text-align: start;
@@ -122,12 +110,10 @@ nav ul {
     font-size: var(--skeleton-size-text-normal);
   }
 
-
 .table tr {
     border-collapse: collapse;
     border: 2px solid solid var(--skeleton-color-border-neutral);
   }
-
 
 .table td {
     background-color: var(--skeleton-color-bg-base);
@@ -135,7 +121,6 @@ nav ul {
     padding: 0.5rem;
     font-size: var(--skeleton-size-text-small);
   }
-
 
 .table tr:nth-child(even) td {
     background-color: var(--skeleton-color-bg-neutral-light);

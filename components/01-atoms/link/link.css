@@ -2,7 +2,7 @@
 p > a,
 li > a {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
   color: var(--skeleton-color-link-default);
   -webkit-text-decoration: 11% underline var(--skeleton-color-link-decoration);
           text-decoration: 11% underline var(--skeleton-color-link-decoration);

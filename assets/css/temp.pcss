@@ -4,32 +4,36 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-block: 1rem;
-
+  padding: 0.75rem;
+  
   li {
     margin: 0;
     padding: 0;
     border-inline-end: 1px solid hsla(260, 10%, 100%, 0.5);
-
+    
     &:last-child {
       border: none;
     }
   }
-
+  
   a {
     padding: 0.75rem 1rem;
     text-decoration: none;
     inline-size: 100%;
     font-weight: 500;
     font-size: 1.1rem;
-    color: var(--skeleton-color-fg-inverted);
-
+    color: var(--skeleton-color-fg-base);
+    
     &:hover {
       color: var(--skeleton-color-fg-inverted);
       background-color: hsla(260, 10%, 100%, 0.25);
       text-decoration: none;
     }
   }
+}
+
+#block-skeleton-main-menu {
+  background-color: var(--skeleton-color-bg-primary-subdued);
 }
 
 
@@ -39,12 +43,12 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-
+  
   &__item {
     inline-size: 100%;
     margin: 0;
   }
-
+  
   &__link {
     display: block;
     padding: 0.5rem;
@@ -53,17 +57,17 @@ nav ul {
     font-weight: 600;
     color: var(--skeleton-color-link-default);
     background-color: transparent;
-
+    
     &:hover,
     &:active {
       background-color: var(--skeleton-color-bg-neutral-light);
     }
   }
-
+  
   &--vertical {
     flex-direction: column;
   }
-
+  
   &.menu--local-tasks {
     gap: 1rem;
   }
@@ -76,11 +80,11 @@ nav ul {
     font-family: var(--skeleton-font-primary);
     font-size: var(--skeleton-size-text-md);
   }
-
+  
   &--page {
     margin-block: 1.5rem;
   }
-
+  
   /* center title on feature pages */
   .page--feature & {
     margin-inline: auto;
@@ -95,29 +99,29 @@ nav ul {
   /* border-spacing: 0; */
   display: table;
   box-sizing: border-box;
-
+  
   thead {
     background-color: var(--skeleton-color-bg-neutral);
   }
-
+  
   th {
     text-align: start;
     padding: 0.5rem;
     font-size: var(--skeleton-size-text-normal);
   }
-
+  
   tr {
     border-collapse: collapse;
     border: 2px solid solid var(--skeleton-color-border-neutral);
   }
-
+  
   td {
     background-color: var(--skeleton-color-bg-base);
     border-block-end: 1px solid var(--skeleton-color-border-neutral);
     padding: 0.5rem;
     font-size: var(--skeleton-size-text-small);
   }
-
+  
   tr:nth-child(even) td {
     background-color: var(--skeleton-color-bg-neutral-light);
   }

@@ -11,7 +11,7 @@
 /* placeholder */
 
 .layout--header {
-    background-color: var(--skeleton-color-bg-primary-dark);
+    background-color: var(--skeleton-color-bg-primary);
   }
 
 .layout--banner {
@@ -32,5 +32,5 @@
 
 .layout--footer {
     margin: 0;
-    background-color: var(--skeleton-color-bg-primary-dark);
+    background-color: var(--skeleton-color-bg-primary);
   }

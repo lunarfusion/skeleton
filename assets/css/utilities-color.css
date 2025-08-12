@@ -16,38 +16,26 @@
 }
 
 /* neutrals */
-.bg-neutral-extra-dark {
-  background-color: var(--skeleton-color-bg-neutral-extra-dark);
-}
-
-.bg-neutral-dark {
-  background-color: var(--skeleton-color-bg-neutral-dark);
-}
-
 .bg-neutral {
   background-color: var(--skeleton-color-bg-neutral);
 }
 
-.bg-neutral-light {
-  background-color: var(--skeleton-color-bg-neutral-light);
+.bg-neutral-subdued {
+  background-color: var(--skeleton-color-bg-neutral-subdued);
 }
 
-.bg-neutral-extra-light {
-  background-color: var(--skeleton-color-bg-neutral-extra-light);
+.bg-neutral-extra-subdued {
+  background-color: var(--skeleton-color-bg-neutral-extra-subdued);
 }
 
 
 /* brand */
-.bg-primary-dark {
-  background-color: var(--skeleton-color-bg-primary-dark);
-}
-
 .bg-primary {
   background-color: var(--skeleton-color-bg-primary);
 }
 
-.bg-primary-light {
-  background-color: var(--skeleton-color-bg-primary-light);
+.bg-primary-subdued {
+  background-color: var(--skeleton-color-bg-primary-subdued);
 }
 
 

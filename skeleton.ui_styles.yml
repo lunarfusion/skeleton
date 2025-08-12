@@ -21,23 +21,13 @@ colors_background_color:
     bg-black-static:
       label: "Black static"
       previewed_with: ["fg-white-static"]
-    bg-neutral-extra-dark:
-      label: Neutral Extra Dark
-      previewed_with: ["fg-inverted"]
-    bg-neutral-dark:
-      label: Neutral Dark
-      previewed_with: ["fg-inverted"]
     bg-neutral: Neutral
-    bg-neutral-light: Neutral Light
-    bg-neutral-extra-light: Neutral Extra Light
-    bg-primary-dark:
-      label: "Primary Dark"
-      previewed_with: ["fg-inverted"]
+    bg-neutral-subdued: Neutral Subdued
+    bg-neutral-extra-subdued: Neutral Extra Subdued
     bg-primary:
       label: "Primary"
-      previewed_with: ["fg-inverted"]
-    bg-primary-light:
-      label: "Primary Light"
+    bg-primary-subdued:
+      label: "Primary Subdued"
       previewed_with: ["fg-base"]
     bg-alert-negative: "Negative Alert"
     bg-alert-warning: "Warning Alert"

@@ -2,7 +2,7 @@
   position: relative;
   padding: 1.25rem 1.5rem;
   margin-block: 0.5rem;
-  background-color: var(--skeleton-color-bg-neutral-light);
+  background-color: var(--skeleton-color-bg-neutral-subdued);
   border-radius: var(--skeleton-size-radius-sm);
 }
   

@@ -55,10 +55,14 @@
   --skeleton-color-blue-090: hsl(220, 100%, 90%);
   
   /*** Violet ***/
-  --skeleton-color-violet-010: hsl(260, 100%, 10%);
-  --skeleton-color-violet-020: hsl(260, 100%, 20%);
-  --skeleton-color-violet-040: hsl(260, 100%, 40%);
-  --skeleton-color-violet-060: hsl(260, 100%, 60%);
-  --skeleton-color-violet-080: hsl(260, 100%, 80%);
-  --skeleton-color-violet-090: hsl(260, 100%, 90%);
+  --skeleton-color-violet-010: hsl(260, 75%, 10%);
+  --skeleton-color-violet-020: hsl(260, 75%, 20%);
+  --skeleton-color-violet-030: hsl(260, 75%, 30%);
+  --skeleton-color-violet-040: hsl(260, 75%, 40%);
+  --skeleton-color-violet-055: hsl(260, 75%, 55%);
+  --skeleton-color-violet-060: hsl(260, 75%, 60%);
+  --skeleton-color-violet-065: hsl(260, 75%, 65%);
+  --skeleton-color-violet-070: hsl(260, 75%, 70%);
+  --skeleton-color-violet-080: hsl(260, 75%, 80%);
+  --skeleton-color-violet-090: hsl(260, 75%, 90%);
 }

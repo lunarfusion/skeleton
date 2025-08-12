@@ -1,6 +1,6 @@
 <div class="page page--default">
 
-  <header role="banner" class="layout layout--header colors-inverted">
+  <header role="banner" class="layout layout--header">
     <div class="container container--full">
       {{ page.header_top }}
       {{ page.header }}
@@ -61,13 +61,19 @@
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo" class="layout layout--footer colors-inverted">
-      <div class="container container--full">
-        {{ page.footer_top }}
-        {{ page.footer }}
-        {{ page.footer_bottom }}
-      </div>
-    </footer>
+    <footer role="contentinfo" class="layout layout--footer">
+    <div class="container container--full">
+      {{ page.footer_top }}
+    </div>
+
+    <div class="container">
+      {{ page.footer }}
+    </div>
+
+    <div class="container container--full">
+      {{ page.footer_bottom }}
+    </div>
+  </footer>
   {% endif %}
 
 </div>{# /.layout-container #}
