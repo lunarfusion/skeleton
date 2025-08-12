@@ -12,6 +12,9 @@
 
 .layout--header {
     background-color: var(--skeleton-color-bg-primary-dark);
+  }
+
+.layout--banner {
     margin-block-end: 2rem;
   }
 

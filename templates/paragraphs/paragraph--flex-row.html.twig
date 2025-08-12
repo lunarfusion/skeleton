@@ -16,8 +16,17 @@
 
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
-    {% block content %}
-      {{ content.field_content_column }}
-    {% endblock %}
+
+  {% if content.field_full_width['#items'].value == 0 %}
+    <div class="container">
+  {% endif %}
+
+      {% block content %}
+        {{ content.field_content_column }}
+      {% endblock %}
+
+    {% if content.field_full_width['#items'].value == 0 %}
+      </div>
+    {% endif %}
   </div>
 {% endblock paragraph %}

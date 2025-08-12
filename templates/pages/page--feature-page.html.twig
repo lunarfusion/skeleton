@@ -11,8 +11,14 @@
   <main role="main" class="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout layout--content-top">
+    <div class="layout layout--banner">
       <div class="container container--full">
+        {{ page.banner }}
+      </div>
+    </div>
+
+    <div class="layout layout--content-top">
+      <div class="container">
         {{ page.content_top }}
       </div>
     </div>
