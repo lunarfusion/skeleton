@@ -31,23 +31,5 @@
     {% endif %}
   </span>
 
-  {% if label %}
-    <span class="download__label">
-      {% if url %}
-        <a{{ attributes.setAttribute('href', url).addClass('link') }}>
-      {% endif %}
-        {{ label }}
-      {% if url %}
-        </a>
-      {% endif %}
-    </span>
-
-    {% if size %}
-      <span class="download__size">{{ size }}</span>
-    {% endif %}
-
-    {% if description %}
-      <span class="download__description">{{ description }}</span>
-    {% endif %}
-  {% endif %}
+  {{ file }}
 </div>

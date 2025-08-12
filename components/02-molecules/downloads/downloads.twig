@@ -1,6 +1,6 @@
 {%
   set classes = [
-    'download-group',
+    'downloads',
     variant and variant != 'default' ? 'download-group--' ~ variant,
   ]
 %}
@@ -10,13 +10,13 @@
 {% if downloads %}
   <div{{ attributes.addClass(classes) }}>
     {% if title %}
-      <{{ title_tag }} class="fr-downloads-group__title">{{ title }}</{{ title_tag }}>
+      <{{ title_tag }} class="downloads__title">{{ title }}</{{ title_tag }}>
     {% endif %}
-    <ul>
+    <div class="downloads__items">
       {% set downloads = downloads and downloads is not sequence ? [downloads] : downloads %}
       {% for download in downloads %}
-        <li>{{ download }}</li>
+        {{ download }}
       {% endfor %}
-    </ul>
+    </div>
   </div>
 {% endif %}

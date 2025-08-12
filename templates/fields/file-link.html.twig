@@ -1,42 +1,7 @@
-{#
-/**
- * @file
- * Default theme implementation for a link to a file.
- *
- * Available variables:
- * - attributes: The HTML attributes for the containing element.
- * - link: A link to the file.
- * - file_size: The size of the file.
- *
- * @see template_preprocess_file_link()
- *
- * @ingroup themeable
- */
-#}
-
-{# original template #}
-{# <span{{ attributes }}>{{ link }}</span>
-{% if file_size %}
-  <span>({{ file_size }})</span>
-{% endif %} #}
-
-
-{# working include #}
-{{ include ('skeleton:download', {
-  attributes: attributes,
+{{ include ('skeleton:file', {
+  attributes: file_attributes,
   url: link['#url'].toString(),
   label: link['#title'],
   size: file_size,
-  description: description,
+  description: description
 }) }}
-
-
-{# how do I get the variant working in the download paragraph? #}
-{# {{ include ('skeleton:download', {
-  attributes: attributes,
-  url: link['#url'].toString(),
-  label: link['#title'],
-  size: file_size,
-  description: description,
-  variant: paragraph.field_file_type.0.value,
-}) }} #}

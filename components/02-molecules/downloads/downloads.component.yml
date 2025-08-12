@@ -1,5 +1,5 @@
-name: Download Group
-description: A group of file downloads.
+name: Downloads
+description: One or more file downloads with optional title.
 group: "Molecules"
 status: experimental
 links:
@@ -23,4 +23,4 @@ slots:
     title: Title
   downloads:
     title: "Download items"
-    description: "Download link components."
+    description: "Download file link components."

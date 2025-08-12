@@ -16,7 +16,7 @@ function drupalSDC() {
     async handleHotUpdate({ file, server }) {
       console.log('Hot update:', file);
       // Check if the changed file is a .pcss file
-      if (file.includes('components') || file.includes('css') && file.endsWith('.pcss')) {
+      if (file.includes('components') && file.endsWith('.pcss') || file.includes('css') && file.endsWith('.pcss')) {
         try {
           const css = await readFile(file, 'utf-8');
           let result = await postcss([postcssImport(), postcssNested(), postcssCustomMedia(), autoprefixer()]).process(css, {

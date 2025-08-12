@@ -1,0 +1,81 @@
+name: Default
+
+props:
+  title_tag: h4
+
+slots:
+  title: "Assets to Download"
+  downloads:
+    - type: component
+      component: "skeleton:download"
+      variant: "default"
+      slots:
+        file:
+        - type: component
+          component: "skeleton:file"
+          slots:
+            label: "download_file"
+            description: "A description of the file to be downloaded"
+            size: "132kb"
+            url: "#"
+
+    - type: component
+      component: "skeleton:download"
+      variant: "image"
+      slots:
+        file:
+        - type: component
+          component: "skeleton:file"
+          slots:
+            label: "download_file.jpg"
+            description: "A description of the file to be downloaded"
+            size: "24kb"
+            url: "#"
+
+    - type: component
+      component: "skeleton:download"
+      variant: "zip"
+      slots:
+        file:
+        - type: component
+          component: "skeleton:file"
+          slots:
+            label: "download_file.zip"
+            description: "A description of the file to be downloaded"
+            size: "2mb"
+            url: "#"
+
+    - type: component
+      component: "skeleton:download"
+      variant: "pdf"
+      slots:
+        file:
+        - type: component
+          component: "skeleton:file"
+          slots:
+            label: "download_file.pdf"
+            description: "A description of the file to be downloaded"
+            size: "0.5mb"
+            url: "#"
+  # downloads:
+  # - type: component
+  #   component: "skeleton:file"
+  #   slots:
+  #     label: "download_file.jpg"
+  #     description: "A description of the file to be downloaded"
+  #     size: "24kb"
+  #     url: "#"
+  # - type: component
+  #   component: "skeleton:file"
+  #   slots:
+  #     label: "download_file.pdf"
+  #     description: "A description of the file to be downloaded"
+  #     size: "50kb"
+  #     url: "#"
+  # - type: component
+  #   component: "skeleton:file"
+  #   slots:
+  #     label: "download_file.zip"
+  #     description: "A description of the file to be downloaded"
+  #     size: "2mb"
+  #     url: "#"

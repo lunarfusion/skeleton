@@ -1,38 +1,27 @@
-name: Download
+name: File
 description: A file that can be downloaded. May contain information about the file.
 group: "Atoms"
 status: experimental
 links:
    - "https://github.com/lunarfusion/skeleton"
 
-variants:
-  default:
-    title: default
-  pdf:
-    title: pdf
-  zip:
-    title: zip
-  image:
-    title: image
-
 props:
   type: object
   properties:
-
-  url:
-    title: "File URL"
-    type: string
-    description: "The URL of the file."
+    url:
+      title: "File URL"
+      type: string
+      description: "The URL of the file."
 
 slots:
   label:
     title: "File label"
   size:
-    title: "Size of file"
+    title: "File Size"
   description:
-    title: "File description"
+    title: "File Description"
 
 libraryOverrides:
     css:
       theme:
-        download.css: {}
+        file.css: {}

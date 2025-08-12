@@ -1,0 +1,28 @@
+name: Download
+description: A file that can be downloaded with an icon which can be customized for the file type.
+group: "Molecules"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+variants:
+  default:
+    title: default
+  pdf:
+    title: pdf
+  zip:
+    title: zip
+  image:
+    title: image
+
+props:
+  type: object
+
+slots:
+  file:
+    title: "File link"
+
+libraryOverrides:
+    css:
+      theme:
+        download.css: {}

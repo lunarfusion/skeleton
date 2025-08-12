@@ -1,6 +1,6 @@
 name: Figure
 status: experimental
-group: atoms
+group: "Atoms"
 
 props:
   type: object

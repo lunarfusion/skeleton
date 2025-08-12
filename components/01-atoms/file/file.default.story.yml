@@ -1,0 +1,10 @@
+name: Default
+
+props:
+  url: "#"
+
+slots:
+  label: "file-name-here.jpg"
+  size: "24kb"
+  description: "A description of the file we are linking to."
+

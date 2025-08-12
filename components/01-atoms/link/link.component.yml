@@ -1,7 +1,7 @@
-name: link
+name: Link
 description: A hyperlink
 status: experimental
-group: "atoms"
+group: "Atoms"
 links:
   - "https://emory.edu"
 

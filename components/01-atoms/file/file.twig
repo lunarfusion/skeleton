@@ -1,0 +1,29 @@
+{%
+  set classes = [
+    'file'
+  ]
+%}
+
+{% set file_attributes = create_attribute() %}
+
+<div{{ file_attributes.addClass(classes) }}>
+  {% if label %}
+    <span class="file__label">
+      {% if url %}
+        <a{{ attributes.setAttribute('href', url).addClass('link') }}>
+      {% endif %}
+        {{ label }}
+      {% if url %}
+        </a>
+      {% endif %}
+    </span>
+
+    {% if size %}
+      <span class="file__size">{{ size }}</span>
+    {% endif %}
+
+    {% if description %}
+      <span class="file__description">{{ description }}</span>
+    {% endif %}
+  {% endif %}
+</div>

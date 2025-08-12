@@ -1,0 +1,16 @@
+name: Default
+
+variant: default
+
+props:
+  url: "#"
+
+slots:
+  file:
+    - type: component
+      component: "skeleton:file"
+      slots:
+        label: "download_file"
+        description: "A description of the file to be downloaded"
+        size: "24kb"
+        url: "#"

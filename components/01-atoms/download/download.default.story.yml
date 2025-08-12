@@ -1,9 +1,0 @@
-name: Default
-
-props:
-  url: "#"
-
-slots:
-  label: "lalalabel"
-  description: "A description of the file to be downloaded"
-  size: "24kb"

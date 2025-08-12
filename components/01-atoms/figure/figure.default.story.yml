@@ -7,7 +7,6 @@ slots:
     alt: image example
   caption: "Figure caption text xxxxx xxxxxxxx xxxx xx xxxxxxx xxxxx."
 
-
 library_wrapper: >
   <div class="node__content">
     <div class="node__content-inner">
