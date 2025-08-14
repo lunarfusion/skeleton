@@ -128,12 +128,12 @@
   border: 1px solid var(--skeleton-color-border-neutral);
 }
 
-.border-color-neutral-light {
-  border: 1px solid var(--skeleton-color-border-neutral-light);
+.border-color-neutral-subdued {
+  border: 1px solid var(--skeleton-color-border-neutral-subdued);
 }
 
-.border-color-neutral-extra-light {
-  border: 1px solid var(--skeleton-color-border-neutral-extra-light);
+.border-color-neutral-extra-subdued {
+  border: 1px solid var(--skeleton-color-border-neutral-extra-subdued);
 }
 
 .border-color-primary {

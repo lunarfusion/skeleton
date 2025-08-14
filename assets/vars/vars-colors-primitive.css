@@ -11,16 +11,29 @@
   /*** Neutral ***/
   --skeleton-color-black: hsl(200, 5%, 0%);
   --skeleton-color-gray-005: hsl(200, 5%, 5%);
-  --skeleton-color-gray-010: hsl(200, 5%, 10%);
-  --skeleton-color-gray-015: hsl(200, 5%, 15%);
-  --skeleton-color-gray-020: hsl(200, 5%, 20%);
-  --skeleton-color-gray-040: hsl(200, 5%, 40%);
-  --skeleton-color-gray-060: hsl(200, 5%, 60%);
-  --skeleton-color-gray-080: hsl(200, 5%, 80%);
-  --skeleton-color-gray-085: hsl(200, 5%, 85%);
-  --skeleton-color-gray-090: hsl(200, 5%, 90%);
-  --skeleton-color-gray-095: hsl(200, 5%, 95%);
-  --skeleton-color-white: hsl(200, 5%, 100%);
+  --skeleton-color-gray-010: hsl(260, 5%, 10%);
+  --skeleton-color-gray-015: hsl(260, 5%, 15%);
+  --skeleton-color-gray-020: hsl(260, 5%, 20%);
+  --skeleton-color-gray-040: hsl(260, 5%, 40%);
+  --skeleton-color-gray-060: hsl(260, 5%, 60%);
+  --skeleton-color-gray-080: hsl(260, 5%, 80%);
+  --skeleton-color-gray-085: hsl(260, 5%, 85%);
+  --skeleton-color-gray-090: hsl(260, 5%, 90%);
+  --skeleton-color-gray-095: hsl(260, 5%, 95%);
+  --skeleton-color-white: hsl(260, 5%, 100%);
+  
+  /*** Neutral Transparent ***/
+  --skeleton-color-black-a05: hsla(260, 5%, 0%, 0.05);
+  --skeleton-color-black-a10: hsla(260, 5%, 0%, 0.1);
+  --skeleton-color-black-a20: hsla(260, 5%, 0%, 0.2);
+  --skeleton-color-black-a30: hsla(260, 5%, 0%, 0.3);
+  --skeleton-color-black-a40: hsla(260, 5%, 0%, 0.4);
+  
+  --skeleton-color-white-a05: hsla(260, 5%, 100%, 0.05);
+  --skeleton-color-white-a10: hsla(260, 5%, 100%, 0.1);
+  --skeleton-color-white-a20: hsla(260, 5%, 100%, 0.2);
+  --skeleton-color-white-a30: hsla(260, 5%, 100%, 0.3);
+  --skeleton-color-white-a40: hsla(260, 5%, 100%, 0.4);
   
   /*** Red ***/
   --skeleton-color-red-010: hsl(350, 71%, 10%);

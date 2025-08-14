@@ -1,7 +1,14 @@
 .accordion {
+  
   display: flex;
   flex-direction: column;
-
+  box-shadow:
+    0 1px 1px var(--skeleton-color-shadow-neutral),
+    0 2px 2px var(--skeleton-color-shadow-neutral),
+    0 4px 4px var(--skeleton-color-shadow-neutral-subdued),
+    0 8px 8px var(--skeleton-color-shadow-neutral-subdued),
+    0 16px 16px var(--skeleton-color-shadow-neutral-subdued);
+  
   /* add margin when in main node content */
   .field--body & {
     margin: 1rem;

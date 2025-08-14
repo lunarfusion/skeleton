@@ -31,11 +31,7 @@
 
 {% set classes = [
   'block',
-  'block--page-title',
-  'title',
-  'title--page',
-  'col',
-  'col--8'
+  'block--page-title'
 ] %}
 
 {% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
@@ -50,3 +46,4 @@
     {{ content }}
   {% endblock %}
 </div>
+

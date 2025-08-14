@@ -1,0 +1,93 @@
+.title {
+  font-weight: 700;
+  font-style: normal;
+  font-optical-sizing: auto;
+  margin-block-start: 0;
+  margin-block-end: 0.5rem;
+
+  /*** Variant - Page Title ***/
+  &--page {
+    margin-block-end: 2rem;
+  }
+
+  &--feature-page {
+    /* placeholder */
+  }
+
+  /*** Variant - Section Title ***/
+  &--section {
+    position: relative;
+    display: block;
+    padding-block-start: 1.5rem;
+    margin-block-start: 1.5rem;
+
+    &::before {
+      --flag-height: 12px;
+      --notch-calc: calc(100% - var(--flag-height));
+
+      content: "";
+      width: 5rem;
+      height: var(--flag-height);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--skeleton-color-border-primary);
+      transform: translateX(calc((var(--flag-height) + var(--skeleton-size-gap-x)) * -1));
+      overflow: hidden;
+      border-end-end-radius: var(--flag-height);
+      border-start-start-radius: var(--flag-height);
+    }
+  }
+
+  /*** Variant - Block Title ***/
+  &--block {
+    position: relative;
+    display: block;
+    margin: 0;
+    margin-block-end: 0.5rem;
+  }
+
+  /*** Variant - Card Title ***/
+  &--card {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding-inline-start: 1rem;
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: var(--skeleton-color-border-primary);
+      overflow: hidden;
+      border-radius: var(--skeleton-size-radius-sm);
+    }
+  }
+
+  /*** Variant - Menu Title ***/
+  &--menu {
+    margin-block: 2rem;
+  }
+
+
+  /*** Variant - Sizes ***/
+  &--sizeS {
+    font-size: var(--skeleton-size-text-small);
+  }
+
+  &--sizeM {
+    font-size: var(--skeleton-size-text-med);
+  }
+
+  &--sizeL {
+    font-size: var(--skeleton-size-text-lrg);
+  }
+
+  &--sizeXL {
+    font-size: var(--skeleton-size-text-ex-lrg);
+  }
+}

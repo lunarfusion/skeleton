@@ -1,0 +1,29 @@
+name: themes
+
+props:
+  variant: Default
+
+slots:
+  title: "On a Related Note"
+  content: "Since we just mentioned an interesting subject matter in the main content, we thought you might like to know more about it. Here we summarize it briefly, perhaps sharing a link to learn more. Carry on as you were."
+
+
+library_wrapper: >
+  {% set themes = [
+    'theme-default',
+    'theme-primary',
+  ] %}
+  {% for theme in themes %}
+  <div class="ui-patterns__story-variant ui-patterns__story-variant--fulltheme">
+    {% set theme_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['aside aside--' ~ theme]
+    })})} %}
+    <h4 class="title title--micro">{{ theme }}</h4>
+    {% set theme_slots = {'#slots': _story['#slots']|merge({
+      'title': "On a Related Note",
+      'content': "Since we just mentioned an interesting subject matter in the main content, we thought you might like to know more about it. Here we summarize it briefly, perhaps sharing a link to learn more. Carry on as you were.",
+    })} %}
+    {% set theme_story = _story %}
+    {{ theme_story|merge(theme_props)|merge(theme_slots) }}
+    </div>
+  {% endfor %}

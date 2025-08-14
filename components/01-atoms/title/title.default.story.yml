@@ -1,0 +1,7 @@
+name: Default
+
+props:
+  size: L
+
+slots:
+  content: "Sphinx of Black Quartz, Judge My Vow"

@@ -32,5 +32,14 @@
 
 .layout--footer {
     margin: 0;
+    padding: 1rem;
     background-color: var(--skeleton-color-bg-primary);
   }
+
+.block {
+  position: relative;
+}
+
+.region {
+  position: relative;
+}

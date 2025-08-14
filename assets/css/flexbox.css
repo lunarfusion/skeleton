@@ -36,7 +36,7 @@
   max-inline-size: 100%;
   flex-grow: 1;
   flex-basis: 0;
-  margin-block: var(--skeleton-size-gap-y);
+  margin-block-end: var(--skeleton-size-gap-y);
 }
 .col--m0 {
     margin: 0;

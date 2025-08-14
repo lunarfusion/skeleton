@@ -2,9 +2,13 @@
   --downloads-padding: 1.25rem;
   
   padding: var(--downloads-padding);
-  margin-block: 0.5rem;
   background-color: var(--skeleton-color-bg-neutral-extra-subdued);
   border-radius: calc(var(--skeleton-size-radius-sm) + (var(--downloads-padding) * 0.5));
+  
+  /* add margin when in main node content */
+  .field--body & {
+    margin-block: 0.5rem;
+  }
   
   &__title {
     font-size: 1.5rem;

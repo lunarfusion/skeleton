@@ -13,6 +13,15 @@ variants:
 
 props:
   type: object
+  properties:
+    theme:
+      title: Theme
+      type: string
+      description: 'Color theme for the details.'
+      enum:
+        - theme-default
+        - theme-primary
+      default: default
 
 slots:
   summary_text:

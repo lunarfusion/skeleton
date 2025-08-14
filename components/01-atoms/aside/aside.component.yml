@@ -5,13 +5,22 @@ status: experimental
 
 variants:
   default:
-    title: Default
+    title: Default Color Theme
   fancy:
     title: Fancy
 
 props:
   type: object
   properties:
+
+    theme:
+      title: Theme
+      type: string
+      description: 'Color theme for the aside.'
+      enum:
+        - theme-default
+        - theme-primary
+      default: default
 
     width:
       type: string

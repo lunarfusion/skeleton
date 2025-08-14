@@ -1,128 +1,66 @@
-nav ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  padding: 0.75rem;
+/*** Demonstrate regions ****/
+.region {
+  border: 0px dashed var(--skeleton-color-border-positive);
+  position: relative;
   
-  li {
-    margin: 0;
-    padding: 0;
-    border-inline-end: 1px solid hsla(260, 10%, 100%, 0.5);
+  &::beforex {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
     
-    &:last-child {
-      border: none;
-    }
-  }
-  
-  a {
-    padding: 0.75rem 1rem;
-    text-decoration: none;
-    inline-size: 100%;
-    font-weight: 500;
-    font-size: 1.1rem;
-    color: var(--skeleton-color-fg-base);
+    transform: translateY(-2.5rem) translateX(0.5rem) scale(2);
     
-    &:hover {
-      color: var(--skeleton-color-fg-inverted);
-      background-color: hsla(260, 10%, 100%, 0.25);
-      text-decoration: none;
-    }
-  }
-}
-
-#block-skeleton-main-menu {
-  background-color: var(--skeleton-color-bg-primary-subdued);
-}
-
-
-/*** TODO - integrate menu component when it is added to the system ****/
-.menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  
-  &__item {
-    inline-size: 100%;
-    margin: 0;
-  }
-  
-  &__link {
-    display: block;
-    padding: 0.5rem;
-    inline-size: 100%;
-    font-size: var(--skeleton-size-text-normal);
-    font-weight: 600;
-    color: var(--skeleton-color-link-default);
-    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     
-    &:hover,
-    &:active {
-      background-color: var(--skeleton-color-bg-neutral-light);
-    }
-  }
-  
-  &--vertical {
-    flex-direction: column;
-  }
-  
-  &.menu--local-tasks {
-    gap: 1rem;
-  }
-}
-
-
-/*** TODO - integrate title component when it is added to the system ****/
-.title {
-  &--menu {
-    font-family: var(--skeleton-font-primary);
-    font-size: var(--skeleton-size-text-md);
-  }
-  
-  &--page {
-    margin-block: 1.5rem;
-  }
-  
-  /* center title on feature pages */
-  .page--feature & {
-    margin-inline: auto;
+    padding: 0.2rem 1rem;
+    width: 3rem;
+    min-height: 1.2rem;
+    
+    font-family: "Noto Sans", sans-serif;
+    font-size: 0.88rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    
+    border-radius: 3px;
+    color: hsl(0, 0%, 100%);
+    background: var(--skeleton-color-bg-positive);
+    
+    content: "region";
   }
 }
 
-
-/*** TODO - integrate table component when it is added to the system ****/
-.table {
-  border: 4px solid solid var(--skeleton-color-border-neutral);
-  width: 100%;
-  /* border-spacing: 0; */
-  display: table;
-  box-sizing: border-box;
+/*** Demonstrate blocks ****/
+.block {
+  border: 0px dotted var(--skeleton-color-border-warning);
   
-  thead {
-    background-color: var(--skeleton-color-bg-neutral);
-  }
-  
-  th {
-    text-align: start;
-    padding: 0.5rem;
-    font-size: var(--skeleton-size-text-normal);
-  }
-  
-  tr {
-    border-collapse: collapse;
-    border: 2px solid solid var(--skeleton-color-border-neutral);
-  }
-  
-  td {
-    background-color: var(--skeleton-color-bg-base);
-    border-block-end: 1px solid var(--skeleton-color-border-neutral);
-    padding: 0.5rem;
-    font-size: var(--skeleton-size-text-small);
-  }
-  
-  tr:nth-child(even) td {
-    background-color: var(--skeleton-color-bg-neutral-light);
+  &::beforex {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    
+    transform: translateY(-1rem) translateX(0.5rem) scale(1.5);
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 0.2rem 1rem;
+    width: 3rem;
+    min-height: 1.2rem;
+    
+    font-family: "Noto Sans", sans-serif;
+    font-size: 0.88rem;
+    line-height: 1;
+    letter-spacing: 1px;
+    
+    border-radius: 3px;
+    color: hsl(0, 0%, 100%);
+    background: var(--skeleton-color-bg-warning);
+    
+    content: "block";
   }
 }

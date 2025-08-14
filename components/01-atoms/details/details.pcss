@@ -1,14 +1,26 @@
 .details {
-  background-color: var(--skeleton-color-bg-base);
-  border: 2px solid var(--skeleton-color-border-neutral);
-  overflow: hidden;
+  --details-border-color: var(--skeleton-color-border-neutral);
+  --details-background-color: var(--skeleton-color-bg-neutral);
+  --details-marker-color: var(--skeleton-color-fg-subdued);
+  --details-width-border: 2px;
+  
+  border: var(--details-width-border) solid var(--details-border-color);
+  /* border width is smaller when in a group */
+  border-block-width: calc(var(--details-width-border) * 0.25);
+  background-color: var(--details-background-color);
+  
   
   &__summary {
-    background-color: var(--skeleton-color-bg-neutral);
     position: relative;
     padding: 0.75rem 1rem;
     font-size: 1.2rem;
+    line-height: 1;
     font-weight: 600;
+    vertical-align: middle;
+    
+    &::marker {
+      color: var(--details-marker-color);
+    }
   }
   
   &__content {
@@ -24,30 +36,26 @@
   &:first-of-type {
     border-start-start-radius: var(--skeleton-size-radius-sm);
     border-start-end-radius: var(--skeleton-size-radius-sm);
-    border-width: 2px;
-    border-block-end-width: 0.5px;
+    border-block-start-width: var(--details-width-border);
   }
   
   &:last-of-type {
     border-end-start-radius: var(--skeleton-size-radius-sm);
     border-end-end-radius: var(--skeleton-size-radius-sm);
-    border-width: 2px;
-    border-block-start-width: 0.5px;
+    border-block-end-width: var(--details-width-border);
   }
   
-  &:not(:first-of-type):not(:last-of-type) {
-    border-block-width: 0.5px;
-    ;
+  /*** Variants - color themes ***/
+  &--theme-primary {
+    --details-border-color: var(--skeleton-color-border-primary);
+    --details-background-color: var(--skeleton-color-bg-primary);
+    --details-marker-color: var(--skeleton-color-fg-primary);
   }
-  
-  
   
   /*** Variants ***/
   &--fancy {
-    border-color: var(--skeleton-color-border-primary);
     
     .details__summary {
-      background-color: var(--skeleton-color-bg-primary);
       padding-inline-start: 2.5rem;
       color: var(--skeleton-color-fg-base);
       overflow: hidden;
@@ -58,22 +66,22 @@
       
       &::before {
         position: absolute;
-        top: 40%;
+        top: 50%;
         bottom: 50%;
         left: 0.75rem;
+        height: 1.2rem;
+        width: 1.2rem;
         margin: auto;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding-inline: 0.25rem;
-        /* width: 0.5rem;
-        height: 0.5rem; */
-        content: "›";
-        font-size: 2rem;
-        line-height: 0;
-        color: currentcolor;
+        font-size: 1.2rem;
+        line-height: 1;
+        color: var(--details-marker-color);
         transform-origin: 50% 50%;
         transition: var(--skeleton-transition-basic);
+        font-family: "FontAwesome";
+        content: "\f105";
       }
     }
     

@@ -1,0 +1,56 @@
+name: Title
+description: Title of a page, section, or component.
+group: "Atoms"
+status: experimental
+links:
+  - "https://emory.edu"
+
+variants:
+  default:
+    title: Default
+  page:
+    title: Page
+  feature-page:
+    title: Feature Page
+  section:
+    title: Section
+  block:
+    title: Block
+  card:
+   title: Card
+
+props:
+  type: object
+  properties:
+
+    size:
+      title: Size
+      type: string
+      description: 'Title size vaiants: extra large, large, medium, small.'
+      enum:
+        - S
+        - M
+        - L
+        - XL
+      default: L
+
+    html_tag:
+      type: string
+      description: Title of a piece of content or a component
+      default: h3
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+
+slots:
+  content:
+    title: Content
+    description: 'Content text of the title'
+
+libraryOverrides:
+    css:
+      title.css: {}

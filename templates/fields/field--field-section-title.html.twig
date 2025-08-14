@@ -1,0 +1,11 @@
+<span{{ attributes }}>
+  {%- for item in items -%}
+    {{ include ('skeleton:title', {
+      content: item.content,
+      html_tag: 'h2',
+      size: 'L',
+      variant: 'section',
+    }, with_context: false) }}
+  {%- endfor -%}
+</span>
+

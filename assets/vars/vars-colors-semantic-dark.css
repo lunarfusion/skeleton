@@ -20,11 +20,14 @@
     --skeleton-color-bg-neutral-subdued: var(--skeleton-color-gray-010);
     --skeleton-color-bg-neutral-extra-subdued: var(--skeleton-color-gray-005);
     
-    /*** Borders - Base Theme - Neutral ***/
-    --skeleton-color-border-neutral-dark: var(--skeleton-color-gray-095);
+    /*** Borders - Neutral ***/
     --skeleton-color-border-neutral: var(--skeleton-color-gray-080);
-    --skeleton-color-border-neutral-light: var(--skeleton-color-gray-040);
-    --skeleton-color-border-neutral-extra-light: var(--skeleton-color-gray-020);
+    --skeleton-color-border-neutral-subdued: var(--skeleton-color-gray-040);
+    --skeleton-color-border-neutral-extra-subdued: var(--skeleton-color-gray-020);
+    
+    /*** Shadows - Neutral ***/
+    --skeleton-color-shadow-neutral: var(--skeleton-color-black-a10);
+    --skeleton-color-shadow-neutral-subdued: var(--skeleton-color-black-a05);
     
     /*** Foreground - Brand ***/
     --skeleton-color-fg-primary: var(--skeleton-color-violet-080);
@@ -65,12 +68,12 @@
     /*** Warning ***/
     --skeleton-color-fg-warning: var(--skeleton-color-yellow-080);
     --skeleton-color-border-warning: var(--skeleton-color-yellow-040);
-    --skeleton-color-bg-warning: var(--skeleton-color-yellow-010);
+    --skeleton-color-bg-warning: var(--skeleton-color-yellow-020);
     
     /*** Positive ***/
     --skeleton-color-fg-positive: var(--skeleton-color-green-080);
-    --skeleton-color-border-positive: var(--skeleton-color-green-020);
-    --skeleton-color-bg-positive: var(--skeleton-color-green-010);
+    --skeleton-color-border-positive: var(--skeleton-color-green-040);
+    --skeleton-color-bg-positive: var(--skeleton-color-green-020);
     
     /*** Informative ***/
     --skeleton-color-fg-informative: var(--skeleton-color-blue-080);

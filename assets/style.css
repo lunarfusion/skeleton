@@ -13,11 +13,14 @@
 @import "css/branding.css";
 @import "css/layout.css";
 @import "css/field.css";
+@import "css/navigation.css";
+@import "css/table.css";
 
 /*** BASE UTLITIES ***/
 @import "css/utilities-color.css";
 @import "css/utilities-space.css";
-
+@import "css/utilities-size.css";
+@import "css/utilities-alignment.css";
 
 /*** TEMP ***/
 @import "css/ui-patterns.css";

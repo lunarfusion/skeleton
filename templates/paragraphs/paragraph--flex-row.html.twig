@@ -17,16 +17,22 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
 
-  {% if content.field_full_width['#items'].value == 0 %}
+  {% if content.field_section_title is not empty %}
     <div class="container">
+      {{ content.field_section_title }}
+    </div>
   {% endif %}
 
-      {% block content %}
-        {{ content.field_content_column }}
-      {% endblock %}
+  {% if content.field_full_width['#items'].value == 0 %}
+    <div class="container">
+  {% else %}
+    <div class="container container--full">
+  {% endif %}
 
-    {% if content.field_full_width['#items'].value == 0 %}
-      </div>
-    {% endif %}
+    {% block content %}
+      {{ content.field_content_column }}
+    {% endblock %}
+
+    </div>
   </div>
 {% endblock paragraph %}

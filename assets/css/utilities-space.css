@@ -1,5 +1,9 @@
+.p-05 {
+  padding: calc(var(--skeleton-size-gap-x) * 0.5);
+}
+
 .p-1 {
-  padding: 1rem;
+  padding: var(--skeleton-size-gap-x);
 }
 
 .p-2 {

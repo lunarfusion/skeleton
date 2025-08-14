@@ -1,10 +1,42 @@
 .aside {
+  --aside-border-width: 0px;
+  --bar-width: var(--skeleton-size-radius-med);
+  --aside-border-color: var(--skeleton-color-border-neutral-extra-subdued);
+  --aside-background-color: var(--skeleton-color-bg-neutral-subdued);
+  
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 1.25rem 1.5rem;
-  background-color: var(--skeleton-color-bg-neutral);
+  padding: 1.5rem 2.5rem;
+  background-color: var(--aside-background-color);
+  /* border-start-end-radius: var(--skeleton-size-radius-med);
+  border-end-end-radius: var(--skeleton-size-radius-med); */
   border-radius: var(--skeleton-size-radius-med);
+  border: var(--aside-border-width) solid var(--aside-border-color);
+  border-inline-start-width: var(--bar-width);
+  border-inline-start-color: transparent;
+  box-shadow:
+    0 1px 1px var(--skeleton-color-shadow-neutral),
+    0 2px 2px var(--skeleton-color-shadow-neutral),
+    0 4px 4px var(--skeleton-color-shadow-neutral-subdued),
+    0 8px 8px var(--skeleton-color-shadow-neutral-subdued),
+    0 16px 16px var(--skeleton-color-shadow-neutral-subdued),
+    0 -1px 1px var(--skeleton-color-shadow-neutral),
+    0 -2px 2px var(--skeleton-color-shadow-neutral-subdued);
+  
+  &::before {
+    content: "";
+    width: var(--bar-width);
+    height: calc(100% + (var(--skeleton-size-radius-med) * 0.65));
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: var(--aside-border-color);
+    border-radius: calc(var(--bar-width) * 0.5);
+    transform: translateX(calc(var(--bar-width) * -1));
+  }
   
   /* add margin when in main node content */
   .field--body & {
@@ -14,7 +46,7 @@
   /*** Child Elements ***/
   &__title {
     margin-block: 0 0.5rem;
-    font-size: var(--skeleton-size-text-lrg);
+    font-size: var(--skeleton-size-text-med);
     font-weight: 600;
   }
   
@@ -25,7 +57,36 @@
   
   /*** VARIANTS - style ***/
   &--fancy {
-    background-color: var(--skeleton-color-bg-primary);
+    
+    &::after {
+      position: absolute;
+      top: 1rem;
+      left: -1.5rem;
+      height: 1.2rem;
+      width: 1.2rem;
+      padding: 0.5rem;
+      margin: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      line-height: 1;
+      color: currentcolor;
+      color: var(--skeleton-color-fg-base);
+      transform-origin: 50% 50%;
+      transition: var(--skeleton-transition-basic);
+      font-family: "FontAwesome";
+      content: "\f54c";
+      background-color: var(--aside-background-color);
+      border-radius: 100%;
+      border: 2px solid var(--aside-border-color);
+    }
+  }
+  
+  /*** VARIANTS - color theme ***/
+  &--theme-primary {
+    --aside-border-color: var(--skeleton-color-border-primary);
+    --aside-background-color: var(--skeleton-color-bg-primary);
   }
   
   /*** VARIANTS - float ***/

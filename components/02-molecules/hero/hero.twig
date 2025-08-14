@@ -1,0 +1,40 @@
+{%
+  set classes = [
+    'Xx',
+    variant and variant != 'default' ? 'Xx--' ~ variant,
+    size ? 'Xx--size' ~ size
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  <div class="Xx__label">{{ label }}</div>
+
+  <span class="Xx__icon">
+    {{ icon(icon.pack_id, icon.icon_id, icon.settings) }}
+  </span>
+</div>
+
+
+
+{# to create an attribute #}
+{% if boop %}
+    {% set attributes = attributes.setAttribute('beep', boop) %}
+{% endif %}
+
+
+{# for a link #}
+{% if url or attributes.href %}
+    {% set attributes = attributes.setAttribute('href', url) %}
+{% endif %}
+
+<a{{ attributes.addClass(classes)}}>
+  {{ label }}
+</a>
+
+
+{# for contains items #}
+<div{{ attributes.addClass(classes) }}>
+  {% if items %}
+   {{ items }}
+  {% endif %}
+</div>
