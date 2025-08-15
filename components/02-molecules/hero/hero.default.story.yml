@@ -1,0 +1,22 @@
+name: Default
+
+props:
+  theme: theme-default
+
+slots:
+
+  image:
+    theme: image
+    uri: "/themes/custom/skeleton/assets/images/placeholder-hero.jpg"
+    alt: "image example"
+
+  heading:
+  - type: component
+    component: "skeleton:title"
+    slots:
+      content: "We Love Bones"
+    props:
+      html_tag: h1
+      size: M
+
+  text: "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light."

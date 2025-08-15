@@ -1,0 +1,26 @@
+{%
+  set classes = [
+    'hero',
+    variant and variant != 'default' ? 'hero--' ~ variant,
+    theme ? 'hero--' ~ theme,
+  ]
+%}
+
+<div{{attributes.addClass(classes)}}>
+
+  {% if image %}
+    <div class="hero__image">
+      {{ image }}
+    </div>
+  {% endif %}
+
+  <div class="hero__content">
+    <div class="hero__heading">
+      {{ heading }}
+    </div>
+
+    <div class="hero__text">
+      {{ text }}
+    </div>
+  </div>
+</div>

@@ -5,9 +5,9 @@ status: experimental
 
 variants:
   default:
-    title: Default Color Theme
+    title: Default Style
   fancy:
-    title: Fancy
+    title: Fancy Style
 
 props:
   type: object

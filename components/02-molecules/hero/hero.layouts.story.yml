@@ -1,0 +1,43 @@
+name: Layouts
+
+props:
+  variant: default
+
+slots:
+
+  image:
+    theme: image
+    uri: "/themes/custom/skeleton/assets/images/placeholder-hero.jpg"
+    alt: "image example"
+
+  heading:
+  - type: component
+    component: "skeleton:title"
+    slots:
+      content: "We Love Bones"
+    props:
+      html_tag: h1
+      size: M
+
+  text: "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light."
+
+library_wrapper: >
+  {% set layouts = [
+    'layout-default',
+    'layout-diptych',
+  ] %}
+  {% for layout in layouts %}
+  <div class="ui-patterns__story-variant ui-patterns__story-variant--fulltheme">
+    {% set layout_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['hero hero--' ~ layout]
+    })})} %}
+    <h4 class="title title--micro">{{ layout }}</h4>
+    {% set layout_slots = {'#slots': _story['#slots']|merge({
+      'heading': "We Love Bones",
+      'text': "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light.",
+      'image': '<img src="/themes/custom/skeleton/assets/images/placeholder-hero.jpg">',
+    })} %}
+    {% set layout_story = _story %}
+    {{ layout_story|merge(layout_props)|merge(layout_slots) }}
+    </div>
+  {% endfor %}

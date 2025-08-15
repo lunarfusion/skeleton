@@ -1,0 +1,64 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  background-color: var(--skeleton-color-bg-neutral);
+  
+  &__image {
+    position: relative;
+  }
+  
+  &__content {
+    position: relative;
+    padding: 2rem;
+  }
+  
+  &__heading {
+    font-weight: 700;
+    font-style: normal;
+    font-optical-sizing: auto;
+    margin-block-start: 0;
+    margin-block-end: 0.5rem;
+  }
+  
+  &__text {
+    font-weight: 400;
+  }
+  
+  /*** VARIANTS - layouts ***/
+  &--layout-diptych {
+    flex-direction: row;
+  }
+  
+  /*** VARIANTS - color theme ***/
+  &--theme-primary {
+    background-color: var(--skeleton-color-bg-primary);
+    
+    .hero__content::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      height: 2rem;
+      width: 2rem;
+      padding: 0.5rem;
+      margin: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: var(--skeleton-color-fg-base);
+      transform-origin: 50% 50%;
+      transition: var(--skeleton-transition-basic);
+      font-family: "FontAwesome";
+      content: "\f54c";
+      background-color: var(--aside-background-color);
+      border-radius: 100%;
+      border: 2px solid var(--aside-border-color);
+      
+    }
+  }
+}

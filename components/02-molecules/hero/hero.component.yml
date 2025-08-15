@@ -1,0 +1,58 @@
+name: Hero
+description: "A large banner containing an image and text which frequently preceeds the main content of a page."
+status: experimental
+group: "02 Molecules"
+
+variants:
+  default:
+    title: Default style
+  fancy:
+    title: Fancy style
+
+
+props:
+  type: object
+  properties:
+
+    theme:
+      title: Theme
+      type: string
+      description: 'Color theme for the aside.'
+      enum:
+        - theme-default
+        - theme-primary
+      default: theme-default
+
+      layout:
+        title: Layout
+        type: string
+        description: "Layout options for the hero."
+        enum:
+          - layout-default
+          - layout-diptych
+        default: layout-default
+
+      text_alignment:
+        title: Text Alignment
+        description: "Which way should the text on the hero align?"
+        enum:
+          - text-align-start
+          - text-align-end
+          - text-center
+
+
+slots:
+
+  image:
+    title: Hero Image
+
+  heading:
+    title: Hero Heading
+
+  text:
+    title: Hero Text
+
+libraryOverrides:
+  css:
+    theme:
+      hero.css: {}

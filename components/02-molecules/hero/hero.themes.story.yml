@@ -1,0 +1,43 @@
+name: Themes
+
+props:
+  variant: default
+
+slots:
+
+  image:
+    theme: image
+    uri: "/themes/custom/skeleton/assets/images/placeholder-hero.jpg"
+    alt: "image example"
+
+  heading:
+  - type: component
+    component: "skeleton:title"
+    slots:
+      content: "We Love Bones"
+    props:
+      html_tag: h1
+      size: M
+
+  text: "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light."
+
+library_wrapper: >
+  {% set themes = [
+    'theme-default',
+    'theme-primary',
+  ] %}
+  {% for theme in themes %}
+  <div class="ui-patterns__story-variant ui-patterns__story-variant--fulltheme">
+    {% set theme_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['hero hero--' ~ theme]
+    })})} %}
+    <h4 class="title title--micro">{{ theme }}</h4>
+    {% set theme_slots = {'#slots': _story['#slots']|merge({
+      'heading': "We Love Bones",
+      'text': "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light.",
+      'image': '<img src="/themes/custom/skeleton/assets/images/placeholder-hero.jpg">',
+    })} %}
+    {% set theme_story = _story %}
+    {{ theme_story|merge(theme_props)|merge(theme_slots) }}
+    </div>
+  {% endfor %}
