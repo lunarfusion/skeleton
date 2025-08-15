@@ -1,4 +1,4 @@
-name: Downloads
+name: Download Group
 description: One or more file downloads with optional title.
 group: "Molecules"
 status: experimental
