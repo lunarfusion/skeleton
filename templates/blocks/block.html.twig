@@ -38,11 +38,10 @@
 <div{{ attributes }}>
   {{ title_prefix }}
   {% if label %}
-    {# <h2{{ title_attributes }}>{{ label }}</h2> #}
     {{ include ('skeleton:title', {
       content: label,
       html_tag: 'h3',
-      size: 'L',
+      size: 'M',
       variant: 'block',
     }, with_context: false) }}
   {% endif %}

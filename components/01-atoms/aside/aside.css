@@ -2,27 +2,18 @@
   --aside-border-width: 0px;
   --bar-width: var(--skeleton-size-radius-med);
   --aside-border-color: var(--skeleton-color-border-neutral-extra-subdued);
-  --aside-background-color: var(--skeleton-color-bg-neutral-subdued);
+  --aside-background-color: var(--skeleton-color-bg-neutral-extra-subdued);
   
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 1.5rem 2.5rem;
   background-color: var(--aside-background-color);
-  /* border-start-end-radius: var(--skeleton-size-radius-med);
-  border-end-end-radius: var(--skeleton-size-radius-med); */
   border-radius: var(--skeleton-size-radius-med);
   border: var(--aside-border-width) solid var(--aside-border-color);
   border-inline-start-width: var(--bar-width);
   border-inline-start-color: transparent;
-  box-shadow:
-    0 1px 1px var(--skeleton-color-shadow-neutral),
-    0 2px 2px var(--skeleton-color-shadow-neutral),
-    0 4px 4px var(--skeleton-color-shadow-neutral-subdued),
-    0 8px 8px var(--skeleton-color-shadow-neutral-subdued),
-    0 16px 16px var(--skeleton-color-shadow-neutral-subdued),
-    0 -1px 1px var(--skeleton-color-shadow-neutral),
-    0 -2px 2px var(--skeleton-color-shadow-neutral-subdued);
+  filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-neutral));
 }
   
   .aside::before {

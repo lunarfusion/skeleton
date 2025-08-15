@@ -1,6 +1,10 @@
 # Overview
 
-An experimental Drupal theme.
+An experimental Drupal theme/design system using the [UI Suite (https://www.drupal.org/project/ui_suite)].
+
+This theme is being created as a learning tool. It is full of errors, code that has not been linted, and dev debris. Commits may or may not be [conventional (https://www.conventionalcommits.org/en/v1.0.0/)]. Commits may contain a wide range of system-wide changes that were made to due to discoveries made while building a component.
+
+In the interest of using the simplest solutions that meet the needs of site builders and content creators, we are using the [Paragraphs module (https://www.drupal.org/project/paragraphs)] for custom page layouts.
 
 ## Starting
 

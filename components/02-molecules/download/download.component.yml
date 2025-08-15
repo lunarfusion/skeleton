@@ -7,13 +7,13 @@ links:
 
 variants:
   default:
-    title: default
+    title: Default file
   pdf:
-    title: pdf
+    title: PDF file
   zip:
-    title: zip
+    title: ZIP file
   image:
-    title: image
+    title: Image file
 
 props:
   type: object

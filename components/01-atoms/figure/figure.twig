@@ -3,9 +3,7 @@
   variant and variant != 'default' ? variant : ''
 ] %}
 
-{% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
-
-<figure{{ attributes }}>
+<figure{{ attributes.addClass(classes) }}>
   <div class="figure__image">
     {{ image }}
   </div>

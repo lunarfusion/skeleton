@@ -20,7 +20,7 @@ props:
       enum:
         - theme-default
         - theme-primary
-      default: default
+      default: theme-default
 
     width:
       type: string

@@ -1,9 +1,7 @@
 name: Default
 
-variant: default
-
 props:
-  url: "#"
+  variant: default
 
 slots:
   file:

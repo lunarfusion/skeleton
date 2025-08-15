@@ -21,7 +21,7 @@ props:
       enum:
         - theme-default
         - theme-primary
-      default: default
+      default: theme-default
 
 slots:
   summary_text:

@@ -5,9 +5,7 @@
   ]
 %}
 
-{% set download_attributes = create_attribute() %}
-
-<div{{ download_attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}>
   <span class="download__icon">
     {% if variant == 'pdf' %}
       <svg class="icon icon--M icon--file-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">

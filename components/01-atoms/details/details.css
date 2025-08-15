@@ -1,6 +1,6 @@
 .details {
-  --details-border-color: var(--skeleton-color-border-neutral);
-  --details-background-color: var(--skeleton-color-bg-neutral);
+  --details-border-color: var(--skeleton-color-border-neutral-extra-subdued);
+  --details-background-color: var(--skeleton-color-bg-neutral-extra-subdued);
   --details-marker-color: var(--skeleton-color-fg-subdued);
   --details-width-border: 2px;
   
