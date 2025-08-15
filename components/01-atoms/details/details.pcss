@@ -9,17 +9,42 @@
   border-block-width: calc(var(--details-width-border) * 0.25);
   background-color: var(--details-background-color);
   
-  
   &__summary {
     position: relative;
-    padding: 0.75rem 1rem;
     font-size: 1.2rem;
     line-height: 1;
     font-weight: 600;
     vertical-align: middle;
+    padding: 1rem;
+    padding-inline-start: 2.5rem;
+    color: var(--skeleton-color-fg-base);
+    overflow: hidden;
     
+    /* hide default marker */
     &::marker {
       color: var(--details-marker-color);
+      content: " ";
+    }
+    
+    /* customize marker */
+    &::before {
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      left: 0.75rem;
+      height: 1.2rem;
+      width: 1.2rem;
+      margin: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      line-height: 1;
+      color: var(--details-marker-color);
+      transform-origin: 50% 50%;
+      transition: var(--skeleton-transition-basic);
+      font-family: "FontAwesome";
+      content: "\f105";
     }
   }
   
@@ -45,6 +70,12 @@
     border-block-end-width: var(--details-width-border);
   }
   
+  &:open {
+    .details__summary::before {
+      transform: rotate(90deg);
+    }
+  }
+  
   /*** Variants - color themes ***/
   &--theme-primary {
     --details-border-color: var(--skeleton-color-border-primary);
@@ -53,43 +84,6 @@
   }
   
   /*** Variants ***/
-  &--fancy {
-    
-    .details__summary {
-      padding-inline-start: 2.5rem;
-      color: var(--skeleton-color-fg-base);
-      overflow: hidden;
-      
-      &::marker {
-        content: " ";
-      }
-      
-      &::before {
-        position: absolute;
-        top: 50%;
-        bottom: 50%;
-        left: 0.75rem;
-        height: 1.2rem;
-        width: 1.2rem;
-        margin: auto;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        line-height: 1;
-        color: var(--details-marker-color);
-        transform-origin: 50% 50%;
-        transition: var(--skeleton-transition-basic);
-        font-family: "FontAwesome";
-        content: "\f105";
-      }
-    }
-    
-    &:open {
-      .details__summary::before {
-        transform: rotate(90deg);
-      }
-    }
-  }
+  
   
 }

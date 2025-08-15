@@ -5,12 +5,6 @@ status: experimental
 links:
    - "https://github.com/lunarfusion/skeleton"
 
-variants:
-  default:
-    title: Default
-  fancy:
-    title: Fancy
-
 props:
   type: object
   properties:

@@ -2,7 +2,6 @@ name: Themes
 
 props:
   size: M
-  variant: default
 
 slots:
   summary_text: "This is the Summary you can click"

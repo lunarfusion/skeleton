@@ -9,23 +9,51 @@
   border-block-width: calc(var(--details-width-border) * 0.25);
   background-color: var(--details-background-color);
   
-}
+  /*** Variants ***/
   
+  
+}
   
   .details__summary {
     position: relative;
-    padding: 0.75rem 1rem;
     font-size: 1.2rem;
     line-height: 1;
     font-weight: 600;
     vertical-align: middle;
+    padding: 1rem;
+    padding-inline-start: 2.5rem;
+    color: var(--skeleton-color-fg-base);
+    overflow: hidden;
   }
   
+  /* hide default marker */
   
   .details__summary::marker {
       color: var(--details-marker-color);
+      content: " ";
     }
   
+  /* customize marker */
+  
+  .details__summary::before {
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      left: 0.75rem;
+      height: 1.2rem;
+      width: 1.2rem;
+      margin: auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      line-height: 1;
+      color: var(--details-marker-color);
+      transform-origin: 50% 50%;
+      transition: var(--skeleton-transition-basic);
+      font-family: "FontAwesome";
+      content: "\f105";
+    }
   
   .details__content {
     padding: 1.5rem;
@@ -36,9 +64,7 @@
     overflow: hidden;
   }
   
-  
   /* border radius only top and bottom */
-  
   
   .details:first-of-type {
     border-start-start-radius: var(--skeleton-size-radius-sm);
@@ -46,60 +72,20 @@
     border-block-start-width: var(--details-width-border);
   }
   
-  
   .details:last-of-type {
     border-end-start-radius: var(--skeleton-size-radius-sm);
     border-end-end-radius: var(--skeleton-size-radius-sm);
     border-block-end-width: var(--details-width-border);
   }
   
+  .details:open .details__summary::before {
+      transform: rotate(90deg);
+    }
   
   /*** Variants - color themes ***/
-  
   
   .details--theme-primary {
     --details-border-color: var(--skeleton-color-border-primary);
     --details-background-color: var(--skeleton-color-bg-primary);
     --details-marker-color: var(--skeleton-color-fg-primary);
   }
-  
-  
-  /*** Variants ***/
-  
-  
-  .details--fancy .details__summary {
-      padding-inline-start: 2.5rem;
-      color: var(--skeleton-color-fg-base);
-      overflow: hidden;
-    }
-  
-  
-  .details--fancy .details__summary::marker {
-        content: " ";
-      }
-  
-  
-  .details--fancy .details__summary::before {
-        position: absolute;
-        top: 50%;
-        bottom: 50%;
-        left: 0.75rem;
-        height: 1.2rem;
-        width: 1.2rem;
-        margin: auto;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        line-height: 1;
-        color: var(--details-marker-color);
-        transform-origin: 50% 50%;
-        transition: var(--skeleton-transition-basic);
-        font-family: "FontAwesome";
-        content: "\f105";
-      }
-  
-  
-  .details--fancy:open .details__summary::before {
-        transform: rotate(90deg);
-      }
