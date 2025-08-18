@@ -21,6 +21,7 @@
 
   <div{{ content_attributes }}>
 
+  {% if node.field_hero_image.value or node.field_hero_heading.value %}
     {% if node.field_hero_heading_is_page_title.value %}
       {{ include ('skeleton:hero', {
           attributes: attributes,
@@ -36,7 +37,6 @@
               size: 'XL',
             }, with_context = false),
           ],
-          page_title: node.field_hero_heading_is_page_title.0.value,
         }) }}
 
      {% else %}
@@ -55,9 +55,9 @@
            size: 'L',
          }, with_context = false),
        ],
-       page_title: node.field_hero_heading_is_page_title.0.value,
      }) }}
     {% endif %}
+  {% endif %}
 
     {{ content.body }}
 
