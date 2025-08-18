@@ -1,4 +1,4 @@
-name: Themes
+name: Text Alignment
 
 props:
   variant: default
@@ -22,22 +22,23 @@ slots:
   text: "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light."
 
 library_wrapper: >
-  {% set themes = [
-    'theme-default',
-    'theme-primary',
+  {% set text_alignments = [
+    'text-align-start',
+    'text-align-end',
+    'text-align-center',
   ] %}
-  {% for theme in themes %}
+  {% for text_alignment in text_alignments %}
   <div class="ui-patterns__story-variant ui-patterns__story-variant--fulltheme">
-    {% set theme_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
-      class: ['hero hero--' ~ theme]
+    {% set text_alignment_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['hero hero--' ~ text_alignment]
     })})} %}
-    <h4 class="title title--micro">{{ theme }}</h4>
-    {% set theme_slots = {'#slots': _story['#slots']|merge({
+    <h4 class="title title--micro">{{ text_alignment }}</h4>
+    {% set text_alignment_slots = {'#slots': _story['#slots']|merge({
       'heading': '<h1>We Love Bones</h1>',
       'text': "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light.",
       'image': '<img src="/themes/custom/skeleton/assets/images/placeholder-hero.jpg">',
     })} %}
-    {% set theme_story = _story %}
-    {{ theme_story|merge(theme_props)|merge(theme_slots) }}
+    {% set text_alignment_story = _story %}
+    {{ text_alignment_story|merge(text_alignment_props)|merge(text_alignment_slots) }}
     </div>
   {% endfor %}

@@ -4,9 +4,9 @@ status: experimental
 group: "02 Molecules"
 
 variants:
-  default:
+  style-default:
     title: Default style
-  fancy:
+  style-fancy:
     title: Fancy style
 
 
@@ -39,7 +39,6 @@ props:
           - text-align-start
           - text-align-end
           - text-center
-
 
 slots:
 

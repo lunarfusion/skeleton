@@ -1,0 +1,26 @@
+{# {% set classes = [
+  'block',
+  'block--hero-banner'
+] %}
+
+{% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
+
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+    {{ label }}
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div> #}
+
+
+ {{ include ('skeleton:hero', {
+  attributes: attributes,
+  heading: content.field_hero_banner_heading,
+  image: content.field_hero_banner_image,
+  text: content.field_hero_banner_text,
+}) }}
+

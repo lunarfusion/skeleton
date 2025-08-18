@@ -17,7 +17,7 @@ slots:
       content: "We Love Bones"
     props:
       html_tag: h1
-      size: M
+      size: XL
 
   text: "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light."
 
@@ -33,7 +33,7 @@ library_wrapper: >
     })})} %}
     <h4 class="title title--micro">{{ layout }}</h4>
     {% set layout_slots = {'#slots': _story['#slots']|merge({
-      'heading': "We Love Bones",
+      'heading': '<h1>We Love Bones</h1>',
       'text': "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light.",
       'image': '<img src="/themes/custom/skeleton/assets/images/placeholder-hero.jpg">',
     })} %}
