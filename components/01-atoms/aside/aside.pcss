@@ -3,7 +3,7 @@
   --bar-width: var(--skeleton-size-radius-med);
   --aside-border-color: var(--skeleton-color-border-neutral-extra-subdued);
   --aside-background-color: var(--skeleton-color-bg-neutral-extra-subdued);
-  
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   border-inline-start-width: var(--bar-width);
   border-inline-start-color: transparent;
   filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-neutral));
-  
+
   &::before {
     content: "";
     width: var(--bar-width);
@@ -28,27 +28,27 @@
     border-radius: calc(var(--bar-width) * 0.5);
     transform: translateX(calc(var(--bar-width) * -1));
   }
-  
+
   /* add margin when in main node content */
   .field--body & {
     margin: 1.5rem;
   }
-  
+
   /*** Child Elements ***/
   &__title {
     margin-block: 0 0.5rem;
     font-size: var(--skeleton-size-text-med);
     font-weight: 600;
   }
-  
+
   &__content {
     font-size: var(--skeleton-size-text-small);
     line-height: 1.6;
   }
-  
+
   /*** VARIANTS - style ***/
-  &--fancy {
-    
+  &--style-fancy {
+
     &::after {
       position: absolute;
       top: 1rem;
@@ -73,33 +73,33 @@
       border: 2px solid var(--aside-border-color);
     }
   }
-  
+
   /*** VARIANTS - color theme ***/
   &--theme-primary {
     --aside-border-color: var(--skeleton-color-border-primary);
     --aside-background-color: var(--skeleton-color-bg-primary);
   }
-  
+
   /*** VARIANTS - float ***/
   &--float-left {
     float: left;
     margin-inline-start: 0;
   }
-  
+
   &--float-right {
     float: right;
     margin-inline-end: 0;
   }
-  
+
   /*** VARIANTS - width ***/
   &--width-60 {
     inline-size: 60%;
   }
-  
+
   &--width-40 {
     inline-size: 40%;
   }
-  
+
   &--width-30 {
     inline-size: 30%;
   }

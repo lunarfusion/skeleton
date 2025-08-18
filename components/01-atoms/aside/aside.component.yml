@@ -4,9 +4,9 @@ group: "Atoms"
 status: experimental
 
 variants:
-  default:
+  style-default:
     title: Default Style
-  fancy:
+  style-fancy:
     title: Fancy Style
 
 props:
