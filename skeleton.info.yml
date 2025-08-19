@@ -15,6 +15,7 @@ dependencies:
   - ui_patterns:ui_patterns
   - ui_icons:ui_icons
   - paragraphs:paragraphs
+  - field_group:field_group
 
 regions:
   header_top: 'Header Top'
