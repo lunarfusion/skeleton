@@ -8,20 +8,26 @@
   ]
 %}
 
-<div{{attributes.addClass(classes)}}>
-  <div class="hero__content">
-    <div class="hero__heading">
-      {{ heading }}
+
+
+{% if heading or image or text %}
+  <div{{attributes.addClass(classes)}}>
+    <div class="hero__content">
+      <div class="hero__content-inner">
+        <div class="hero__heading">
+          {{ heading }}
+        </div>
+
+        <div class="hero__text">
+          {{ text }}
+        </div>
+      </div>
     </div>
 
-    <div class="hero__text">
-      {{ text }}
-    </div>
+    {% if image %}
+      <div class="hero__image">
+        {{ image }}
+      </div>
+    {% endif %}
   </div>
-
-  {% if image %}
-    <div class="hero__image">
-      {{ image }}
-    </div>
-  {% endif %}
-</div>
+{% endif %}

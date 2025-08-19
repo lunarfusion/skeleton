@@ -7,28 +7,42 @@
   flex-direction: column-reverse;
   inline-size: 100%;
   background-color: var(--hero-background-color);
+  margin-block-end: 2rem;
 }
   
   .hero__image {
     position: relative;
+    min-inline-size: 100%;
+    overflow: hidden;
   }
   
   .hero__image img {
-      inline-size: 100%;
-      block-size: 100%;
       -o-object-fit: cover;
          object-fit: cover;
-      -o-object-position: center;
-         object-position: center;
+      -o-object-position: top center;
+         object-position: top center;
+      inline-size: 100%;
+      block-size: 100%;
+    }
+  
+  .hero__image span {
+      inline-size: 100%;
     }
   
   .hero__content {
     position: relative;
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     z-index: 1;
+  }
+  
+  .hero__content-inner {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    inline-size: 100%;
   }
   
   .hero__heading {
@@ -36,29 +50,41 @@
     font-style: normal;
     font-optical-sizing: auto;
     margin-block-start: 0;
-    margin-block-end: 0.5rem;
+    margin-block-end: 1rem;
   }
   
   .hero__text {
     font-size: var(--skeleton-size-text-med);
     font-weight: 400;
+    /* ⬇ limit vertical text ⬇ */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 992px) {
+    .hero .hero__text {
+      -webkit-line-clamp: unset;
+      line-clamp: unset;
+    }
   }
   
   /*** VARIANTS - style ***/
   
-  .hero--style-fancy .hero__content {
-      padding-inline-start: 6rem;
+  .hero--style-fancy .hero__content-inner {
+      padding-block-start: 3rem;
     }
   
   .hero--style-fancy .hero__content::before {
       position: absolute;
       top: 0;
-      left: 0;
       margin: auto;
       height: 2.75rem;
       width: 2.75rem;
       padding: 0.5rem;
-      margin: auto;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -71,42 +97,67 @@
       border-radius: 100%;
       border: 2px solid var(--hero-border-color);
       transform-origin: 50% 50%;
-      transform: translateY(-50%) translateX(1.75rem);
+      transform: translateY(-50%);
     }
   
-  .hero--style-fancy.hero--layout-diptych .hero__content {
-        padding-inline-start: 4rem;
+  .hero--style-fancy.hero--layout-diptych .hero__content-inner {
+        padding-inline-end: 3rem;
       }
   
   .hero--style-fancy.hero--layout-diptych .hero__content::before {
-        transform: translateX(-50%) translateY(1.75rem);
+        left: auto;
+        right: 0;
+        bottom: 0;
+        transform: translateX(50%);
       }
   
   @media (max-width: 992px) {
           .hero--style-fancy.hero--layout-diptych .hero__content::before {
-            transform: translateY(-50%) translateX(1.75rem);
+            bottom: auto;
+            left: 0;
+            transform: translateY(-50%) translateX(-1.75rem);
           }
       }
   
   /*** VARIANTS - layouts ***/
   
   .hero--layout-diptych {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
+  
+  .hero--layout-diptych .hero__image {
+      display: flex;
+      flex: 1;
+      justify-content: stretch;
+      align-items: stretch;
+    }
   
   .hero--layout-diptych .hero__content {
       flex: 0 0 50%;
       max-inline-size: 50%;
+      align-items: flex-end;
+    }
+  
+  .hero--layout-diptych .hero__content-inner {
+      max-inline-size: 650px;
     }
   
   @media (max-width: 992px) {
       .hero--layout-diptych {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
       }
         
         .hero--layout-diptych .hero__content {
           flex: 0 0 100%;
           max-inline-size: 100%;
+          align-items: flex-start;
+          flex-grow: 0;
+          flex-basis: 0;
+        }
+        
+        .hero--layout-diptych .hero__content-inner {
+          max-inline-size: unset;
         }
     }
   
