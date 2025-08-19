@@ -39,6 +39,7 @@ props:
       description: Title of a piece of content or a component
       default: h3
       enum:
+        - span
         - h1
         - h2
         - h3
