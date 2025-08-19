@@ -1,0 +1,17 @@
+.node__header {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .node__title {
+    /* placeholder node title */
+  }
+  
+  .node__body {
+    /* placeholder node content */
+    margin-block-end: 2rem;
+  }
+  
+  .node--feature {
+    /* placeholder feature page node */
+  }

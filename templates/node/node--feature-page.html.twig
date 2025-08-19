@@ -1,13 +1,68 @@
-<article{{ attributes }}>
+<article{{ attributes.addClasses('node') }}>
 
-  {{ title_prefix }}
-  {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+    {{ title_prefix }}
+      {% if label and not page %}
+        <h2{{ title_attributes }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+      {% endif %}
+    {{ title_suffix }}
 
+    <div class="node__header">
+    {# hero heading is page title #}
+      {% if node.field_hero_heading_is_page_title.value %}
+        {{ include ('skeleton:hero', {
+            attributes: attributes,
+            image: content.field_hero_image,
+            text: content.field_hero_text,
+            variant: 'style-fancy',
+            theme: 'theme-primary',
+            layout: 'layout-diptych',
+            'heading': [
+              include('skeleton:title', {
+                content: node.label,
+                html_tag: 'h1',
+                size: 'XL',
+              }, with_context = false),
+            ],
+        }) }}
+
+      {% else %}
+
+      {# hero heading is not page title #}
+        <div class="node__title">
+          <div class="container row row--justify-center">
+            <div class="col col--8">
+              {# page title #}
+              {{ label }}
+            </div>
+          </div>
+        </div>
+      {# end node title #}
+
+        {# display hero only if it has content #}
+        {% if node.field_hero_image.value or node.field_hero_heading.value %}
+          {{ include ('skeleton:hero', {
+              attributes: attributes,
+              image: content.field_hero_image,
+              text: content.field_hero_text,
+              variant: 'style-fancy',
+              theme: 'theme-primary',
+              layout: 'layout-diptych',
+              'heading': [
+                include('skeleton:title', {
+                  content: content.field_hero_heading,
+                  html_tag: 'span',
+                  size: 'L',
+                }, with_context = false),
+              ],
+            }) }}
+          {% endif %}
+        {% endif %}
+      </div>
+    {# end node header #}
+
+  {# authoring information #}
   {% if display_submitted %}
     <footer class="container row row--justify-center">
       <div class="col col--8">
@@ -20,48 +75,18 @@
   {% endif %}
 
   <div{{ content_attributes }}>
+    <div class="node__body">
+      <div class="container row row--justify-center">
+        <div class="col col--8">
+          {# node content #}
+          {{ content.body }}
+        </div>
+      </div>
+    </div>
+    {# end node body #}
 
-  {% if node.field_hero_image.value or node.field_hero_heading.value %}
-    {% if node.field_hero_heading_is_page_title.value %}
-      {{ include ('skeleton:hero', {
-          attributes: attributes,
-          image: content.field_hero_image,
-          text: content.field_hero_text,
-          variant: 'style-fancy',
-          theme: 'theme-primary',
-          layout: 'layout-diptych',
-          'heading': [
-            include('skeleton:title', {
-              content: node.label,
-              html_tag: 'h1',
-              size: 'XL',
-            }, with_context = false),
-          ],
-        }) }}
-
-     {% else %}
-
-      {{ include ('skeleton:hero', {
-       attributes: attributes,
-       image: content.field_hero_image,
-       text: content.field_hero_text,
-       variant: 'style-fancy',
-       theme: 'theme-primary',
-       layout: 'layout-diptych',
-       'heading': [
-         include('skeleton:title', {
-           content: content.field_hero_heading,
-           html_tag: 'h2',
-           size: 'L',
-         }, with_context = false),
-       ],
-     }) }}
-    {% endif %}
-  {% endif %}
-
-    {{ content.body }}
-
+    {# paragraphs flexrow #}
     {{ content.field_section }}
-  </div>
 
+  </div>
 </article>
