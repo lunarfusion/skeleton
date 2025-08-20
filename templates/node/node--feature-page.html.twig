@@ -17,7 +17,7 @@
             text: content.field_hero_text,
             variant: 'style-fancy',
             theme: 'theme-primary',
-            layout: 'layout-diptych',
+            layout: node.field_hero_layout.0.value,
             'heading': [
               include('skeleton:title', {
                 content: node.label,
@@ -48,7 +48,7 @@
               text: content.field_hero_text,
               variant: 'style-fancy',
               theme: 'theme-primary',
-              layout: 'layout-diptych',
+              layout: node.field_hero_layout.0.value,
               'heading': [
                 include('skeleton:title', {
                   content: content.field_hero_heading,

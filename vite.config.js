@@ -53,7 +53,11 @@ export default {
 
   css: {
     postcss: {
-      plugins: [postcssImport(), postcssNested(), postcssCustomMedia(), autoprefixer()],
+      plugins: [postcssImport(),
+        postcssNested(),
+        postcssCustomMedia(),
+        autoprefixer()
+      ],
     },
   },
 
