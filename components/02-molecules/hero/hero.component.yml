@@ -23,22 +23,24 @@ props:
         - theme-primary
       default: theme-default
 
-      layout:
-        title: Layout
-        type: string
-        description: "Layout options for the hero."
-        enum:
-          - layout-default
-          - layout-diptych
-        default: layout-default
+    layout:
+      title: Layout
+      type: string
+      description: "Layout options for the hero."
+      enum:
+        - layout-default
+        - layout-diptych
+      default: layout-default
 
-      text_alignment:
-        title: Text Alignment
-        description: "Which way should the text on the hero align?"
-        enum:
-          - text-align-start
-          - text-align-end
-          - text-center
+    text_alignment:
+      title: Text Alignment
+      type: string
+      description: "Which way should the text on the hero align?"
+      enum:
+        - text-align-start
+        - text-align-end
+        - text-center
+      default: text-align-start
 
 slots:
 
