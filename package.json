@@ -28,7 +28,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "lint": "stylelint assets/css/*.pcss"
+    "lint": "stylelint */*/*.pcss"
   },
   "eslintConfig": {
     "rules": {
