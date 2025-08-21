@@ -11,43 +11,59 @@
   <main role="main" class="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-    <div class="layout layout--banner">
-      <div class="container container--full">
-        {{ page.banner }}
+    {% if page.banner %}
+      <div class="layout layout--banner">
+        <div class="container container--full">
+          {{ page.banner }}
+        </div>
       </div>
-    </div>
+    {% endif %}
 
-    <div class="layout layout--content-top">
-      <div class="container">
-        {{ page.content_top }}
+    {% if page.content_top %}
+      <div class="layout layout--content-top">
+        <div class="container">
+          {{ page.content_top }}
+        </div>
       </div>
-    </div>
+    {% endif %}
 
     {# Feature page is fullwidth - does not allow sidebars #}
-    <div class="layout layout--content-main">
-      {{ page.content }}
-    </div> {# end content main #}
+    {% if page.content %}
+      <div class="layout layout--content-main">
+        {{ page.content }}
+      </div> {# end content main #}
+    {% endif %}
 
-    <div class="layout layout--content-bottom">
-      <div class="container container--full">
-        {{ page.content_bottom }}
+    {% if page.content_bottom %}
+      <div class="layout layout--content-bottom">
+        <div class="container container--full">
+          {{ page.content_bottom }}
+        </div>
       </div>
-    </div>
+    {% endif %}
   </main>
 
   {% if page.footer %}
     <footer role="contentinfo" class="layout layout--footer">
-      <div class="container container--full">
-        {{ page.footer_top }}
-      </div>
 
-      <div class="container">
-        {{ page.footer }}
-      </div>
+      {% if page.footer_top %}
+        <div class="container container--full">
+          {{ page.footer_top }}
+        </div>
+      {% endif %}
 
-      <div class="container container--full">
-        {{ page.footer_bottom }}
-      </div>
+      {% if page.footer %}
+        <div class="container">
+          {{ page.footer }}
+        </div>
+      {% endif %}
+
+      {% if page.footer_bottom %}
+        <div class="container container--full">
+          {{ page.footer_bottom }}
+        </div>
+      {% endif %}
+
     </footer>
   {% endif %}
 
