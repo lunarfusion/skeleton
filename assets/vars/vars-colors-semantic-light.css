@@ -12,41 +12,41 @@
   --skeleton-color-fg-base: var(--skeleton-color-black);
   --skeleton-color-fg-inverted: var(--skeleton-color-white);
   --skeleton-color-fg-subdued: var(--skeleton-color-gray-040);
-  
+
   /*** Background - Base ***/
   --skeleton-color-bg-base: var(--skeleton-color-white);
   --skeleton-color-bg-inverted: var(--skeleton-color-black);
-  
+
   /*** Border - Base ***/
   --skeleton-color-border-base: var(--skeleton-color-gray-010);
   --skeleton-color-border-inverted: var(--skeleton-color-gray-090);
-  
+
   /*** Background - Neutral ***/
   --skeleton-color-bg-neutral: var(--skeleton-color-gray-080);
   --skeleton-color-bg-neutral-subdued: var(--skeleton-color-gray-090);
   --skeleton-color-bg-neutral-extra-subdued: var(--skeleton-color-gray-095);
-  
+
   /*** Borders - Neutral ***/
   --skeleton-color-border-neutral: var(--skeleton-color-gray-040);
   --skeleton-color-border-neutral-subdued: var(--skeleton-color-gray-060);
   --skeleton-color-border-neutral-extra-subdued: var(--skeleton-color-gray-080);
-  
+
   /*** Shadows - Neutral ***/
   --skeleton-color-shadow-neutral: var(--skeleton-color-black-a20);
   --skeleton-color-shadow-neutral-subdued: var(--skeleton-color-black-a10);
-  
+
   /*** Foreground - Brand ***/
   --skeleton-color-fg-primary: var(--skeleton-color-violet-040);
   --skeleton-color-fg-primary-inverted: var(--skeleton-color-violet-080);
-  
+
   /*** Background - Brand ***/
-  --skeleton-color-bg-primary: var(--skeleton-color-violet-065);
+  --skeleton-color-bg-primary: var(--skeleton-color-violet-070);
   --skeleton-color-bg-primary-subdued: var(--skeleton-color-violet-080);
-  
+
   /*** Border - Brand ***/
   --skeleton-color-border-primary: var(--skeleton-color-violet-040);
   --skeleton-color-border-primary-inverted: var(--skeleton-color-violet-080);
-  
+
   /****** Static ******/
   --skeleton-color-fg-white-static: var(--skeleton-color-white);
   --skeleton-color-fg-black-static: var(--skeleton-color-black);
@@ -54,14 +54,14 @@
   --skeleton-color-bg-black-static: var(--skeleton-color-black);
   --skeleton-color-border-white-static: var(--skeleton-color-white);
   --skeleton-color-border-black-static: var(--skeleton-color-black);
-  
+
   /****************** SYSTEM ******************/
   /*** Focus Indicator ***/
   --skeleton-color-focus-indicator: var(--skeleton-color-blue-060);
-  
+
   /*** System accent color ***/
   --skeleton-color-accent: var(--skeleton-color-violet-060);
-  
+
   /*** Actions - Link Text ***/
   --skeleton-color-link-default: var(--skeleton-color-violet-060);
   --skeleton-color-link-hover: var(--skeleton-color-blue-060);
@@ -71,33 +71,33 @@
   --skeleton-color-link-disabled: var(--skeleton-color-gray-060);
   --skeleton-color-link-decoration: var(--skeleton-color-blue-080);
   --skeleton-color-link-decoration-hover: var(--skeleton-color-violet-060);
-  
+
   /********* SYSTEM ALERTS *********/
   /*** Negative ***/
   --skeleton-color-fg-negative: var(--skeleton-color-red-040);
   --skeleton-color-border-negative: var(--skeleton-color-red-060);
   --skeleton-color-bg-negative: var(--skeleton-color-red-090);
-  
+
   /*** Warning ***/
   --skeleton-color-fg-warning: var(--skeleton-color-yellow-040);
   --skeleton-color-border-warning: var(--skeleton-color-yellow-060);
   --skeleton-color-bg-warning: var(--skeleton-color-yellow-090);
-  
+
   /*** Positive ***/
   --skeleton-color-fg-positive: var(--skeleton-color-green-020);
   --skeleton-color-border-positive: var(--skeleton-color-green-060);
   --skeleton-color-bg-positive: var(--skeleton-color-green-090);
-  
+
   /*** Informative ***/
   --skeleton-color-fg-informative: var(--skeleton-color-blue-040);
   --skeleton-color-border-informative: var(--skeleton-color-blue-060);
   --skeleton-color-bg-informative: var(--skeleton-color-blue-090);
-  
+
   /*** Inverted Dark Background Class ***/
   .colors-inverted {
     --skeleton-color-fg-base: var(--skeleton-color-white);
     --skeleton-color-fg-subdued: var(--skeleton-color-gray-080);
-    
+
     /*** Actions - Link Text ***/
     --skeleton-color-link-default: var(--skeleton-color-violet-080);
     --skeleton-color-link-hover: var(--skeleton-color-blue-080);
