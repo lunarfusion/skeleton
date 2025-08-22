@@ -42,6 +42,16 @@ props:
         - text-center
       default: text-align-start
 
+    height:
+      title: Hero Height
+      type: string
+      description: "What height should the hero be?"
+      enum:
+        - height-default
+        - height-medium
+        - height-tall
+      default: height-default
+
 slots:
 
   image:

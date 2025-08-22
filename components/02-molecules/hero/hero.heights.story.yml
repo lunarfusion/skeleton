@@ -1,0 +1,46 @@
+name: Heights
+
+props:
+  variant: default
+  layout: layout-default
+  theme: theme-default
+
+slots:
+
+  image:
+    theme: image
+    uri: "/themes/custom/skeleton/assets/images/placeholder-hero.jpg"
+    alt: "image example"
+
+  heading:
+  - type: component
+    component: "skeleton:title"
+    slots:
+      content: "We Love Bones"
+    props:
+      html_tag: h1
+      size: XL
+
+  text: "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light."
+
+library_wrapper: >
+  {% set heights = [
+    'height-default',
+    'height-medium',
+    'height-tall',
+  ] %}
+  {% for height in heights %}
+  <div class="ui-patterns__story-variant ui-patterns__story-variant--fulltheme">
+    {% set height_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['hero hero--' ~ height]
+    })})} %}
+    <h4 class="title title--micro">{{ height }}</h4>
+    {% set height_slots = {'#slots': _story['#slots']|merge({
+      'heading': '<h1>We Love Bones</h1>',
+      'text': "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light.",
+      'image': '<img src="/themes/custom/skeleton/assets/images/placeholder-hero.jpg">',
+    })} %}
+    {% set height_story = _story %}
+    {{ height_story|merge(height_props)|merge(height_slots) }}
+    </div>
+  {% endfor %}
