@@ -5,6 +5,12 @@ status: experimental
 links:
    - "https://github.com/lunarfusion/skeleton"
 
+variants:
+  style-default:
+   title: Default Style
+  style-fa-marker:
+    title: FontAwesome Marker Style
+
 props:
   type: object
   properties:

@@ -1,6 +1,7 @@
 name: Themes
 
 props:
+  variant: style-default
   size: M
 
 slots:
