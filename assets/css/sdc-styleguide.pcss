@@ -1,0 +1,108 @@
+.sdc-styleguide-pattern {
+  --c1: var(--skeleton-color-bg-base);
+  --c2: var(--skeleton-color-bg-neutral-subdued);
+}
+
+.sdc-styleguide-page {
+  /* display: flex;
+  flex-direction: row; */
+  
+  color: var(--skeleton-color-fg-base);
+  
+  /** Sidebar version **/
+  &--alternate-layout {
+    display: flex;
+    flex-direction: row;
+    
+    .sdc-styleguide-page__explorer {
+      flex: 0 0 calc(25% - var(--skeleton-size-gap-x));
+      max-inline-size: calc(25% - var(--skeleton-size-gap-x));
+    }
+    
+    .sdc-styleguide-page__content {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+    
+    .sdc-styleguide-page__components-list {
+      flex-basis: 0;
+      overflow: unset;
+    }
+  }
+  
+  &__explorer {
+    padding: 1.5rem;
+    background: var(--skeleton-color-bg-primary);
+  }
+  
+  
+  /*** Explorer - component menu ***/
+  .sdc-styleguide-explorer {
+    
+    &__group,
+    &__group:first-child {
+      padding: 0 0.5rem;
+      border: 0;
+    }
+    
+    &__group-title,
+    h2 {
+      border-block-start: 4px solid var(--skeleton-color-border-primary-inverted);
+      font-size: 2rem;
+      line-height: 1.11;
+      padding: 0.5rem;
+      color: var(--skeleton-color-fg-base);
+      
+      button {
+        color: unset;
+      }
+    }
+    
+    &__group {
+      margin-block-end: 2rem;
+    }
+    
+    &__group-components {
+      background: transparent;
+      box-shadow: none;
+      padding-inline: 1.5rem 0.5rem;
+      display: flex !important;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    
+    &__component {
+      padding: 0;
+    }
+    
+    &__component-title {
+      color: var(--skeleton-color-fg-base);
+      font-size: 1.15rem;
+      line-height: 1.11;
+      font-weight: 400;
+    }
+  }
+  
+  
+  /*** Not sure why this is separate ***/
+  .sdc-styleguide {
+    &__explorer-separator {
+      display: none;
+    }
+    
+    &__explorer-branding {
+      
+      .branding__content {
+        flex-direction: column;
+      }
+      
+      .branding__sitename {
+        font-size: 3rem;
+      }
+      
+      .branding__siteslogan {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
