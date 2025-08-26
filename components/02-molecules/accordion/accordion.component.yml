@@ -5,8 +5,8 @@ status: experimental
 links:
   - "http://emory.edu"
 
-props:
-  type: object
+# props:
+#   type: object
 
 slots:
   items:

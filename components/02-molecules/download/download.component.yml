@@ -15,8 +15,8 @@ variants:
   image:
     title: Image file
 
-props:
-  type: object
+# props:
+#   type: object
 
 slots:
   file:

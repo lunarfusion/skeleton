@@ -1,7 +1,7 @@
 name: Hero
 description: "A large banner containing an image and text which frequently preceeds the main content of a page."
 status: experimental
-group: "02 Molecules"
+group: "Molecules"
 
 variants:
   style-default:
