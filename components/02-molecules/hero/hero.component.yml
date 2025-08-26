@@ -62,8 +62,3 @@ slots:
 
   text:
     title: Hero Text
-
-libraryOverrides:
-  css:
-    theme:
-      hero.css: {}

@@ -20,8 +20,3 @@ slots:
     title: "File Size"
   description:
     title: "File Description"
-
-libraryOverrides:
-    css:
-      theme:
-        file.css: {}

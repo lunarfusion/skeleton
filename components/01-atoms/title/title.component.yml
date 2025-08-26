@@ -51,7 +51,3 @@ slots:
   content:
     title: Content
     description: 'Content text of the title'
-
-libraryOverrides:
-    css:
-      title.css: {}

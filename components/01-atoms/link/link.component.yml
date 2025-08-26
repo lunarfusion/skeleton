@@ -28,7 +28,3 @@ slots:
   label:
     title: Label
     description: 'Label text of the link'
-
-libraryOverrides:
-    css:
-      link.css: {}

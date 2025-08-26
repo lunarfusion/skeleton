@@ -21,8 +21,3 @@ props:
 slots:
   file:
     title: "File link"
-
-libraryOverrides:
-    css:
-      theme:
-        download.css: {}
