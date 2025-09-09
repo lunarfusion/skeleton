@@ -5,15 +5,19 @@ Update to remove CSS as the system implementation matures
 ***/
 
 .ui-patterns {
+  padding-block-start: 4rem;
+  
   /* Component display - right column */
   &__components {
     display: flex;
     flex-direction: column;
     gap: 4rem;
   }
-
+  
   /*** Navigation - First col ***/
   &__menu {
+    position: sticky;
+    top: 6rem;
     max-inline-size: 100%;
     background-color: var(--skeleton-color-bg-base);
     border-radius: var(--skeleton-size-radius-med);
@@ -22,12 +26,12 @@ Update to remove CSS as the system implementation matures
     flex-direction: column;
     gap: 1rem;
   }
-
+  
   &__menu-group {
     border-block-start: 4px solid var(--skeleton-color-border-neutral);
     padding: 0.25rem;
   }
-
+  
   &__components-item {
     max-inline-size: 100%;
     padding: 2rem;
@@ -36,8 +40,9 @@ Update to remove CSS as the system implementation matures
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
+    
     .title {
+      
       a,
       a:hover,
       a:focus,
@@ -48,20 +53,20 @@ Update to remove CSS as the system implementation matures
       }
     }
   }
-
+  
   &__component-stories {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
-
+  
   &__story {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
     margin-block: 1rem;
   }
-
+  
   &__story-content {
     display: flex;
     flex-flow: row wrap;
@@ -78,10 +83,10 @@ Update to remove CSS as the system implementation matures
     position: relative;
     overflow: hidden;
   }
-
+  
   &__story-variant {
     min-inline-size: 180px;
-
+    
     .title--micro {
       font-family: var(--skeleton-font-primary);
       color: var(--skeleton-color-fg-subdued);
@@ -92,38 +97,38 @@ Update to remove CSS as the system implementation matures
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
-
+    
     &--fullwidth {
       inline-size: 100%;
     }
   }
-
+  
   &__metadata {
     border-block-end: 1px solid var(--skeleton-color-border-neutral);
     display: flex;
     flex-flow: row wrap;
-
+    
     p {
       font-size: var(--skeleton-size-text-small);
     }
   }
-
+  
   &__id {
     flex: 1;
   }
-
+  
   &__description {
     flex: 1;
   }
-
+  
   &__status {
     flex: 1;
   }
-
+  
   /* external documentation links */
   &__links {
     padding-block-start: 0.5rem;
-
+    
     p {
       font-size: var(--skeleton-size-text-small);
     }

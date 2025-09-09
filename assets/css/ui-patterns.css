@@ -4,6 +4,10 @@ This is a temporary solution for display of UI Patterns
 Update to remove CSS as the system implementation matures
 ***/
 
+.ui-patterns {
+  padding-block-start: 4rem;
+}
+
 /* Component display - right column */
 
 .ui-patterns__components {
@@ -15,6 +19,8 @@ Update to remove CSS as the system implementation matures
 /*** Navigation - First col ***/
 
 .ui-patterns__menu {
+    position: sticky;
+    top: 6rem;
     max-inline-size: 100%;
     background-color: var(--skeleton-color-bg-base);
     border-radius: var(--skeleton-size-radius-med);
@@ -63,15 +69,16 @@ Update to remove CSS as the system implementation matures
 
 .ui-patterns__story-content {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: space-between;
     justify-content: space-around;
-    flex-wrap: wrap;
     gap: 40px;
     padding: var(--skeleton-size-gap-y) var(--skeleton-size-gap-x);
     border-radius: var(--skeleton-size-radius-lrg);
     background: var(--skeleton-color-bg-base);
-    box-shadow: var(--skeleton-color-shadow-neutral-subdued) 0px 1px 3px, var(--skeleton-color-shadow-neutral) 0px 1px 2px;
+    box-shadow:
+      var(--skeleton-color-shadow-neutral-subdued) 0px 1px 3px,
+      var(--skeleton-color-shadow-neutral) 0px 1px 2px;
     border: 1px solid var(--skeleton-color-border-neutral-extra-subdued);
     position: relative;
     overflow: hidden;
@@ -88,7 +95,7 @@ Update to remove CSS as the system implementation matures
       line-height: 1.3;
       font-weight: 400;
       margin-block: 20px;
-      letter-spacing: .06em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
     }
 
@@ -99,8 +106,7 @@ Update to remove CSS as the system implementation matures
 .ui-patterns__metadata {
     border-block-end: 1px solid var(--skeleton-color-border-neutral);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
   }
 
 .ui-patterns__metadata p {
