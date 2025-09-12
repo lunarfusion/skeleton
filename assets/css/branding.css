@@ -34,7 +34,7 @@
     }
   
   .branding__siteslogan {
-    font-size: calc(var(--skeleton-size-text-lrg) * 1);
+    font-size: var(--skeleton-size-text-lrg);
     color: var(--skeleton-color-fg-base);
     font-weight: 400;
   }
