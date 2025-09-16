@@ -1,0 +1,10 @@
+name: Default
+
+slots:
+  label: "Button Text"
+
+props:
+  kind: button
+  size: M
+  has_icon: false
+  icon_only: false

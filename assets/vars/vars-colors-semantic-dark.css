@@ -44,7 +44,7 @@
     
     /****************** SYSTEM ******************/
     /*** Focus Indicator ***/
-    --skeleton-color-focus-indicator: var(--skeleton-color-blue-080);
+    --skeleton-color-focus-indicator: var(--skeleton-color-blue-060);
     
     /*** System accent color ***/
     --skeleton-color-accent: var(--skeleton-color-violet-080);

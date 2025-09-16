@@ -2,6 +2,18 @@
   --c1: var(--skeleton-color-bg-base);
   --c2: var(--skeleton-color-bg-neutral-subdued);
 }
+  
+  .sdc-styleguide-pattern .form-wrapper {
+    margin-block: 3rem;
+  }
+  
+  .sdc-styleguide-pattern .sdc-styleguide-patter__messages {
+    display: none;
+  }
+  
+  .sdc-styleguide-pattern input[type="submit"] {
+    margin-block: 3rem;
+  }
 
 .sdc-styleguide-page {
   /* display: flex;

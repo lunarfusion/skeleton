@@ -1,0 +1,11 @@
+name: Icon Only
+
+slots:
+  label: "Button Text"
+
+props:
+  kind: button
+  size: M
+  has_icon: true
+  icon_only: true
+  icon: 'circle-info'

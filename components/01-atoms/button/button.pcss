@@ -1,0 +1,350 @@
+/*** Button Variables ***/
+.button {
+  /* TBD unknown */
+  --skeleton-branding-size-block: 300px;
+  
+  --skeleton-size-block-button: 40px;
+  --skeleton-size-md-gap-component: .75rem;
+  --skeleton-size-sm-gap-component: 0.25rem;
+  --skeleton-size-thickness-component: 1.5px;
+  --skeleton-size-radius-button: calc(var(--skeleton-size-block-button) * 0.5);
+  
+  --skeleton-color-action-nav-fg-default: var(--skeleton-color-fg-base);
+  --skeleton-color-action-nav-fg-hover: var(--skeleton-color-fg-base);
+  --skeleton-color-action-nav-fg-focus: var(--skeleton-color-fg-base);
+  --skeleton-color-action-nav-fg-active: var(--skeleton-color-fg-base);
+  
+  --skeleton-color-action-primary-default: var(--skeleton-color-violet-055);
+  --skeleton-color-action-primary-hover: var(--skeleton-color-violet-065);
+  --skeleton-color-action-primary-focus: var(--skeleton-color-violet-065);
+  --skeleton-color-action-primary-active: var(--skeleton-color-violet-075);
+  
+  --skeleton-color-action-secondary-default: var(--skeleton-color-pink-050);
+  --skeleton-color-action-secondary-hover: var(--skeleton-color-pink-070);
+  --skeleton-color-action-secondary-focus: var(--skeleton-color-pink-070);
+  --skeleton-color-action-secondary-active: var(--skeleton-color-pink-080);
+  
+  --skeleton-color-action-disabled: var(--skeleton-color-gray-040);
+  --skeleton-color-action-fg-disabled: var(--skeleton-color-gray-080);
+}
+
+/*** Button Styles ***/
+.button {
+  z-index: 1;
+  position: relative;
+  padding-inline: var(--skeleton-size-radius-button);
+  
+  max-inline-size: 100%;
+  block-size: var(--skeleton-size-block-button);
+  inline-size: auto;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--skeleton-size-md-gap-component);
+  
+  border: var(--skeleton-size-thickness-component) solid transparent;
+  outline: none;
+  border-radius: var(--skeleton-size-radius-button);
+  
+  transition: var(--skeleton-transition-basic);
+  cursor: pointer;
+  
+  font-family: var(--skeleton-font-primary);
+  font-size: var(--skeleton-size-text-normal);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  color: var(--skeleton-color-fg-white-static);
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  background-color: var(--skeleton-color-action-primary-default);
+  
+  /*** Focus Indicator ***/
+  &::after {
+    position: absolute;
+    margin: auto;
+    content: "";
+    left: 0;
+    top: 0;
+    
+    z-index: -1;
+    
+    inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-thickness-component) * 2));
+    block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-thickness-component) * 2));
+    
+    margin-block-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-thickness-component)) * -1);
+    margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-thickness-component)) * -1);
+    
+    border-width: var(--skeleton-size-focus-indicator);
+    border-style: solid;
+    border-color: var(--skeleton-color-focus-indicator);
+    opacity: 0;
+    
+    border-radius: calc(var(--skeleton-size-radius-button) + var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-thickness-component));
+  }
+  
+  &__text {}
+  
+  /*** Child Icon ***/
+  &__icon {
+    display: flex;
+    block-size: calc(var(--skeleton-size-block-button) * 0.5);
+    inline-size: auto;
+    font-size: inherit;
+    color: inherit;
+    
+    svg {
+      transition: var(--skeleton-transition-basic);
+      
+      path {
+        fill: currentcolor;
+      }
+    }
+  }
+  
+  /*** State: Hover ***/
+  &:hover,
+  &.hover {
+    background-color: var(--skeleton-color-action-primary-hover);
+    color: var(--skeleton-color-fg-white-static);
+  }
+  
+  /*** State: Focus ***/
+  &:focus:not(:focus-visible),
+  &.focus:not(.focus-visible) {
+    &::after {
+      opacity: 1;
+    }
+  }
+  
+  &:focus,
+  &.focus,
+  &:focus-visible,
+  &.focus-visible {
+    background-color: var(--skeleton-color-action-primary-focus);
+    color: var(--skeleton-color-fg-white-static);
+    box-shadow: none;
+    
+    &::after {
+      border-color: var(--skeleton-color-focus-indicator);
+      opacity: 1;
+    }
+  }
+  
+  /*** State: Active ***/
+  &:active,
+  &.active,
+  &:focus:active,
+  &.focus.active,
+  &:focus-visible:active,
+  &.focus-visible.active {
+    background-color: var(--skeleton-color-action-primary-active);
+    color: var(--skeleton-color-fg-white-static);
+  }
+  
+  /*** prevent focus from firing on click ***/
+  &:-webkit-focus-ring {
+    outline: none;
+  }
+  
+  /*** Variant - secondary ***/
+  &--secondary {
+    background-color: var(--skeleton-color-action-secondary-default);
+    color: var(--skeleton-color-fg-black-static);
+    
+    &:hover,
+    &.hover {
+      background-color: var(--skeleton-color-action-secondary-hover);
+      color: var(--skeleton-color-fg-black-static);
+    }
+    
+    &:focus,
+    &.focus,
+    &:focus-visible,
+    &.focus-visible {
+      background-color: var(--skeleton-color-action-secondary-focus);
+      color: var(--skeleton-color-fg-black-static);
+    }
+    
+    &:active,
+    &.active,
+    &:focus:active,
+    &.focus.active {
+      background-color: var(--skeleton-color-action-secondary-active);
+      color: var(--skeleton-color-fg-black-static);
+    }
+  }
+  
+  /*** Variant - ghost ***/
+  &--ghost,
+  &--empty {
+    background-color: transparent;
+    border: var(--skeleton-size-thickness-component) solid var(--skeleton-color-action-secondary-default);
+    color: var(--skeleton-color-fg-base);
+    
+    &:hover,
+    &.hover {
+      background-color: transparent;
+      border-color: var(--skeleton-color-action-secondary-hover);
+      color: var(--skeleton-color-fg-base);
+    }
+    
+    &:focus,
+    &.focus,
+    &:focus-visible,
+    &.focus-visible {
+      background-color: transparent;
+      border-color: var(--skeleton-color-action-secondary-focus);
+      color: var(--skeleton-color-fg-base);
+    }
+    
+    &:active,
+    &.active,
+    &:focus:active,
+    &.focus.active {
+      background-color: transparent;
+      border-color: var(--skeleton-color-action-secondary-active);
+      color: var(--skeleton-color-fg-base);
+    }
+  }
+  
+  &--empty {
+    border: var(--skeleton-size-thickness-component) solid transparent;
+  }
+  
+  &--disabled {
+    background-color: var(--skeleton-color-action-disabled);
+    color: var(--skeleton-color-action-fg-disabled);
+    pointer-events: none;
+    
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:active {
+      background-color: var(--skeleton-color-action-disabled);
+    }
+  }
+  
+  /*** Variant - circle icon only ***/
+  &--icon-only {
+    border-radius: 100%;
+    block-size: var(--skeleton-size-block-button);
+    inline-size: var(--skeleton-size-block-button);
+    max-inline-size: var(--skeleton-size-block-button);
+    max-block-size: var(--skeleton-size-block-button);
+    padding: 0;
+    
+    &::after {
+      border-radius: 100%;
+    }
+    
+    .button__content {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+    }
+  }
+  
+  /*** Variant - small ***/
+  &--sizeS {
+    font-size: var(--skeleton-size-text-small);
+    padding-inline: calc(var(--skeleton-size-radius-button) * 0.65);
+    block-size: calc(var(--skeleton-size-block-button) * 0.75);
+    
+    .button__icon {
+      block-size: calc(var(--skeleton-size-block-button) * 0.35);
+    }
+  }
+  
+  /*** Variant - medium - default ***/
+  &--sizeM {
+    font-size: var(--skeleton-size-text-normal);
+    padding-inline: var(--skeleton-size-radius-button);
+    block-size: var(--skeleton-size-block-button);
+    
+    .button__icon {
+      block-size: calc(var(--skeleton-size-block-button) * 0.5);
+    }
+  }
+  
+  /*** Variant - large ***/
+  &--sizeL {
+    font-size: var(--skeleton-size-text-med);
+    padding-inline: calc(var(--skeleton-size-radius-button) * 1.25);
+    block-size: calc(var(--skeleton-size-block-button) * 1.5);
+    border-radius: calc(var(--skeleton-size-radius-button) * 1.5);
+    
+    .button__icon {
+      block-size: calc(var(--skeleton-size-block-button) * 0.75);
+    }
+  }
+  
+  
+  &--menu-toggle {
+    z-index: 9;
+    padding-block: calc(var(--skeleton-size-radius-button) * 0.5);
+    block-size: calc(var(--skeleton-size-block-button) * 1.5);
+    
+    span {
+      font-size: inherit;
+    }
+    
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
+    
+    .button__icon {
+      content: url("../../../assets/icons/svgs/solid/bars.svg");
+      filter: invert(1);
+      
+      svg path {
+        fill: currentcolor;
+      }
+    }
+    
+    .button__content {
+      font-size: var(--skeleton-size-text-small);
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 0.25rem;
+    }
+    
+    /* menu is closed */
+    .close-text {
+      display: none;
+    }
+    
+    .open-text {
+      display: block;
+    }
+    
+    &.closed {
+      .button__icon {
+        content: url("../../../assets/icons/svgs/solid/bars.svg");
+      }
+    }
+    
+    /* menu is opened */
+    &.open {
+      
+      .button__icon {
+        content: url("../../../assets/icons/svgs/solid/x.svg");
+      }
+      
+      .close-text {
+        display: block
+      }
+      
+      .open-text {
+        display: none;
+      }
+    }
+  }
+}

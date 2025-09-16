@@ -1,0 +1,101 @@
+
+{% set kind = kind in ['button', 'link', 'menu-toggle'] ? kind : 'button' %}
+{% set kind_class = kind ? 'button--%s'|format(kind) : '' %}
+{% set assets_dir = assets_dir|default('@skeleton/../assets/icons/svgs/solid/') %}
+
+
+{%
+  set classes = [
+    'button',
+    variant and variant != 'default' ? 'button--' ~ variant,
+    size ? 'button--size' ~ size,
+    layout ? 'button--' ~ layout,
+    icon_only and icon_only == 'true' ? 'button--icon-only',
+    kind_class,
+    state and state != '' ? state,
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+{# content markup #}
+{% set content_markup %}
+
+    {% if icon_only %}
+      <span class="button__text  sr-only">
+        {{ label }}
+      </span>
+
+      <span class="button__icon">
+        {{ source(assets_dir ~ icon ~ '.svg') }}
+      </span>
+
+    {% else %}
+      <span class="button__text">
+        {{ label }}
+      </span>
+      {% if has_icon %}
+        <span class="button__icon">
+          {{ source(assets_dir ~ icon ~ '.svg') }}
+        </span>
+      {% endif %}
+
+  {% endif %}
+{% endset %}
+
+
+
+{# kind markup #}
+{% if kind == 'button' %}
+  <button
+    {{ attributes }}
+    data-component-name="button"
+    value="{{ label }}"
+    {% if attributes is not empty %}
+      {{attributes.setAttribute('id',input_id)}}
+    {% endif %}
+    {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}>
+    {{- content_markup -}}
+  </button>
+
+{% elseif kind == 'link' %}
+  <a
+    {{ attributes }}
+    data-component-name="button"
+    {% if attributes is not empty %}
+      {{attributes.setAttribute('href',url)}}
+    {% endif %}
+    {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}>
+    {{- content_markup -}}
+  </a>
+
+{% elseif kind in ['reset', 'submit'] %}
+  <input
+    {{ attributes }}
+    data-component-name="button"
+    type="{{ kind }}"
+    value="{{- label -}}"
+    {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}
+  />
+
+{# TODO - menu open/close button label and icon swap #}
+  {% elseif kind == 'menu-toggle' %}
+
+  <button
+    {{ attributes }}
+    data-component-name="button"
+    value="{{ label }}"
+    {% if attributes is not empty %}
+      {{attributes.setAttribute('id',input_id)}}
+    {% endif %}>
+
+    {# {{- content_markup -}} #}
+
+    <span class="button__content">
+      <span class="open-text">MENU</span>
+      <span class="close-text">CLOSE</span>
+      <span class="button__icon"></span>
+    </span>
+  </button>
+
+{% endif %}

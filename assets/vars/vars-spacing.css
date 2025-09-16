@@ -7,7 +7,6 @@
   /* focus indicator */
   --skeleton-size-gap-focus-indicator: 2px;
   --skeleton-size-focus-indicator: 2px;
-  --skeleton-color-focus-indicator: hsl(190, 100%, 50%);
   
   /****** Character width limiter ******/
   --skeleton-size-charlimit: 75ch;

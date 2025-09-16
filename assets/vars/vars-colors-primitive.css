@@ -21,20 +21,20 @@
   --skeleton-color-gray-090: hsl(260, 5%, 90%);
   --skeleton-color-gray-095: hsl(260, 5%, 95%);
   --skeleton-color-white: hsl(260, 5%, 100%);
-
+  
   /*** Neutral Transparent ***/
   --skeleton-color-black-a05: hsla(260, 5%, 0%, 0.05);
   --skeleton-color-black-a10: hsla(260, 5%, 0%, 0.1);
   --skeleton-color-black-a20: hsla(260, 5%, 0%, 0.2);
   --skeleton-color-black-a30: hsla(260, 5%, 0%, 0.3);
   --skeleton-color-black-a40: hsla(260, 5%, 0%, 0.4);
-
+  
   --skeleton-color-white-a05: hsla(260, 5%, 100%, 0.05);
   --skeleton-color-white-a10: hsla(260, 5%, 100%, 0.1);
   --skeleton-color-white-a20: hsla(260, 5%, 100%, 0.2);
   --skeleton-color-white-a30: hsla(260, 5%, 100%, 0.3);
   --skeleton-color-white-a40: hsla(260, 5%, 100%, 0.4);
-
+  
   /*** Red ***/
   --skeleton-color-red-010: hsl(350, 71%, 10%);
   --skeleton-color-red-020: hsl(350, 71%, 20%);
@@ -42,7 +42,7 @@
   --skeleton-color-red-060: hsl(350, 71%, 60%);
   --skeleton-color-red-080: hsl(350, 71%, 80%);
   --skeleton-color-red-090: hsl(350, 71%, 90%);
-
+  
   /*** Yellow ***/
   --skeleton-color-yellow-010: hsl(40, 100%, 10%);
   --skeleton-color-yellow-020: hsl(40, 100%, 20%);
@@ -50,7 +50,7 @@
   --skeleton-color-yellow-060: hsl(40, 100%, 60%);
   --skeleton-color-yellow-080: hsl(40, 100%, 80%);
   --skeleton-color-yellow-090: hsl(40, 100%, 90%);
-
+  
   /*** Green ***/
   --skeleton-color-green-010: hsl(170, 80%, 10%);
   --skeleton-color-green-020: hsl(170, 80%, 20%);
@@ -58,15 +58,16 @@
   --skeleton-color-green-060: hsl(170, 80%, 60%);
   --skeleton-color-green-080: hsl(170, 80%, 80%);
   --skeleton-color-green-090: hsl(170, 80%, 90%);
-
+  
   /*** Blue ***/
   --skeleton-color-blue-010: hsl(220, 100%, 10%);
   --skeleton-color-blue-020: hsl(220, 100%, 20%);
   --skeleton-color-blue-040: hsl(220, 100%, 40%);
   --skeleton-color-blue-060: hsl(220, 100%, 60%);
+  --skeleton-color-blue-070: hsl(220, 100%, 70%);
   --skeleton-color-blue-080: hsl(220, 100%, 80%);
   --skeleton-color-blue-090: hsl(220, 100%, 90%);
-
+  
   /*** Violet ***/
   --skeleton-color-violet-010: hsl(260, 75%, 10%);
   --skeleton-color-violet-020: hsl(260, 75%, 20%);
@@ -80,4 +81,15 @@
   --skeleton-color-violet-080: hsl(260, 75%, 80%);
   --skeleton-color-violet-085: hsl(260, 75%, 85%);
   --skeleton-color-violet-090: hsl(260, 75%, 90%);
+  
+  /*** Pink ***/
+  --skeleton-color-pink-010: hsl(300, 80%, 10%);
+  --skeleton-color-pink-020: hsl(300, 80%, 20%);
+  --skeleton-color-pink-030: hsl(300, 80%, 30%);
+  --skeleton-color-pink-040: hsl(300, 80%, 40%);
+  --skeleton-color-pink-050: hsl(300, 80%, 50%);
+  --skeleton-color-pink-060: hsl(300, 80%, 60%);
+  --skeleton-color-pink-070: hsl(300, 80%, 70%);
+  --skeleton-color-pink-080: hsl(300, 80%, 80%);
+  --skeleton-color-pink-090: hsl(300, 80%, 90%);
 }

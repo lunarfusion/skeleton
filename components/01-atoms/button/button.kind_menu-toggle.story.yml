@@ -1,0 +1,28 @@
+name: Menu Toggle
+
+slots:
+  label: "Toggle Menu"
+
+props:
+  variant: primary
+  kind: menu-toggle
+  size: M
+  has_icon: true
+  icon: 'bars'
+  input_id: menu-toggle
+
+library_wrapper: >
+  {% set states = [
+    'open',
+    'closed',
+  ] %}
+  {% for state in states %}
+  <div class="ui-patterns__story-variant">
+    {% set state_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['button--primary ' ~ state]
+    })})} %}
+    <h4 class="title title--micro">{{ state }}</h4>
+    {% set state_story = _story %}
+    {{ state_story|merge(state_props) }}
+    </div>
+  {% endfor %}

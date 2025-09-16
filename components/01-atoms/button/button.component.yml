@@ -1,0 +1,129 @@
+name: Button
+group: "Atoms"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+variants:
+  primary:
+    title: Primary
+  secondary:
+    title: Secondary
+  ghost:
+    title: Ghost
+  empty:
+    title: Empty
+  disabled:
+    title: Disabled
+
+props:
+  type: object
+  properties:
+
+    has_icon:
+      type: boolean
+      enum:
+        - true
+        - false
+      default: false
+
+    icon_only:
+      type: boolean
+      description: Text is screenreader only
+      enum:
+        - true
+        - false
+      default: false
+
+    icon:
+      type: string
+      title: Icon
+      description: Icon name.
+      enum:
+        - 'circle-info'
+        - 'arrow-right'
+        - 'bars'
+        - 'x'
+      examples:
+        - 'circle-info'
+
+    layout:
+      type: string
+      title: Button layout
+      enum:
+        - horizontal
+        - vertical
+      default:
+        - horizontal
+
+    assets_dir:
+      type: string
+      title: Assets dir
+      description: Optional assets directory to get icons from.
+      default: '@skeleton/../assets/icons/svgs/solid/'
+      examples:
+        - '@skeleton/../assets/icons/svgs/solid/'
+
+    is_disabled:
+      type: boolean
+      title: Disabled or not.
+      default: false
+      examples:
+        - false
+
+    url:
+      type: string
+      title: Button URL
+      format: iri-reference
+      default:
+        - http://wikipedia.com
+
+    input_id:
+      type: string
+      format: iri-reference
+      default: button-id
+
+    input_value:
+      type: string
+      title: Input value
+      default: submit
+
+    kind:
+      type: string
+      title: Kind
+      description: 'Button kind: submit, button, link, menu toggle.'
+      default: button
+      enum:
+        - button
+        - link
+        - menu-toggle
+      examples:
+        - button
+
+    size:
+      type: string
+      title: Size
+      description: 'Button size: large, medium, small.'
+      enum:
+        - S
+        - M
+        - L
+      default: M
+
+    state:
+      type: string
+      title: State
+      description: 'Toggle button state.'
+      enum:
+        - ''
+        - open
+        - closed
+      default: closed
+
+slots:
+  label:
+    type: string
+    title: label
+    description: Button label text.
+    default:
+      - Button Text
