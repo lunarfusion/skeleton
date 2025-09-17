@@ -1,26 +1,31 @@
+/*** Download Group Variables ***/
 .download-group {
-  --downloads-padding: 1.25rem;
-  
-  padding: var(--downloads-padding);
-  background-color: var(--skeleton-color-bg-neutral-extra-subdued);
-  border-radius: calc(var(--skeleton-size-radius-sm) + (var(--downloads-padding) * 0.5));
-  filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-neutral));
+  --skeleton-padding-download-group: 1.25rem;
+  --skeleton-color-bg-download-group: var(--skeleton-color-bg-neutral-extra-subdued);
+  --skeleton-border-radius-download-group: var(--skeleton-size-radius-sm);
+  --skeleton-color-shadow-download-group: var(--skeleton-color-shadow-neutral);
 }
-  
-  /* add margin when in main node content */
-  .field--body .download-group {
+/*** Download Group Styles ***/
+.download-group {
+  padding: var(--skeleton-padding-download-group);
+  background-color: var(--skeleton-color-bg-download-group);
+  border-radius: calc(var(--skeleton-border-radius-download-group) + (var(--skeleton-padding-download-group) * 0.5));
+  filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-download-group));
+}
+/* add margin when in main node content */
+.field--body .download-group {
     margin-block: 0.5rem;
   }
-  .download-group__title {
+.download-group__title {
     font-size: 1.5rem;
     line-height: 1.1;
     margin-block-start: 0;
     margin-block-end: 1rem;
   }
-  .download-group__items {}
-  .download-group .download {
+.download-group__items {}
+.download-group .download {
     margin-block: 0.75rem;
   }
-  .download-group .download:last-of-type {
+.download-group .download:last-of-type {
       margin-block-end: 0;
     }
