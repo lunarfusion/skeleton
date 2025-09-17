@@ -1,13 +1,22 @@
+/*** Download Variables ***/
+.download {
+  --skeleton-color-bg-download: var(--skeleton-color-bg-neutral-subdued);
+  --skeleton-border-radius-download: var(--skeleton-size-radius-sm);
+  --skeleton-color-fg-download: var(--skeleton-color-fg-primary);
+  --skeleton-size-text-download: var(--skeleton-size-text-med);
+}
+
+/*** Download Styles ***/
 .download {
   position: relative;
   padding: 1.25rem 1.5rem;
   margin-block: 0.5rem;
-  background-color: var(--skeleton-color-bg-neutral-subdued);
-  border-radius: var(--skeleton-size-radius-sm);
+  background-color: var(--skeleton-color-bg-download);
+  border-radius: var(--skeleton-border-radius-download);
   
   &__icon {
-    color: var(--skeleton-color-fg-primary);
-    font-size: var(--skeleton-size-text-med);
+    color: var(--skeleton-color-fg-download);
+    font-size: var(--skeleton-size-text-download);
     line-height: 1;
     display: inline-block;
     vertical-align: middle;
