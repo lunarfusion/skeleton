@@ -1,58 +1,72 @@
+/*** Aside Variables ***/
 .aside {
-  --aside-border-width: 0px;
-  --bar-width: var(--skeleton-size-radius-med);
-  --aside-border-color: var(--skeleton-color-border-neutral-extra-subdued);
-  --aside-background-color: var(--skeleton-color-bg-neutral-extra-subdued);
+  --skeleton-width-bar-aside: var(--skeleton-size-radius-med);
+  --skeleton-color-border-aside: var(--skeleton-color-border-neutral-extra-subdued);
+  --skeleton-color-bg-aside: var(--skeleton-color-bg-neutral-extra-subdued);
+  
+  --skeleton-size-radius-aside: var(--skeleton-size-radius-med);
+  --skeleton-color-shadow-aside: var(--skeleton-color-shadow-neutral);
+  
+  --skeleton-size-text-aside-title: var(--skeleton-size-text-med);
+  --skeleton-size-text-aside-content: var(--skeleton-size-text-small);
+  
+  --skeleton-color-fg-aside: var(--skeleton-color-fg-base);
+  --skeleton-transition-aside: var(--skeleton-transition-basic);
+  
+  /* themes */
+  --skeleton-color-border-primary-aside: var(--skeleton-color-border-primary);
+  --skeleton-color-bg-primary-aside: var(--skeleton-color-bg-primary);
+}
 
+/*** Aside Styles ***/
+.aside {
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 1.5rem 2.5rem;
-  background-color: var(--aside-background-color);
-  border-radius: var(--skeleton-size-radius-med);
-  border: var(--aside-border-width) solid var(--aside-border-color);
-  border-inline-start-width: var(--bar-width);
+  background-color: var(--skeleton-color-bg-aside);
+  border-radius: var(--skeleton-size-radius-aside);
+  border-inline-start-width: var(--skeleton-width-bar-aside);
   border-inline-start-color: transparent;
-  filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-neutral));
-
+  filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-aside));
+  
   &::before {
     content: "";
-    width: var(--bar-width);
-    height: calc(100% + (var(--skeleton-size-radius-med) * 0.65));
+    width: var(--skeleton-width-bar-aside);
+    height: calc(100% + (var(--skeleton-size-radius-aside) * 0.65));
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     margin: auto;
-    background-color: var(--aside-border-color);
-    border-radius: calc(var(--bar-width) * 0.5);
-    transform: translateX(calc(var(--bar-width) * -1));
+    background-color: var(--skeleton-color-border-aside);
+    border-radius: calc(var(--skeleton-width-bar-aside) * 0.5);
   }
-
+  
   /* add margin when in main node content */
   .field--body & {
     margin: 1.5rem;
   }
-
+  
   /*** Child Elements ***/
   &__title {
     margin-block: 0 0.5rem;
-    font-size: var(--skeleton-size-text-med);
+    font-size: var(--skeleton-size-text-aside-title);
     font-weight: 600;
   }
-
+  
   &__content {
-    font-size: var(--skeleton-size-text-small);
+    font-size: var(--skeleton-size-text-aside-content);
     line-height: 1.6;
   }
-
+  
   /*** VARIANTS - style ***/
   &--style-fancy {
-
+    
     &::after {
       position: absolute;
       top: 1rem;
-      left: -1.5rem;
+      left: 0;
       height: 1.2rem;
       width: 1.2rem;
       padding: 0.5rem;
@@ -63,43 +77,43 @@
       font-size: 1.2rem;
       line-height: 1;
       color: currentcolor;
-      color: var(--skeleton-color-fg-base);
+      color: var(--skeleton-color-fg-aside);
       transform-origin: 50% 50%;
-      transition: var(--skeleton-transition-basic);
+      transform: translateX(calc(var(--skeleton-width-bar-aside) * -1));
       font-family: "FontAwesome";
       content: "\f54c";
-      background-color: var(--aside-background-color);
+      background-color: var(--skeleton-color-bg-aside);
       border-radius: 100%;
-      border: 2px solid var(--aside-border-color);
+      border: 2px solid var(--skeleton-color-border-aside);
     }
   }
-
+  
   /*** VARIANTS - color theme ***/
   &--theme-primary {
-    --aside-border-color: var(--skeleton-color-border-primary);
-    --aside-background-color: var(--skeleton-color-bg-primary);
+    --skeleton-color-border-aside: var(--skeleton-color-border-primary-aside);
+    --skeleton-color-bg-aside: var(--skeleton-color-bg-primary-aside);
   }
-
+  
   /*** VARIANTS - float ***/
   &--float-left {
     float: left;
     margin-inline-start: 0;
   }
-
+  
   &--float-right {
     float: right;
     margin-inline-end: 0;
   }
-
+  
   /*** VARIANTS - width ***/
   &--width-60 {
     inline-size: 60%;
   }
-
+  
   &--width-40 {
     inline-size: 40%;
   }
-
+  
   &--width-30 {
     inline-size: 30%;
   }
