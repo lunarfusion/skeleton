@@ -1,0 +1,50 @@
+name: Has Actions
+
+props:
+  icon:
+    pack_id: skeleton_fontawesome_icons
+    icon_id: circle-info
+    settings:
+      icon_size: M
+      extra_class: alert-icon
+  is_dismisable: true
+  has_actions: true
+
+slots:
+  title:
+  - type: component
+    component: 'skeleton:title'
+    props:
+      variant: alert
+      size: M
+    slots:
+      content: "Title of the Alert"
+
+  content: "Xxxxx xxxxxxx xxxxxx xxxxxxxxx. Xxxxxxx xxxxxx xxx. Xxxxx xxxxxxx xxxxxx xxxxxxxxx. Xxxxxxx xxxxxx xxx. Xxxxx xxxxxxx xxxxxx xxxxxxxxx."
+
+  buttons:
+  - type: component
+    component: 'skeleton:button'
+    props:
+      variant: primary
+    slots:
+      label: "Primary Button"
+  - type: component
+    component: 'skeleton:button'
+    props:
+      variant: ghost
+    slots:
+      label: "Ghost Button"
+
+  close_button:
+  - type: component
+    component: 'skeleton:button'
+    props:
+      variant: empty
+      has_icon: true
+      icon_only: true
+      icon: 'x'
+      size: S
+      modifier_class: 'button--alert'
+    slots:
+      label: "Close Alert"

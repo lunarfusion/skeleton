@@ -1,0 +1,68 @@
+name: Alert
+description: A temporary message to provide feedback to the user in response to their action, or bring attention to temporary announcement such as a banner
+group: "Molecules"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+variants:
+  informative:
+    title: Informative/neutral
+  positive:
+    title: Positive
+  warning:
+    title: Warning
+  negative:
+    title: Negative
+
+props:
+  type: object
+  properties:
+    assets_dir:
+      type: string
+      title: Assets dir
+      description: Optional assets directory to get icons from.
+      default: '@skeleton/../assets/icons/svgs/solid/'
+      examples:
+        - '@skeleton/../assets/icons/svgs/solid/'
+
+    is_dismisable:
+      type: boolean
+      description: Alert can be closed
+      enum:
+        - true
+        - false
+      default: true
+
+    has_actions:
+      type: boolean
+      description: Alert has action buttons
+      enum:
+        - true
+        - false
+      default: false
+
+    banner:
+      type: boolean
+      description: Alert is banner style
+      enum:
+        - true
+        - false
+      default: false
+
+slots:
+  title:
+    title: Title
+    description: 'Title of the alert'
+
+  content:
+    title: Content
+    description: 'Body content of the alert'
+
+  buttons:
+    title: Buttons
+    description: "Alert button actions."
+
+  close_button:
+    title: Close Button
+    description: "Button to close the alert"

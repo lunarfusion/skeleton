@@ -1,0 +1,72 @@
+{%
+  set classes = [
+    'alert',
+    variant and variant != 'default' ? 'alert--' ~ variant,
+    banner and banner != '' ? 'alert--banner',
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+
+ {# icon per each alert variant #}
+  <div class="alert__icon">
+    {% if variant == 'informative' %}
+      <svg class="icon icon--M icon--alert-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#circle-info" href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#circle-info"></use>
+      </svg>
+
+    {% elseif variant == 'positive' %}
+      <svg class="icon icon--M icon--alert-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#face-smile" href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#face-smile"></use>
+      </svg>
+
+    {% elseif variant == 'warning' %}
+      <svg class="icon icon--M icon--alert-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#triangle-exclamation" href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#triangle-exclamation"></use>
+     </svg>
+
+    {% elseif variant == 'negative' %}
+      <svg class="icon icon--M icon--alert-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#ban" href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#ban"></use>
+      </svg>
+
+    {% else %}
+      <svg class="icon icon--M icon--alert-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#circle-info" href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#circle-info"></use>
+      </svg>
+    {% endif %}
+  </div>
+
+  <div class="alert__content">
+    <div class="alert__title">
+      <span>{{ title }}</span>
+    </div>
+
+    <div class="alert__body">
+      <span>{{ content }}</span>
+    </div>
+
+    {% if has_actions %}
+      <div class="alert__actions">
+        {% for button in buttons %}
+        {{ button }}
+        {% endfor %}
+      </div>
+    {% endif %}
+    <!--end alert actions-->
+
+    {% if is_dismisable %}
+      <div class="alert__close">
+        {{ close_button }}
+      </div>
+    {% endif %}
+  </div>
+  <!--end alert__content-->
+
+  {# the close button is not a slot, so we can just place it #}
+  {# <button class="button button--empty button--icon button--icon-only button--alert-close">
+    <svg class="icon icon--M icon--alert-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#xmark" href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#xmark"></use>
+    </svg>
+  </button> #}
+</div>

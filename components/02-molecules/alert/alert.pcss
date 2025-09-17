@@ -1,0 +1,109 @@
+/*** Alert Variables ***/
+.alert {
+  --skeleton-color-fg-alert: var(--skeleton-color-fg-base);
+  
+  --skeleton-color-bg-alert-default: var(--skeleton-color-bg-informative);
+  --skeleton-color-border-alert-default: var(--skeleton-color-border-informative);
+  --skeleton-color-icon-alert-default: var(--color-fg-informative);
+  
+  --skeleton-color-bg-alert-warning: var(--skeleton-color-bg-warning);
+  --skeleton-color-border-alert-warning: var(--skeleton-color-border-warning);
+  --skeleton-color-icon-alert-warning: var(--skeleton-color-fg-warning);
+  
+  --skeleton-color-bg-alert-positive: var(--skeleton-color-bg-positive);
+  --skeleton-color-border-alert-positive: var(--skeleton-color-border-positive);
+  --skeleton-color-icon-alert-positive: var(--skeleton-color-fg-positive);
+  
+  --skeleton-color-bg-alert-negative: var(--skeleton-color-bg-negative);
+  --skeleton-color-border-alert-negative: var(--skeleton-color-border-negative);
+  --skeleton-color-icon-alert-negative: var(--skeleton-color-fg-negative);
+  
+  --skeleton-border-width-alert: 4px;
+  --skeleton-padding-alert: 1.25rem;
+  --skeleton-border-radius-alert: var(--skeleton-size-radius-med);
+  --skeleton-size-inline-alert: 800px;
+  --skeleton-size-gap-inner-alert: 0.75rem;
+}
+
+
+/*** Alert Styles ***/
+.alert {
+  position: relative;
+  inline-size: 100%;
+  max-inline-size: var(--skeleton-size-inline-alert);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--skeleton-padding-alert);
+  border-radius: var(--skeleton-border-radius-alert);
+  background-color: var(--skeleton-color-bg-alert-default);
+  border: var(--skeleton-border-width-alert) solid var(--skeleton-color-border-alert-default);
+  --skeleton-color-icon-alert: var(--skeleton-color-icon-alert-default);
+  
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--skeleton-size-gap-inner-alert);
+    color: var(--skeleton-color-fg-alert);
+  }
+  
+  &__icon {
+    color: var(--skeleton-color-icon-alert);
+    margin-inline-end: var(--skeleton-size-gap-inner-alert);
+  }
+  
+  &__header {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  
+  &__body {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  
+  &__actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-block-start: 0.5rem;
+  }
+  
+  &__close {
+    position: absolute;
+    top: calc(var(--skeleton-padding-alert) * 0.25);
+    right: calc(var(--skeleton-padding-alert) * 0.25);
+  }
+  
+  /*** Style Variants ***/
+  &--banner {
+    border-radius: 0;
+    max-inline-size: 100%;
+    inline-size: 100%;
+  }
+  
+  /*** Semantic Variants **/
+  &--positive {
+    --skeleton-color-icon-alert: var(--skeleton-color-icon-alert-positive);
+    background-color: var(--skeleton-color-bg-alert-positive);
+    border-color: var(--skeleton-color-border-alert-positive);
+  }
+  
+  &--warning {
+    --skeleton-color-icon-alert: var(--skeleton-color-icon-alert-warning);
+    background-color: var(--skeleton-color-bg-alert-warning);
+    border-color: var(--skeleton-color-border-alert-warning);
+  }
+  
+  &--negative {
+    --skeleton-color-icon-alert: var(--skeleton-color-icon-alert-negative);
+    background-color: var(--skeleton-color-bg-alert-negative);
+    border-color: var(--skeleton-color-border-alert-negative);
+  }
+}
