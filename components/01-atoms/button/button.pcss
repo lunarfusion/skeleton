@@ -1,31 +1,23 @@
 /*** Button Variables ***/
 .button {
-  /* TBD unknown */
-  --skeleton-branding-size-block: 300px;
-  
   --skeleton-size-block-button: 40px;
-  --skeleton-size-md-gap-component: .75rem;
-  --skeleton-size-sm-gap-component: 0.25rem;
-  --skeleton-size-thickness-component: 1.5px;
+  --skeleton-size-md-gap-button: .75rem;
+  --skeleton-size-sm-gap-button: 0.25rem;
+  --skeleton-size-border-button: 1.5px;
   --skeleton-size-radius-button: calc(var(--skeleton-size-block-button) * 0.5);
   
-  --skeleton-color-action-nav-fg-default: var(--skeleton-color-fg-base);
-  --skeleton-color-action-nav-fg-hover: var(--skeleton-color-fg-base);
-  --skeleton-color-action-nav-fg-focus: var(--skeleton-color-fg-base);
-  --skeleton-color-action-nav-fg-active: var(--skeleton-color-fg-base);
+  --skeleton-color-button-primary-default: var(--skeleton-color-violet-055);
+  --skeleton-color-button-primary-hover: var(--skeleton-color-violet-065);
+  --skeleton-color-button-primary-focus: var(--skeleton-color-violet-065);
+  --skeleton-color-button-primary-active: var(--skeleton-color-violet-075);
   
-  --skeleton-color-action-primary-default: var(--skeleton-color-violet-055);
-  --skeleton-color-action-primary-hover: var(--skeleton-color-violet-065);
-  --skeleton-color-action-primary-focus: var(--skeleton-color-violet-065);
-  --skeleton-color-action-primary-active: var(--skeleton-color-violet-075);
+  --skeleton-color-button-secondary-default: var(--skeleton-color-pink-050);
+  --skeleton-color-button-secondary-hover: var(--skeleton-color-pink-070);
+  --skeleton-color-button-secondary-focus: var(--skeleton-color-pink-070);
+  --skeleton-color-button-secondary-active: var(--skeleton-color-pink-080);
   
-  --skeleton-color-action-secondary-default: var(--skeleton-color-pink-050);
-  --skeleton-color-action-secondary-hover: var(--skeleton-color-pink-070);
-  --skeleton-color-action-secondary-focus: var(--skeleton-color-pink-070);
-  --skeleton-color-action-secondary-active: var(--skeleton-color-pink-080);
-  
-  --skeleton-color-action-disabled: var(--skeleton-color-gray-040);
-  --skeleton-color-action-fg-disabled: var(--skeleton-color-gray-080);
+  --skeleton-color-button-disabled: var(--skeleton-color-gray-040);
+  --skeleton-color-button-fg-disabled: var(--skeleton-color-gray-080);
 }
 
 /*** Button Styles ***/
@@ -41,9 +33,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--skeleton-size-md-gap-component);
+  gap: var(--skeleton-size-md-gap-button);
   
-  border: var(--skeleton-size-thickness-component) solid transparent;
+  border: var(--skeleton-size-border-button) solid transparent;
   outline: none;
   border-radius: var(--skeleton-size-radius-button);
   
@@ -61,7 +53,7 @@
   text-decoration: none;
   text-transform: uppercase;
   
-  background-color: var(--skeleton-color-action-primary-default);
+  background-color: var(--skeleton-color-button-primary-default);
   
   /*** Focus Indicator ***/
   &::after {
@@ -73,18 +65,18 @@
     
     z-index: -1;
     
-    inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-thickness-component) * 2));
-    block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-thickness-component) * 2));
+    inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-border-button) * 2));
+    block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-border-button) * 2));
     
-    margin-block-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-thickness-component)) * -1);
-    margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-thickness-component)) * -1);
+    margin-block-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-border-button)) * -1);
+    margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-border-button)) * -1);
     
     border-width: var(--skeleton-size-focus-indicator);
     border-style: solid;
     border-color: var(--skeleton-color-focus-indicator);
     opacity: 0;
     
-    border-radius: calc(var(--skeleton-size-radius-button) + var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-thickness-component));
+    border-radius: calc(var(--skeleton-size-radius-button) + var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-border-button));
   }
   
   &__text {}
@@ -109,7 +101,7 @@
   /*** State: Hover ***/
   &:hover,
   &.hover {
-    background-color: var(--skeleton-color-action-primary-hover);
+    background-color: var(--skeleton-color-button-primary-hover);
     color: var(--skeleton-color-fg-white-static);
   }
   
@@ -125,7 +117,7 @@
   &.focus,
   &:focus-visible,
   &.focus-visible {
-    background-color: var(--skeleton-color-action-primary-focus);
+    background-color: var(--skeleton-color-button-primary-focus);
     color: var(--skeleton-color-fg-white-static);
     box-shadow: none;
     
@@ -142,7 +134,7 @@
   &.focus.active,
   &:focus-visible:active,
   &.focus-visible.active {
-    background-color: var(--skeleton-color-action-primary-active);
+    background-color: var(--skeleton-color-button-primary-active);
     color: var(--skeleton-color-fg-white-static);
   }
   
@@ -153,12 +145,12 @@
   
   /*** Variant - secondary ***/
   &--secondary {
-    background-color: var(--skeleton-color-action-secondary-default);
+    background-color: var(--skeleton-color-button-secondary-default);
     color: var(--skeleton-color-fg-black-static);
     
     &:hover,
     &.hover {
-      background-color: var(--skeleton-color-action-secondary-hover);
+      background-color: var(--skeleton-color-button-secondary-hover);
       color: var(--skeleton-color-fg-black-static);
     }
     
@@ -166,7 +158,7 @@
     &.focus,
     &:focus-visible,
     &.focus-visible {
-      background-color: var(--skeleton-color-action-secondary-focus);
+      background-color: var(--skeleton-color-button-secondary-focus);
       color: var(--skeleton-color-fg-black-static);
     }
     
@@ -174,7 +166,7 @@
     &.active,
     &:focus:active,
     &.focus.active {
-      background-color: var(--skeleton-color-action-secondary-active);
+      background-color: var(--skeleton-color-button-secondary-active);
       color: var(--skeleton-color-fg-black-static);
     }
   }
@@ -183,13 +175,13 @@
   &--ghost,
   &--empty {
     background-color: transparent;
-    border: var(--skeleton-size-thickness-component) solid var(--skeleton-color-action-secondary-default);
+    border: var(--skeleton-size-border-button) solid var(--skeleton-color-button-secondary-default);
     color: var(--skeleton-color-fg-base);
     
     &:hover,
     &.hover {
       background-color: transparent;
-      border-color: var(--skeleton-color-action-secondary-hover);
+      border-color: var(--skeleton-color-button-secondary-hover);
       color: var(--skeleton-color-fg-base);
     }
     
@@ -198,7 +190,7 @@
     &:focus-visible,
     &.focus-visible {
       background-color: transparent;
-      border-color: var(--skeleton-color-action-secondary-focus);
+      border-color: var(--skeleton-color-button-secondary-focus);
       color: var(--skeleton-color-fg-base);
     }
     
@@ -207,25 +199,25 @@
     &:focus:active,
     &.focus.active {
       background-color: transparent;
-      border-color: var(--skeleton-color-action-secondary-active);
+      border-color: var(--skeleton-color-button-secondary-active);
       color: var(--skeleton-color-fg-base);
     }
   }
   
   &--empty {
-    border: var(--skeleton-size-thickness-component) solid transparent;
+    border: var(--skeleton-size-border-button) solid transparent;
   }
   
   &--disabled {
-    background-color: var(--skeleton-color-action-disabled);
-    color: var(--skeleton-color-action-fg-disabled);
+    background-color: var(--skeleton-color-button-disabled);
+    color: var(--skeleton-color-button-fg-disabled);
     pointer-events: none;
     
     &:hover,
     &:focus,
     &:focus-visible,
     &:active {
-      background-color: var(--skeleton-color-action-disabled);
+      background-color: var(--skeleton-color-button-disabled);
     }
   }
   
