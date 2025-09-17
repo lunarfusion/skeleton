@@ -120,6 +120,13 @@ props:
         - closed
       default: closed
 
+    modifier_class:
+      type: string
+      title: Modifier class
+      description: Additional classes.
+      examples:
+        - 'custom-class'
+
 slots:
   label:
     type: string

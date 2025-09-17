@@ -1,10 +1,26 @@
 /*** Button Variables ***/
 .button {
-  --skeleton-size-block-button: 40px;
+  --skeleton-size-block-button-medium: 40px;
+  --skeleton-size-block-button-small: 30px;
+  --skeleton-size-block-button-large: 60px;
+  
+  --skeleton-size-icon-button-small: 14px;
+  --skeleton-size-icon-button-medium: 20px;
+  --skeleton-size-icon-button-large: 30px;
+  
   --skeleton-size-md-gap-button: .75rem;
   --skeleton-size-sm-gap-button: 0.25rem;
   --skeleton-size-border-button: 1.5px;
   --skeleton-size-radius-button: calc(var(--skeleton-size-block-button) * 0.5);
+  
+  --skeleton-padding-button-small: var(--skeleton-size-radius-button);
+  --skeleton-padding-button-medium: var(--skeleton-size-radius-button);
+  --skeleton-padding-button-large: var(--skeleton-size-radius-button);
+  
+  --skeleton-size-text-menu-toggle-button: var(--skeleton-size-text-small);
+  --skeleton-size-text-button-medium: var(--skeleton-size-text-normal);
+  --skeleton-size-text-button-large: var(--skeleton-size-text-med);
+  --skeleton-size-text-button-small: var(--skeleton-size-text-small);
   
   --skeleton-color-button-primary-default: var(--skeleton-color-violet-055);
   --skeleton-color-button-primary-hover: var(--skeleton-color-violet-065);
@@ -17,13 +33,30 @@
   --skeleton-color-button-secondary-active: var(--skeleton-color-pink-080);
   
   --skeleton-color-button-disabled: var(--skeleton-color-gray-040);
-  --skeleton-color-button-fg-disabled: var(--skeleton-color-gray-080);
+  --skeleton-color-fg-button-disabled: var(--skeleton-color-gray-080);
+  
+  --skeleton-color-fg-button-primary-default: var(--skeleton-color-fg-white-static);
+  --skeleton-color-fg-button-primary-hover: var(--skeleton-color-fg-white-static);
+  --skeleton-color-fg-button-primary-focus: var(--skeleton-color-fg-white-static);
+  --skeleton-color-fg-button-primary-active: var(--skeleton-color-fg-white-static);
+  
+  --skeleton-color-fg-button-secondary-default: var(--skeleton-color-fg-black-static);
+  --skeleton-color-fg-button-secondary-hover: var(--skeleton-color-fg-black-static);
+  --skeleton-color-fg-button-secondary-focus: var(--skeleton-color-fg-black-static);
+  --skeleton-color-fg-button-secondary-active: var(--skeleton-color-fg-black-static);
+  
+  --skeleton-color-fg-button-ghost-default: var(--skeleton-color-fg-base);
+  --skeleton-color-fg-button-ghost-hover: var(--skeleton-color-fg-base);
+  --skeleton-color-fg-button-ghost-focus: var(--skeleton-color-fg-base);
+  --skeleton-color-fg-button-ghost-active: var(--skeleton-color-fg-base);
 }
 /*** Button Styles ***/
 .button {
+  --skeleton-size-block-button: var(--skeleton-size-block-button-medium);
+  
   z-index: 1;
   position: relative;
-  padding-inline: var(--skeleton-size-radius-button);
+  padding-inline: var(--skeleton-padding-button-medium);
   
   max-inline-size: 100%;
   block-size: var(--skeleton-size-block-button);
@@ -42,16 +75,15 @@
   cursor: pointer;
   
   font-family: var(--skeleton-font-primary);
-  font-size: var(--skeleton-size-text-normal);
+  font-size: var(--skeleton-size-text-button-medium);
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.5px;
-  color: var(--skeleton-color-fg-white-static);
+  color: var(--skeleton-color-fg-button-primary-default);
   text-align: center;
   text-transform: none;
   text-decoration: none;
   text-transform: uppercase;
-  
   background-color: var(--skeleton-color-button-primary-default);
 }
 /*** Focus Indicator ***/
@@ -96,7 +128,7 @@
 .button:hover,
   .button.hover {
     background-color: var(--skeleton-color-button-primary-hover);
-    color: var(--skeleton-color-fg-white-static);
+    color: var(--skeleton-color-fg-button-primary-hover);
   }
 /*** State: Focus ***/
 .button:focus:not(:focus-visible)::after, .button.focus:not(.focus-visible)::after {
@@ -107,7 +139,7 @@
   .button:focus-visible,
   .button.focus-visible {
     background-color: var(--skeleton-color-button-primary-focus);
-    color: var(--skeleton-color-fg-white-static);
+    color: var(--skeleton-color-fg-button-primary-focus);
     box-shadow: none;
   }
 .button:focus::after, .button.focus::after, .button:focus-visible::after, .button.focus-visible::after {
@@ -122,7 +154,7 @@
   .button:focus-visible:active,
   .button.focus-visible.active {
     background-color: var(--skeleton-color-button-primary-active);
-    color: var(--skeleton-color-fg-white-static);
+    color: var(--skeleton-color-fg-button-primary-active);
   }
 /*** prevent focus from firing on click ***/
 .button:-webkit-focus-ring {
@@ -131,33 +163,33 @@
 /*** Variant - secondary ***/
 .button--secondary {
     background-color: var(--skeleton-color-button-secondary-default);
-    color: var(--skeleton-color-fg-black-static);
+    color: var(--skeleton-color-fg-button-secondary-default);
   }
 .button--secondary:hover,
     .button--secondary.hover {
       background-color: var(--skeleton-color-button-secondary-hover);
-      color: var(--skeleton-color-fg-black-static);
+      color: var(--skeleton-color-fg-button-secondary-hover);
     }
 .button--secondary:focus,
     .button--secondary.focus,
     .button--secondary:focus-visible,
     .button--secondary.focus-visible {
       background-color: var(--skeleton-color-button-secondary-focus);
-      color: var(--skeleton-color-fg-black-static);
+      color: var(--skeleton-color-fg-button-secondary-focus);
     }
 .button--secondary:active,
     .button--secondary.active,
     .button--secondary:focus:active,
     .button--secondary.focus.active {
       background-color: var(--skeleton-color-button-secondary-active);
-      color: var(--skeleton-color-fg-black-static);
+      color: var(--skeleton-color-fg-button-secondary-active);
     }
 /*** Variant - ghost ***/
 .button--ghost,
   .button--empty {
     background-color: transparent;
     border: var(--skeleton-size-border-button) solid var(--skeleton-color-button-secondary-default);
-    color: var(--skeleton-color-fg-base);
+    color: var(--skeleton-color-fg-button-ghost-default);
   }
 .button--ghost:hover,
     .button--ghost.hover,
@@ -165,7 +197,7 @@
     .button--empty.hover {
       background-color: transparent;
       border-color: var(--skeleton-color-button-secondary-hover);
-      color: var(--skeleton-color-fg-base);
+      color: var(--skeleton-color-fg-button-ghost-hover);
     }
 .button--ghost:focus,
     .button--ghost.focus,
@@ -177,7 +209,7 @@
     .button--empty.focus-visible {
       background-color: transparent;
       border-color: var(--skeleton-color-button-secondary-focus);
-      color: var(--skeleton-color-fg-base);
+      color: var(--skeleton-color-fg-button-ghost-focus);
     }
 .button--ghost:active,
     .button--ghost.active,
@@ -189,14 +221,14 @@
     .button--empty.focus.active {
       background-color: transparent;
       border-color: var(--skeleton-color-button-secondary-active);
-      color: var(--skeleton-color-fg-base);
+      color: var(--skeleton-color-fg-button-ghost-active);
     }
 .button--empty {
     border: var(--skeleton-size-border-button) solid transparent;
   }
 .button--disabled {
     background-color: var(--skeleton-color-button-disabled);
-    color: var(--skeleton-color-button-fg-disabled);
+    color: var(--skeleton-color-fg-button-disabled);
     pointer-events: none;
   }
 .button--disabled:hover,
@@ -208,10 +240,11 @@
 /*** Variant - circle icon only ***/
 .button--icon-only {
     border-radius: 100%;
-    block-size: var(--skeleton-size-block-button);
+    /* block-size: var(--skeleton-size-block-button);
+    inline-size: var(--skeleton-size-block-button); */
+    /* max-inline-size: var(--skeleton-size-block-button);
+    max-block-size: var(--skeleton-size-block-button); */
     inline-size: var(--skeleton-size-block-button);
-    max-inline-size: var(--skeleton-size-block-button);
-    max-block-size: var(--skeleton-size-block-button);
     padding: 0;
   }
 .button--icon-only::after {
@@ -225,31 +258,34 @@
     }
 /*** Variant - small ***/
 .button--sizeS {
-    font-size: var(--skeleton-size-text-small);
-    padding-inline: calc(var(--skeleton-size-radius-button) * 0.65);
-    block-size: calc(var(--skeleton-size-block-button) * 0.75);
+    --skeleton-size-block-button: var(--skeleton-size-block-button-small);
+    
+    font-size: var(--skeleton-size-text-button-small);
+    padding-inline: var(--skeleton-padding-button-small);
   }
 .button--sizeS .button__icon {
-      block-size: calc(var(--skeleton-size-block-button) * 0.35);
+      block-size: var(--skeleton-size-icon-button-small);
     }
 /*** Variant - medium - default ***/
 .button--sizeM {
-    font-size: var(--skeleton-size-text-normal);
+    --skeleton-size-block-button: var(--skeleton-size-block-button-medium);
+    
+    font-size: var(--skeleton-size-text-button-medium);
     padding-inline: var(--skeleton-size-radius-button);
-    block-size: var(--skeleton-size-block-button);
   }
 .button--sizeM .button__icon {
-      block-size: calc(var(--skeleton-size-block-button) * 0.5);
+      block-size: var(--skeleton-size-icon-button-medium);
     }
 /*** Variant - large ***/
 .button--sizeL {
-    font-size: var(--skeleton-size-text-med);
-    padding-inline: calc(var(--skeleton-size-radius-button) * 1.25);
-    block-size: calc(var(--skeleton-size-block-button) * 1.5);
+    --skeleton-size-block-button: var(--skeleton-size-block-button-large);
+    
+    font-size: var(--skeleton-size-text-button-large);
+    padding-inline: var(--skeleton-padding-button-large);
     border-radius: calc(var(--skeleton-size-radius-button) * 1.5);
   }
 .button--sizeL .button__icon {
-      block-size: calc(var(--skeleton-size-block-button) * 0.75);
+      block-size: var(--skeleton-size-icon-button-large);
     }
 .button--menu-toggle {
     z-index: 9;
@@ -271,7 +307,7 @@
         fill: currentcolor;
       }
 .button--menu-toggle .button__content {
-      font-size: var(--skeleton-size-text-small);
+      font-size: var(--skeleton-size-text-menu-toggle-button);
       display: flex;
       flex-direction: column-reverse;
       justify-content: center;
