@@ -1,9 +1,19 @@
+/*** File Variables ***/
+.file {
+  --skeleton-size-text-label-file: var(--skeleton-size-text-med);
+  --skeleton-size-text-filesize-file: var(--skeleton-size-text-extra-extra-small);
+  --skeleton-color-fg-filesize-file: var(--skeleton-color-fg-subdued);
+  --skeleton-size-text-desc-file: var(--skeleton-size-text-extra-small);
+  --skeleton-color-fg-desc-file: var(--skeleton-color-fg-base);
+}
+
+/*** File Styles ***/
 .file {
   position: relative;
   
   &__label {
     margin-block: 0 0.5rem;
-    font-size: var(--skeleton-size-text-med);
+    font-size: var(--skeleton-size-text-label-file);
     font-weight: 600;
     line-height: 1.6;
     display: inline;
@@ -12,9 +22,9 @@
   }
   
   &__size {
-    font-size: var(--skeleton-size-text-extra-extra-small);
+    font-size: var(--skeleton-size-text-filesize-file);
     line-height: 1.6;
-    color: var(--skeleton-color-fg-subdued);
+    color: var(--skeleton-color-fg-filesize-file);
     font-weight: 400;
     display: inline-block;
     vertical-align: bottom;
@@ -22,9 +32,9 @@
   
   &__description {
     display: block;
-    font-size: var(--skeleton-size-text-extra-small);
+    font-size: var(--skeleton-size-text-desc-file);
     line-height: 1.4;
-    color: var(--skeleton-color-fg-base);
+    color: var(--skeleton-color-fg-desc-file);
     margin-block-start: 0.5rem;
   }
 }
