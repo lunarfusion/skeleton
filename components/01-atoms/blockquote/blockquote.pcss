@@ -1,28 +1,39 @@
+/*** Blockquote Variables ***/
 .blockquote {
-  color: var(--skeleton-color-fg-base);
-  padding: 1rem 1rem 1rem 1.5rem;
-  font-size: 1rem;
-  line-height: 1.6;
-  border-inline-start: 2px solid var(--skeleton-color-border-neutral-extra-subdued);
+  --skeleton-color-fg-blockquote: var(--skeleton-color-fg-base);
+  --skeleton-color-fg-cite-blockquote: var(--skeleton-color-fg-subdued);
+  --skeleton-color-border-blockquote: var(--skeleton-color-border-neutral-extra-subdued);
+  
+  --skeleton-size-text-cite-blockquote: var(--skeleton-size-text-small);
+  --skeleton-size-text-blockquote: var(--skeleton-size-text-normal);
+}
 
+/*** Blockquote Styles ***/
+.blockquote {
+  color: var(--skeleton-color-fg-blockquote);
+  padding: 1rem 1rem 1rem 1.5rem;
+  font-size: var(--skeleton-size-text-blockquote);
+  line-height: 1.6;
+  border-inline-start: 2px solid var(--skeleton-color-border-blockquote);
+  
   /* add margin when in main node content */
   .field--body & {
     margin-block: 2rem;
   }
-
+  
   &__cite {
     inline-size: 100%;
     display: block;
-    font-size: var(--skeleton-size-text-small);
-    color: var(--skeleton-color-fg-subdued);
+    font-size: var(--skeleton-size-text-cite-blockquote);
+    color: var(--skeleton-color-fg-cite-blockquote);
     text-align: end;
     margin-block-start: 1.5rem;
-
+    
     &::before {
       content: "— ";
     }
   }
-
+  
   /* if paragraphs are injected */
   p:last-of-type {
     margin-block-end: 0;
