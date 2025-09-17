@@ -1,13 +1,29 @@
+/* renamed system variables for this component  */
 .details {
-  --details-border-color: var(--skeleton-color-border-neutral-extra-subdued);
-  --details-background-color: var(--skeleton-color-bg-neutral-extra-subdued);
-  --details-marker-color: var(--skeleton-color-fg-subdued);
-  --details-width-border: 2px;
+  /* colors */
+  --details-color-text: var(--skeleton-color-fg-base);
+  --details-color-border: var(--skeleton-color-border-neutral-extra-subdued);
+  --details-color-background: var(--skeleton-color-bg-neutral-extra-subdued);
+  --details-color-background-content: var(--skeleton-color-bg-base);
+  --details-color-marker: var(--skeleton-color-fg-subdued);
   
-  border: var(--details-width-border) solid var(--details-border-color);
+  /* colors theme primary */
+  --details-theme-primary-color-border: var(--skeleton-color-border-primary);
+  --details-theme-primary-color-background: var(--skeleton-color-bg-primary);
+  --details-theme-primary-color-marker: var(--skeleton-color-fg-primary);
+  
+  /* space and size */
+  --details-border-radius: var(--skeleton-size-radius-sm);
+  --details-transition-marker: var(--skeleton-transition-basic);
+  --details-width-border: 2px;
+}
+
+/* styles for this component */
+.details {
+  border: var(--details-width-border) solid var(--details-color-border);
   /* border width is smaller when in a group */
   border-block-width: calc(var(--details-width-border) * 0.25);
-  background-color: var(--details-background-color);
+  background-color: var(--details-color-background);
   
   &__summary {
     position: relative;
@@ -16,57 +32,41 @@
     font-weight: 600;
     vertical-align: middle;
     padding: 1rem;
-    padding-inline-start: 2.5rem;
-    color: var(--skeleton-color-fg-base);
+    padding-inline-start: 1.5rem;
+    color: var(--details-color-text);
     overflow: hidden;
     
-    /* hide default marker */
-    &::marker {
-      color: var(--details-marker-color);
-      content: " ";
+    span {
+      margin-inline-start: 0.25rem;
     }
     
-    /* customize marker */
-    &::before {
-      position: absolute;
-      top: 50%;
-      bottom: 50%;
-      left: 0.75rem;
-      height: 1.2rem;
-      width: 1.2rem;
-      margin: auto;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      line-height: 1;
-      color: var(--details-marker-color);
-      transform-origin: 50% 50%;
-      transition: var(--skeleton-transition-basic);
-      font-family: "FontAwesome";
-      content: "\f105";
+    &::marker {
+      color: var(--details-color-marker);
+      margin-inline-end: 0.5rem;
     }
   }
   
   &__content {
     padding: 1.5rem;
-    background-color: var(--skeleton-color-bg-base);
+    background-color: var(--details-color-background-content);
     font-size: 1rem;
     line-height: 1.4;
     display: block;
+    border-end-start-radius: var(--details-border-radius);
+    border-end-end-radius: var(--details-border-radius);
     overflow: hidden;
   }
   
   /* border radius only top and bottom */
   &:first-of-type {
-    border-start-start-radius: var(--skeleton-size-radius-sm);
-    border-start-end-radius: var(--skeleton-size-radius-sm);
+    border-start-start-radius: var(--details-border-radius);
+    border-start-end-radius: var(--details-border-radius);
     border-block-start-width: var(--details-width-border);
   }
   
   &:last-of-type {
-    border-end-start-radius: var(--skeleton-size-radius-sm);
-    border-end-end-radius: var(--skeleton-size-radius-sm);
+    border-end-start-radius: var(--details-border-radius);
+    border-end-end-radius: var(--details-border-radius);
     border-block-end-width: var(--details-width-border);
   }
   
@@ -78,12 +78,46 @@
   
   /*** Variants - color themes ***/
   &--theme-primary {
-    --details-border-color: var(--skeleton-color-border-primary);
-    --details-background-color: var(--skeleton-color-bg-primary);
-    --details-marker-color: var(--skeleton-color-fg-primary);
+    --details-color-border: var(--details-theme-primary-color-border);
+    --details-color-background: var(--details-theme-primary-color-background);
+    --details-color-marker: var(--details-theme-primary-color-marker);
   }
   
-  /*** Variants ***/
-  
-  
+  /*** Variants - FontAwesome marker ***/
+  &--style-fa-marker {
+    .details__summary {
+      padding-inline-start: 3rem;
+      
+      span {
+        margin-inline-start: 0;
+      }
+      
+      /* hide default marker */
+      &::marker {
+        color: var(--details-color-marker);
+        content: " ";
+      }
+      
+      /* customize marker */
+      &::before {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 1rem;
+        height: 1.2rem;
+        width: 1.2rem;
+        margin: auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        line-height: 1;
+        color: var(--details-color-marker);
+        transform-origin: 50% 50%;
+        transition: var(--details-transition-marker);
+        font-family: "FontAwesome";
+        content: "\f105";
+      }
+    }
+  }
 }
