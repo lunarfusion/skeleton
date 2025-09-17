@@ -1,3 +1,17 @@
+/*** Title Variables ***/
+.title {
+  --skeleton-flag-height-title: 12px;
+  --skeleton-notch-calc-title: calc(100% - var(--skeleton-flag-height-title));
+  --skeleton-color-accent-title: var(--skeleton-color-border-primary);
+  --skeleton-size-gap-x-title: var(--skeleton-size-gap-x);
+  --skeleton-border-radius-card-title: var(--skeleton-size-radius-sm);
+  
+  --skeleton-size-font-small-title: var(--skeleton-size-text-small);
+  --skeleton-size-font-medium-title: var(--skeleton-size-text-med);
+  --skeleton-size-font-large-title: var(--skeleton-size-text-lrg);
+  --skeleton-size-font-extra-large-title: var(--skeleton-size-text-ex-lrg);
+}
+/*** Title Styles ***/
 .title {
   font-weight: 700;
   font-style: normal;
@@ -5,52 +19,48 @@
   margin-block-start: 0;
   margin-block-end: 0.5rem;
 }
-
-  /*** Variant - Page Title ***/
-  .title--page {
+/*** Variant - Page Title ***/
+.title--page {
     margin-block-end: 2rem;
   }
-  .title--feature-page {
+.title--feature-page {
     margin-block-start: 2rem;
   }
-  /*** Variant - Section Title ***/
-  .title--section {
+/*** Variant - Section Title ***/
+.title--section {
     position: relative;
     display: block;
     padding-block-start: 1.5rem;
     margin-block-start: 1.5rem;
   }
-  .title--section::before {
-      --flag-height: 12px;
-      --notch-calc: calc(100% - var(--flag-height));
-
+.title--section::before {
       content: "";
       width: 5rem;
-      height: var(--flag-height);
+      height: var(--skeleton-flag-height-title);
       position: absolute;
       top: 0;
       left: 0;
-      background-color: var(--skeleton-color-border-primary);
-      transform: translateX(calc((var(--flag-height) + var(--skeleton-size-gap-x)) * -1));
+      background-color: var(--skeleton-color-accent-title);
+      transform: translateX(calc((var(--skeleton-flag-height-title) + var(--skeleton-size-gap-x-title)) * -1));
       overflow: hidden;
-      border-end-end-radius: var(--flag-height);
-      border-start-start-radius: var(--flag-height);
+      border-end-end-radius: var(--skeleton-flag-height-title);
+      border-start-start-radius: var(--skeleton-flag-height-title);
     }
-  /*** Variant - Block Title ***/
-  .title--block {
+/*** Variant - Block Title ***/
+.title--block {
     position: relative;
     display: block;
     margin: 0;
     margin-block-end: 0.5rem;
   }
-  /*** Variant - Card Title ***/
-  .title--card {
+/*** Variant - Card Title ***/
+.title--card {
     position: relative;
     display: block;
     margin: 0;
     padding-inline-start: 1rem;
   }
-  .title--card::before {
+.title--card::before {
       content: "";
       width: 6px;
       height: 100%;
@@ -58,24 +68,24 @@
       top: 0;
       bottom: 0;
       left: 0;
-      background-color: var(--skeleton-color-border-primary);
+      background-color: var(--skeleton-color-accent-title);
       overflow: hidden;
-      border-radius: var(--skeleton-size-radius-sm);
+      border-radius: var(--skeleton-border-radius-card-title);
     }
-  /*** Variant - Menu Title ***/
-  .title--menu {
+/*** Variant - Menu Title ***/
+.title--menu {
     margin-block: 2rem;
   }
-  /*** Variant - Sizes ***/
-  .title--sizeS {
-    font-size: var(--skeleton-size-text-small);
+/*** Variant - Sizes ***/
+.title--sizeS {
+    font-size: var(--skeleton-size-font-small-title);
   }
-  .title--sizeM {
-    font-size: var(--skeleton-size-text-med);
+.title--sizeM {
+    font-size: var(--skeleton-size-font-medium-title);
   }
-  .title--sizeL {
-    font-size: var(--skeleton-size-text-lrg);
+.title--sizeL {
+    font-size: var(--skeleton-size-font-large-title);
   }
-  .title--sizeXL {
-    font-size: var(--skeleton-size-text-ex-lrg);
+.title--sizeXL {
+    font-size: var(--skeleton-size-font-extra-large-title);
   }
