@@ -72,6 +72,9 @@
       overflow: hidden;
       border-radius: var(--skeleton-border-radius-card-title);
     }
+.title--alert {
+    margin: 0;
+  }
 /*** Variant - Menu Title ***/
 .title--menu {
     margin-block: 2rem;

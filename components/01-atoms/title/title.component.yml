@@ -18,6 +18,8 @@ variants:
     title: Block
   card:
    title: Card
+  alert:
+    title: Alert
 
 props:
   type: object
