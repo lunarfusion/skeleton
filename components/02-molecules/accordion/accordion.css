@@ -1,10 +1,14 @@
+/*** Accordion Variables ***/
+.accordion {
+  --skeleton-color-shadow-accordion: var(--skeleton-color-shadow-neutral);
+}
+/*** Accordion Styles ***/
 .accordion {
   display: flex;
   flex-direction: column;
-  filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-neutral));
+  filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-accordion));
 }
-  
-  /* add margin when in main node content */
-  .field--body .accordion {
+/* add margin when in main node content */
+.field--body .accordion {
     margin: 1rem;
   }
