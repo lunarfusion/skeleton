@@ -1,3 +1,27 @@
+/*** Link Variables ***/
+.link,
+p > a,
+li > a {
+  --skeleton-color-link-disabled: var(--skeleton-color-fg-disabled);
+  --skeleton-transition-link: var(--skeleton-transition-basic);
+  --skeleton-transition-icon-link: var(--skeleton-transition-boing);
+  
+  --skeleton-icon-transform-cta-link: 0.25rem;
+  --skeleton-icon-size-cta-link: 1rem;
+  
+  --skeleton-size-gap-focus-indicator-link: var(--skeleton-size-gap-focus-indicator);
+  --skeleton-color-focus-indicator-link: var(--skeleton-color-focus-indicator);
+  --skeleton-border-radius-focus-indicator-link: var(--skeleton-size-radius-sm);
+  
+  --skeleton-color-link-default: var(--skeleton-color-fg-action-default);
+  --skeleton-color-link-hover: var(--skeleton-color-fg-action-hover);
+  --skeleton-color-link-focus: var(--skeleton-color-fg-action-focus);
+  --skeleton-color-link-active: var(--skeleton-color-fg-action-active);
+  --skeleton-color-link-visited: var(--skeleton-color-fg-action-visited);
+  --skeleton-color-link-decoration: var(--skeleton-color-fg-action-decoration);
+  --skeleton-color-link-decoration-hover: var(--skeleton-color-fg-action-decoration-hover);
+}
+/*** Link Styles ***/
 .link,
 p > a,
 li > a {
@@ -7,11 +31,10 @@ li > a {
   -webkit-text-decoration: 11% underline var(--skeleton-color-link-decoration);
           text-decoration: 11% underline var(--skeleton-color-link-decoration);
   font-weight: 600;
-  transition: var(--skeleton-transition-basic);
+  transition: var(--skeleton-transition-link);
 }
-
-  /*** Focus Indicator ***/
-  .link::before, p > a::before, li > a::before {
+/*** Focus Indicator ***/
+.link::before, p > a::before, li > a::before {
     position: absolute;
     margin: auto;
     content: "";
@@ -20,15 +43,15 @@ li > a {
     top: 0;
     bottom: 0;
     z-index: -1;
-    inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2));
-    block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2));
-    margin-block-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator)) * -1);
-    margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator)) * -1);
-    border: var(--skeleton-size-focus-indicator) solid var(--skeleton-color-focus-indicator);
-    border-radius: var(--skeleton-size-radius-sm);
+    inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator-link) * 2));
+    block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator-link) * 2));
+    margin-block-start: calc((var(--skeleton-size-gap-focus-indicator-link) + var(--skeleton-size-focus-indicator)) * -1);
+    margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator-link) + var(--skeleton-size-focus-indicator)) * -1);
+    border: var(--skeleton-size-focus-indicator) solid var(--skeleton-color-focus-indicator-link);
+    border-radius: var(--skeleton-border-radius-focus-indicator-link);
     opacity: 0;
   }
-  .link:focus,
+.link:focus,
   .link.focus,
   p > a:focus,
   p > a.focus,
@@ -36,7 +59,7 @@ li > a {
   li > a.focus {
     color: var(--skeleton-color-link-focus);
   }
-  .link:focus-visible,
+.link:focus-visible,
   .link.focus-visible,
   p > a:focus-visible,
   p > a.focus-visible,
@@ -44,10 +67,10 @@ li > a {
   li > a.focus-visible {
     color: var(--skeleton-color-link-focus);
   }
-  .link:focus-visible::before, .link.focus-visible::before, p > a:focus-visible::before, p > a.focus-visible::before, li > a:focus-visible::before, li > a.focus-visible::before {
+.link:focus-visible::before, .link.focus-visible::before, p > a:focus-visible::before, p > a.focus-visible::before, li > a:focus-visible::before, li > a.focus-visible::before {
       opacity: 1;
     }
-  .link:hover,
+.link:hover,
   .link.hover,
   p > a:hover,
   p > a.hover,
@@ -57,10 +80,10 @@ li > a {
             text-decoration: 11% underline var(--skeleton-color-link-decoration-hover);
     color: var(--skeleton-color-link-hover);
   }
-  .link:hover::before, .link.hover::before, p > a:hover::before, p > a.hover::before, li > a:hover::before, li > a.hover::before {
+.link:hover::before, .link.hover::before, p > a:hover::before, p > a.hover::before, li > a:hover::before, li > a.hover::before {
       background-size: 100% 100%;
     }
-  .link:active,
+.link:active,
   .link.active,
   .link:focus:active,
   .link:focus-visible:active,
@@ -80,7 +103,7 @@ li > a {
   li > a:active:focus-visible {
     color: var(--skeleton-color-link-active);
   }
-  .link.disabled,
+.link.disabled,
   .link.disabled:hover,
   .link:disabled,
   .link:disabled:hover,
@@ -94,51 +117,50 @@ li > a {
   li > a:disabled:hover {
     color: var(--skeleton-color-link-disabled);
     text-decoration-color: currentColor;
+    pointer-events: none;
   }
-  .link.disabled::before, .link.disabled:hover::before, .link:disabled::before, .link:disabled:hover::before, p > a.disabled::before, p > a.disabled:hover::before, p > a:disabled::before, p > a:disabled:hover::before, li > a.disabled::before, li > a.disabled:hover::before, li > a:disabled::before, li > a:disabled:hover::before {
+.link.disabled::before, .link.disabled:hover::before, .link:disabled::before, .link:disabled:hover::before, p > a.disabled::before, p > a.disabled:hover::before, p > a:disabled::before, p > a:disabled:hover::before, li > a.disabled::before, li > a.disabled:hover::before, li > a:disabled::before, li > a:disabled:hover::before {
       display: none;
     }
-  /*** prevent focus from firing on click ***/
-  .link:-webkit-focus-ring, p > a:-webkit-focus-ring, li > a:-webkit-focus-ring {
+/*** prevent focus from firing on click ***/
+.link:-webkit-focus-ring, p > a:-webkit-focus-ring, li > a:-webkit-focus-ring {
     outline: none;
   }
-  /*** VARIANT - Quiet ***/
-  .link--quiet, p > a--quiet, li > a--quiet {
+/*** VARIANT - Quiet ***/
+.link--quiet, p > a--quiet, li > a--quiet {
     text-decoration: none;
   }
-  .link--quiet:hover, p > a--quiet:hover, li > a--quiet:hover {
+.link--quiet:hover, p > a--quiet:hover, li > a--quiet:hover {
       text-decoration: none;
     }
-  /*** VARIANT - CTA ***/
-  .link--cta, p > a--cta, li > a--cta {
-    --cta-icon-transform: 0.25rem;
-    --cta-icon-size: 1rem;
+/*** VARIANT - CTA ***/
+.link--cta, p > a--cta, li > a--cta {
     display: inline-block;
     padding-inline-start: 0.125rem;
-    padding-inline-end: calc(var(--cta-icon-size) + 0.25rem);
+    padding-inline-end: calc(var(--skeleton-icon-size-cta-link) + 0.25rem);
     font-weight: 600;
     font-size: 120%;
-    transition: var(--skeleton-transition-boing);
+    transition: var(--skeleton-transition-icon-link);
     text-decoration: none;
     background: linear-gradient(var(--skeleton-color-link-decoration) 50%, transparent 51%);
     background-repeat: no-repeat;
-    background-position: bottom left;
-    background-size: 0% 4px;
+    background-position: 0% 115%;
+    background-size: 0% 5px;
   }
-  .link--cta:hover, p > a--cta:hover, li > a--cta:hover {
+.link--cta:hover, p > a--cta:hover, li > a--cta:hover {
       text-decoration: none;
-      background-size: 100% 4px;
+      background-size: 100% 5px;
     }
-  .link--cta::after, p > a--cta::after, li > a--cta::after {
+.link--cta::after, p > a--cta::after, li > a--cta::after {
       content: "\f061";
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
       font-variant: normal;
       font-style: normal;
       text-rendering: auto;
-      font-size: var(--cta-icon-size);
-      width: var(--cta-icon-size);
-      height: var(--cta-icon-size);
+      font-size: var(--skeleton-icon-size-cta-link);
+      width: var(--skeleton-icon-size-cta-link);
+      height: var(--skeleton-icon-size-cta-link);
       position: absolute;
       bottom: 0;
       top: 0;
@@ -148,17 +170,17 @@ li > a {
       color: inherit;
       transition: var(--skeleton-transition-boing);
     }
-  .link--cta:hover::after, p > a--cta:hover::after, li > a--cta:hover::after {
-      transform: translateX(var(--cta-icon-transform)) scale(1.1);
+.link--cta:hover::after, p > a--cta:hover::after, li > a--cta:hover::after {
+      transform: translateX(var(--skeleton-icon-transform-cta-link)) scale(1.1);
     }
-  .link--cta.disabled::after, p > a--cta.disabled::after, li > a--cta.disabled::after {
+.link--cta.disabled::after, p > a--cta.disabled::after, li > a--cta.disabled::after {
       color: inherit;
     }
-  /*** VARIANT - External ***/
-  .link--external, p > a--external, li > a--external {
+/*** VARIANT - External ***/
+.link--external, p > a--external, li > a--external {
     padding-inline-end: 1.25rem;
   }
-  .link--external::after, p > a--external::after, li > a--external::after {
+.link--external::after, p > a--external::after, li > a--external::after {
       content: "\f08e";
       font-family: "Font Awesome 5 Free";
       font-weight: 900;

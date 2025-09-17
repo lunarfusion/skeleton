@@ -24,6 +24,14 @@ props:
       description: "The link URL."
       $ref: "ui-patterns://url"
 
+    disabled:
+      type: boolean
+      description: Link is disabled
+      enum:
+        - true
+        - false
+      default: false
+
 slots:
   label:
     title: Label

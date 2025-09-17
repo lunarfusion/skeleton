@@ -6,6 +6,7 @@
     --skeleton-color-fg-base: var(--skeleton-color-white);
     --skeleton-color-fg-inverted: var(--skeleton-color-black);
     --skeleton-color-fg-subdued: var(--skeleton-color-gray-060);
+    --skeleton-color-fg-disabled: var(--skeleton-color-gray-050);
     
     /*** Background - Base ***/
     --skeleton-color-bg-base: var(--skeleton-color-black);
@@ -50,14 +51,13 @@
     --skeleton-color-accent: var(--skeleton-color-violet-080);
     
     /*** Actions - Link Text - copied from light mode, inverted background ***/
-    --skeleton-color-link-default: var(--skeleton-color-violet-080);
-    --skeleton-color-link-hover: var(--skeleton-color-blue-080);
-    --skeleton-color-link-focus: var(--skeleton-color-blue-080);
-    --skeleton-color-link-active: var(--skeleton-color-violet-060);
-    --skeleton-color-link-visited: var(--skeleton-color-fg-base);
-    --skeleton-color-link-disabled: var(--skeleton-color-gray-080);
-    --skeleton-color-link-decoration: var(--skeleton-color-blue-080);
-    --skeleton-color-link-decoration-hover: var(--skeleton-color-violet-080);
+    --skeleton-color-fg-action-default: var(--skeleton-color-violet-080);
+    --skeleton-color-fg-action-hover: var(--skeleton-color-blue-080);
+    --skeleton-color-fg-action-focus: var(--skeleton-color-blue-080);
+    --skeleton-color-fg-action-active: var(--skeleton-color-violet-060);
+    --skeleton-color-fg-action-visited: var(--skeleton-color-fg-base);
+    --skeleton-color-fg-action-decoration: var(--skeleton-color-blue-080);
+    --skeleton-color-fg-action-decoration-hover: var(--skeleton-color-violet-080);
     
     /********* SYSTEM ALERTS *********/
     /*** Negative ***/
@@ -87,14 +87,14 @@
       --skeleton-color-fg-subdued: var(--skeleton-color-gray-020);
       
       /*** Actions - Link Text - Copied from Light Mode ***/
-      --skeleton-color-link-default: var(--skeleton-color-violet-040);
-      --skeleton-color-link-hover: var(--skeleton-color-blue-040);
-      --skeleton-color-link-focus: var(--skeleton-color-blue-040);
-      --skeleton-color-link-active: var(--skeleton-color-violet-060);
-      --skeleton-color-link-visited: var(--skeleton-color-fg-base);
-      --skeleton-color-link-disabled: var(--skeleton-color-gray-060);
-      --skeleton-color-link-decoration: var(--skeleton-color-blue-060);
-      --skeleton-color-link-decoration-hover: var(--skeleton-color-violet-060);
+      --skeleton-color-fg-action-default: var(--skeleton-color-violet-040);
+      --skeleton-color-fg-action-hover: var(--skeleton-color-blue-040);
+      --skeleton-color-fg-action-focus: var(--skeleton-color-blue-040);
+      --skeleton-color-fg-action-active: var(--skeleton-color-violet-060);
+      --skeleton-color-fg-action-visited: var(--skeleton-color-fg-base);
+      --skeleton-color-fg-action-disabled: var(--skeleton-color-gray-060);
+      --skeleton-color-fg-action-decoration: var(--skeleton-color-blue-060);
+      --skeleton-color-fg-action-decoration-hover: var(--skeleton-color-violet-060);
     }
   }
 }

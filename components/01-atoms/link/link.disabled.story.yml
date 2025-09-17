@@ -1,0 +1,8 @@
+name: Disabled
+
+props:
+  url: "#"
+  disabled: true
+
+slots:
+  label: "Link Label"

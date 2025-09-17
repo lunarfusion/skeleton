@@ -2,6 +2,7 @@
   set classes = [
     'link',
     variant and variant != 'default' ? 'link--' ~ variant,
+    disabled and disabled == 'true' ? 'disabled',
   ]
 %}
 
@@ -9,6 +10,7 @@
     {% set attributes = attributes.setAttribute('href', url) %}
 {% endif %}
 
-<a{{ attributes.addClass(classes)}}>
+<a{{ attributes.addClass(classes)}}
+  {% if disabled %}disabled="disabled" aria-disabled="true"{% endif %}>
   {{ label }}
 </a>

@@ -1,3 +1,28 @@
+/*** Link Variables ***/
+.link,
+p > a,
+li > a {
+  --skeleton-color-link-disabled: var(--skeleton-color-fg-disabled);
+  --skeleton-transition-link: var(--skeleton-transition-basic);
+  --skeleton-transition-icon-link: var(--skeleton-transition-boing);
+  
+  --skeleton-icon-transform-cta-link: 0.25rem;
+  --skeleton-icon-size-cta-link: 1rem;
+  
+  --skeleton-size-gap-focus-indicator-link: var(--skeleton-size-gap-focus-indicator);
+  --skeleton-color-focus-indicator-link: var(--skeleton-color-focus-indicator);
+  --skeleton-border-radius-focus-indicator-link: var(--skeleton-size-radius-sm);
+  
+  --skeleton-color-link-default: var(--skeleton-color-fg-action-default);
+  --skeleton-color-link-hover: var(--skeleton-color-fg-action-hover);
+  --skeleton-color-link-focus: var(--skeleton-color-fg-action-focus);
+  --skeleton-color-link-active: var(--skeleton-color-fg-action-active);
+  --skeleton-color-link-visited: var(--skeleton-color-fg-action-visited);
+  --skeleton-color-link-decoration: var(--skeleton-color-fg-action-decoration);
+  --skeleton-color-link-decoration-hover: var(--skeleton-color-fg-action-decoration-hover);
+}
+
+/*** Link Styles ***/
 .link,
 p > a,
 li > a {
@@ -6,8 +31,8 @@ li > a {
   color: var(--skeleton-color-link-default);
   text-decoration: 11% underline var(--skeleton-color-link-decoration);
   font-weight: 600;
-  transition: var(--skeleton-transition-basic);
-
+  transition: var(--skeleton-transition-link);
+  
   /*** Focus Indicator ***/
   &::before {
     position: absolute;
@@ -18,39 +43,39 @@ li > a {
     top: 0;
     bottom: 0;
     z-index: -1;
-    inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2));
-    block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2));
-    margin-block-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator)) * -1);
-    margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator)) * -1);
-    border: var(--skeleton-size-focus-indicator) solid var(--skeleton-color-focus-indicator);
-    border-radius: var(--skeleton-size-radius-sm);
+    inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator-link) * 2));
+    block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator-link) * 2));
+    margin-block-start: calc((var(--skeleton-size-gap-focus-indicator-link) + var(--skeleton-size-focus-indicator)) * -1);
+    margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator-link) + var(--skeleton-size-focus-indicator)) * -1);
+    border: var(--skeleton-size-focus-indicator) solid var(--skeleton-color-focus-indicator-link);
+    border-radius: var(--skeleton-border-radius-focus-indicator-link);
     opacity: 0;
   }
-
+  
   &:focus,
   &.focus {
     color: var(--skeleton-color-link-focus);
   }
-
+  
   &:focus-visible,
   &.focus-visible {
     color: var(--skeleton-color-link-focus);
-
+    
     &::before {
       opacity: 1;
     }
   }
-
+  
   &:hover,
   &.hover {
     text-decoration: 11% underline var(--skeleton-color-link-decoration-hover);
     color: var(--skeleton-color-link-hover);
-
+    
     &::before {
       background-size: 100% 100%;
     }
   }
-
+  
   &:active,
   &.active,
   &:focus:active,
@@ -59,54 +84,53 @@ li > a {
   &:active:focus-visible {
     color: var(--skeleton-color-link-active);
   }
-
+  
   &.disabled,
   &.disabled:hover,
   &:disabled,
   &:disabled:hover {
     color: var(--skeleton-color-link-disabled);
     text-decoration-color: currentColor;
-
+    pointer-events: none;
+    
     &::before {
       display: none;
     }
   }
-
+  
   /*** prevent focus from firing on click ***/
   &:-webkit-focus-ring {
     outline: none;
   }
-
+  
   /*** VARIANT - Quiet ***/
   &--quiet {
     text-decoration: none;
-
+    
     &:hover {
       text-decoration: none;
     }
   }
-
+  
   /*** VARIANT - CTA ***/
   &--cta {
-    --cta-icon-transform: 0.25rem;
-    --cta-icon-size: 1rem;
     display: inline-block;
     padding-inline-start: 0.125rem;
-    padding-inline-end: calc(var(--cta-icon-size) + 0.25rem);
+    padding-inline-end: calc(var(--skeleton-icon-size-cta-link) + 0.25rem);
     font-weight: 600;
     font-size: 120%;
-    transition: var(--skeleton-transition-boing);
+    transition: var(--skeleton-transition-icon-link);
     text-decoration: none;
     background: linear-gradient(var(--skeleton-color-link-decoration) 50%, transparent 51%);
     background-repeat: no-repeat;
-    background-position: bottom left;
-    background-size: 0% 4px;
-
+    background-position: 0% 115%;
+    background-size: 0% 5px;
+    
     &:hover {
       text-decoration: none;
-      background-size: 100% 4px;
+      background-size: 100% 5px;
     }
-
+    
     &::after {
       content: "\f061";
       font-family: "Font Awesome 5 Free";
@@ -114,9 +138,9 @@ li > a {
       font-variant: normal;
       font-style: normal;
       text-rendering: auto;
-      font-size: var(--cta-icon-size);
-      width: var(--cta-icon-size);
-      height: var(--cta-icon-size);
+      font-size: var(--skeleton-icon-size-cta-link);
+      width: var(--skeleton-icon-size-cta-link);
+      height: var(--skeleton-icon-size-cta-link);
       position: absolute;
       bottom: 0;
       top: 0;
@@ -126,20 +150,20 @@ li > a {
       color: inherit;
       transition: var(--skeleton-transition-boing);
     }
-
+    
     &:hover::after {
-      transform: translateX(var(--cta-icon-transform)) scale(1.1);
+      transform: translateX(var(--skeleton-icon-transform-cta-link)) scale(1.1);
     }
-
+    
     &.disabled::after {
       color: inherit;
     }
   }
-
+  
   /*** VARIANT - External ***/
   &--external {
     padding-inline-end: 1.25rem;
-
+    
     &::after {
       content: "\f08e";
       font-family: "Font Awesome 5 Free";
