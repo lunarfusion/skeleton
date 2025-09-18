@@ -36,17 +36,22 @@
 {% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
 
 <div{{ attributes }}>
-  {{ title_prefix }}
-  {% if label %}
-    {{ include ('skeleton:title', {
-      content: label,
-      html_tag: 'h3',
-      size: 'M',
-      variant: 'block',
-    }, with_context: false) }}
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+  <div class="block__title">
+    {{ title_prefix }}
+    {% if label %}
+      {{ include ('skeleton:title', {
+        content: label,
+        html_tag: 'h3',
+        size: 'M',
+        variant: 'block',
+      }, with_context: false) }}
+    {% endif %}
+    {{ title_suffix }}
+  </div>
+
+  <div class="block__content">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
 </div>
