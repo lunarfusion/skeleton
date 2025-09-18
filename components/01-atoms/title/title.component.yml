@@ -3,7 +3,7 @@ description: Title of a page, section, or component.
 group: "Atoms"
 status: experimental
 links:
-  - "https://emory.edu"
+   - "https://github.com/lunarfusion/skeleton"
 
 variants:
   default:
