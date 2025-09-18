@@ -1,0 +1,57 @@
+name: Alert Dismisable
+
+props:
+  variant: informative
+
+  icon:
+    pack_id: skeleton_fontawesome_icons
+    icon_id: circle-info
+    settings:
+      icon_size: M
+      extra_class: alert-icon
+  is_dismisable: true
+  has_actions: false
+
+slots:
+  title:
+  - type: component
+    component: 'skeleton:title'
+    props:
+      variant: alert
+      size: M
+    slots:
+      content: "Title of the Alert"
+
+  content: "Xxxxx xxxxxxx xxxxxx xxxxxxxxx. Xxxxxxx xxxxxx xxx. Xxxxx xxxxxxx xxxxxx xxxxxxxxx. Xxxxxxx xxxxxx xxx. Xxxxx xxxxxxx xxxxxx xxxxxxxxx."
+
+  close_button:
+  - type: component
+    component: 'skeleton:button'
+    props:
+      variant: empty
+      has_icon: true
+      icon_only: true
+      icon: 'x'
+      size: S
+      modifier_class: 'button--alert'
+    slots:
+      label: "Close Alert"
+
+library_wrapper: >
+  {% set props = [
+    'dismisable'
+  ] %}
+  {% for prop in props %}
+  <div class="ui-patterns__story-variant ui-patterns__story-variant--fullprop">
+    {% set prop_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['alert alert--' ~ prop]
+    })})} %}
+    <h4 class="title title--micro">{{ prop }}</h4>
+    {% set prop_slots = {'#slots': _story['#slots']|merge({
+      'title': "On a Related Note",
+      'content': "Since we just mentioned an interesting subject matter in the main content, we thought you might like to know more about it. Here we summarize it briefly, perhaps sharing a link to learn more. Carry on as you were.",
+    })} %}
+    {% set prop_story = _story %}
+    {{ prop_story|merge(prop_props)|merge(prop_slots) }}
+    </div>
+  {% endfor %}

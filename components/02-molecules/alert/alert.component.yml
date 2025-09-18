@@ -32,7 +32,7 @@ props:
       enum:
         - true
         - false
-      default: true
+      default: false
 
     has_actions:
       type: boolean
@@ -62,7 +62,3 @@ slots:
   buttons:
     title: Buttons
     description: "Alert button actions."
-
-  close_button:
-    title: Close Button
-    description: "Button to close the alert"

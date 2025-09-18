@@ -95,3 +95,6 @@
     background-color: var(--skeleton-color-bg-alert-negative);
     border-color: var(--skeleton-color-border-alert-negative);
   }
+.alert--dismisable {
+    /* placeholder */
+  }

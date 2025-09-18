@@ -1,13 +1,15 @@
-name: Has Actions
+name: Alert with Actions
 
 props:
+  variant: informative
+
   icon:
     pack_id: skeleton_fontawesome_icons
     icon_id: circle-info
     settings:
       icon_size: M
       extra_class: alert-icon
-  is_dismisable: true
+  is_dismisable: false
   has_actions: true
 
 slots:

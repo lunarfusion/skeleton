@@ -1,4 +1,4 @@
-name: Default
+name: Alert Semantic
 
 props:
   icon:
@@ -7,7 +7,7 @@ props:
     settings:
       icon_size: M
       extra_class: alert-icon
-  is_dismisable: true
+  is_dismisable: false
 
 slots:
   title:

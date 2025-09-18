@@ -1,6 +1,8 @@
-name: Banner
+name: Alert Fullwidth Banner
 
 props:
+  variant: informative
+
   icon:
     pack_id: skeleton_fontawesome_icons
     icon_id: circle-info

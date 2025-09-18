@@ -3,6 +3,7 @@
     'alert',
     variant and variant != 'default' ? 'alert--' ~ variant,
     banner and banner != '' ? 'alert--banner',
+    dismisable and dismisable != '' ? 'alert--dismisable',
   ]
 %}
 
@@ -56,20 +57,16 @@
     <!--end alert actions-->
 
     {# version 1 - the close button is not a slot #}
-    {# {% if is_dismisable %}
+    {% if is_dismisable %}
       <div class="alert__close">
         <button class="button button--empty button--icon button--icon-only button--alert-close">
           <svg class="icon icon--M icon--alert-icon" height="20" width="20" fill="currentColor" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#xmark" href="/themes/custom/skeleton/assets/icons/sprites/solid.svg#xmark"></use>
           </svg>
+          <span class="button__text sr-only">
+            {{ 'Close dialog'|t }}
+          </span>
         </button>
-      </div>
-    {% endif %} #}
-
-    {# version 2 - the close button placed as a slot #}
-    {% if is_dismisable %}
-      <div class="alert__close">
-        {{ close_button }}
       </div>
     {% endif %}
 
