@@ -1,0 +1,14 @@
+name: Author
+description: Content author
+group: "Atoms"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+  type: object
+
+slots:
+  content:
+    title: Content
+    description: 'Name of the author'
