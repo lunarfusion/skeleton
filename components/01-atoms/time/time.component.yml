@@ -1,0 +1,14 @@
+name: Time
+description: Time and date that an article was published.
+group: "Atoms"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+  type: object
+
+slots:
+  content:
+    title: Content
+    description: 'Content text of the time'
