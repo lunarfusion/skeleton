@@ -1,0 +1,28 @@
+name: Sizes
+
+slots:
+  image:
+    theme: image
+    uri: "/themes/custom/skeleton/assets/images/avatar-example.jpg"
+    alt: avatar example
+
+library_wrapper: >
+  {% set sizes = [
+    'S',
+    'M',
+    'L',
+    'XL',
+  ] %}
+  {% for size in sizes %}
+  <div class="ui-patterns__story-variant">
+    {% set size_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['avatar avatar--size' ~ size]
+    })})} %}
+    <h4 class="avatar avatar--micro">{{ size }}</h4>
+    {% set size_slots = {'#slots': _story['#slots']|merge({
+      'content': 'Sphinx of Black Quartz, Judge My Vow',
+    })} %}
+    {% set size_story = _story %}
+    {{ size_story|merge(size_props)|merge(size_slots) }}
+    </div>
+  {% endfor %}

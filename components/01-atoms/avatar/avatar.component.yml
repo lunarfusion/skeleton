@@ -1,0 +1,25 @@
+name: Avatar
+description: Content avatar
+group: "Atoms"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+  type: object
+  properties:
+
+    size:
+      title: Size
+      type: string
+      description: 'Avatar size vaiants: extra large, large, medium, small.'
+      enum:
+        - S
+        - M
+        - L
+        - XL
+      default: L
+
+slots:
+  image:
+    title: Image

@@ -1,0 +1,7 @@
+name: Default
+
+slots:
+  image:
+    theme: image
+    uri: "/themes/custom/skeleton/assets/images/avatar-example.jpg"
+    alt: avatar example

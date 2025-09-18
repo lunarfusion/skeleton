@@ -1,0 +1,10 @@
+{%
+  set classes = [
+    'avatar',
+    size ? 'avatar--size' ~ size,
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ image }}
+</div>
