@@ -66,14 +66,16 @@
 
   {# authoring information #}
   {% if display_submitted %}
-    <footer class="article__footer container row row--justify-center">
-      <div class="col col--8">
-        {{ author_picture }}
-        <div{{ author_attributes.addClass('byline') }}>
-          {% trans %}By {{ author_name }} <span class="sr-only">on</span> {{ date }}{% endtrans %}
-        </div>
-      </div>
-    </footer>
+  <div class="container row row--justify-center">
+    <div class="col col--8">
+      <footer class="article__footer">
+          {{ author_picture }}
+          <div{{ author_attributes.addClass('byline') }}>
+            {% trans %}By {{ author_name }} <span class="sr-only">on</span> {{ date }}{% endtrans %}
+          </div>
+      </footer>
+    </div>
+  </div>
   {% endif %}
 
   <div{{ content_attributes }}>
