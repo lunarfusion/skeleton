@@ -1,8 +1,8 @@
 /*** Figure Variables ***/
 .figure {
   --skeleton-color-border-figure: var(--skeleton-color-border-primary);
-  
-  --skeleton-size-font-figure: var(--skeleton-size-text-small);
+
+  --skeleton-size-text-figure: var(--skeleton-size-text-small);
   --skeleton-color-fg-figure: var(--skeleton-color-fg-subdued);
 }
 /*** Figure Styles ***/
@@ -19,6 +19,6 @@
 .figure__image {}
 .figure__caption {
     padding: 0.25rem 0.5rem;
-    font-size: var(--skeleton-size-font-figure);
+    font-size: var(--skeleton-size-text-figure);
     color: var(--skeleton-color-fg-figure);
   }
