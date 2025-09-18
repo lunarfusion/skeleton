@@ -36,14 +36,16 @@
     padding: 1rem;
     background-color: var(--skeleton-color-bg-primary);
   }
+  
+  .page--default & {
+    &--content-main {
+      margin-block: 3rem;
+    }
+  }
 }
 
 .block {
   position: relative;
-  
-  &__content {
-    padding-inline-start: var(--skeleton-size-gap-x);
-  }
 }
 
 .region {
@@ -51,14 +53,18 @@
   
   &--sidebar-second {
     padding-inline-start: var(--skeleton-size-gap-x);
+    
+    .block__content {
+      padding-inline-start: var(--skeleton-size-gap-x);
+    }
   }
   
   &--content,
   &--sidebar {
-    margin-block-start: 2rem;
+    /* placeholder */
   }
   
   &--content {
-    padding-block-end: 2rem;
+    /* placeholder */
   }
 }

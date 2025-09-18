@@ -2,14 +2,14 @@
 .title {
   --skeleton-flag-height-title: 12px;
   --skeleton-notch-calc-title: calc(100% - var(--skeleton-flag-height-title));
-  
+
   --skeleton-size-accent-title-block: 9px;
   --skeleton-size-accent-title-card: 6px;
-  
+
   --skeleton-color-accent-title: var(--skeleton-color-border-primary);
   --skeleton-size-gap-x-title: var(--skeleton-size-gap-x);
   --skeleton-border-radius-card-title: var(--skeleton-size-radius-sm);
-  
+
   --skeleton-size-font-small-title: var(--skeleton-size-text-small);
   --skeleton-size-font-medium-title: var(--skeleton-size-text-med);
   --skeleton-size-font-large-title: var(--skeleton-size-text-lrg);
@@ -25,7 +25,7 @@
 }
 /*** Variant - Page Title ***/
 .title--page {
-    margin-block-end: 2rem;
+    /* margin-block-end: 2rem; */
   }
 .title--feature-page {
     margin-block-start: 2rem;

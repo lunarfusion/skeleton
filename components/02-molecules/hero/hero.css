@@ -2,21 +2,21 @@
 .hero {
   --skeleton-color-border-hero: var(--skeleton-color-border-neutral-extra-subdued);
   --skeleton-color-bg-hero: var(--skeleton-color-bg-neutral-extra-subdued);
-  
+
   --skeleton-size-block-hero-default: 350px;
   --skeleton-size-block-hero-medium: 500px;
   --skeleton-size-block-hero-tall: 650px;
-  
+
   --skeleton-size-text-hero: var(--skeleton-size-text-med);
   --skeleton-color-fg-icon-hero: var(--skeleton-color-fg-base);
-  
+
   --skeleton-color-border-primary-hero: var(--skeleton-color-border-primary);
   --skeleton-color-bg-primary-hero: var(--skeleton-color-bg-primary);
 }
 /*** Hero Styles ***/
 .hero {
   --skeleton-hero-size-block: var(--skeleton-size-block-hero-default);
-  
+
   position: relative;
   display: flex;
   flex-direction: column-reverse;
@@ -24,7 +24,6 @@
   block-size: auto;
   min-block-size: var(--skeleton-hero-size-block);
   background-color: var(--skeleton-color-bg-hero);
-  margin-block-end: 2rem;
 }
 .hero__image {
     position: relative;
@@ -46,7 +45,7 @@
          object-position: top center;
       inline-size: 100%;
       block-size: 100%;
-      
+
       display: block;
       position: absolute;
       top: 0;
@@ -158,7 +157,7 @@
         flex-direction: column-reverse;
         justify-content: flex-start;
       }
-        
+
         .hero--layout-diptych .hero__content {
           flex: 0 0 100%;
           max-inline-size: 100%;
@@ -166,7 +165,7 @@
           flex-grow: 0;
           flex-basis: 0;
         }
-        
+
         .hero--layout-diptych .hero__content-inner {
           max-inline-size: unset;
         }

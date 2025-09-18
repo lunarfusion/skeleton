@@ -2,14 +2,14 @@
 .title {
   --skeleton-flag-height-title: 12px;
   --skeleton-notch-calc-title: calc(100% - var(--skeleton-flag-height-title));
-  
+
   --skeleton-size-accent-title-block: 9px;
   --skeleton-size-accent-title-card: 6px;
-  
+
   --skeleton-color-accent-title: var(--skeleton-color-border-primary);
   --skeleton-size-gap-x-title: var(--skeleton-size-gap-x);
   --skeleton-border-radius-card-title: var(--skeleton-size-radius-sm);
-  
+
   --skeleton-size-font-small-title: var(--skeleton-size-text-small);
   --skeleton-size-font-medium-title: var(--skeleton-size-text-med);
   --skeleton-size-font-large-title: var(--skeleton-size-text-lrg);
@@ -23,23 +23,23 @@
   font-optical-sizing: auto;
   margin-block-start: 0;
   margin-block-end: 0.5rem;
-  
+
   /*** Variant - Page Title ***/
   &--page {
-    margin-block-end: 2rem;
+    /* margin-block-end: 2rem; */
   }
-  
+
   &--feature-page {
     margin-block-start: 2rem;
   }
-  
+
   /*** Variant - Section Title ***/
   &--section {
     position: relative;
     display: block;
     padding-block-start: 1.5rem;
     margin-block-start: 1.5rem;
-    
+
     &::before {
       content: "";
       width: 5rem;
@@ -54,7 +54,7 @@
       border-start-start-radius: var(--skeleton-flag-height-title);
     }
   }
-  
+
   /*** Variant - Block Title ***/
   &--block {
     position: relative;
@@ -63,7 +63,7 @@
     margin-block-end: 0.5rem;
     padding-block-start: 2rem;
     padding-inline-start: 1.5rem;
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -76,14 +76,14 @@
       border-radius: calc(var(--skeleton-size-accent-title-block) * 0.5);
     }
   }
-  
+
   /*** Variant - Card Title ***/
   &--card {
     position: relative;
     display: block;
     margin: 0;
     padding-inline-start: 1rem;
-    
+
     &::before {
       content: "";
       width: var(--skeleton-size-accent-title-card);
@@ -97,29 +97,29 @@
       border-radius: var(--skeleton-border-radius-card-title);
     }
   }
-  
+
   &--alert {
     margin: 0;
   }
-  
+
   /*** Variant - Menu Title ***/
   &--menu {
     margin-block: 2rem;
   }
-  
+
   /*** Variant - Sizes ***/
   &--sizeS {
     font-size: var(--skeleton-size-font-small-title);
   }
-  
+
   &--sizeM {
     font-size: var(--skeleton-size-font-medium-title);
   }
-  
+
   &--sizeL {
     font-size: var(--skeleton-size-font-large-title);
   }
-  
+
   &--sizeXL {
     font-size: var(--skeleton-size-font-extra-large-title);
   }

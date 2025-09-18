@@ -36,13 +36,13 @@
     background-color: var(--skeleton-color-bg-primary);
   }
 
+.page--default .layout--content-main {
+      margin-block: 3rem;
+    }
+
 .block {
   position: relative;
 }
-
-.block__content {
-    padding-inline-start: var(--skeleton-size-gap-x);
-  }
 
 .region {
   position: relative;
@@ -52,11 +52,15 @@
     padding-inline-start: var(--skeleton-size-gap-x);
   }
 
+.region--sidebar-second .block__content {
+      padding-inline-start: var(--skeleton-size-gap-x);
+    }
+
 .region--content,
   .region--sidebar {
-    margin-block-start: 2rem;
+    /* placeholder */
   }
 
 .region--content {
-    padding-block-end: 2rem;
+    /* placeholder */
   }

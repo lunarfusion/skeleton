@@ -6,17 +6,17 @@ nav ul {
   padding: 0;
   padding: 0.5rem;
 }
-  
+
   nav ul li {
     margin: 0.25rem 0;
     padding: 0;
     border-inline-end: 1px solid var(--skeleton-color-white-a40);
   }
-  
+
   nav ul li:last-child {
       border: none;
     }
-  
+
   nav ul a {
     position: relative;
     display: block;
@@ -28,7 +28,7 @@ nav ul {
     line-height: 1.2;
     color: var(--skeleton-color-fg-base);
   }
-  
+
   nav ul a::after {
       transition: all 0.5s cubic-bezier(0.6, 0.5, 0.38, 1.35);
       width: calc(100% - (0.75rem * 2));
@@ -45,11 +45,11 @@ nav ul {
       z-index: 999;
       transform: scaleX(0);
     }
-  
+
   nav ul a:hover {
       text-decoration: none;
     }
-  
+
   nav ul a:hover::after {
       transform: scaleX(1);
     }
@@ -92,8 +92,13 @@ nav ul {
   }
 
 .menu.menu--local-tasks {
+    flex-direction: row;
     gap: 1rem;
     padding-block: 0.5rem;
-    margin-block: 1rem;
+    /* margin-block: 1rem; */
     align-items: center;
   }
+
+.menu.menu--local-tasks li {
+      margin-block: 0;
+    }

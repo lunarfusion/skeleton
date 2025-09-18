@@ -1,15 +1,11 @@
-.article__footer {
-    margin-block: 1rem;
+.article {
+  padding-block: 2rem;
+}
+  
+  .article__footer {
     font-size: var(--skeleton-size-text-small);
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 0.5rem;
   }
-
-
-.byline {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.25rem;
-}

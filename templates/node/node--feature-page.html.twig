@@ -1,4 +1,11 @@
-<article{{ attributes.addClasses('node') }}>
+{%
+  set classes = [
+    'article',
+    'node'
+  ]
+%}
+
+<article{{ attributes }}>
 
     {{ title_prefix }}
       {% if label and not page %}
@@ -33,7 +40,7 @@
       {# hero heading is not page title #}
         <div class="node__title">
           <div class="container row row--justify-center">
-            <div class="col col--8">
+            <div class="col col--8 m-0 mt-2">
               {# page title #}
               {{ label }}
             </div>
@@ -67,7 +74,7 @@
   {# authoring information #}
   {% if display_submitted %}
   <div class="container row row--justify-center">
-    <div class="col col--8">
+    <div class="col col--8 m-0">
       <footer class="article__footer">
           {{ author_picture }}
           <div{{ author_attributes.addClass('byline') }}>
@@ -81,7 +88,7 @@
   <div{{ content_attributes }}>
     <div class="node__body">
       <div class="container row row--justify-center">
-        <div class="col col--8">
+        <div class="col col--8 m-0">
           {# node content #}
           {{ content.body }}
         </div>
