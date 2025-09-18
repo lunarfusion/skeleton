@@ -77,14 +77,16 @@
   }
   
   /*** Variants - color themes ***/
-  &--theme-primary {
+  &--theme-primary,
+  .accordion--theme-primary & {
     --details-color-border: var(--details-theme-primary-color-border);
     --details-color-background: var(--details-theme-primary-color-background);
     --details-color-marker: var(--details-theme-primary-color-marker);
   }
   
   /*** Variants - FontAwesome marker ***/
-  &--style-fa-marker {
+  &--style-fa-marker,
+  .accordion--style-fa-marker & {
     .details__summary {
       padding-inline-start: 3rem;
       

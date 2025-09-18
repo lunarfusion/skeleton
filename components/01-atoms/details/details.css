@@ -67,25 +67,26 @@
       transform: rotate(90deg);
     }
 /*** Variants - color themes ***/
-.details--theme-primary {
+.details--theme-primary,
+  .accordion--theme-primary .details {
     --details-color-border: var(--details-theme-primary-color-border);
     --details-color-background: var(--details-theme-primary-color-background);
     --details-color-marker: var(--details-theme-primary-color-marker);
   }
 /*** Variants - FontAwesome marker ***/
-.details--style-fa-marker .details__summary {
+.details--style-fa-marker .details__summary, .accordion--style-fa-marker .details .details__summary {
       padding-inline-start: 3rem;
     }
-.details--style-fa-marker .details__summary span {
+.details--style-fa-marker .details__summary span, .accordion--style-fa-marker .details .details__summary span {
         margin-inline-start: 0;
       }
 /* hide default marker */
-.details--style-fa-marker .details__summary::marker {
+.details--style-fa-marker .details__summary::marker, .accordion--style-fa-marker .details .details__summary::marker {
         color: var(--details-color-marker);
         content: " ";
       }
 /* customize marker */
-.details--style-fa-marker .details__summary::before {
+.details--style-fa-marker .details__summary::before, .accordion--style-fa-marker .details .details__summary::before {
         position: absolute;
         top: 50%;
         bottom: 50%;

@@ -5,8 +5,14 @@ status: experimental
 links:
   - "http://emory.edu"
 
-# props:
-#   type: object
+variants:
+  style-default:
+    title: Default Style
+  style-fa-marker:
+    title: FontAwesome Marker Style
+
+props:
+  type: object
 
 slots:
   items:

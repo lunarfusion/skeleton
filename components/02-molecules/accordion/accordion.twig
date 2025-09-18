@@ -1,6 +1,8 @@
 {%
   set classes = [
-    'accordion'
+    'accordion',
+    variant and variant != 'default' ? 'accordion--' ~ variant,
+    theme ? 'accordion--' ~ theme,
   ]
 %}
 
