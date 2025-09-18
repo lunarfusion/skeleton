@@ -9,7 +9,7 @@ props:
     settings:
       icon_size: M
       extra_class: alert-icon
-  is_dismisable: true
+  dismisable: true
   has_actions: false
 
 slots:

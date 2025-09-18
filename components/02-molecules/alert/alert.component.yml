@@ -18,15 +18,8 @@ variants:
 props:
   type: object
   properties:
-    assets_dir:
-      type: string
-      title: Assets dir
-      description: Optional assets directory to get icons from.
-      default: '@skeleton/../assets/icons/svgs/solid/'
-      examples:
-        - '@skeleton/../assets/icons/svgs/solid/'
 
-    is_dismisable:
+    dismisable:
       type: boolean
       description: Alert can be closed
       enum:

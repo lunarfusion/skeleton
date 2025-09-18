@@ -47,15 +47,6 @@ props:
       examples:
         - 'circle-info'
 
-    layout:
-      type: string
-      title: Button layout
-      enum:
-        - horizontal
-        - vertical
-      default:
-        - horizontal
-
     assets_dir:
       type: string
       title: Assets dir
@@ -82,11 +73,6 @@ props:
       type: string
       format: iri-reference
       default: button-id
-
-    input_value:
-      type: string
-      title: Input value
-      default: submit
 
     kind:
       type: string
@@ -129,7 +115,6 @@ props:
 
 slots:
   label:
-    type: string
     title: label
     description: Button label text.
     default:

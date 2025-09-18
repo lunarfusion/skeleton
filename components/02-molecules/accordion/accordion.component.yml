@@ -13,6 +13,15 @@ variants:
 
 props:
   type: object
+  properties:
+    theme:
+      title: Theme
+      type: string
+      description: 'Color theme for the accordion.'
+      enum:
+        - theme-default
+        - theme-primary
+      default: theme-default
 
 slots:
   items:

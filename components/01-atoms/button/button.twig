@@ -9,7 +9,6 @@
     'button',
     variant and variant != 'default' ? 'button--' ~ variant,
     size ? 'button--size' ~ size,
-    layout ? 'button--' ~ layout,
     icon_only and icon_only == 'true' ? 'button--icon-only',
     kind_class,
     state and state != '' ? state,
@@ -52,7 +51,7 @@
     {{ attributes }}
     data-component-name="button"
     value="{{ label }}"
-    {% if attributes is not empty %}
+    {% if attributes %}
       {{attributes.setAttribute('id',input_id)}}
     {% endif %}
     {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}>
@@ -63,7 +62,7 @@
   <a
     {{ attributes }}
     data-component-name="button"
-    {% if attributes is not empty %}
+    {% if attributes %}
       {{attributes.setAttribute('href',url)}}
     {% endif %}
     {% if is_disabled %}disabled="disabled" aria-disabled="true"{% endif %}>
@@ -86,7 +85,7 @@
     {{ attributes }}
     data-component-name="button"
     value="{{ label }}"
-    {% if attributes is not empty %}
+    {% if attributes %}
       {{attributes.setAttribute('id',input_id)}}
     {% endif %}>
 
