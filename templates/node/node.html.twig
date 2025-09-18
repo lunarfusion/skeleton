@@ -60,6 +60,13 @@
  * @ingroup themeable
  */
 #}
+
+{%
+  set classes = [
+    'article'
+  ]
+%}
+
 <article{{ attributes }}>
 
   {{ title_prefix }}
@@ -71,10 +78,10 @@
   {{ title_suffix }}
 
   {% if display_submitted %}
-    <footer>
+    <footer class="article__footer">
       {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+      <div{{ author_attributes.addClass('byline') }}>
+        {% trans %}By {{ author_name }} <span class="sr-only">on</span> {{ date }}{% endtrans %}
       </div>
     </footer>
   {% endif %}
