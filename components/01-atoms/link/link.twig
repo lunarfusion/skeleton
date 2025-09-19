@@ -7,7 +7,7 @@
 %}
 
 {% if url or attributes.href %}
-    {% set attributes = attributes.setAttribute('href', url) %}
+  {% set attributes = attributes.setAttribute('href', url) %}
 {% endif %}
 
 <a{{ attributes.addClass(classes)}}
