@@ -1,0 +1,37 @@
+{%
+  set card_classes = [
+    'card',
+    variant and variant != 'default' ? 'card--' ~ variant,
+    modifier_class
+  ]
+%}
+
+{% if url %}
+  {% set tag_name = 'a' %}
+  {% set attributes = attributes.setAttribute('href', url) %}
+{% else %}
+  {% set tag_name = 'div' %}
+{% endif %}
+
+<{{ tag_name }} {{ attributes.addClass(card_classes) }}>
+
+  <div class="card__content">
+    <div class="card__title">
+      {{ title }}
+    </div>
+
+    <div class="card__tags">
+      {{ tags }}
+    </div>
+
+    <div class="card__summary">
+      {{ summary }}
+    </div>
+  </div>
+
+  {% if image %}
+    <div class="card__image">
+      {{ image }}
+    </div>
+  {% endif %}
+</{{ tag_name }}>

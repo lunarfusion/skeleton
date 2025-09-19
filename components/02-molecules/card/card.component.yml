@@ -1,0 +1,35 @@
+name: Card
+group: "Molecules"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+variants:
+  default:
+    title: Default
+  diptych:
+    title: Diptych
+
+props:
+  type: object
+  properties:
+    url:
+      type: string
+      title: Card URL
+      format: iri-reference
+      default:
+        - http://wikipedia.com
+    modifier_class:
+      type: string
+      title: Modifier Class
+      description: Optional extra class
+
+slots:
+  title:
+    title: Card title text
+
+  summary:
+    title: Card summary text
+
+  image:
+    title: Card Image

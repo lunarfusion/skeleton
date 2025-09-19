@@ -1,0 +1,29 @@
+name: Default
+
+props:
+  url: 'http://wikipedia.com'
+
+slots:
+  title:
+  - type: component
+    component: 'skeleton:title'
+    props:
+      variant: card
+      size: M
+    slots:
+      content: "Title of the Card"
+
+  summary: "Card summary text xxxxx xxxxxxxx xxxx xx xxxxxxx xxxxx."
+
+  image:
+    theme: image
+    uri: "/themes/custom/skeleton/assets/images/placeholder-card.jpg"
+    alt: image example
+
+  # card_tags:
+  #   - type: component
+  #     component: "academica:tag"
+  #     props:
+  #       type: science
+  #       label: "Science"
+  #       url: "https://example.com"

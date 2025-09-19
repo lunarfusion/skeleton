@@ -1,0 +1,150 @@
+/*** Card Variables ***/
+.card {
+  --skeleton-size-gap-inner-card: 1.25rem;
+  --skeleton-size-gap-inner-card-content: 0.25rem;
+  --skeleton-size-radius-card: var(--skeleton-size-radius-med);
+  --skeleton-size-text-card-summary: var(--skeleton-size-text-small);
+  --skeleton-color-bg-card: var(--skeleton-color-bg-neutral-extra-subdued);
+  --skeleton-color-text-card-summary: var(--skeleton-color-fg-base);
+  --skeleton-color-bg-image-overlay-card: var(--skeleton-color-bg-primary);
+  --skeleton-color-shadow-card: var(--skeleton-color-shadow-neutral);
+  --skeleton-transition-card: var(--skeleton-transition-ease-in);
+}
+/*** Card Styles ***/
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  width: 100%;
+  gap: var(--skeleton-size-gap-inner-card);
+  border-radius: var(--skeleton-size-radius-card);
+  filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-card));
+  background-color: var(--skeleton-color-bg-card);
+  transition: var(--skeleton-transition-card);
+  z-index: 1;
+  
+}
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: var(--skeleton-size-gap-inner-card-content);
+    padding-inline: var(--skeleton-size-gap-inner-card);
+    padding-block-end: var(--skeleton-size-gap-inner-card);
+  }
+.card__title {}
+.card__summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    line-height: 1.4;
+    font-size: var(--skeleton-size-text-card-summary);
+    color: var(--skeleton-color-text-card-summary);
+  }
+.card__image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    border-start-start-radius: inherit;
+    border-start-end-radius: inherit;
+  }
+.card__image img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+         object-position: center;
+      position: absolute;
+      top: 0;
+      filter: saturate(0);
+      transition: var(--skeleton-transition-card);
+    }
+.card__image::after {
+      display: block;
+      top: 0;
+      content: "";
+      padding-block-start: 60%;
+      width: 100%;
+    }
+.card__image::before {
+      position: absolute;
+      display: block;
+      top: 0;
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-color: var(--skeleton-color-bg-image-overlay-card);
+      z-index: 2;
+      mix-blend-mode: color;
+      transition: var(--skeleton-transition-card);
+      opacity: 1;
+    }
+/*** Focus Indicator ***/
+.card::after {
+    position: absolute;
+    margin: auto;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: -1;
+    inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2));
+    block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2));
+    margin-block-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator)) * -1);
+    margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator)) * -1);
+    border-width: var(--skeleton-size-focus-indicator);
+    border-style: solid;
+    border-color: var(--skeleton-color-focus-indicator);
+    opacity: 0;
+    border-radius: calc(var(--skeleton-size-radius-card) + var(--skeleton-size-gap-focus-indicator));
+  }
+/****** VARIANTS ******/
+.card--diptych {
+    flex-direction: row-reverse;
+  }
+.card--diptych .card__content {
+      padding: 0;
+      padding-block: var(--skeleton-size-gap-inner-card);
+    }
+.card--diptych .card__image {
+      border-start-end-radius: 0;
+      border-start-start-radius: inherit;
+      border-end-start-radius: inherit;
+    }
+.card--diptych .card__image::after {
+      padding-block-start: 100%;
+      
+    }
+/****** hover ******/
+.card:hover {
+    filter: initial;
+  }
+.card:hover .card__title span {
+      /* placeholder */
+    }
+.card:hover .card__image img {
+        filter: saturate(1);
+        mix-blend-mode: initial;
+      }
+.card:hover .card__image::before {
+        opacity: 0;
+      }
+/****** focus ******/
+.card:focus,
+  .card:focus-visible {
+    outline: none;
+    border-color: transparent;
+  }
+/*** prevent focus from firing on click ***/
+.card:-webkit-focus-ring {
+    outline: none;
+  }
+.card:focus::after,
+  .card:focus-visible::after {
+    opacity: 1;
+    outline: none;
+  }
