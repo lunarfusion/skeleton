@@ -1,0 +1,75 @@
+name: Default
+
+
+
+slots:
+
+  card_group_title:
+    - type: component
+      component: 'skeleton:title'
+      props:
+        variant: section
+        size: L
+      slots:
+        content: "Title of the Card Group"
+
+  cards:
+    - type: component
+      component: 'skeleton:card'
+      variant: default
+      props:
+        url: 'http://wikipedia.com'
+      slots:
+        image:
+          theme: image
+          uri: "/themes/custom/skeleton/assets/images/placeholder-card.jpg"
+          alt: image example
+        title:
+        - type: component
+          component: 'skeleton:title'
+          props:
+            variant: card
+            size: M
+          slots:
+            content: "Things to Do"
+        summary: "Card summary text xxxxx xxxxxxxx xxxx xx xxxxxxx xxxxx."
+
+    - type: component
+      component: 'skeleton:card'
+      variant: default
+      props:
+        url: 'http://wikipedia.com'
+      slots:
+        image:
+          theme: image
+          uri: "/themes/custom/skeleton/assets/images/placeholder-card.jpg"
+          alt: image example
+        title:
+        - type: component
+          component: 'skeleton:title'
+          props:
+            variant: card
+            size: M
+          slots:
+            content: "People to See"
+        summary: "Card summary text xxxxx xxxxxxxx xxxx xx xxxxxxx xxxxx."
+
+    - type: component
+      component: 'skeleton:card'
+      variant: default
+      props:
+        url: 'http://wikipedia.com'
+      slots:
+        image:
+          theme: image
+          uri: "/themes/custom/skeleton/assets/images/placeholder-card.jpg"
+          alt: image example
+        title:
+        - type: component
+          component: 'skeleton:title'
+          props:
+            variant: card
+            size: M
+          slots:
+            content: "Forces of Evil to Conquer"
+        summary: "Card summary text xxxxx xxxxxxxx xxxx xx xxxxxxx xxxxx."

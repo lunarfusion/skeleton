@@ -1,0 +1,16 @@
+name: Card Group
+description: Multiple cards with a title.
+group: "Organisms"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+  type: object
+
+slots:
+  title:
+    title: Title
+  cards:
+    title: Cards
+    description: "Card Items."
