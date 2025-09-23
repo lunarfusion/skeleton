@@ -1,0 +1,15 @@
+{{ include ('skeleton:card', {
+  attributes: attributes,
+  image: content.field_card_image,
+  summary: content.field_card_summary,
+  url: content.field_card_url,
+  variant: default,
+  'title': [
+    include('skeleton:title', {
+      content: content.field_card_title,
+      html_tag: 'h3',
+      size: 'M',
+      variant: 'card',
+      }, with_context = false),
+    ],
+}) }}
