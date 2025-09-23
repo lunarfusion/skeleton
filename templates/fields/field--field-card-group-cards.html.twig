@@ -1,0 +1,11 @@
+{#
+/**
+* Referenced in Card Group Block
+* Pulls cards items from Card Paragraph
+ */
+#}
+
+{{ include ('skeleton:card_group', {
+   attributes: attributes,
+   cards: items,
+ }, with_context: false) }}
