@@ -1,17 +1,6 @@
 name: Default
 
-
-
 slots:
-
-  card_group_title:
-    - type: component
-      component: 'skeleton:title'
-      props:
-        variant: section
-        size: L
-      slots:
-        content: "Title of the Card Group"
 
   cards:
     - type: component

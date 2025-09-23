@@ -9,8 +9,6 @@ props:
   type: object
 
 slots:
-  title:
-    title: Title
   cards:
     title: Cards
     description: "Card Items."

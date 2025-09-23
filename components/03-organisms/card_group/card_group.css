@@ -2,26 +2,22 @@
 .card-group {
   --skeleton-size-gap-x-card-group-items: var(--skeleton-size-gap-x);
   --skeleton-size-col-spacing-card-group: calc(var(--skeleton-size-gap-x) * 2);
-  --skeleton-size-gap-card-group: var(--skeleton-size-gap-x);
-  --skeleton-size-gap-y-card-group-title: 3rem;
+  --skeleton-size-gap-x-card-group: calc(var(--skeleton-size-gap-x) * 0.666);
+  --skeleton-size-gap-y-card-group: 3rem;
 }
 /*** Card Group Styles ***/
 .card-group {
   inline-size: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: var(--skeleton-size-gap-y-card-group-title);
 }
-.card-group__title {
-    inline-size: 100%;
-  }
 .card-group__items {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     inline-size: 100%;
-    gap: var(--skeleton-size-gap-x-card-group-items);
+    /* gap: var(--skeleton-size-gap-x-card-group-items); */
+    justify-content: space-between;
     container-type: inline-size;
+    margin-block: var(--skeleton-size-gap-y-card-group);
   }
 .card-group__item {
     position: relative;
@@ -30,10 +26,11 @@
     flex-grow: 1;
     flex-basis: 0;
     margin-block-end: var(--skeleton-size-col-spacing-card-group);
-    flex: 0 0 calc(33.3333% - var(--skeleton-size-gap-card-group));
-    max-inline-size: calc(33.3333% - var(--skeleton-size-gap-card-group));
+    flex: 0 0 calc(33.3333% - var(--skeleton-size-gap-x-card-group));
+    max-inline-size: calc(33.3333% - var(--skeleton-size-gap-x-card-group));
+    /* border: 1px dotted white; */
   }
-@container (max-width: 900px) {
+@container (max-width: 1200px) {
     .card-group__item {
       position: relative;
       inline-size: auto;
@@ -41,7 +38,19 @@
       flex-grow: 1;
       flex-basis: 0;
       margin-block-end: var(--skeleton-size-col-spacing-card-group);
-      flex: 0 0 calc(50% - var(--skeleton-size-gap-card-group));
-      max-inline-size: calc(50% - var(--skeleton-size-gap-card-group));
+      flex: 0 0 calc(50% - var(--skeleton-size-gap-x-card-group));
+      max-inline-size: calc(50% - var(--skeleton-size-gap-x-card-group));
+    }
+  }
+@container (max-width: 776px) {
+    .card-group__item {
+      position: relative;
+      inline-size: auto;
+      max-inline-size: 100%;
+      flex-grow: 1;
+      flex-basis: 0;
+      margin-block-end: var(--skeleton-size-col-spacing-card-group);
+      flex: 100%;
+      max-inline-size: 100%;
     }
   }

@@ -5,31 +5,14 @@
 %}
 
 
-
 <div{{ attributes.addClass(classes) }}>
-
-  {% if card_group_title %}
-    <div class="card-group__title">
-      {{ card_group_title }}
-    </div>
-  {% endif %}
-
   {% if cards %}
     <div class="card-group__items">
-
       {% for card in cards %}
         <div class="card-group__item">
           {{ card }}
         </div>
       {% endfor %}
-
-    {# <div class="card-group__item">
-      {% set cards = cards and cards is not sequence ? [cards] : cards %}
-
-      {% for card in cards %}
-        {{ card }}
-      {% endfor %}
-    </div> #}
     {% endif %}
   </div>
 </div>
