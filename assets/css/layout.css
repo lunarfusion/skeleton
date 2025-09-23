@@ -6,9 +6,13 @@
 
 .main {
   flex: 1;
+  inline-size: 100%;
 }
 
-/* placeholder */
+.layout {
+  position: relative;
+  inline-size: 100%;
+}
 
 .layout--header {
     background-color: var(--skeleton-color-bg-primary);
@@ -34,6 +38,9 @@
     margin: 0;
     padding: 1rem;
     background-color: var(--skeleton-color-bg-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 
 .page--default .layout--content-main {
@@ -43,6 +50,93 @@
 .block {
   position: relative;
 }
+
+.block__content {
+    padding-inline-start: 1.5rem;
+  }
+
+.block--footerlogo .block__content {
+      position: relative;
+      transform: translateY(-40%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+.block--footerlogo .block__content::after {
+        content: "";
+        height: auto;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        margin: auto;
+        display: inline-block;
+        position: absolute;
+        background: var(--skeleton-color-bg-base);
+        z-index: -1;
+        transform: translateY(calc(var(--skeleton-size-text-lrg) * -0.5));
+      }
+
+.block--footerlogo .block__link {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      inline-size: 100%;
+      max-inline-size: 300px;
+    }
+
+.block--footerlogo .block__image {
+      position: relative;
+      display: inline-block;
+      background-color: var(--skeleton-color-bg-primary);
+      border-radius: 100%;
+      border: 6px solid var(--skeleton-color-bg-base);
+      padding: 0.75rem;
+      max-inline-size: 100px;
+      z-index: 2;
+      
+    }
+
+.block--footerlogo .block__image-label {
+      position: relative;
+      font-size: var(--skeleton-size-text-lrg);
+      font-weight: 600;
+      line-height: 1;
+      background-color: var(--skeleton-color-bg-primary);
+      inline-size: 100%;
+      text-align: center;
+    }
+
+.block--footerlogo .block__image-label::before,
+      .block--footerlogo .block__image-label::after {
+        content: "";
+        background: url("../images/diamond.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        height: auto;
+        width: 32px;
+        height: 100%;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        display: inline-block;
+        position: absolute;
+      }
+
+.block--footerlogo .block__image-label::before {
+        left: 0;
+        transform: translateX(-50%);
+      }
+
+.block--footerlogo .block__image-label::after {
+        right: 0;
+        transform: translateX(50%);
+      }
 
 .region {
   position: relative;

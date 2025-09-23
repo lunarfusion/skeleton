@@ -36,7 +36,7 @@
 
     {% if page.content_bottom %}
       <div class="layout layout--content-bottom">
-        <div class="container container--full">
+        <div class="container">
           {{ page.content_bottom }}
         </div>
       </div>
@@ -53,9 +53,7 @@
       {% endif %}
 
       {% if page.footer %}
-        <div class="container">
-          {{ page.footer }}
-        </div>
+        {{ page.footer }}
       {% endif %}
 
       {% if page.footer_bottom %}
