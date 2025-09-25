@@ -1,0 +1,52 @@
+name: Nav
+description: "Navigation for site"
+group: "Navigation"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+  type: object
+  properties:
+
+    menu_id:
+      title: 'ID'
+      description: "Must start with a letter. Randomly generated if empty."
+      $ref: "ui-patterns://identifier"
+
+    menu_name:
+      title: "Menu name"
+      description: "For aria label."
+      type: string
+
+    main:
+      type: boolean
+      description: Nav is main nav
+      enum:
+        - true
+        - false
+      default: false
+
+    collapsible:
+      type: boolean
+      description: Nav item dropdown is collapsible
+      enum:
+        - true
+        - false
+      default: false
+
+    layout:
+      type: string
+      description: Nav layout direction
+      enum:
+        - vertical
+        - horizontal
+      default: vertical
+
+    items:
+      title: "Nav Menu items"
+      $ref: "ui-patterns://links"
+
+libraryOverrides:
+  js:
+    navigation-subnavs.js: {}

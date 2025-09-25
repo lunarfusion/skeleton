@@ -1,0 +1,66 @@
+name: Navigation, Main Nav
+
+props:
+  collapsible: true
+  layout: vertical
+  main: true
+
+  items:
+
+    - title: Level Zero Active Trail
+      in_active_trail: true
+
+      below:
+        - title: "Level One Active Trail"
+          url: 'http://wikipedia.com'
+          in_active_trail: true
+
+          below:
+            - title: "Level Two Active Trail"
+              url: 'http://wikipedia.com'
+              in_active_trail: true
+
+            - title: "Level Two Active Trail"
+              url: 'http://wikipedia.com'
+              in_active_trail: true
+
+            - title: "Level Two Active Trail"
+              url: 'http://wikipedia.com'
+              in_active_trail: true
+
+        - title: "Level One Active Trail"
+          url: 'http://wikipedia.com'
+          in_active_trail: true
+
+          below:
+            - title: "Level Two"
+              url: 'http://wikipedia.com'
+              in_active_trail: false
+
+    - title: Level Zero
+      url: 'http://wikipedia.com'
+
+      below:
+      - title: "Level One"
+        url: 'http://wikipedia.com'
+
+      - title: "Level One"
+        url: 'http://wikipedia.com'
+
+      - title: "Level One"
+        url: 'http://wikipedia.com'
+
+        below:
+          - title: "Level Two"
+            url: 'http://wikipedia.com'
+
+          - title: "Level Two"
+            url: 'http://wikipedia.com'
+
+          - title: "Level Two"
+            url: 'http://wikipedia.com'
+
+library_wrapper: >
+  <div class="region region--header-bottom">
+    {{ _story }}
+  </div>
