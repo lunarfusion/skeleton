@@ -1,7 +1,7 @@
 /*** Link Variables ***/
 .link,
 p > a,
-li > a {
+li:not(.nav__item) > a {
   --skeleton-color-link-disabled: var(--skeleton-color-fg-disabled);
   --skeleton-transition-link: var(--skeleton-transition-basic);
   --skeleton-transition-icon-link: var(--skeleton-transition-boing);
@@ -25,7 +25,7 @@ li > a {
 /*** Link Styles ***/
 .link,
 p > a,
-li > a {
+li:not(.nav__item) > a {
   position: relative;
   /* display: inline-block; */
   color: var(--skeleton-color-link-default);
