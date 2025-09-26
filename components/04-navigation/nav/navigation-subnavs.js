@@ -1,25 +1,58 @@
 ((Drupal, once) => {
-	const menuItemDropdownToggles = document.querySelectorAll('.nav__subnav-toggle');
-	// alert('Hello! I am an alert box!!');
+  Drupal.skeleton_subnavs = Drupal.skeleton_subnavs || {};
 
-	// TOGGLE ATTRIBUTES - find each toggle object
-	menuItemDropdownToggles.forEach(function(dropdownToggle) {
-		// TOGGLE ACTIONS - Add both click and focus keydown events
-		['mousedown', 'focus.keydown'].forEach(event => dropdownToggle.addEventListener(event, showHideDropdown));
+  /**
+   *
+   * @type {Drupal~behavior}
+   *
+   * @prop {Drupal~behaviorAttach}
+   **/
+  Drupal.behaviors.skeleton_subnavs = {
 
-		// Toggle click/keydown event
-		function showHideDropdown(event) {
-			event.preventDefault();
-			console.log('dropdown clicked');
-			dropdownToggle.parentNode.classList.toggle('nav__item--open');
+    attach(context) {
 
-			// toggle aria-expanded
-			if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
-				dropdownToggle.setAttribute('aria-expanded', 'false');
-			} else {
-				// otherwise if it's false, make it true
-				dropdownToggle.setAttribute('aria-expanded', 'true');
-			}
-		}
-	});
+      // Find each occurance of the nav component
+      once('.nav', context).forEach((nav) => {
+
+        // Find each subnav toggle button within the nav
+        const menuItemDropdownToggles = nav.querySelectorAll('.nav__subnav-toggle');
+
+        menuItemDropdownToggles.forEach(function(dropdownToggle) {
+
+          // Add both click and focus keydown events
+          ['mousedown', 'focus.keydown'].forEach(event => dropdownToggle.addEventListener(event, showHideDropdown));
+
+          // Find the subnav the button opens
+          let subNav = dropdownToggle.nextElementSibling;
+
+          // Toggle click/keydown event
+          function showHideDropdown(event) {
+            event.preventDefault();
+            console.log('dropdown clicked');
+
+            // Reveal the subnav
+            dropdownToggle.parentNode.classList.toggle('nav__item--open');
+
+            // toggle aria-expanded on the button
+            if (dropdownToggle.getAttribute('aria-expanded') === 'true') {
+              dropdownToggle.setAttribute('aria-expanded', 'false');
+            } else {
+              // if it's false, make it true
+              dropdownToggle.setAttribute('aria-expanded', 'true');
+            }
+
+            // toggle aria-expanded on the subnav
+            if (subNav.getAttribute('aria-hidden') === 'true') {
+              subNav.setAttribute('aria-hidden', 'false');
+            } else {
+              // if it's false, make it true
+              subNav.setAttribute('aria-hidden', 'true');
+            }
+          }
+        });
+
+      });
+    },
+  };
+
 })(Drupal, once);

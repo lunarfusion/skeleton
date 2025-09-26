@@ -50,3 +50,6 @@ props:
 libraryOverrides:
   js:
     navigation-subnavs.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

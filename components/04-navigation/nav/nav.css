@@ -3,11 +3,11 @@
   --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
   --skeleton-color-text-nav-item-hover: var(--skeleton-color-fg-primary);
   --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
-  
-  --skeleton-size-nav-dropdown-icon: 1rem;
   --skeleton-color-action-nav-fg-icon: var(--skeleton-color-fg-primary);
-  --skeleton-transition-nav-icon: var(--skeleton-transition-basic);
-  --skeleton-transition-nav-item: var(--skeleton-transition-basic);
+  --skeleton-color-bg-subnav: var(--skeleton-color-bg-base);
+  
+  --skeleton-size-border-nav-list: 2px;
+  --skeleton-size-nav-dropdown-icon: 1rem;
   
   --skeleton-size-text-nav-level-0: 1.3rem;
   --skeleton-size-text-nav-level-1: 1rem;
@@ -15,8 +15,10 @@
   
   --skeleton-size-space-y-nav-item: 0.5rem;
   --skeleton-size-space-x-nav-item: 0.75rem;
-  
   --skeleton-size-y-nav-item-main: 45px;
+  
+  --skeleton-transition-nav-icon: var(--skeleton-transition-basic);
+  --skeleton-transition-nav-item: var(--skeleton-transition-basic);
 }
 /*** Navigation Styles ***/
 .nav {
@@ -35,6 +37,9 @@
     font-size: 0;
     transition: var(--skeleton-transition-nav-item);
   }
+.nav__list--level-1 {
+      margin-inline-start: calc(var(--skeleton-size-space-x-nav-item) + var(--skeleton-size-border-nav-list));
+    }
 /* LI element */
 .nav__item {
     position: relative;
@@ -55,8 +60,8 @@
     }
 .nav__item--level-1 {
       font-size: var(--skeleton-size-text-nav-level-1);
-      border-inline-start: 2px dotted var(--skeleton-color-border-nav-item);
-      margin-inline-start: calc(var(--skeleton-size-nav-dropdown-icon) * 0.5);
+      border-inline-start: var(--skeleton-size-border-nav-list) dotted var(--skeleton-color-border-nav-item);
+      /* margin-inline-start: calc(var(--skeleton-size-nav-dropdown-icon) * 0.5); */
       margin-block-end: 0.5rem;
     }
 .nav__item--level-1 > .nav__link,
@@ -128,6 +133,7 @@
       inline-size: 100%;
       transition: var(--skeleton-transition-nav-item);
       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      background-color: var(--skeleton-color-bg-subnav);
     }
 .nav--collapsible .nav__subnav-wrapper > .nav__list {
         block-size: 0;
@@ -138,6 +144,7 @@
     }
 .nav--collapsible .nav__item--open .nav__subnav-wrapper {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      z-index: 2;
     }
 .nav--collapsible .nav__item--open .nav__subnav-wrapper > .nav__list {
         block-size: auto;

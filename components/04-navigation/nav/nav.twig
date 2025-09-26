@@ -118,7 +118,7 @@
         {% if item.below %}
 
           {% if menu_level == 0 %}
-            <div class="nav__subnav-wrapper">
+            <div class="nav__subnav-wrapper" aria-hidden="true">
               {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
             </div>
           {% else %}
