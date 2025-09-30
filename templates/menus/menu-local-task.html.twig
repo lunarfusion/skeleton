@@ -1,0 +1,6 @@
+
+{{ include ('skeleton:tab', {
+  attributes: attributes,
+  active: is_active|default(false),
+  link: link,
+}, with_context: false) }}
