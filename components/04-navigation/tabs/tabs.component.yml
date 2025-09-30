@@ -1,0 +1,13 @@
+name: Tabs
+description: "Tabs for local tasks"
+group: "Navigation"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+ type: object
+
+slots:
+  items:
+    title: "Tabs items"

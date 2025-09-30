@@ -1,0 +1,35 @@
+name: Default
+
+slots:
+  items:
+    - type: component
+      component: "skeleton:tab"
+      slots:
+        link:
+          type: html_tag
+          tag: a
+          value: "View"
+          attributes:
+            href: "#"
+      props:
+        active: true
+
+    - type: component
+      component: "skeleton:tab"
+      slots:
+        link:
+          type: html_tag
+          tag: a
+          value: "Edit"
+          attributes:
+            href: "#"
+
+    - type: component
+      component: "skeleton:tab"
+      slots:
+        link:
+          type: html_tag
+          tag: a
+          value: "Delete"
+          attributes:
+            href: "#"
