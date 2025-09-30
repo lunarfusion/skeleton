@@ -1,0 +1,12 @@
+name: Default
+
+props:
+  active: false
+
+slots:
+  link:
+    type: html_tag
+    tag: a
+    value: Link
+    attributes:
+      href: "https://example.com"

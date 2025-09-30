@@ -1,0 +1,36 @@
+/*** Tab Variables ***/
+.tab {
+  --skeleton-color-border-tab: var(--skeleton-color-border-neutral-extra-subdued);
+  --skeleton-color-border-tab-active: var(--skeleton-color-border-neutral-subdued);
+  
+  --skeleton-color-bg-tab: var(--skeleton-color-bg-neutral-extra-subdued);
+  --skeleton-color-bg-tab-active: var(--skeleton-color-bg-base);
+  
+  --skeleton-color-fg-tab: var(--skeleton-color-accent);
+  --skeleton-color-fg-tab-active: var(--skeleton-color-fg-base);
+  
+  --skeleton-width-border-tab: 1px;
+  --skeleton-width-border-tab-active: 2px;
+  --skeleton-border-radius-tab: var(--skeleton-size-radius-lrg);
+  --skeleton-size-text-tab: var(--skeleton-size-text-small);
+}
+/*** Tab Styles ***/
+.tab {
+  font-size: var(--skeleton-size-text-tab);
+  /* line-height: 1; */
+  display: inline-flex;
+  padding: 0.5rem 0.75rem;
+  border: var(--skeleton-width-border-tab) solid var(--skeleton-color-border-tab);
+  border-block-end: var(--skeleton-width-border-tab-active) solid var(--skeleton-color-border-tab-active);
+  border-start-start-radius: var(--skeleton-border-radius-tab);
+  border-start-end-radius: var(--skeleton-border-radius-tab);
+  background-color: var(--skeleton-color-bg-tab);
+  margin-inline-start: calc(var(--skeleton-width-border-tab-active) * -0.5);
+}
+.tab--active {
+    background-color: var(--skeleton-color-bg-tab-active);
+    color: var(--skeleton-color-fg-tab-active);
+    border: var(--skeleton-width-border-tab-active) solid var(--skeleton-color-border-tab-active);
+    border-block-end: var(--skeleton-width-border-tab-active) solid var(--skeleton-color-bg-tab-active);
+    z-index: 1;
+  }

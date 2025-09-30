@@ -1,0 +1,11 @@
+{% set classes = [
+  'tab',
+] %}
+
+{% set link = active ? link|add_class('tab--active') : link %}
+
+{% for key, value in attributes %}
+{% set link = link|set_attribute(key, value) %}
+{% endfor %}
+
+{{ link|set_attribute('role', 'tab')|add_class(classes) }}

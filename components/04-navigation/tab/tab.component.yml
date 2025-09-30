@@ -1,0 +1,19 @@
+name: Tab
+description: "Tab for local tasks"
+group: "Navigation"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+ type: object
+ properties:
+   active:
+     title: "Active link"
+     description: "Css class for whether the link corresponds to the current url."
+     type: boolean
+
+slots:
+  link:
+    title: Link
+    description: "The link item."
