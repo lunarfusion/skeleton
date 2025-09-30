@@ -19,6 +19,8 @@
   
   --skeleton-transition-nav-icon: var(--skeleton-transition-basic);
   --skeleton-transition-nav-item: var(--skeleton-transition-basic);
+  
+  --skeleton-border-radius-main-nav-subnav: var(--skeleton-size-radius-med);
 }
 /*** Navigation Styles ***/
 .nav {
@@ -132,23 +134,23 @@
 .nav--collapsible .nav__subnav-wrapper {
       inline-size: 100%;
       transition: var(--skeleton-transition-nav-item);
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-      background-color: var(--skeleton-color-bg-subnav);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 .nav--collapsible .nav__subnav-wrapper > .nav__list {
-        block-size: 0;
+        background-color: var(--skeleton-color-bg-subnav);
         transform: translateY(-100%);
+        position: absolute;
       }
 .nav--collapsible .nav__item--open .nav__subnav-toggle::before {
       transform: rotate(0deg);
     }
 .nav--collapsible .nav__item--open .nav__subnav-wrapper {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       z-index: 2;
     }
 .nav--collapsible .nav__item--open .nav__subnav-wrapper > .nav__list {
         block-size: auto;
         transform: none;
+        position: relative;
       }
 /*** Variant - Horizontal ***/
 .nav--horizontal > .nav__list {
@@ -160,10 +162,22 @@
 /*** Variant - Main Nav ***/
 .region--header-bottom .nav--main > .nav__list .nav__subnav-wrapper {
       position: absolute;
+      border-end-start-radius: var(--skeleton-border-radius-main-nav-subnav);
+      border-end-end-radius: var(--skeleton-border-radius-main-nav-subnav);
+      margin-block-start: var(--skeleton-size-gap-y);
     }
+.region--header-bottom .nav--main > .nav__list .nav__subnav-wrapper > .nav__list {
+        padding: var(--skeleton-size-gap-y) var(--skeleton-size-gap-x);
+        margin-inline-start: 0;
+      }
 .region--header-bottom .nav--main > .nav__list {
       flex-direction: row;
+      padding: var(--skeleton-size-gap-y) var(--skeleton-size-gap-x);
     }
 .region--header-bottom .nav--main > .nav__list .nav__item {
         margin-inline: 0.5rem;
+      }
+.region--header-bottom .nav--main > .nav__list > .nav__link,
+      .region--header-bottom .nav--main > .nav__list > .nav__subnav-toggle {
+        padding-block: calc(var(--skeleton-size-space-y-nav-item) * 2);
       }
