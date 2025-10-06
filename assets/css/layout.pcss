@@ -12,28 +12,28 @@
 .layout {
   position: relative;
   inline-size: 100%;
-  
-  
+
+
   &--header {
     background-color: var(--skeleton-color-bg-primary);
   }
-  
+
   &--banner {
     margin-block-end: 2rem;
   }
-  
+
   &--content-top {
     /* placeholder */
   }
-  
+
   &--content-main {
     /* placeholder */
   }
-  
+
   &--content-bottom {
     /* placeholder */
   }
-  
+
   &--footer {
     margin: 0;
     padding: 1rem;
@@ -42,7 +42,7 @@
     flex-direction: column;
     gap: 2rem;
   }
-  
+
   .page--default & {
     &--content-main {
       margin-block: 3rem;
@@ -52,14 +52,14 @@
 
 .block {
   position: relative;
-  
+
   &__content {
-    padding-inline-start: 1.5rem;
+    /* placeholder */
   }
-  
+
   &--footerlogo {
-    
-    
+
+
     .block__content {
       position: relative;
       transform: translateY(-40%);
@@ -67,7 +67,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      
+
       &::after {
         content: "";
         height: auto;
@@ -82,7 +82,7 @@
         transform: translateY(calc(var(--skeleton-size-text-lrg) * -0.5));
       }
     }
-    
+
     .block__link {
       position: relative;
       display: flex;
@@ -94,7 +94,7 @@
       inline-size: 100%;
       max-inline-size: 300px;
     }
-    
+
     .block__image {
       position: relative;
       display: inline-block;
@@ -104,9 +104,9 @@
       padding: 0.75rem;
       max-inline-size: 100px;
       z-index: 2;
-      
+
     }
-    
+
     .block__image-label {
       position: relative;
       font-size: var(--skeleton-size-text-lrg);
@@ -115,7 +115,7 @@
       background-color: var(--skeleton-color-bg-primary);
       inline-size: 100%;
       text-align: center;
-      
+
       &::before,
       &::after {
         content: "";
@@ -131,12 +131,12 @@
         display: inline-block;
         position: absolute;
       }
-      
+
       &::before {
         left: 0;
         transform: translateX(-50%);
       }
-      
+
       &::after {
         right: 0;
         transform: translateX(50%);
@@ -147,27 +147,27 @@
 
 .region {
   position: relative;
-  
+
   &--header-bottom {
     background-color: var(--skeleton-color-bg-primary-subdued);
   }
-  
+
   &--sidebar-second {
     padding-inline-start: var(--skeleton-size-gap-x);
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    
+
     .block__content {
       padding-inline-start: var(--skeleton-size-gap-x);
     }
   }
-  
+
   &--content,
   &--sidebar {
     /* placeholder */
   }
-  
+
   &--content {
     /* placeholder */
   }
