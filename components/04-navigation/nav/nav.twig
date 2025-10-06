@@ -86,7 +86,7 @@
     %}
 
     {% set list_attributes = create_attribute() %}
-    <ul{{ list_attributes.addClass(list_classes) }}>
+    <ul{{ list_attributes.addClass(list_classes).setAttribute('role', 'menu') }}>
 
       {% for item in items %}
 
@@ -101,7 +101,7 @@
         ]
       %}
 
-      <li class="{{- item_classes|join(' ')-}}">
+      <li class="{{- item_classes|join(' ')-}}" aria-haspopup="true">
         {% set item_attributes = item.attributes|default(create_attribute()) %}
 
         {% if item.url %}
@@ -110,7 +110,7 @@
           </a>
 
         {% else %}
-          <button class="nav__subnav-toggle" aria-expanded="false" type="button" {% if item.in_active_trail %} aria-current="true"{% endif %}>
+          <button class="nav__link nav__subnav-toggle" aria-haspopup="true" aria-expanded="false" aria-label="toggle submenu" type="button" target="self" {% if item.in_active_trail %} aria-current="true"{% endif %}>
             {{ item.title }}
           </button>
         {% endif %}

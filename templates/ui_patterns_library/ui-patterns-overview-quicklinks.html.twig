@@ -10,8 +10,11 @@
 
     {% if groups|length > 1 %}
       {% for group_name, components in groups %}
-        <div class="ui-patterns__menu-group">
-          <h3 class="title title--menu">{{ group_name }}</h3>
+
+        <details class="details">
+          <summary class="details__summary">
+            <h3 class="title title--menu">{{ group_name }}</h3>
+          </summary>
           <ul class="menu menu--vertical">
             {% for component in components %}
               <li class="menu__item">
@@ -19,7 +22,8 @@
               </li>
             {% endfor %}
           </ul>
-        </div>
+        </details>
+
       {% endfor %}
 
     {% else %}
