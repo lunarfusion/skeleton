@@ -148,8 +148,15 @@
 .region {
   position: relative;
   
+  &--header-bottom {
+    background-color: var(--skeleton-color-bg-primary-subdued);
+  }
+  
   &--sidebar-second {
     padding-inline-start: var(--skeleton-size-gap-x);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     
     .block__content {
       padding-inline-start: var(--skeleton-size-gap-x);

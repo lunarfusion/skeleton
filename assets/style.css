@@ -3,7 +3,6 @@
 @import "vars/vars-colors-semantic-light.css";
 @import "vars/vars-colors-semantic-dark.css";
 @import "vars/vars-fonts.css";
-@import "vars/vars-shadows.css";
 @import "vars/vars-spacing.css";
 @import "vars/vars-transitions-animations.css";
 
@@ -13,7 +12,6 @@
 @import "css/branding.css";
 @import "css/layout.css";
 @import "css/field.css";
-@import "css/navigation.css";
 @import "css/table.css";
 @import "css/node.css";
 @import "css/article.css";

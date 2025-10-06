@@ -53,14 +53,13 @@
 /*** Columns ***/
 
 .col {
-  
+
   position: relative;
   inline-size: auto;
   max-inline-size: 100%;
   flex-grow: 1;
   flex-basis: 0;
   margin-block-end: var(--skeleton-size-gap-y);
-  border: 1px dotted white;
 }
 
 .col--m0 {
@@ -98,7 +97,7 @@
   }
 
 @media (max-width: 776px) {
-  
+
   .col,
   .col--9,
   .col--6,
@@ -132,7 +131,7 @@
     }
 
 @media (max-width: 994px) {
-      
+
       .paragraph-flexrow-layout--50-25-25 .col:nth-child(2),
       .paragraph-flexrow-layout--50-25-25 .col:nth-child(3) {
         flex: 0 0 calc(50% - var(--col-spacing));
@@ -165,7 +164,7 @@
 /* all columns full width on small screen */
 
 @media (max-width: 776px) {
-      
+
       .paragraph-flexrow-layout--50-50 .col,
       .paragraph-flexrow-layout--50-50 .col:first-child,
       .paragraph-flexrow-layout--50-50 .col:nth-child(2),

@@ -4,10 +4,6 @@ This is a temporary solution for display of UI Patterns
 Update to remove CSS as the system implementation matures
 ***/
 
-.ui-patterns {
-  padding-block-start: 4rem;
-}
-
 /* Component display - right column */
 
 .ui-patterns__components {
@@ -20,14 +16,13 @@ Update to remove CSS as the system implementation matures
 
 .ui-patterns__menu {
     position: sticky;
-    top: 6rem;
+    top: 2rem;
     max-inline-size: 100%;
     background-color: var(--skeleton-color-bg-base);
     border-radius: var(--skeleton-size-radius-med);
     padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
   }
 
 .ui-patterns__menu-group {

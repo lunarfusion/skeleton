@@ -142,8 +142,15 @@
   position: relative;
 }
 
+.region--header-bottom {
+    background-color: var(--skeleton-color-bg-primary-subdued);
+  }
+
 .region--sidebar-second {
     padding-inline-start: var(--skeleton-size-gap-x);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 
 .region--sidebar-second .block__content {
