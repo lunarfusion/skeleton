@@ -35,10 +35,13 @@
     color: var(--details-color-text);
     overflow: hidden;
   }
-.details__summary span {
+.details__summary span,
+    .details__summary > * {
+      display: inline-block;
       margin-inline-start: 0.25rem;
     }
 .details__summary::marker {
+      display: inline-block;
       color: var(--details-color-marker);
       margin-inline-end: 0.5rem;
     }

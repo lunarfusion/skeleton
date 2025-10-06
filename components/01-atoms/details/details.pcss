@@ -36,11 +36,14 @@
     color: var(--details-color-text);
     overflow: hidden;
     
-    span {
+    span,
+    > * {
+      display: inline-block;
       margin-inline-start: 0.25rem;
     }
     
     &::marker {
+      display: inline-block;
       color: var(--details-color-marker);
       margin-inline-end: 0.5rem;
     }
