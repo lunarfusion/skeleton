@@ -1,4 +1,4 @@
-name: Navigation, Vertical
+name: Navigation, Layout Vertical
 
 props:
   layout: vertical
@@ -8,7 +8,6 @@ props:
       url: 'http://wikipedia.com'
 
     - title: Level Zero Active Trail
-      url: 'http://wikipedia.com'
       in_active_trail: true
 
       below:
@@ -30,7 +29,6 @@ props:
               in_active_trail: false
 
     - title: Level Zero
-      url: 'http://wikipedia.com'
 
       below:
       - title: "Level One"

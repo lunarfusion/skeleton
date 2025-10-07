@@ -29,7 +29,15 @@ props:
 
     collapsible:
       type: boolean
-      description: Nav item dropdown is collapsible
+      description: Nav item dropdown is collapsible. Menu must be set to "expand all menu links."
+      enum:
+        - true
+        - false
+      default: false
+
+    collapsible_no_js:
+      type: boolean
+      description: Nav item dropdown is collapsible and does not use Javascript. Menu must be set to "expand all menu links."
       enum:
         - true
         - false

@@ -1,16 +1,16 @@
-name: Navigation, Layout Vertical, Collapsible
+name: Navigation, Layout Vertical, Collapsible No Javascript
 
 props:
-  collapsible: true
+  collapsible: false
+  collapsible_no_js: true
   layout: vertical
 
   items:
-    - title: Level Zero Active Trail
+    - title: Level Zero Active Trail with URL
       in_active_trail: true
 
       below:
         - title: "Level One Active Trail"
-          url: 'http://wikipedia.com'
           in_active_trail: true
 
           below:
@@ -34,11 +34,12 @@ props:
               url: 'http://wikipedia.com'
               in_active_trail: false
 
-    - title: Level Zero
+    - title: Level Zero No URL
 
       below:
-        - title: "Level One Active Trail"
-          url: 'http://wikipedia.com'
+        - title: "Level One Active Trail Details"
+          type: component
+          component: "skeleton:details"
           in_active_trail: true
 
           below:

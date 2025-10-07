@@ -1,4 +1,4 @@
-name: Navigation, Horizontal
+name: Navigation, Layout Horizontal
 
 props:
   layout: horizontal

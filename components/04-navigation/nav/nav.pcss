@@ -35,37 +35,34 @@
   
   /*** UL element ***/
   &__list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-size: 0;
     position: relative;
-    
     display: flex;
     flex-direction: column;
-    
+    margin: 0;
+    padding: 0;
     background-color: var(--skeleton-color-bg-subnav);
-    
     transition: var(--skeleton-transition-nav-item);
+    /* fg styles */
+    list-style-type: none;
+    font-size: 0;
     
     /* indent child lists */
     .nav__list {
-      margin-inline-start: 1rem;
+      margin-inline-start: 1.5rem;
     }
   }
   
   /*** LI element ***/
   &__item {
+    position: relative;
     margin: 0;
     padding: 0;
-    list-style-type: none;
-    position: relative;
-    
     transition: var(--skeleton-transition-nav-item);
+    box-shadow: var(--skeleton-color-border-nav-item) 0px 0.5px 0px, var(--skeleton-color-border-nav-item) 0px 0.5px 0px inset;
+    
+    /* fg styles */
     color: var(--skeleton-color-text-nav-item);
     font-size: var(--skeleton-size-text-nav-level-0);
-    
-    box-shadow: var(--skeleton-color-border-nav-item) 0px 0.5px 0px, var(--skeleton-color-border-nav-item) 0px 0.5px 0px inset;
     
     &:marker {
       display: none;
@@ -96,13 +93,14 @@
     border: 0;
     outline: 0;
     background: transparent;
+    transition: var(--skeleton-transition-nav-item);
+    /* fg styles */
     text-align: start;
     line-height: 1.2;
     font-size: inherit;
     font-weight: 400;
     text-decoration: none;
     color: inherit;
-    transition: var(--skeleton-transition-nav-item);
     
     /*** Focus Indicator ***/
     &::after {
@@ -163,24 +161,23 @@
     /*** dropdown indicator - points right when collapsed ***/
     &::before {
       position: absolute;
+      top: 0;
+      left: 0;
       display: inline-flex;
       justify-self: center;
       align-self: center;
-      
       padding: 0;
       margin: 0;
-      top: 0;
-      left: 0;
       margin-inline-start: var(--skeleton-size-space-y-nav-item);
       margin-block-start: calc((var(--skeleton-size-nav-dropdown-icon) * 0.25) + var(--skeleton-size-space-y-nav-item));
+      transition: var(--skeleton-transition-nav-icon);
+      transform: rotate(-90deg);
       content: "\f107";
+      /* fg styles */
       font-family: "FontAwesome";
       font-weight: 700;
       font-size: var(--skeleton-size-nav-dropdown-icon);
       color: var(--skeleton-color-action-nav-fg-icon);
-      
-      transition: var(--skeleton-transition-nav-icon);
-      transform: rotate(-90deg);
     }
   }
   
@@ -213,6 +210,38 @@
       transform: rotate(0deg);
     }
   }
+  
+  /*** Variant - Collapsible No JS ***/
+  &--collapsible-no-js {
+    
+    .nav__subnav-wrapper {
+      inline-size: 100%;
+      transition: var(--skeleton-transition-nav-item);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      
+      > .nav__list {
+        transform: translateY(-100%);
+      }
+    }
+    
+    details {
+      transition: var(--skeleton-transition-nav-item);
+    }
+    
+    details:open {
+      .nav__subnav-toggle::before {
+        transform: rotate(0deg);
+      }
+      
+      /* TODO - animation sometimes does not animate on details open */
+      .nav__subnav-wrapper {
+        > .nav__list {
+          transform: translateY(0%);
+        }
+      }
+    }
+  }
+  
   
   /*** Variant - Horizontal ***/
   &--horizontal {

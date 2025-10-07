@@ -1,4 +1,4 @@
-name: Navigation, Collapsible, Horizontal
+name: Navigation, Layout Horizontal, Collapsible
 
 props:
   collapsible: true
