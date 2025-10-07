@@ -2,12 +2,12 @@
 .nav {
   --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
   --skeleton-color-text-nav-item-hover: var(--skeleton-color-fg-primary);
-  --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
+  --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-extra-subdued);
   --skeleton-color-action-nav-fg-icon: var(--skeleton-color-fg-primary);
   --skeleton-color-bg-subnav: var(--skeleton-color-bg-base);
   --skeleton-color-border-subnav-main: var(--skeleton-color-bg-primary-subdued);
   
-  --skeleton-size-border-subnav-main: 6px;
+  --skeleton-size-border-subnav-main: 8px;
   --skeleton-size-border-nav-list: 2px;
   --skeleton-size-nav-dropdown-icon: 1rem;
   
@@ -64,7 +64,7 @@
     color: var(--skeleton-color-text-nav-item);
     font-size: var(--skeleton-size-text-nav-level-0);
     
-    border-block-end: 1px solid hsla(0, 0%, 100%, 0.15);
+    box-shadow: var(--skeleton-color-border-nav-item) 0px 0.5px 0px, var(--skeleton-color-border-nav-item) 0px 0.5px 0px inset;
   }
 .nav__item:marker {
       display: none;
@@ -138,6 +138,7 @@
 /*** Button ***/
 .nav__subnav-toggle {
     padding-inline-start: calc(var(--skeleton-size-nav-dropdown-icon) * 2);
+    cursor: pointer;
   }
 /*** dropdown indicator - points right when collapsed ***/
 .nav__subnav-toggle::before {
@@ -197,6 +198,7 @@
     }
 .region--header-bottom .nav--main > .nav__list > .nav__item {
         border-block-end: 0;
+        box-shadow: none;
       }
 .region--header-bottom .nav--main > .nav__list .nav__subnav-wrapper {
       position: absolute;
@@ -204,9 +206,11 @@
       border-end-end-radius: var(--skeleton-border-radius-main-nav-subnav);
       margin-block-start: var(--skeleton-size-gap-y);
       min-inline-size: 300px;
+      clip-path: polygon(-10% 0, 110% 0, 110% 110%, -10% 110%);
     }
 .region--header-bottom .nav--main > .nav__list .nav__subnav-wrapper > .nav__list {
-        padding: var(--skeleton-size-gap-y) var(--skeleton-size-gap-x);
+        padding: 1rem;
         margin-inline-start: 0;
         border-block-end: var(--skeleton-size-border-subnav-main) solid var(--skeleton-color-border-subnav-main);
+        box-shadow: var(--skeleton-color-border-nav-item) 0px 4px 16px, var(--skeleton-color-border-nav-item) 0px 8px 32px;
       }

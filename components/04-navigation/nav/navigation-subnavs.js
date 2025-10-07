@@ -14,7 +14,7 @@
 
       // HELP WANTED - this JS needs expert review, accessibility improvements
 
-      // Find each occurance of the nav component
+      // Find each occurrence of the nav component
       once('.nav', context).forEach((nav) => {
 
         // Set all first level links be focusable
@@ -24,7 +24,7 @@
           navItem.setAttribute("tabindex", "0");
         });
 
-        //Set all subnav links to unfocusable until subnav is open
+        // Set all subnav links to unfocusable until subnav is open
         let subnavLinks = nav.querySelectorAll('.nav__subnav-wrapper .nav__link');
 
         subnavLinks.forEach(function(subnavlink) {
