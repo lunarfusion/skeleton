@@ -20,7 +20,6 @@ Update to remove CSS as the system implementation matures
     max-inline-size: 100%;
     background-color: var(--skeleton-color-bg-base);
     border-radius: var(--skeleton-size-radius-med);
-    padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
   }
