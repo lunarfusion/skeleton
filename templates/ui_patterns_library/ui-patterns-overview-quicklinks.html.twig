@@ -6,34 +6,52 @@
 #}
 {% if groups %}
   <div class="ui-patterns__menu">
-    <h2 class="title">{{ 'Components'|t }}</h2>
+    <h2 class="title h3">{{ 'Components'|t }}</h2>
 
+    <div class="p-1">
     {% if groups|length > 1 %}
       {% for group_name, components in groups %}
 
-        <details class="details">
+        <details class="details details--style-fa-marker">
           <summary class="details__summary">
-            <h3 class="title title--menu">{{ group_name }}</h3>
+            <h3 class="title title--nav mb-0 h5">{{ group_name }}</h3>
           </summary>
-          <ul class="menu menu--vertical">
-            {% for component in components %}
-              <li class="menu__item">
-                <a class="menu__link" href="#{{ component.id }}">{{ component.name }}</a>
-              </li>
-            {% endfor %}
-          </ul>
+          <div class="details__content">
+
+            {# How to use nav component here? This does not print href #}
+            {# {{ include ('skeleton:nav', {
+              layout: 'vertical',
+              items: components,
+              nav_id: 'ui-patterns-nav',
+              menu_name: 'ui patterns menu'
+            }, with_context: false) }} #}
+
+            <nav class="nav">
+              <ul class="nav__list">
+                {% for component in components %}
+                  <li class="nav__item">
+                    <a class="nav__link" href="#{{ component.id }}">{{ component.name }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+
+          </div>
         </details>
 
       {% endfor %}
+    </div>
 
     {% else %}
-      <ul class="menu menu--vertical">
-        {% for component in components %}
-          <li class="menu__item">
-            <a class="menu__link" href="#{{ component.id }}">{{ component.name }}</a>
-          </li>
-        {% endfor %}
-      </ul>
+      <nav class="nav">
+        <ul class="nav__list">
+          {% for component in components %}
+            <li class="nav__item">
+              <a class="nav__link" href="#{{ component.id }}">{{ component.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
     {% endif %}
   </div>
 {% endif %}
