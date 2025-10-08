@@ -1,16 +1,16 @@
-name: Navigation, Layout Vertical, Collapsible No Javascript
+name: Navigation, Collapsible No Javascript
 
 props:
   collapsible: false
   collapsible_no_js: true
-  layout: vertical
 
   items:
-    - title: Level Zero Active Trail with URL
+    - title: Level Zero Active Trail
       in_active_trail: true
 
       below:
         - title: "Level One Active Trail"
+          url: 'http://wikipedia.com'
           in_active_trail: true
 
           below:
@@ -34,12 +34,11 @@ props:
               url: 'http://wikipedia.com'
               in_active_trail: false
 
-    - title: Level Zero No URL
+    - title: Level Zero
 
       below:
-        - title: "Level One Active Trail Details"
-          type: component
-          component: "skeleton:details"
+        - title: "Level One Active Trail"
+          url: 'http://wikipedia.com'
           in_active_trail: true
 
           below:
@@ -62,3 +61,24 @@ props:
             - title: "Level Two"
               url: 'http://wikipedia.com'
               in_active_trail: false
+
+    - title: Level Zero No Children
+      in_active_trail: true
+      url: 'http://wikipedia.com'
+
+
+library_wrapper: >
+  {% set layouts = [
+    'vertical',
+    'horizontal',
+  ] %}
+  {% for layout in layouts %}
+  <div class="ui-patterns__story-variant">
+    {% set layout_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['nav nav--' ~ layout]
+    })})} %}
+    <h4 class="title title--micro">{{ layout }}</h4>
+    {% set layout_story = _story %}
+    {{ layout_story|merge(layout_props) }}
+    </div>
+  {% endfor %}
