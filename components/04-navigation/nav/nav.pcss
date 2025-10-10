@@ -5,23 +5,27 @@
   --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
   --skeleton-color-border-nav-item-secondary: var(--skeleton-color-border-neutral-extra-subdued);
   --skeleton-color-action-nav-fg-icon: var(--skeleton-color-fg-primary);
-  --skeleton-color-bg-subnav: var(--skeleton-color-bg-base);
-  --skeleton-color-border-subnav-main: var(--skeleton-color-bg-primary-subdued);
-  --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-primary);
   
-  --skeleton-size-border-subnav-main: 8px;
+  --skeleton-color-bg-subnav: var(--skeleton-color-bg-base);
+  --skeleton-color-bg-nav-main: var(--skeleton-color-bg-primary-subdued);
+  --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-base);
+  --skeleton-color-border-subnav-main: var(--skeleton-color-bg-primary-extra-subdued);
+  --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-primary-subdued);
+  
+  --skeleton-size-border-subnav-main: 3px;
   --skeleton-size-border-nav-list: 2px;
   --skeleton-size-nav-dropdown-icon: 1rem;
   
   --skeleton-size-border-navlink: 0px;
   --skeleton-size-radius-navlink: 4px;
+  --skeleton-size-radius-subnav: var(--skeleton-size-radius-med);
   
-  --skeleton-size-text-nav-level-0: 1.3rem;
-  --skeleton-size-text-nav-level-1: 1rem;
-  --skeleton-size-text-nav-level-2: 0.75rem;
+  --skeleton-size-text-nav-level-0: 1rem;
+  --skeleton-size-text-nav-level-1: 0.85rem;
+  --skeleton-size-text-nav-level-2: 0.7rem;
   
-  --skeleton-size-space-y-nav-item: 0.75rem;
-  --skeleton-size-space-x-nav-item: 1rem;
+  --skeleton-size-space-y-nav-item: 0.5rem;
+  --skeleton-size-space-x-nav-item: 0.75rem;
   --skeleton-size-y-nav-item-main: 45px;
   
   --skeleton-transition-nav-icon: var(--skeleton-transition-basic);
@@ -41,7 +45,7 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 0;
+    padding: 0 0.25rem;
     background-color: var(--skeleton-color-bg-subnav);
     transition: var(--skeleton-transition-nav-item);
     /* fg styles */
@@ -59,14 +63,14 @@
   &__item {
     position: relative;
     margin: 0;
-    padding: 0;
+    padding: var(--skeleton-size-gap-focus-indicator);
     transition: var(--skeleton-transition-nav-item);
     box-shadow: var(--skeleton-color-border-nav-item) 0px 0.5px 0px, var(--skeleton-color-border-nav-item) 0px 0.5px 0px inset;
-    
     
     /* fg styles */
     color: var(--skeleton-color-text-nav-item);
     font-size: var(--skeleton-size-text-nav-level-0);
+    line-height: 1.2;
     
     &:marker {
       display: none;
@@ -98,14 +102,15 @@
     /* make space for focus indicator */
     margin-block: calc(var(--skeleton-size-focus-indicator) * 2);
     border: 0;
-    outline: 0;
+    outline: none;
     background: transparent;
     transition: var(--skeleton-transition-nav-item);
     /* fg styles */
     text-align: start;
-    line-height: 1.2;
+    line-height: inherit;
     font-size: inherit;
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 0.5px;
     text-decoration: none;
     color: inherit;
     
@@ -116,7 +121,7 @@
       content: "";
       left: 0;
       top: 0;
-      
+      z-index: -1;
       inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-border-navlink) * 2));
       block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-border-navlink) * 2));
       
@@ -131,32 +136,29 @@
       opacity: 0;
     }
     
-    /*** Link State - Focus ***/
-    &:focus,
-    &:focus-visible {
-      
-      /* border: 2px dashed orange; */
-      &::after {
-        opacity: 1;
-      }
-    }
-    
-    
     /*** Link State - Hover ***/
     &:hover {
       color: var(--skeleton-color-text-nav-item-hover);
+      
+      &::after {
+        opacity: 0;
+      }
     }
     
-    /*** Link State - Active ***/
-    &:active,
-    &.is-active {
-      
-      /*** prevent focus from firing on click ***/
-      &:-webkit-focus-ring {
-        border-color: transparent;
-        outline: none;
-        box-shadow: none;
+    /*** State: Focus ***/
+    /* use focus-visible so focus indicator does not fire on click */
+    &:focus-visible {
+      &::after {
+        opacity: 1;
+        z-index: 1;
       }
+    }
+    
+    /*** prevent focus from firing on click ***/
+    &:-webkit-focus-ring {
+      border-color: transparent;
+      outline: none;
+      box-shadow: none;
     }
   }
   
@@ -169,14 +171,12 @@
     &::before {
       position: absolute;
       top: 0;
-      left: 0;
+      bottom: 0;
+      left: var(--skeleton-size-space-x-nav-item);
       display: inline-flex;
       justify-self: center;
       align-self: center;
       padding: 0;
-      margin: 0;
-      margin-inline-start: var(--skeleton-size-space-y-nav-item);
-      margin-block-start: calc((var(--skeleton-size-nav-dropdown-icon) * 0.25) + var(--skeleton-size-space-y-nav-item));
       transition: var(--skeleton-transition-nav-icon);
       transform: rotate(-90deg);
       content: "\f107";
@@ -191,48 +191,25 @@
   /************ VARIANTS ************/
   /*** Variant - Collapsible ***/
   &--collapsible {
-    .nav__subnav-wrapper {
-      inline-size: 100%;
-      transition: var(--skeleton-transition-nav-item);
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      
-      > .nav__list {
-        transform: translateY(-100%);
-        position: absolute;
-      }
-      
-      /* open state */
-      &--open {
-        z-index: 2;
-        
-        > .nav__list {
-          block-size: auto;
-          transform: none;
-          position: relative;
-        }
-      }
-    }
-    
-    .nav__subnav-toggle--open::before {
-      transform: rotate(0deg);
-    }
-  }
-  
-  /*** Variant - Collapsible No JS ***/
-  &--collapsible-no-js {
     
     .nav__subnav-wrapper {
       inline-size: 100%;
       transition: var(--skeleton-transition-nav-item);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      z-index: 1;
       
       > .nav__list {
         transform: translateY(-100%);
+        opacity: 0;
       }
     }
     
     details {
       transition: var(--skeleton-transition-nav-item);
+      
+      summary::marker {
+        content: " ";
+      }
     }
     
     details:open {
@@ -240,10 +217,16 @@
         transform: rotate(0deg);
       }
       
+      /* &::before {
+        transform: rotate(0deg);
+      } */
+      
       /* TODO - animation sometimes does not animate on details open */
       .nav__subnav-wrapper {
         > .nav__list {
           transform: translateY(0%);
+          opacity: 1;
+          z-index: 2;
         }
       }
     }
@@ -255,6 +238,7 @@
     > .nav__list {
       flex-direction: row;
       align-items: stretch;
+      padding-inline: 1rem;
     }
     
     .nav__item--level-0 {
@@ -265,11 +249,11 @@
   
   /*** Variant - Main Nav ***/
   .region--header-bottom &--main {
-    background-color: var(--skeleton-color-bg-primary-subdued);
+    background-color: var(--skeleton-color-bg-nav-main);
     
     > .nav__list {
       flex-direction: row;
-      padding: var(--skeleton-size-gap-y) var(--skeleton-size-gap-x);
+      padding-inline: 2rem;
       background-color: transparent;
       
       > .nav__item {
@@ -279,27 +263,28 @@
     }
     
     > .nav__list .nav__subnav-wrapper {
-      --sn-size-shadow-1: 16px;
-      --sn-size-shadow-2: 24px;
-      --sn-color-shadow-1: var(--skeleton-color-border-nav-item);
-      --sn-color-shadow-2: var(--skeleton-color-bg-primary-subdued);
+      --sn-size-shadow-1: 12px;
+      --sn-size-shadow-2: 22px;
+      --sn-color-shadow-1: var(--skeleton-color-shadow-brand);
+      --sn-color-shadow-2: var(--skeleton-color-shadow-brand-subdued);
       
       position: absolute;
       border-end-start-radius: var(--skeleton-border-radius-main-nav-subnav);
       border-end-end-radius: var(--skeleton-border-radius-main-nav-subnav);
-      margin-block-start: var(--skeleton-size-gap-y);
       min-inline-size: 300px;
       clip-path: polygon(-10% 0, 110% 0, 110% 110%, -10% 110%);
       
       > .nav__list {
-        background-color: var(--skeleton-color-bg-primary-subdued);
+        background-color: var(--skeleton-color-bg-subnav-main);
         padding: 1rem;
         margin-inline-start: 0;
-        border-inline: 3px solid var(--skeleton-color-border-subnav-main);
-        border-block-end: var(--skeleton-size-border-subnav-main) solid var(--skeleton-color-border-bottom-subnav-main);
+        border-end-start-radius: var(--skeleton-size-radius-subnav);
+        border-end-end-radius: 8px;
+        border: var(--skeleton-size-border-subnav-main) solid var(--skeleton-color-border-bottom-subnav-main);
+        border-block-start: 0;
         box-shadow:
-          var(--sn-color-shadow-1) 0px 4px var(--sn-size-shadow-1),
-          var(--sn-color-shadow-2) 0px 8px var(--sn-size-shadow-2);
+          var(--sn-color-shadow-1) 0px 2px var(--sn-size-shadow-1),
+          var(--sn-color-shadow-2) 0px 4px var(--sn-size-shadow-2);
       }
     }
   }

@@ -35,14 +35,6 @@ props:
         - false
       default: false
 
-    collapsible_no_js:
-      type: boolean
-      description: Nav item dropdown is collapsible and does not use Javascript. Menu must be set to "expand all menu links."
-      enum:
-        - true
-        - false
-      default: false
-
     layout:
       type: string
       description: Nav layout direction
@@ -57,7 +49,7 @@ props:
 
 libraryOverrides:
   js:
-    navigation-subnavs.js: {}
+    nav-close-submenus.js: {}
   dependencies:
     - core/drupal
     - core/once

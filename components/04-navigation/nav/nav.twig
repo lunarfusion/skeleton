@@ -1,40 +1,30 @@
-{%
-  set classes = [
-    'nav',
-    variant and variant != 'default' ? 'nav--' ~ variant,
-    layout ? 'nav--' ~ layout,
-    collapsible and collapsible == 'true' ? 'nav--collapsible',
-    collapsible_no_js and collapsible_no_js == 'true' ? 'nav--collapsible-no-js',
-    main and main == 'true' ? 'nav--main',
-  ]
-%}
-
 {% if items %}
+  {%
+    set classes = [
+      'nav',
+      variant and variant != 'default' ? 'nav--' ~ variant,
+      layout ? 'nav--' ~ layout,
+      collapsible and collapsible == 'true' ? 'nav--collapsible',
+      main and main == 'true' ? 'nav--main',
+    ]
+  %}
+
   {% set menu_id = menu_id|default('main-menu-' ~ random()) %}
   <nav{{ attributes.addClass(classes).setAttribute('id',menu_id) }} role="navigation" aria-label="{{ menu_name }}">
-      {% import _self as menus %}
-      {% if collapsible %}
-        {{ _self.menu_links_collapsible(items, attributes, 0, menu_id, collapsible) }}
-      {% elseif collapsible_no_js %}
-        {{ _self.menu_links_collapsible_no_js(items, attributes, 0, menu_id, collapsible_no_js) }}
-      {% else %}
-        {{ _self.menu_links(items, attributes, 0, menu_id) }}
-      {% endif %}
+
+    {% import _self as menus %}
+    {% if collapsible %}
+      {{ _self.menu_links_collapsible(items, attributes, 0, menu_id, collapsible) }}
+    {% else %}
+      {{ _self.menu_links(items, attributes, 0, menu_id) }}
+    {% endif %}
+
   </nav>
 {% endif %}
 
 
 {% macro menu_links(items, attributes, menu_level, menu_id) %}
-    {%
-      set list_classes = [
-      'nav__list',
-      'nav__list--level-' ~ menu_level,
-      ]
-    %}
-
-    {% set list_attributes = create_attribute() %}
-    <ul{{ list_attributes.addClass(list_classes) }}>
-
+    <ul class="nav__list">
       {% for item in items %}
 
       {%
@@ -52,7 +42,7 @@
         {% set item_attributes = item.attributes|default(create_attribute()) %}
 
         {% if item.url %}
-          <a class="nav__link" {{ item_attributes.setAttribute('href', item.url) }}>
+          <a class="nav__link" tabindex="0" {{ item_attributes.setAttribute('href', item.url) }}>
             <span>{{ item.title }}</span>
           </a>
 
@@ -81,15 +71,7 @@
 
 
 {% macro menu_links_collapsible(items, attributes, menu_level, menu_id, collapsible) %}
-    {%
-      set list_classes = [
-        'nav__list',
-        'nav__list--level-' ~ menu_level,
-      ]
-    %}
-
-    {% set list_attributes = create_attribute() %}
-    <ul{{ list_attributes.addClass(list_classes).setAttribute('role', 'menu') }}>
+  <ul class="nav__list">
 
       {% for item in items %}
 
@@ -104,72 +86,17 @@
         ]
       %}
 
-      <li class="{{- item_classes|join(' ')-}}" aria-haspopup="true">
+      <li class="{{- item_classes|join(' ')-}}">
         {% set item_attributes = item.attributes|default(create_attribute()) %}
 
         {% if item.url %}
-          <a class="nav__link" {{ item_attributes.setAttribute('href', item.url) }}>
-            <span>{{ item.title }}</span>
-          </a>
-
-        {% else %}
-          <button class="nav__link nav__subnav-toggle" aria-haspopup="true" aria-expanded="false" aria-label="toggle submenu" type="button" target="self" {% if item.in_active_trail %} aria-current="true"{% endif %}>
-            {{ item.title }}
-          </button>
-
-          {% if item.below %}
-            {% if menu_level == 0 %}
-              <div class="nav__subnav-wrapper" aria-hidden="true">
-                {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-              </div>
-            {% else %}
-              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-            {% endif %}
-          {% endif %}
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-{% endmacro %}
-
-
-
-
-{% macro menu_links_collapsible_no_js(items, attributes, menu_level, menu_id, collapsible_no_js) %}
-    {%
-      set list_classes = [
-        'nav__list',
-        'nav__list--level-' ~ menu_level,
-      ]
-    %}
-
-    {% set list_attributes = create_attribute() %}
-    <ul{{ list_attributes.addClass(list_classes).setAttribute('role', 'menu') }}>
-
-      {% for item in items %}
-
-      {%
-        set item_classes = [
-          'nav__item',
-          'nav__item--level-' ~ menu_level,
-          item.is_expanded ? 'nav__item--expanded',
-          item.is_collapsed ? 'nav__item--collapsed',
-          item.in_active_trail ? 'nav__item--active-trail',
-          item.below ? 'nav__item--has-children' : '',
-        ]
-      %}
-
-      <li class="{{- item_classes|join(' ')-}}" aria-haspopup="true">
-        {% set item_attributes = item.attributes|default(create_attribute()) %}
-
-        {% if item.url %}
-          <a class="nav__link" {{ item_attributes.setAttribute('href', item.url) }}>
+          <a class="nav__link" tabindex="0" {{ item_attributes.setAttribute('href', item.url) }}>
             <span>{{ item.title }}</span>
           </a>
 
         {% else %}
           <details>
-            <summary class="nav__link nav__subnav-toggle" aria-label="toggle submenu" role="button" target="self" {% if item.in_active_trail %} aria-current="true"{% endif %}>
+            <summary class="nav__link nav__subnav-toggle" tabindex="0" aria-label="toggle submenu" {% if item.in_active_trail %} aria-current="true"{% endif %}>
               {{ item.title }}
             </summary>
 

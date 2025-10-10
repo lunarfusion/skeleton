@@ -1,4 +1,4 @@
-
+{% if items %}
   {{ include ('skeleton:nav', {
     layout: 'vertical',
     collapsible: true,
@@ -7,4 +7,4 @@
     nav_id: 'main-nav',
     menu_name: 'main menu'
   }, with_context: false) }}
-
+{% endif %}

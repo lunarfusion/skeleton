@@ -15,7 +15,7 @@
       // HELP WANTED - this JS needs expert review, accessibility improvements
 
       // Find each occurrence of the nav component
-      once('.nav', context).forEach((nav) => {
+      once('.nav--collapsible', context).forEach((nav) => {
 
         // Set all first level links be focusable
         let navItems = nav.querySelectorAll('.nav__link');
