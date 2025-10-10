@@ -84,6 +84,19 @@
   --skeleton-color-violet-085: hsl(260, 75%, 85%);
   --skeleton-color-violet-090: hsl(260, 75%, 90%);
   
+  /*** Violet Transparent Dark ***/
+  --skeleton-color-violet-drk-a10: hsla(260, 75%, 20%, 0.1);
+  --skeleton-color-violet-drk-a20: hsla(260, 75%, 20%, 0.2);
+  --skeleton-color-violet-drk-a40: hsla(260, 75%, 20%, 0.4);
+  --skeleton-color-violet-drk-a60: hsla(260, 75%, 20%, 0.6);
+  
+  /*** Violet Transparent Light***/
+  --skeleton-color-violet-lt-a10: hsla(260, 75%, 60%, 0.1);
+  --skeleton-color-violet-lt-a20: hsla(260, 75%, 60%, 0.2);
+  --skeleton-color-violet-lt-a40: hsla(260, 75%, 60%, 0.4);
+  --skeleton-color-violet-lt-a60: hsla(260, 75%, 60%, 0.6);
+  
+  
   /*** Pink ***/
   --skeleton-color-pink-010: hsl(300, 80%, 10%);
   --skeleton-color-pink-020: hsl(300, 80%, 20%);

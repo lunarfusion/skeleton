@@ -36,12 +36,16 @@
     
     /*** Background - Brand ***/
     --skeleton-color-bg-primary: var(--skeleton-color-violet-055);
-    --skeleton-color-bg-primary-subdued: var(--skeleton-color-violet-030);
+    --skeleton-color-bg-primary-subdued: var(--skeleton-color-violet-040);
+    --skeleton-color-bg-primary-extra-subdued: var(--skeleton-color-violet-030);
     
     /*** Border - Brand ***/
     --skeleton-color-border-primary: var(--skeleton-color-violet-080);
     --skeleton-color-border-primary-inverted: var(--skeleton-color-violet-060);
     
+    /*** Shadows - Brand ***/
+    --skeleton-color-shadow-brand: var(--skeleton-color-violet-lt-a60);
+    --skeleton-color-shadow-brand-subdued: var(--skeleton-color-violet-lt-a20);
     
     /****************** SYSTEM ******************/
     /*** Focus Indicator ***/
