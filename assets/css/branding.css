@@ -1,5 +1,6 @@
 .branding {
-  padding: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--skeleton-color-bg-primary);
 }
   
   .branding__content {
@@ -9,13 +10,13 @@
   }
   
   .branding__logo {
-    inline-size: 150px;
+    inline-size: 100px;
   }
   
   .branding__sitename {
     font-family: var(--skeleton-font-serif);
     color: var(--skeleton-color-fg-base);
-    font-size: calc(var(--skeleton-size-text-lrg) * 2);
+    font-size: 48px;
     font-weight: 500;
     line-height: 1.1;
     display: flex;
@@ -34,7 +35,7 @@
     }
   
   .branding__siteslogan {
-    font-size: var(--skeleton-size-text-lrg);
+    font-size: 18px;
     color: var(--skeleton-color-fg-base);
     font-weight: 400;
   }

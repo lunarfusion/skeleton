@@ -14,24 +14,8 @@
   inline-size: 100%;
 }
 
-.layout--header {
-    background-color: var(--skeleton-color-bg-primary);
-  }
-
 .layout--banner {
     margin-block-end: 2rem;
-  }
-
-.layout--content-top {
-    /* placeholder */
-  }
-
-.layout--content-main {
-    /* placeholder */
-  }
-
-.layout--content-bottom {
-    /* placeholder */
   }
 
 .layout--footer {
