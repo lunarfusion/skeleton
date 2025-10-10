@@ -8,5 +8,5 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  margin-block: 2rem;
+  margin-block: 1rem 0.5rem;
 }
