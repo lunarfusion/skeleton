@@ -13,6 +13,7 @@
     "postcss-import": "^16.1.0",
     "postcss-nested": "^6.0.1",
     "postcss-nesting": "^12.1.5",
+    "semver": "^6.3.1",
     "shelljs": "^0.8.5",
     "simple-update-notifier": "^2.0.0",
     "stylelint": "^14.4.0",
@@ -22,7 +23,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
-    "nodemon": "^2.0.4",
+    "nodemon": "^3.1.10",
     "vite-plugin-twig-drupal": "^1.6.2"
   },
   "scripts": {
