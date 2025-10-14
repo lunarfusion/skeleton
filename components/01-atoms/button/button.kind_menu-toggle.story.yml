@@ -22,7 +22,9 @@ library_wrapper: >
       class: ['button--primary ' ~ state]
     })})} %}
     <h4 class="title title--micro">{{ state }}</h4>
-    {% set state_story = _story %}
-    {{ state_story|merge(state_props) }}
+    <div class="block">
+      {% set state_story = _story %}
+      {{ state_story|merge(state_props) }}
+    </div>
     </div>
   {% endfor %}

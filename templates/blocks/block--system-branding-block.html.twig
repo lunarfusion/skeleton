@@ -27,6 +27,18 @@
         {% endif %}
       </div>
     {% endif %}
+
+    {{ include ('skeleton:button', {
+      attributes: attributes,
+      icon_only: false,
+      label: 'menu',
+      variant: primary,
+      kind: 'menu-toggle',
+      size: 'M',
+      has_icon: true,
+      icon: 'bars',
+      input_id:'menu-toggle',
+    }) }}
     </div>
 
   </div>

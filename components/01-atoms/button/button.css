@@ -3,48 +3,48 @@
   --skeleton-size-block-button-medium: 40px;
   --skeleton-size-block-button-small: 30px;
   --skeleton-size-block-button-large: 60px;
-
+  
   --skeleton-size-icon-button-small: 14px;
   --skeleton-size-icon-button-medium: 20px;
   --skeleton-size-icon-button-large: 30px;
-
+  
   --skeleton-size-md-gap-button: .75rem;
   --skeleton-size-sm-gap-button: 0.25rem;
   --skeleton-size-border-button: 1.5px;
   --skeleton-size-radius-button: calc(var(--skeleton-size-block-button) * 0.5);
-
+  
   --skeleton-padding-button-small: var(--skeleton-size-radius-button);
   --skeleton-padding-button-medium: var(--skeleton-size-radius-button);
   --skeleton-padding-button-large: var(--skeleton-size-radius-button);
-
+  
   --skeleton-size-text-menu-toggle-button: var(--skeleton-size-text-small);
   --skeleton-size-text-button-medium: var(--skeleton-size-text-normal);
   --skeleton-size-text-button-large: var(--skeleton-size-text-med);
   --skeleton-size-text-button-small: var(--skeleton-size-text-small);
-
+  
   --skeleton-color-button-primary-default: var(--skeleton-color-violet-055);
   --skeleton-color-button-primary-hover: var(--skeleton-color-violet-065);
   --skeleton-color-button-primary-focus: var(--skeleton-color-violet-065);
   --skeleton-color-button-primary-active: var(--skeleton-color-violet-075);
-
+  
   --skeleton-color-button-secondary-default: var(--skeleton-color-pink-050);
   --skeleton-color-button-secondary-hover: var(--skeleton-color-pink-070);
   --skeleton-color-button-secondary-focus: var(--skeleton-color-pink-070);
   --skeleton-color-button-secondary-active: var(--skeleton-color-pink-080);
-
+  
   --skeleton-color-button-disabled: var(--skeleton-color-gray-040);
   --skeleton-color-fg-button-disabled: var(--skeleton-color-gray-080);
-
+  
   --skeleton-color-fg-button-primary-default: var(--skeleton-color-fg-white-static);
   --skeleton-color-fg-button-primary-hover: var(--skeleton-color-fg-white-static);
   --skeleton-color-fg-button-primary-focus: var(--skeleton-color-fg-white-static);
   --skeleton-color-fg-button-primary-active: var(--skeleton-color-fg-white-static);
-
+  
   --skeleton-color-fg-button-secondary-default: var(--skeleton-color-fg-black-static);
   --skeleton-color-fg-button-secondary-hover: var(--skeleton-color-fg-black-static);
   --skeleton-color-fg-button-secondary-focus: var(--skeleton-color-fg-black-static);
   --skeleton-color-fg-button-secondary-active: var(--skeleton-color-fg-black-static);
-
+  
   --skeleton-color-fg-button-ghost-default: var(--skeleton-color-fg-base);
   --skeleton-color-fg-button-ghost-hover: var(--skeleton-color-fg-base);
   --skeleton-color-fg-button-ghost-focus: var(--skeleton-color-fg-base);
@@ -53,27 +53,27 @@
 /*** Button Styles ***/
 .button {
   --skeleton-size-block-button: var(--skeleton-size-block-button-medium);
-
+  
   z-index: 1;
   position: relative;
   padding-inline: var(--skeleton-padding-button-medium);
-
+  
   max-inline-size: 100%;
   block-size: var(--skeleton-size-block-button);
   inline-size: auto;
-
+  
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--skeleton-size-md-gap-button);
-
+  
   border: var(--skeleton-size-border-button) solid transparent;
   outline: none;
   border-radius: var(--skeleton-size-radius-button);
-
+  
   transition: var(--skeleton-transition-basic);
   cursor: pointer;
-
+  
   font-family: var(--skeleton-font-primary);
   font-size: var(--skeleton-size-text-button-medium);
   font-weight: 500;
@@ -93,20 +93,20 @@
     content: "";
     left: 0;
     top: 0;
-
+    
     z-index: -1;
-
+    
     inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-border-button) * 2));
     block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-border-button) * 2));
-
+    
     margin-block-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-border-button)) * -1);
     margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-border-button)) * -1);
-
+    
     border-width: var(--skeleton-size-focus-indicator);
     border-style: solid;
     border-color: var(--skeleton-color-focus-indicator);
     opacity: 0;
-
+    
     border-radius: calc(var(--skeleton-size-radius-button) + var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-border-button));
   }
 .button__text {}
@@ -240,10 +240,6 @@
 /*** Variant - circle icon only ***/
 .button--icon-only {
     border-radius: 100%;
-    /* block-size: var(--skeleton-size-block-button);
-    inline-size: var(--skeleton-size-block-button); */
-    /* max-inline-size: var(--skeleton-size-block-button);
-    max-block-size: var(--skeleton-size-block-button); */
     inline-size: var(--skeleton-size-block-button);
     padding: 0;
   }
@@ -259,7 +255,7 @@
 /*** Variant - small ***/
 .button--sizeS {
     --skeleton-size-block-button: var(--skeleton-size-block-button-small);
-
+    
     font-size: var(--skeleton-size-text-button-small);
     padding-inline: var(--skeleton-padding-button-small);
   }
@@ -269,7 +265,7 @@
 /*** Variant - medium - default ***/
 .button--sizeM {
     --skeleton-size-block-button: var(--skeleton-size-block-button-medium);
-
+    
     font-size: var(--skeleton-size-text-button-medium);
     padding-inline: var(--skeleton-size-radius-button);
   }
@@ -279,7 +275,7 @@
 /*** Variant - large ***/
 .button--sizeL {
     --skeleton-size-block-button: var(--skeleton-size-block-button-large);
-
+    
     font-size: var(--skeleton-size-text-button-large);
     padding-inline: var(--skeleton-padding-button-large);
     border-radius: calc(var(--skeleton-size-radius-button) * 1.5);
@@ -291,7 +287,14 @@
     z-index: 9;
     padding-block: calc(var(--skeleton-size-radius-button) * 0.5);
     block-size: calc(var(--skeleton-size-block-button) * 1.5);
+    font-size: var(--skeleton-size-text-button-small);
   }
+/* positioning in branding header */
+.branding .button--menu-toggle {
+      margin-block: auto;
+      margin-inline-end: 0;
+      margin-inline-start: auto;
+    }
 .button--menu-toggle span {
       font-size: inherit;
     }
@@ -302,12 +305,12 @@
 .button--menu-toggle .button__icon {
       content: url("../../../assets/icons/svgs/solid/bars.svg");
       filter: invert(1);
+      block-size: var(--skeleton-size-icon-button-large);
     }
 .button--menu-toggle .button__icon svg path {
         fill: currentcolor;
       }
 .button--menu-toggle .button__content {
-      font-size: var(--skeleton-size-text-menu-toggle-button);
       display: flex;
       flex-direction: column-reverse;
       justify-content: center;
