@@ -1,0 +1,9 @@
+{% if items %}
+  {{ include ('skeleton:nav', {
+    layout: 'horizontal',
+    collapsible: false,
+    items: items,
+    nav_id: 'supra-nav',
+    menu_name: 'top menu'
+  }, with_context: false) }}
+{% endif %}

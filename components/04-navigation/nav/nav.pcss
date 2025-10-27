@@ -283,7 +283,14 @@
           var(--sn-color-shadow-2) 0px 4px var(--sn-size-shadow-2);
       }
     }
+    
+    @media (max-width: 776px) {
+      > .nav__list {
+        flex-direction: column;
+        padding-inline: 0;
+        background-color: var(--skeleton-color-bg-subnav);
+      }
+    }
+    
+    /* end main nav */
   }
-  
-  /* end main nav */
-}
