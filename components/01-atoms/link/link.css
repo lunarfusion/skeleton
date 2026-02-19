@@ -1,7 +1,7 @@
 /*** Link Variables ***/
 .link,
 p > a,
-li:not(.nav__item) > a {
+li:not(.nav__item):not(.menu-item) > a {
   --skeleton-color-link-disabled: var(--skeleton-color-fg-disabled);
   --skeleton-transition-link: var(--skeleton-transition-basic);
   --skeleton-transition-icon-link: var(--skeleton-transition-boing);
