@@ -1,7 +1,7 @@
 /*** Figure Variables ***/
 .figure {
   --skeleton-color-border-figure: var(--skeleton-color-border-primary);
-
+  
   --skeleton-size-text-figure: var(--skeleton-size-text-small);
   --skeleton-color-fg-figure: var(--skeleton-color-fg-subdued);
 }
@@ -16,7 +16,9 @@
 .field--body .figure {
     margin-block: 2rem;
   }
-.figure__image {}
+.figure__image {
+    padding: 0.5rem;
+  }
 .figure__caption {
     padding: 0.25rem 0.5rem;
     font-size: var(--skeleton-size-text-figure);
