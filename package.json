@@ -6,6 +6,9 @@
   "main": "index.js",
   "license": "ISC",
   "dependencies": {
+    "braces": "^3.0.3",
+    "got": "^14.6.6",
+    "node": "^25.6.1",
     "onchange": "^7.1.0",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.1",
@@ -13,17 +16,17 @@
     "postcss-import": "^16.1.0",
     "postcss-nested": "^6.0.1",
     "postcss-nesting": "^12.1.5",
-    "semver": "^6.3.1",
-    "shelljs": "^0.8.5",
+    "semver": "^7.7.4",
+    "shelljs": "^0.10.0",
     "simple-update-notifier": "^2.0.0",
-    "stylelint": "^14.4.0",
-    "stylelint-config-standard": "^25.0.0",
+    "stylelint": "^17.3.0",
+    "stylelint-config-standard": "^40.0.0",
     "vite": "^7.1.7",
     "vite-plugin-live-reload": "^3.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
-    "nodemon": "^3.1.10",
+    "nodemon": "^1.0.2",
     "vite-plugin-twig-drupal": "^1.6.2"
   },
   "scripts": {
