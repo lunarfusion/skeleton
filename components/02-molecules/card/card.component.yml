@@ -33,3 +33,6 @@ slots:
 
   image:
     title: Card Image
+
+  # tags:
+  #   title: Card Tags

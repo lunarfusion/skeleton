@@ -20,9 +20,13 @@
       {{ title }}
     </div>
 
-    <div class="card__tags">
-      {{ tags }}
-    </div>
+   {# {% if tags %}
+      <div class="card__tags">
+        {% for tag in tags %}
+          {{ tags }}
+        {% endfor %}
+      </div>
+    {% endif %} #}
 
     <div class="card__summary">
       {{ summary }}
