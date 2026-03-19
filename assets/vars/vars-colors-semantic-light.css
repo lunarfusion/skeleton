@@ -24,8 +24,8 @@
   
   /*** Background - Neutral ***/
   --skeleton-color-bg-neutral: var(--skeleton-color-gray-075);
-  --skeleton-color-bg-neutral-subdued: var(--skeleton-color-gray-085);
-  --skeleton-color-bg-neutral-extra-subdued: var(--skeleton-color-gray-090);
+  --skeleton-color-bg-neutral-subdued: var(--skeleton-color-gray-090);
+  --skeleton-color-bg-neutral-extra-subdued: var(--skeleton-color-gray-095);
   
   
   /*** Borders - Neutral ***/
