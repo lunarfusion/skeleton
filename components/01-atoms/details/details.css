@@ -37,7 +37,6 @@
   }
 .details__summary span,
     .details__summary > * {
-      display: inline-block;
       margin-inline-start: 0.25rem;
     }
 .details__summary::marker {
