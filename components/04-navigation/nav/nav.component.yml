@@ -43,6 +43,14 @@ props:
         - horizontal
       default: vertical
 
+    transparent:
+      type: boolean
+      description: Nav menu has a transparent background.
+      enum:
+        - true
+        - false
+      default: false
+
     items:
       title: "Nav Menu items"
       $ref: "ui-patterns://links"

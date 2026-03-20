@@ -236,6 +236,16 @@
       border-inline-start: 0px;
       border-block-start: 6px solid var(--skeleton-color-accent-nav-item);
     }
+/*** Variant - Transparent Background ***/
+.nav--transparent .nav__list {
+      background-color: transparent;
+    }
+.nav--transparent .nav__item {
+      box-shadow: none;
+    }
+.nav--transparent .nav__item--active-trail {
+      border: none;
+    }
 /*** Variant - Main Nav ***/
 .region--header-bottom .nav--main {
     background-color: var(--skeleton-color-bg-nav-main);
