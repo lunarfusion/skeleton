@@ -19,6 +19,8 @@ props:
       format: iri-reference
       default:
         - http://wikipedia.com
+    link_attributes:
+      type: object
     modifier_class:
       type: string
       title: Modifier Class

@@ -1,7 +1,7 @@
 /*** Flex Variable Resets ***/
 
 .container {
-  --skeleton-space-x-outter-container: var(--skeleton-size-gap-x);
+  --skeleton-space-x-outter-container: calc(var(--skeleton-size-gap-x) * 2);
 }
 
 .row {
@@ -10,7 +10,7 @@
 
 /*** Columns ***/
 .col {
-  --col-spacing: calc(var(--skeleton-size-gap-x) * 0.5);
+  --col-spacing: var(--skeleton-size-gap-x);
 }
 
 /*** Containers Styles ***/
@@ -35,7 +35,7 @@
   flex-direction: row;
   inline-size: 100%;
   justify-content: space-between;
-  /* gap: var(--skeleton-space-x-inner-row); */
+  container-type: inline-size;
   
   &--wrap {
     flex-wrap: wrap;
@@ -45,7 +45,7 @@
     justify-content: center;
   }
   
-  @media (max-width: 994px) {
+  @container (max-width: 994px) {
     &--wrap-sm {
       flex-wrap: wrap;
     }
@@ -60,7 +60,6 @@
 
 /*** Columns ***/
 .col {
-  
   position: relative;
   inline-size: auto;
   max-inline-size: 100%;
@@ -103,7 +102,7 @@
   }
 }
 
-@media (max-width: 994px) {
+@container (max-width: 994px) {
   
   .col--9 {
     flex: 0 0 100%;
@@ -147,7 +146,7 @@
       max-inline-size: calc(25% - var(--col-spacing));
     }
     
-    @media (max-width: 994px) {
+    @container (max-width: 994px) {
       
       .col:nth-child(2),
       .col:nth-child(3) {
@@ -175,7 +174,7 @@
       max-inline-size: calc(33.3333% - var(--col-spacing));
     }
     
-    @media (max-width: 994px) {
+    @container (max-width: 994px) {
       .col {
         flex: 0 0 calc(50% - var(--col-spacing));
         max-inline-size: calc(50% - var(--col-spacing));
@@ -183,8 +182,9 @@
     }
   }
   
+  
   /* all columns full width on small screen */
-  @media (max-width: 776px) {
+  @container (max-width: 776px) {
     
     &--50-50,
     &--50-25-25,

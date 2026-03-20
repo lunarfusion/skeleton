@@ -6,8 +6,9 @@
   ]
 %}
 
-{% if url %}
+{% if url or attributes.href %}
   {% set tag_name = 'a' %}
+  {% set url = url|default(attributes.href) %}
   {% set attributes = attributes.setAttribute('href', url) %}
 {% else %}
   {% set tag_name = 'div' %}

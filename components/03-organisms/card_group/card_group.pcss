@@ -2,7 +2,7 @@
 .card-group {
   --skeleton-size-gap-x-card-group-items: var(--skeleton-size-gap-x);
   --skeleton-size-col-spacing-card-group: calc(var(--skeleton-size-gap-x) * 2);
-  --skeleton-size-gap-x-card-group: calc(var(--skeleton-size-gap-x) * 0.666);
+  --skeleton-size-gap-x-card-group: var(--skeleton-size-gap-x);
   --skeleton-size-gap-y-card-group: 3rem;
 }
 
@@ -15,7 +15,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     inline-size: 100%;
-    /* gap: var(--skeleton-size-gap-x-card-group-items); */
     justify-content: space-between;
     container-type: inline-size;
     margin-block: var(--skeleton-size-gap-y-card-group);
@@ -33,7 +32,7 @@
     /* border: 1px dotted white; */
   }
   
-  @container (max-width: 1200px) {
+  @container (max-width: 994px) {
     &__item {
       position: relative;
       inline-size: auto;
