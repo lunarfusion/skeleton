@@ -1,10 +1,14 @@
 /*** Card Variables ***/
 .card {
+  --skeleton-size-accent-title-card: 8px;
   --skeleton-size-gap-inner-card: 1.25rem;
-  --skeleton-size-gap-inner-card-content: 0.25rem;
+  --skeleton-size-gap-inner-card-content: 0.75rem;
   --skeleton-size-radius-card: var(--skeleton-size-radius-med);
+  --skeleton-border-radius-card-title: var(--skeleton-size-radius-sm);
   --skeleton-size-text-card-summary: var(--skeleton-size-text-small);
+  --skeleton-color-accent-title: var(--skeleton-color-border-primary);
   --skeleton-color-bg-card: var(--skeleton-color-bg-neutral-extra-subdued);
+  --skeleton-color-bg-card-title-hover: var(--skeleton-color-bg-primary-subdued);
   --skeleton-color-text-card-summary: var(--skeleton-color-fg-base);
   --skeleton-color-bg-image-overlay-card: var(--skeleton-color-bg-primary);
   --skeleton-color-shadow-card: var(--skeleton-color-shadow-neutral);
@@ -18,12 +22,14 @@
   flex-direction: column-reverse;
   align-items: flex-start;
   width: 100%;
-  gap: var(--skeleton-size-gap-inner-card);
+  /* gap: var(--skeleton-size-gap-inner-card); */
   border-radius: var(--skeleton-size-radius-card);
   filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-card));
   background-color: var(--skeleton-color-bg-card);
   transition: var(--skeleton-transition-card);
   z-index: 1;
+  /* border: 6px solid var(--skeleton-color-border-primary); */
+  
   
   &__content {
     display: flex;
@@ -31,11 +37,35 @@
     align-items: flex-start;
     width: 100%;
     gap: var(--skeleton-size-gap-inner-card-content);
-    padding-inline: var(--skeleton-size-gap-inner-card);
-    padding-block-end: var(--skeleton-size-gap-inner-card);
+    padding: var(--skeleton-size-gap-inner-card);
   }
   
-  &__title {}
+  &__title {
+    position: relative;
+    inline-size: 100%;
+    
+    &::before,
+    &::after {
+      z-index: 1;
+      content: "";
+      height: var(--skeleton-size-accent-title-card);
+      width: 25%;
+      position: absolute;
+      top: calc((var(--skeleton-size-gap-inner-card) * -1) - 0.25rem);
+      left: -0.25rem;
+      background-color: var(--skeleton-color-accent-title);
+      overflow: hidden;
+      border-radius: var(--skeleton-border-radius-card-title);
+    }
+    
+    &::after {
+      width: calc(100% + 0.25rem);
+      transform: scaleX(20%);
+      transform-origin: top left;
+      left: 0;
+      transition: var(--skeleton-transition-card);
+    }
+  }
   
   &__summary {
     display: flex;
@@ -114,8 +144,7 @@
     flex-direction: row-reverse;
     
     .card__content {
-      padding: 0;
-      padding-block: var(--skeleton-size-gap-inner-card);
+      padding: var(--skeleton-size-gap-inner-card);
     }
     
     .card__image {
@@ -134,8 +163,8 @@
   &:hover {
     filter: initial;
     
-    .card__title span {
-      /* placeholder */
+    .card__title::after {
+      transform: scaleX(100%);
     }
     
     .card__image {

@@ -4,8 +4,6 @@
   --skeleton-notch-calc-title: calc(100% - var(--skeleton-flag-height-title));
   
   --skeleton-size-accent-title-block: 9px;
-  --skeleton-size-accent-title-card: 6px;
-  
   --skeleton-color-accent-title: var(--skeleton-color-border-primary);
   --skeleton-size-gap-x-title: var(--skeleton-size-gap-x);
   --skeleton-border-radius-card-title: var(--skeleton-size-radius-sm);
@@ -75,20 +73,19 @@
     position: relative;
     display: block;
     margin: 0;
-    padding-inline-start: 1rem;
-  }
-.title--card::before {
+    
+    /* &::before {
       content: "";
       width: var(--skeleton-size-accent-title-card);
-      height: 100%;
+      height: calc(100% + 0.5rem);
       position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
+      top: -0.125rem;
+      left: -1.25rem;
       background-color: var(--skeleton-color-accent-title);
       overflow: hidden;
       border-radius: var(--skeleton-border-radius-card-title);
-    }
+    } */
+  }
 .title--alert {
     margin: 0;
   }

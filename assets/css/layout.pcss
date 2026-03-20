@@ -81,16 +81,18 @@
     .block__image {
       position: relative;
       display: inline-block;
-      background-color: var(--skeleton-color-bg-primary);
+      /* background-color: var(--skeleton-color-bg-primary); */
+      background: linear-gradient(to right, var(--skeleton-color-bg-primary-extra-subdued) 0%, var(--skeleton-color-bg-primary-extra-subdued) 30%, 50%, var(--skeleton-color-bg-primary-subdued) 70%, var(--skeleton-color-bg-primary-subdued) 100%);
       border-radius: 100%;
       border: 6px solid var(--skeleton-color-bg-base);
       padding: 0.75rem;
+      margin-block-end: 1rem;
       max-inline-size: 100px;
       z-index: 2;
-      
     }
     
     .block__image-label {
+      color: var(--skeleton-color-fg-base);
       position: relative;
       font-size: var(--skeleton-size-text-lrg);
       font-weight: 600;
