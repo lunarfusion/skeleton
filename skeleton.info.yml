@@ -16,6 +16,7 @@ dependencies:
   - ui_icons:ui_icons
   - paragraphs:paragraphs
   - field_group:field_group
+  - menu_block_title:menu_block_title
 
 regions:
   header_top: 'Header Top'
