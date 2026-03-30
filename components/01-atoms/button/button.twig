@@ -18,6 +18,10 @@
 
 {% set attributes = attributes.addClass(classes) %}
 
+{% if input_id %}
+  {% set attributes = attributes.setAttribute('id', input_id) %}
+{% endif %}
+
 {# content markup #}
 {% set content_markup %}
 
@@ -84,10 +88,7 @@
   <button
     {{ attributes }}
     data-component-name="button"
-    value="{{ label }}"
-    {% if attributes %}
-      {{attributes.setAttribute('id',input_id)}}
-    {% endif %}>
+    value="{{ label }}">
 
     {# {{- content_markup -}} #}
 
