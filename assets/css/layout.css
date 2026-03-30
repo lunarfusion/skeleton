@@ -18,6 +18,10 @@
     margin-block-end: 2rem;
   }
 
+.layout--content-bottom {
+    margin-block-start: 6rem;
+  }
+
 .layout--footer {
     margin: 0;
     padding: 1rem;
