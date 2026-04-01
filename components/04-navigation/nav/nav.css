@@ -43,7 +43,6 @@
   position: relative;
   padding-inline: 1.5rem;
   
-  
   /* end main nav */
 }
 /* equal to padding-inline-start of block title */
@@ -247,6 +246,7 @@
       border: none;
     }
 /*** Variant - Main Nav ***/
+/* we name the region so the mobile drawer does not effect sidebar nav */
 .region--header-bottom .nav--main {
     background-color: var(--skeleton-color-bg-nav-main);
     
@@ -290,9 +290,36 @@
           var(--sn-color-shadow-2) 0px 4px var(--sn-size-shadow-2);
       }
 @media (max-width: 776px) {
+      .region--header-bottom .nav--main {
+        padding-inline: 0;
+        position: absolute;
+        transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 3;
+        transform: translateX(100%);
+        padding-block-end: 1rem;
+      }
+      
+      .region--header-bottom .nav--main.is-open {
+        transform: translateX(0%);
+      }
+      
       .region--header-bottom .nav--main > .nav__list {
         flex-direction: column;
         padding-inline: 0;
-        background-color: var(--skeleton-color-bg-subnav);
       }
+      
+      .region--header-bottom .nav--main > .nav__list .nav__subnav-wrapper {
+        position: relative;
+        border-radius: 0;
+      }
+        
+        .region--header-bottom .nav--main > .nav__list .nav__subnav-wrapper > .nav__list {
+          box-shadow: none;
+          border: 0;
+          border-radius: 0;
+        }
+        
+        .region--header-bottom .nav--main > .nav__list .nav__subnav-wrapper > .nav__item {
+          padding-inline: 1rem;
+        }
     }

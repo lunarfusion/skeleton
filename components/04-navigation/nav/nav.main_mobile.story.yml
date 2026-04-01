@@ -1,10 +1,9 @@
-name: Navigation, Main Nav Mobile
+name: Navigation, Main Nav
 
 props:
   collapsible: true
   layout: vertical
   main: true
-  main_mobile: true
 
   items:
 

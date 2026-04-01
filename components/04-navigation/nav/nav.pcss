@@ -286,6 +286,7 @@
   }
   
   /*** Variant - Main Nav ***/
+  /* we name the region so the mobile drawer does not effect sidebar nav */
   .region--header-bottom &--main {
     background-color: var(--skeleton-color-bg-nav-main);
     
@@ -332,16 +333,42 @@
     }
     
     @media (max-width: 776px) {
+      & {
+        padding-inline: 0;
+        position: absolute;
+        transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 3;
+        transform: translateX(100%);
+        padding-block-end: 1rem;
+      }
+      
+      &.is-open {
+        transform: translateX(0%);
+      }
+      
       > .nav__list {
         flex-direction: column;
         padding-inline: 0;
-        background-color: var(--skeleton-color-bg-subnav);
+      }
+      
+      > .nav__list .nav__subnav-wrapper {
+        position: relative;
+        border-radius: 0;
+        
+        > .nav__list {
+          box-shadow: none;
+          border: 0;
+          border-radius: 0;
+        }
+        
+        > .nav__item {
+          padding-inline: 1rem;
+        }
       }
     }
     
     /* end main nav variant */
   }
-  
   
   /* end main nav */
 }

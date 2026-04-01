@@ -10,7 +10,13 @@
     ]
   %}
 
-  {% set menu_id = menu_id|default('main-menu-' ~ random()) %}
+  {% if menu_id is not empty %}
+    {% set menu_id = menu_id %}
+  {% else %}
+    {% set menu_id = menu_id|default('menu-' ~ random()) %}
+  {% endif %}
+
+
   <nav{{ attributes.addClass(classes).setAttribute('id',menu_id) }} role="navigation" aria-label="{{ menu_name }}">
 
     {% import _self as menus %}
@@ -19,9 +25,9 @@
     {% else %}
       {{ _self.menu_links(items, attributes, 0, menu_id) }}
     {% endif %}
-
   </nav>
 {% endif %}
+
 
 
 {% macro menu_links(items, attributes, menu_level, menu_id) %}
@@ -69,11 +75,9 @@
     </ul>
 {% endmacro %}
 
-
-
+{# Collapsible nav items contain a details accordion #}
 {% macro menu_links_collapsible(items, attributes, menu_level, menu_id, collapsible) %}
   <ul class="nav__list">
-
       {% for item in items %}
 
       {%

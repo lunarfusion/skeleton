@@ -2,3 +2,5 @@ skeleton:
   css:
     theme:
       assets/style.css: {}
+  js:
+    assets/js/nav-close-menu.js: {}
