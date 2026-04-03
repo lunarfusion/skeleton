@@ -33,6 +33,9 @@
 {% else %}
 <span{{ attributes }}>
   {%- for item in items -%}
+    {# {{ item.content }} #}
+
+    {# TODO - field template is the wrong place for a component #}
     {{ include ('skeleton:author', {
       content: item.content,
     }, with_context: false) }}
