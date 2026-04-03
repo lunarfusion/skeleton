@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Default theme implementation for page titles.
+ *
+ * Available variables:
+ * - title_attributes: HTML attributes for the page title element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title: The page title, for use in the actual content.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @ingroup themeable
+ */
+#}
+{{ title_prefix }}
+{% if title %}
+  {# <h1{{ title_attributes }}>{{ title }}</h1> #}
+
+  {{ include ('skeleton:title', {
+    content: title,
+    html_tag: 'h1',
+    size: 'XL',
+    variant: 'page',
+  }, with_context: false) }}
+{% endif %}
+{{ title_suffix }}
+
+{{ dump() }}

@@ -33,14 +33,7 @@
 {% else %}
 <span{{ attributes }}>
   {%- for item in items -%}
-    {# {{ item.content }} #}
-
-    {{ include ('skeleton:title', {
-      content: item.content,
-      html_tag: 'h1',
-      size: 'XL',
-      variant: 'page',
-    }, with_context: false) }}
+    {{ item.content }}
   {%- endfor -%}
 </span>
 {% endif %}
