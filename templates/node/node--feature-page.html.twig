@@ -28,7 +28,7 @@
             layout: node.field_hero_layout.0.value,
             'heading': [
               include('skeleton:title', {
-                content: node.label,
+                content: label,
                 html_tag: 'h1',
                 size: 'XL',
               }, with_context = false),
@@ -42,7 +42,15 @@
           <div class="container row row--justify-center">
             <div class="col col--8 m-0 mt-2">
               {# page title #}
-              {{ label }}
+              {# {{ label }} #}
+
+              {{ include ('skeleton:title', {
+                content: label,
+                html_tag: 'h1',
+                size: 'XL',
+                variant: 'page',
+              }, with_context: false) }}
+
             </div>
           </div>
         </div>

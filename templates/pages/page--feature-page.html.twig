@@ -2,9 +2,17 @@
 
   <header role="banner" class="layout layout--header">
     <div class="container container--full">
-      {{ page.header_top }}
-      {{ page.header }}
-      {{ page.header_bottom }}
+      {% if page.header_top %}
+        {{ page.header_top }}
+      {% endif %}
+
+      {% if page.header %}
+        {{ page.header }}
+      {% endif %}
+
+      {% if page.header_bottom %}
+        {{ page.header_bottom }}
+      {% endif %}
     </div>
   </header>
 
