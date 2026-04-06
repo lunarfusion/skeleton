@@ -1,3 +1,9 @@
+{% set classes = [
+  'block',
+] %}
+
+{% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
+
 {# render image div only if there is an image #}
 {% if content.field_card_image is not empty %}
   {% set image %}

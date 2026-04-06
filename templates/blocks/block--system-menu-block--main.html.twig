@@ -4,8 +4,6 @@
 
 {{ title_prefix }}
 {% if label %}
-  {# <h2{{ title_attributes }}>{{ label }}</h2> #}
-
   {{ include ('skeleton:title', {
     attributes: attributes,
     content: label,
@@ -13,7 +11,6 @@
     size: 'M',
     variant: 'block',
   }, with_context: false) }}
-
 {% endif %}
 {{ title_suffix }}
 
