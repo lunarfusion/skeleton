@@ -3,7 +3,7 @@ description: A hyperlink
 status: experimental
 group: "Atoms"
 links:
-  - "https://emory.edu"
+  - "https://github.com/lunarfusion/skeleton"
 
 variants:
   default:
