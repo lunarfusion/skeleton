@@ -11,6 +11,7 @@
 .blockquote {
   color: var(--skeleton-color-fg-blockquote);
   padding: 1rem 1rem 1rem 1.5rem;
+  margin-inline: 1rem;
   font-size: var(--skeleton-size-text-blockquote);
   line-height: 1.6;
   border-inline-start: 2px solid var(--skeleton-color-border-blockquote);
