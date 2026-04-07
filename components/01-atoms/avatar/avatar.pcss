@@ -2,7 +2,7 @@
 .avatar {
   --skeleton-color-fg-avatar: var(--skeleton-color-fg-base);
   --skeleton-size-text-avatar: var(--skeleton-size-text-small);
-  
+
   --skeleton-size-avatar-small: 30px;
   --skeleton-size-avatar-medium: 50px;
   --skeleton-size-avatar-large: 70px;
@@ -17,11 +17,13 @@
   inline-size: var(--skeleton-size-avatar-medium);
   position: relative;
   border-radius: 100%;
-  
+  display: inline-flex;
+  align-self: center;
+
   a {
     border-radius: inherit;
   }
-  
+
   img {
     border: 1px solid var(--skeleton-color-border-primary);
     padding: 0.25rem;
@@ -31,15 +33,15 @@
     top: 0;
     left: 0;
     right: 0;
-    
+
     height: 100%;
     width: 100%;
-    
+
     -o-object-fit: cover;
     object-fit: cover;
     object-position: center;
   }
-  
+
   &::before {
     padding-block-start: 100%;
     position: relative;
@@ -47,20 +49,20 @@
     content: "";
     width: 100%;
   }
-  
+
   /*** Variant - Sizes ***/
   &--sizeS {
     inline-size: var(--skeleton-size-avatar-small);
   }
-  
+
   &--sizeM {
     inline-size: var(--skeleton-size-avatar-medium);
   }
-  
+
   &--sizeL {
     inline-size: var(--skeleton-size-avatar-large);
   }
-  
+
   &--sizeXL {
     inline-size: var(--skeleton-size-avatar-extra-large);
   }
