@@ -4,6 +4,16 @@
   ]
 %}
 
-<span{{ attributes.addClass(classes) }}>
+{% if is_link %}
+  <a{{ attributes.addClass(classes) }}>
+{% else %}
+  <span{{ attributes.addClass(classes) }}>
+{% endif %}
+
   {{ content }}
-</span>
+
+{% if is_link %}
+  </a>
+{% else %}
+  </span>
+{% endif %}

@@ -7,6 +7,14 @@ links:
 
 props:
   type: object
+  properties:
+
+    is_link:
+      title: Author name is a link
+      type: boolean
+      description: 'Is the author name a link?'
+      default: true
+
 
 slots:
   content:
