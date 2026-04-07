@@ -1,8 +1,4 @@
-.article {
-  padding-block: 2rem;
-}
-
-  .article__footer {
+.article__footer {
     font-size: var(--skeleton-size-text-small);
     display: flex;
     flex-direction: row;
