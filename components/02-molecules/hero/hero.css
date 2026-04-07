@@ -64,7 +64,6 @@
     z-index: 1;
   }
 .hero__content-inner {
-    padding: 2rem;
     padding: calc(var(--skeleton-size-gap-x) * 2.5);
     display: flex;
     flex-direction: column;
@@ -93,11 +92,12 @@
       -webkit-line-clamp: unset;
       line-clamp: unset;
     }
+    
+    .hero .hero__content-inner {
+      padding: calc(var(--skeleton-size-gap-x) * 1.5);
+    }
   }
 /*** VARIANTS - style ***/
-.hero--style-fancy .hero__content-inner {
-      padding-block-start: 3rem;
-    }
 .hero--style-fancy .hero__content::before {
       position: absolute;
       top: 0;

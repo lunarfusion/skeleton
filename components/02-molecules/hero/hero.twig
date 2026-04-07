@@ -15,9 +15,12 @@
   <div{{attributes.addClass(classes)}}>
     <div class="hero__content">
       <div class="hero__content-inner">
-        <div class="hero__heading">
-          {{ heading }}
-        </div>
+
+        {% if heading %}
+          <div class="hero__heading">
+            {{ heading }}
+          </div>
+        {% endif %}
 
         <div class="hero__text">
           {{ text }}

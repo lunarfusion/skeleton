@@ -67,7 +67,6 @@
   }
   
   &__content-inner {
-    padding: 2rem;
     padding: calc(var(--skeleton-size-gap-x) * 2.5);
     display: flex;
     flex-direction: column;
@@ -99,14 +98,14 @@
       -webkit-line-clamp: unset;
       line-clamp: unset;
     }
+    
+    .hero__content-inner {
+      padding: calc(var(--skeleton-size-gap-x) * 1.5);
+    }
   }
   
   /*** VARIANTS - style ***/
   &--style-fancy {
-    
-    .hero__content-inner {
-      padding-block-start: 3rem;
-    }
     
     .hero__content::before {
       position: absolute;
