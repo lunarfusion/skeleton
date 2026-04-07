@@ -5,6 +5,8 @@
   ]
 %}
 
+{% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
+
 <article{{ attributes }}>
 
     {{ title_prefix }}
@@ -84,9 +86,14 @@
   <div class="container row row--justify-center">
     <div class="col col--8 m-0">
       <footer class="article__footer">
-          {{ author_picture }}
           <div{{ author_attributes.addClass('byline') }}>
-            {% trans %}By {{ author_name }} <span class="sr-only">on</span> {{ date }}{% endtrans %}
+            <span class="byline__author">
+              {{ author_picture }}
+              {% trans %}By {{ author_name }}
+            </span>
+            <span class="byline__time">
+              <span class="sr-only">on</span> {{ date }}{% endtrans %}
+            </span>
           </div>
       </footer>
     </div>

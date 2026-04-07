@@ -8,7 +8,6 @@
   color: var(--skeleton-color-fg-time);
   font-size: var(--skeleton-size-text-time);
   font-weight: 500;
-  border-inline-start: 2px solid var(--skeleton-color-border-neutral-subdued);
   padding-inline-start: 0.5rem;
   margin-inline-start: 0.25rem;
 }
