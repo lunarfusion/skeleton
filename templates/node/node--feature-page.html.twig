@@ -21,7 +21,6 @@
     {# hero heading is page title #}
       {% if node.field_hero_heading_is_page_title.value %}
         {{ include ('skeleton:hero', {
-            attributes: attributes,
             image: content.field_hero_image,
             text: content.field_hero_text,
             variant: 'style-fancy',
@@ -61,7 +60,6 @@
         {# display hero only if it has content #}
         {% if node.field_hero_image.value or node.field_hero_heading.value %}
           {{ include ('skeleton:hero', {
-              attributes: attributes,
               image: content.field_hero_image,
               text: content.field_hero_text,
               variant: 'style-fancy',

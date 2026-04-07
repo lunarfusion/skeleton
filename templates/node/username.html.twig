@@ -30,6 +30,7 @@
   <span{{ attributes }}>{{ name }}{{ extra }}</span>
 {%- endif -%} #}
 
+{# link requires attributes to work #}
 {% if link_path -%}
   {{ include ('skeleton:author', {
     attributes: attributes,
@@ -38,7 +39,6 @@
   }, with_context: false) }}
 {%- else -%}
   {{ include ('skeleton:author', {
-    attributes: attributes,
     content: name,
     is_link: false,
   }, with_context: false) }}
