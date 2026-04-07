@@ -17,14 +17,17 @@
 
       // FIRST - if main content is clicked, close all subnavs
       // Find each occurrence of the nav component
-      once('.nav--collapsible', context).forEach((nav) => {
+      once(
+        '.nav--collapsible',
+        context,
+      ).forEach((navcollapse) => {
         document.getElementById('main-content').addEventListener('mousedown', function(event) {
-          event.preventDefault();
+          // event.preventDefault();
           hideDropdown();
         });
 
         // find all dropdowns and close them when main area is clicked
-        let menuItems = nav.querySelectorAll('details');
+        let menuItems = navcollapse.querySelectorAll('details');
 
         function hideDropdown(event) {
           console.log('main clicked');

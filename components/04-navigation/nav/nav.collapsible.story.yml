@@ -4,7 +4,7 @@ props:
   collapsible: true
 
   items:
-    - title: Level Zero Active Trail
+    - title: "Level Zero Active Trail"
       in_active_trail: true
 
       below:
@@ -33,7 +33,7 @@ props:
               url: 'http://wikipedia.com'
               in_active_trail: false
 
-    - title: Level Zero
+    - title: "Level Zero"
 
       below:
         - title: "Level One Active Trail"
@@ -61,7 +61,7 @@ props:
               url: 'http://wikipedia.com'
               in_active_trail: false
 
-    - title: Level Zero No Children
+    - title: "Level Zero No Children"
       in_active_trail: true
       url: 'http://wikipedia.com'
 

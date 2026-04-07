@@ -3,10 +3,10 @@ name: Navigation Layouts
 props:
 
   items:
-    - title: Level Zero
+    - title: "Level Zero"
       url: 'http://wikipedia.com'
 
-    - title: Level Zero Active Trail
+    - title: "Level Zero Active Trail"
       url: 'http://wikipedia.com'
       in_active_trail: true
 
@@ -28,7 +28,7 @@ props:
               url: 'http://wikipedia.com'
               in_active_trail: false
 
-    - title: Level Zero
+    - title: "Level Zero"
       url: 'http://wikipedia.com'
 
       below:
