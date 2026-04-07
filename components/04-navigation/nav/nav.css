@@ -245,6 +245,25 @@
 .nav--transparent .nav__item--active-trail {
       border: none;
     }
+/*** Variant - Size Small ***/
+.nav--small {
+    padding-inline: 0.5rem;
+  }
+.nav--small.nav--horizontal > .nav__list {
+      padding-inline: 0.5rem;
+    }
+.nav--small .nav__item--level-0 {
+      font-size: calc(var(--skeleton-size-text-nav-level-0) * 0.75);
+    }
+.nav--small .nav__item--level-1 {
+      font-size: calc(var(--skeleton-size-text-nav-level-1) * 0.75);
+    }
+.nav--small .nav__item--level-2 {
+      font-size: calc(var(--skeleton-size-text-nav-level-2) * 0.75);
+    }
+.nav--small .nav__link {
+      padding: calc(var(--skeleton-size-space-y-nav-item) * 0.5) calc(var(--skeleton-size-space-x-nav-item) * 0.5);
+    }
 /*** Variant - Main Nav ***/
 /* we name the region so the mobile drawer does not effect sidebar nav */
 .region--header-bottom .nav--main {

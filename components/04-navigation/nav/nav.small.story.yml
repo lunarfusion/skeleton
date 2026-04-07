@@ -1,0 +1,69 @@
+name: Navigation Sizes
+
+props:
+
+  items:
+    - title: Level Zero
+      url: 'http://wikipedia.com'
+
+    - title: Level Zero Active Trail
+      url: 'http://wikipedia.com'
+      in_active_trail: true
+
+      below:
+        - title: "Level One Active Trail"
+          url: 'http://wikipedia.com'
+          in_active_trail: true
+
+          below:
+            - title: "Level Two Active Trail"
+              url: 'http://wikipedia.com'
+              in_active_trail: true
+
+        - title: "Level One Active Trail"
+          url: 'http://wikipedia.com'
+          in_active_trail: true
+          below:
+            - title: "Level Two"
+              url: 'http://wikipedia.com'
+              in_active_trail: false
+
+    - title: Level Zero
+      url: 'http://wikipedia.com'
+
+      below:
+      - title: "Level One"
+        url: 'http://wikipedia.com'
+
+        below:
+          - title: "Level Two"
+            url: 'http://wikipedia.com'
+
+          - title: "Level Two"
+            url: 'http://wikipedia.com'
+
+      - title: "Level One"
+        url: 'http://wikipedia.com'
+
+        below:
+          - title: "Level Two"
+            url: 'http://wikipedia.com'
+
+          - title: "Level Two"
+            url: 'http://wikipedia.com'
+
+library_wrapper: >
+  {% set sizes = [
+    'default',
+    'small',
+  ] %}
+  {% for size in sizes %}
+  <div class="ui-patterns__story-variant">
+    {% set size_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['nav nav--' ~ size]
+    })})} %}
+    <h4 class="title title--micro">{{ size }}</h4>
+    {% set size_story = _story %}
+    {{ size_story|merge(size_props) }}
+    </div>
+  {% endfor %}

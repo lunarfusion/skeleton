@@ -43,6 +43,14 @@ props:
         - horizontal
       default: vertical
 
+    size:
+      type: string
+      description: Nav size
+      enum:
+        - default
+        - small
+      default: default
+
     transparent:
       type: boolean
       description: Nav menu has a transparent background.

@@ -285,6 +285,31 @@
     }
   }
   
+  /*** Variant - Size Small ***/
+  &--small {
+    padding-inline: 0.5rem;
+    
+    &.nav--horizontal > .nav__list {
+      padding-inline: 0.5rem;
+    }
+    
+    .nav__item--level-0 {
+      font-size: calc(var(--skeleton-size-text-nav-level-0) * 0.75);
+    }
+    
+    .nav__item--level-1 {
+      font-size: calc(var(--skeleton-size-text-nav-level-1) * 0.75);
+    }
+    
+    .nav__item--level-2 {
+      font-size: calc(var(--skeleton-size-text-nav-level-2) * 0.75);
+    }
+    
+    .nav__link {
+      padding: calc(var(--skeleton-size-space-y-nav-item) * 0.5) calc(var(--skeleton-size-space-x-nav-item) * 0.5);
+    }
+  }
+  
   /*** Variant - Main Nav ***/
   /* we name the region so the mobile drawer does not effect sidebar nav */
   .region--header-bottom &--main {
