@@ -51,7 +51,7 @@
         <span{{ item.attributes }}>
         {# {{ item.content }} #}
 
-        {# TODO - field template is the wrong place for a component #}
+      {# TODO - field template might be in the wrong place for a component #}
           {{ include ('skeleton:avatar', {
             image: item.content,
             size: 'S',
@@ -64,7 +64,7 @@
       <span{{ item.attributes }}>
       {# {{ item.content }} #}
 
-      {# TODO - field template is the wrong place for a component #}
+      {# TODO - field template might be in the wrong place for a component #}
         {{ include ('skeleton:avatar', {
           image: item.content,
           size: 'S',
@@ -80,13 +80,7 @@
     {% endif %}
     {% for item in items %}
       <span{{ item.attributes }}>
-      {# {{ item.content }} #}
-
-      {# TODO - field template is the wrong place for a component #}
-        {{ include ('skeleton:avatar', {
-          image: item.content,
-          size: 'S',
-        }, with_context: false) }}
+        {{ item.content }}
       </span>
     {% endfor %}
     {% if multiple %}
