@@ -4,6 +4,10 @@
   ]
 %}
 
+{% if url or attributes.href %}
+  {% set attributes = attributes.setAttribute('href', url) %}
+{% endif %}
+
 {% if is_link %}
   <a{{ attributes.addClass(classes) }}>
 {% else %}

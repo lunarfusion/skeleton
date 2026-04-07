@@ -15,6 +15,10 @@ props:
       description: 'Is the author name a link?'
       default: true
 
+    url:
+      title: URL
+      description: "The link URL."
+      $ref: "ui-patterns://url"
 
 slots:
   content:

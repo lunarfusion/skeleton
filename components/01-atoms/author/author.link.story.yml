@@ -1,0 +1,8 @@
+name: Link
+
+props:
+  url: "#"
+  is_link: true
+
+slots:
+  content: "Skeletina Osteo"
