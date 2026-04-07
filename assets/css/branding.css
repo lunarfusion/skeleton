@@ -40,3 +40,9 @@
     color: var(--skeleton-color-fg-base);
     font-weight: 400;
   }
+  
+  @media (max-width: 776px) {
+    .branding {
+      padding: 1rem 0.75rem;
+    }
+  }
