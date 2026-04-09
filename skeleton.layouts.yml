@@ -1,0 +1,47 @@
+one_column:
+  label: 'One column'
+  category: 'Skeleton Layouts'
+  template: templates/layouts/one-column
+  default_region: main
+  regions:
+    main:
+      label: Main content
+
+two_column:
+  label: 'Two column'
+  category: 'Skeleton Layouts'
+  template: templates/layouts/two-column
+  default_region: first
+  regions:
+    first:
+      label: First Column
+    second:
+      label: Second Column
+
+three_column:
+  label: 'Three column'
+  category: 'Skeleton Layouts'
+  template: templates/layouts/three-column
+  default_region: first
+  regions:
+    first:
+      label: First Column
+    second:
+      label: Second Column
+    third:
+      label: Third Column
+
+four_column:
+  label: 'Four column'
+  category: 'Skeleton Layouts'
+  template: templates/layouts/four-column
+  default_region: first
+  regions:
+    first:
+      label: First Column
+    second:
+      label: Second Column
+    third:
+      label: Third Column
+    fourth:
+      label: Fourth Column

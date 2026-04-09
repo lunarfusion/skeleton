@@ -1,0 +1,75 @@
+{# This node type is for the content type that uses layout paragraphs, rather than entity in entities, to manage paragraphs in paragraphs #}
+{%
+  set classes = [
+    'article',
+    'node'
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
+
+<article{{ attributes }}>
+  <div class="node__body">
+
+    <div class="node__header">
+    {# hero heading is page title #}
+      {{ include ('skeleton:hero', {
+          image: content.field_hero_image,
+          text: content.field_hero_text,
+          variant: 'style-fancy',
+          theme: 'theme-primary',
+          height: 'height-default',
+          layout: node.field_hero_layout.0.value,
+          'heading': [
+            include('skeleton:title', {
+              content: label,
+              html_tag: 'h1',
+              size: 'XL',
+            }, with_context = false),
+          ],
+      }) }}
+
+      {{ dump() }}
+    </div>
+
+  <div class="container row row--justify-center">
+    <div class="col col--8">
+      {{ title_prefix }}
+      {% if label and not page %}
+        <h2{{ title_attributes }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+      {% endif %}
+      {{ title_suffix }}
+
+      {% if display_submitted %}
+        <footer class="article__footer">
+          <div{{ author_attributes.addClass('byline') }}>
+            <span class="byline__author">
+              {{ author_picture }}
+              {% trans %}By {{ author_name }}
+            </span>
+            <span class="byline__time">
+              <span class="sr-only">on</span> {{ date }}{% endtrans %}
+            </span>
+          </div>
+        </footer>
+      {% endif %}
+
+      <div{{ content_attributes }}>
+        {# node content #}
+        {{ content.body }}
+      </div>
+    </div>
+  </div>
+  {# end node body #}
+
+  {# layout paragraphs #}
+  {% if content.field_content_layout_section %}
+    <div class="content-layout-section my-3">
+      {{ content.field_content_layout_section }}
+    </div>
+  {% endif %}
+
+  </div>
+</article>

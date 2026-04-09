@@ -1,0 +1,25 @@
+
+{# Get the selected background to provide below as a class #}
+{% set background = content.field_background.0|render|lower|replace({' ': "-", '%': "", ",": ""}) %}
+
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished',
+    background,
+    'container',
+    content.field_full_width['#items'].value == 1 ? 'container--full',
+    'p-2',
+    'my-2'
+  ]
+%}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      {{ content.regions }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

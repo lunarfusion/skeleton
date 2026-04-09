@@ -1,0 +1,15 @@
+{% if content %}
+  <div class="row row--wrap">
+    {% if content.first %}
+      <div {{ region_attributes.first.addClass('col p-1') }}>
+        {{ content.first}}
+      </div>
+    {% endif %}
+
+    {% if content.second %}
+      <div {{ region_attributes.second.addClass('col p-1') }}>
+        {{ content.second}}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}
