@@ -28,13 +28,14 @@
         {% endfor %}
       </div>
     {% endif %} #}
-
-    <div class="card__summary">
-      {{ summary }}
-    </div>
+    {% if summary.0 %}
+      <div class="card__summary">
+        {{ summary }}
+      </div>
+    {% endif %}
   </div>
 
-  {% if image %}
+  {% if image.0 %}
     <div class="card__image">
       {{ image }}
     </div>
