@@ -11,7 +11,7 @@
   --skeleton-color-fg-icon-hero: var(--skeleton-color-fg-base);
   
   --skeleton-color-border-primary-hero: var(--skeleton-color-border-primary);
-  --skeleton-color-bg-primary-hero: var(--skeleton-color-bg-primary);
+  --skeleton-color-bg-primary-hero: var(--skeleton-color-bg-primary-extra-subdued);
 }
 /*** Hero Styles ***/
 .hero {
@@ -75,6 +75,8 @@
     font-optical-sizing: auto;
     margin-block-start: 0;
     margin-block-end: 1rem;
+    display: flex;
+    justify-content: center;
   }
 .hero__text {
     font-size: var(--skeleton-size-text-hero);
@@ -86,6 +88,8 @@
     line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
   }
 @media (max-width: 992px) {
     .hero .hero__text {
@@ -98,17 +102,18 @@
     }
   }
 /*** VARIANTS - style ***/
+/*** decorative skull icon ***/
 .hero--style-fancy .hero__content::before {
       position: absolute;
-      top: 0;
+      bottom: 0;
       margin: auto;
-      height: 2.75rem;
-      width: 2.75rem;
-      padding: 0.5rem;
+      height: 2rem;
+      width: 2rem;
+      padding: 0.25rem;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.25rem;
+      font-size: 1.5rem;
       line-height: 1;
       color: var(--skeleton-color-fg-icon-hero);
       font-family: "FontAwesome";
@@ -117,15 +122,17 @@
       border-radius: 100%;
       border: 2px solid var(--skeleton-color-border-hero);
       transform-origin: 50% 50%;
-      transform: translateY(-50%);
+      transform: translateY(50%);
     }
 .hero--style-fancy.hero--layout-diptych .hero__content-inner {
         padding-inline-end: 3rem;
       }
+/*** decorative skull icon ***/
 .hero--style-fancy.hero--layout-diptych .hero__content::before {
         left: auto;
         right: 0;
         bottom: 0;
+        top: 0;
         transform: translateX(50%);
       }
 @media (max-width: 992px) {
