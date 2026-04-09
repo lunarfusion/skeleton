@@ -19,3 +19,5 @@ slots:
     title: Blockquote content
   cite:
     title: Citation of content source
+  link:
+    title: Citation link text

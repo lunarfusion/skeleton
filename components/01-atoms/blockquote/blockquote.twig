@@ -6,8 +6,13 @@
 %}
 
 
-{% if url %}
+{# {% if url %}
     {% set attributes = attributes.setAttribute('cite', url) %}
+{% endif %} #}
+
+{% if url or attributes.href %}
+  {% set url = url|default(attributes.href) %}
+  {% set link_attributes = attributes.setAttribute('href', url) %}
 {% endif %}
 
 <blockquote{{ attributes.addClass(classes) }}>
@@ -15,5 +20,7 @@
 
   <cite class="blockquote__cite">
     {{ cite }}
+
+    <a{{ link_attributes }}>{{ link }}</a>
   </cite>
 </blockquote>
