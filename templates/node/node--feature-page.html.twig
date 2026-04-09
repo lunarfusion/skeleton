@@ -1,3 +1,5 @@
+{# This node type is for the content type that uses entity in entities, with field--paragraph--flex-row.html.twig, to manage paragraphs in paragraphs #}
+
 {%
   set classes = [
     'article',
@@ -110,7 +112,9 @@
     {# end node body #}
 
     {# paragraphs flexrow #}
-    {{ content.field_section }}
+    {% if content.field_section %}
+      {{ content.field_section }}
+    {% endif %}
 
   </div>
 </article>

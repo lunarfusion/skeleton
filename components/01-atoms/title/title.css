@@ -24,6 +24,7 @@
 /*** Variant - Page Title ***/
 .title--page {
     /* margin-block-end: 2rem; */
+    margin-block-start: 2rem;
   }
 .title--feature-page {
     margin-block-start: 2rem;
@@ -73,18 +74,6 @@
     position: relative;
     display: block;
     margin: 0;
-    
-    /* &::before {
-      content: "";
-      width: var(--skeleton-size-accent-title-card);
-      height: calc(100% + 0.5rem);
-      position: absolute;
-      top: -0.125rem;
-      left: -1.25rem;
-      background-color: var(--skeleton-color-accent-title);
-      overflow: hidden;
-      border-radius: var(--skeleton-border-radius-card-title);
-    } */
   }
 .title--alert {
     margin: 0;

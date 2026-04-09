@@ -36,9 +36,13 @@
     {% endif %}
 
     {% if page.content or page.sidebar_second or page.sidebar_first %}
-    <div class="layout layout--content-main">
-      <div class="container">
-        <div class="row row--wrap">
+      <div class="layout layout--content-main">
+
+
+        {% if page.sidebar_first or page.sidebar_second %}
+          <div class="container">
+            <div class="row row--wrap">
+        {% endif %}
 
         {% if page.sidebar_first %}
           <aside class="col col--4" role="complementary">
@@ -62,8 +66,10 @@
             {{ page.sidebar_second }}
           </aside>
         {% endif %}
+
         </div> {# end row #}
       </div> {# end container #}
+
     </div> {# end content main #}
  {% endif %}
 

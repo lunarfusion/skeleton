@@ -32,7 +32,7 @@
   }
 
 .page--default .layout--content-main {
-      margin-block: 4rem;
+      /* margin-block: 4rem; */
     }
 
 .block {
@@ -136,14 +136,16 @@
     /* background-color: var(--skeleton-color-bg-primary-subdued); */
   }
 
-.region--sidebar-second {
+.region--sidebar-second,
+  .region--sidebar-first {
     padding-inline-start: var(--skeleton-size-gap-x);
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    margin-block-start: 4rem;
   }
 
-.region--sidebar-second .block__content {
+.region--sidebar-second .block__content, .region--sidebar-first .block__content {
       padding-inline-start: var(--skeleton-size-gap-x);
     }
 
