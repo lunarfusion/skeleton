@@ -12,8 +12,8 @@
   <div class="node__body">
 
     <div class="node__header">
-    {# hero heading is page title #}
       {{ include ('skeleton:hero', {
+          attributes: attributes,
           image: content.field_hero_image,
           text: content.field_hero_text,
           variant: 'style-fancy',
@@ -28,8 +28,6 @@
             }, with_context = false),
           ],
       }) }}
-
-      {{ dump() }}
     </div>
 
   <div class="container row row--justify-center">
