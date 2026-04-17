@@ -18,6 +18,17 @@ two_column:
     second:
       label: Second Column
 
+two_column-8-4:
+  label: 'Two column 8col width and 4col width'
+  category: 'Skeleton Layouts'
+  template: templates/layouts/two-column-8-4
+  default_region: first
+  regions:
+    first:
+      label: First Column
+    second:
+      label: Second Column
+
 three_column:
   label: 'Three column'
   category: 'Skeleton Layouts'
