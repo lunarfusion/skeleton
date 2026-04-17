@@ -1,6 +1,5 @@
- {{ include ('skeleton:aside', {
-  attributes: attributes,
+{{ include ('skeleton:aside', {
   title: content.field_aside_title,
-  content: content.field_aside_content,
+  summary: content.field_aside_content,
   variant: paragraph.field_aside_variant.0.value,
-}) }}
+}, with_context: false) }}
