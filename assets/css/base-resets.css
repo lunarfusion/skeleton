@@ -14,8 +14,7 @@ body {
 body {
   /* overflow */
   position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden auto;
   
   /* fix typography rough edges */
   -webkit-font-smoothing: antialiased;
@@ -34,15 +33,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-/* a {
-  color: var(--skeleton-color-accent);
-} */
-@-o-viewport {
-  width: device-width;
-}
-@viewport {
-  width: device-width;
 }
 *,
 div {
@@ -78,8 +68,7 @@ h6,
   font-weight: 700;
   font-style: normal;
   font-optical-sizing: auto;
-  margin-block-start: 0;
-  margin-block-end: 0.5rem;
+  margin-block: 0 0.5rem;
 }
 h1,
 .h1 {
@@ -159,15 +148,15 @@ a:focus {
   font-size: 0px;
   line-height: 0;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
   border: 0;
   white-space: nowrap;
 }
 .visually-hidden {
   position: absolute !important;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: circle(0);
   width: 1px;
   height: 1px;
-  word-wrap: normal;
+  overflow-wrap: normal;
 }

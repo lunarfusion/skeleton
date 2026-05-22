@@ -16,9 +16,6 @@
 }
 
 .sdc-styleguide-page {
-  /* display: flex;
-  flex-direction: row; */
-  
   color: var(--skeleton-color-fg-base);
   
   /** Sidebar version **/
@@ -47,14 +44,17 @@
     background: var(--skeleton-color-bg-primary);
   }
   
-  
   /*** Explorer - component menu ***/
   .sdc-styleguide-explorer {
-    
-    &__group,
-    &__group:first-child {
+    &__group {
       padding: 0 0.5rem;
       border: 0;
+      margin-block-end: 2rem;
+    }
+    
+    &__group:first-child {
+      padding: inherit;
+      border: inherit;
     }
     
     &__group-title,
@@ -70,14 +70,11 @@
       }
     }
     
-    &__group {
-      margin-block-end: 2rem;
-    }
-    
     &__group-components {
       background: transparent;
       box-shadow: none;
       padding-inline: 1.5rem 0.5rem;
+      /* override sdc styleguide module style */
       display: flex !important;
       flex-direction: column;
       gap: 0.75rem;
@@ -95,7 +92,6 @@
     }
   }
   
-  
   /*** Not sure why this is separate ***/
   .sdc-styleguide {
     &__explorer-separator {
@@ -103,7 +99,6 @@
     }
     
     &__explorer-branding {
-      
       .branding__content {
         flex-direction: column;
       }

@@ -1,9 +1,8 @@
 .byline {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 0.5rem;
   margin-block: 1rem;
   inline-size: 100%;

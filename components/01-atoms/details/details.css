@@ -10,7 +10,7 @@
   /* colors theme primary */
   --details-theme-primary-color-border: var(--skeleton-color-border-primary);
   --details-theme-primary-color-background: var(--skeleton-color-bg-primary);
-  --details-theme-primary-color-marker: var(--skeleton-color-fg-primary);
+  /* --details-theme-primary-color-marker: var(--skeleton-color-fg-primary); */
   
   /* space and size */
   --details-border-radius: var(--skeleton-size-radius-sm);
@@ -72,7 +72,8 @@
   .accordion--theme-primary .details {
     --details-color-border: var(--details-theme-primary-color-border);
     --details-color-background: var(--details-theme-primary-color-background);
-    --details-color-marker: var(--details-theme-primary-color-marker);
+    /* --details-color-marker: var(--details-theme-primary-color-marker); */
+    --details-color-marker: var(--skeleton-color-accent);
   }
 /*** Variants - FontAwesome marker ***/
 .details--style-fa-marker .details__summary, .accordion--style-fa-marker .details .details__summary {

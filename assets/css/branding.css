@@ -42,8 +42,7 @@
     font-family: var(--skeleton-font-primary);
   }
   
-  @media (max-width: 776px) {
-    .branding {
-      padding: 1rem 0.75rem;
-    }
+  @media (width <=776px) {.branding {
+    padding: 1rem 0.75rem
+}
   }

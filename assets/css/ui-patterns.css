@@ -64,8 +64,7 @@ Update to remove CSS as the system implementation matures
 .ui-patterns__story-content {
     display: flex;
     flex-flow: row wrap;
-    align-items: space-between;
-    justify-content: space-around;
+    place-content: space-between space-around;
     gap: 40px;
     padding: calc(var(--skeleton-size-gap-y) * 2)var(--skeleton-size-gap-x);
     border-radius: var(--skeleton-size-radius-lrg);

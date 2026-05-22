@@ -29,23 +29,12 @@
     flex-direction: column;
     gap: 2rem;
   }
-  
-  .page--default & {
-    &--content-main {
-      /* margin-block: 4rem; */
-    }
-  }
 }
 
 .block {
   position: relative;
   
-  &__content {
-    /* placeholder */
-  }
-  
   &--footerlogo {
-    
     .block__content {
       position: relative;
       transform: translateY(-40%);
@@ -56,7 +45,6 @@
       
       &::after {
         content: "";
-        height: auto;
         width: 100%;
         height: 2px;
         bottom: 0;
@@ -84,7 +72,6 @@
     .block__image {
       position: relative;
       display: inline-block;
-      /* background-color: var(--skeleton-color-bg-primary); */
       background: linear-gradient(to right, var(--skeleton-color-bg-primary) 0%, var(--skeleton-color-bg-primary) 30%, 50%, var(--skeleton-color-bg-primary-subdued) 70%, var(--skeleton-color-bg-primary-subdued) 100%);
       border-radius: 100%;
       border: 6px solid var(--skeleton-color-bg-base);
@@ -111,7 +98,6 @@
         background: url("../images/diamond.svg");
         background-repeat: no-repeat;
         background-position: center;
-        height: auto;
         width: 32px;
         height: 100%;
         bottom: 0;
@@ -137,10 +123,6 @@
 .region {
   position: relative;
   
-  &--header-bottom {
-    /* background-color: var(--skeleton-color-bg-primary-subdued); */
-  }
-  
   &--sidebar-second,
   &--sidebar-first {
     padding-inline-start: var(--skeleton-size-gap-x);
@@ -152,14 +134,5 @@
     .block__content {
       padding-inline-start: var(--skeleton-size-gap-x);
     }
-  }
-  
-  &--content,
-  &--sidebar {
-    /* placeholder */
-  }
-  
-  &--content {
-    /* placeholder */
   }
 }

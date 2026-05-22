@@ -5,7 +5,7 @@
     "alpha-value-notation": null,
     "length-zero-no-unit": null,
     "color-function-notation": null,
-    "max-empty-lines": [1, {"ignore": ["comments"]}],
-    "no-eol-whitespace": null
+    "comment-empty-line-before": null,
+    "rule-empty-line-before": null
   }
 }

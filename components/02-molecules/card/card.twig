@@ -35,6 +35,9 @@
     {% endif %}
   </div>
 
+{# if image.0 prevents the div from rentering if empty
+but also prevents the image from rendering in the component library
+how to fix? #}
   {% if image.0 %}
     <div class="card__image">
       {{ image }}
