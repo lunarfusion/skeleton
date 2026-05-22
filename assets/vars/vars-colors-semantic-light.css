@@ -42,9 +42,11 @@
   --skeleton-color-fg-primary-inverted: var(--skeleton-color-violet-080);
   
   /*** Background - Brand ***/
-  --skeleton-color-bg-primary: var(--skeleton-color-violet-070);
+  /* --skeleton-color-bg-primary: var(--skeleton-color-violet-070);
   --skeleton-color-bg-primary-subdued: var(--skeleton-color-violet-080);
-  --skeleton-color-bg-primary-extra-subdued: var(--skeleton-color-violet-090);
+  --skeleton-color-bg-primary-extra-subdued: var(--skeleton-color-violet-090); */
+  --skeleton-color-bg-primary: var(--skeleton-color-violet-040);
+  --skeleton-color-bg-primary-subdued: var(--skeleton-color-violet-050);
   
   /*** Border - Brand ***/
   --skeleton-color-border-primary: var(--skeleton-color-violet-060);

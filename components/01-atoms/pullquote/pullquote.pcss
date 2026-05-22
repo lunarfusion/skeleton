@@ -1,0 +1,44 @@
+/*** Pullquote Variables ***/
+.pullquote {
+  --skeleton-color-pullquote-icon: var(--skeleton-color-accent);
+  --skeleton-padding-pullquote: 2rem;
+  --skeleton-margin-pullquote: 1rem;
+}
+
+/*** Pullquote Styles ***/
+.pullquote {
+  position: relative;
+  padding: var(--skeleton-padding-pullquote);
+  margin-inline: 1rem;
+  font-size: 2rem;
+  line-height: 1.3;
+  
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    font-size: 5rem;
+    display: block;
+    color: var(--skeleton-color-pullquote-icon);
+    font-family: var(--skeleton-font-serif);
+  }
+  
+  &::before {
+    content: "“";
+    top: 0;
+    transform: translateX(calc(var(--skeleton-padding-pullquote) * -1.5));
+  }
+  
+  &::after {
+    content: "”";
+    bottom: var(--skeleton-padding-pullquote);
+    right: 0;
+    margin-inline-end: auto;
+  }
+  
+  &--small {}
+  
+  &--large {}
+}

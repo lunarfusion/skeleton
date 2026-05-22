@@ -39,5 +39,5 @@ props:
 slots:
   title:
     title: Aside title
-  content:
+  summary:
     title: Aside content

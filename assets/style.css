@@ -2,6 +2,7 @@
 @import "vars/vars-colors-primitive.css";
 @import "vars/vars-colors-semantic-light.css";
 @import "vars/vars-colors-semantic-dark.css";
+@import "vars/vars-colors-theme-primary.css";
 @import "vars/vars-fonts.css";
 @import "vars/vars-spacing.css";
 @import "vars/vars-transitions-animations.css";

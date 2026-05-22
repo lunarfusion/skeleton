@@ -5,7 +5,7 @@ props:
 
 slots:
   title: "On a Related Note"
-  content: "Since we just mentioned an interesting subject matter in the main content, we thought you might like to know more about it. Here we summarize it briefly, perhaps sharing a link to learn more. Carry on as you were."
+  summary: "Since we just mentioned an interesting subject matter in the main content, we thought you might like to know more about it. Here we summarize it briefly, perhaps sharing a link to learn more. Carry on as you were."
 
 
 library_wrapper: >
@@ -22,7 +22,7 @@ library_wrapper: >
     <h4 class="title title--micro">{{ width }}</h4>
     {% set width_slots = {'#slots': _story['#slots']|merge({
       'title': "On a Related Note",
-      'content': "Since we just mentioned an interesting subject matter in the main content, we thought you might like to know more about it. Here we summarize it briefly, perhaps sharing a link to learn more. Carry on as you were.",
+      'summary': "Since we just mentioned an interesting subject matter in the main content, we thought you might like to know more about it. Here we summarize it briefly, perhaps sharing a link to learn more. Carry on as you were.",
     })} %}
     {% set width_story = _story %}
     {{ width_story|merge(width_props)|merge(width_slots) }}

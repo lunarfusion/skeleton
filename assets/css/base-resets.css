@@ -35,9 +35,9 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-a {
+/* a {
   color: var(--skeleton-color-accent);
-}
+} */
 @-o-viewport {
   width: device-width;
 }
@@ -140,6 +140,15 @@ article li {
   line-height: 1.5;
   color: var(--skeleton-color-fg-base);
 }
+a {
+  color: var(--skeleton-color-fg-action-default);
+}
+a:hover {
+    color: var(--skeleton-color-fg-action-hover);
+  }
+a:focus {
+    color: var(--skeleton-color-fg-action-focus);
+  }
 /************* ACCESSIBILITY *************/
 .sr-only,
 #page-navigation {

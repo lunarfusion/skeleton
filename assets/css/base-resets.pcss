@@ -38,9 +38,9 @@ body {
   min-height: 100vh;
 }
 
-a {
+/* a {
   color: var(--skeleton-color-accent);
-}
+} */
 
 @viewport {
   width: device-width;
@@ -154,6 +154,18 @@ article li {
   margin-block-end: 1rem;
   line-height: 1.5;
   color: var(--skeleton-color-fg-base);
+}
+
+a {
+  color: var(--skeleton-color-fg-action-default);
+  
+  &:hover {
+    color: var(--skeleton-color-fg-action-hover);
+  }
+  
+  &:focus {
+    color: var(--skeleton-color-fg-action-focus);
+  }
 }
 
 /************* ACCESSIBILITY *************/

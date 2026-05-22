@@ -20,6 +20,26 @@
   
   &__image {
     padding: 0.5rem;
+    
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    
+    /* provide 6:4 ratio */
+    img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      position: absolute;
+    }
+    
+    &::after {
+      content: "";
+      display: block;
+      padding-bottom: 60%;
+    }
   }
   
   &__caption {

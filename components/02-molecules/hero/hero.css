@@ -11,7 +11,7 @@
   --skeleton-color-fg-icon-hero: var(--skeleton-color-fg-base);
   
   --skeleton-color-border-primary-hero: var(--skeleton-color-border-primary);
-  --skeleton-color-bg-primary-hero: var(--skeleton-color-bg-primary-extra-subdued);
+  --skeleton-color-bg-primary-hero: var(--skeleton-color-bg-primary-subdued);
 }
 /*** Hero Styles ***/
 .hero {
@@ -25,9 +25,6 @@
   min-block-size: var(--skeleton-hero-size-block);
   background-color: var(--skeleton-color-bg-hero);
 }
-.hero div[class^="hero__"] {
-    /* border: 2px dashed lime; */
-  }
 .hero__image {
     position: relative;
     overflow: hidden;
@@ -93,6 +90,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    color: var(--skeleton-color-fg-base);
   }
 @media (max-width: 992px) {
     .hero .hero__text {

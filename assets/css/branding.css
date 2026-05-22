@@ -32,13 +32,14 @@
     .branding__sitename a:visited,
     .branding__sitename a:active {
       font-size: inherit;
-      color: inherit;
+      color: var(--skeleton-color-fg-base);
     }
   
   .branding__siteslogan {
     font-size: 18px;
     color: var(--skeleton-color-fg-base);
-    font-weight: 400;
+    font-weight: 500;
+    font-family: var(--skeleton-font-primary);
   }
   
   @media (max-width: 776px) {

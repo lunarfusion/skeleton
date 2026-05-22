@@ -1,0 +1,10 @@
+{%
+  set classes = [
+    'pullquote',
+    size and size != 'default' ? 'pullquote--' ~ size
+  ]
+%}
+
+<div{{ attributes.addClass(classes) }}>
+  {{ content }}
+</div>

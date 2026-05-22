@@ -1,16 +1,16 @@
 /*** Navigation Variables ***/
 .nav {
   --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
-  --skeleton-color-text-nav-item-hover: var(--skeleton-color-fg-primary);
+  --skeleton-color-text-nav-item-hover: var(--skeleton-color-fg-base);
   --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
   --skeleton-color-border-nav-item-secondary: var(--skeleton-color-border-neutral-extra-subdued);
-  --skeleton-color-action-nav-fg-icon: var(--skeleton-color-fg-primary);
+  --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
   
   /* --skeleton-color-bg-subnav: var(--skeleton-color-bg-base); */
-  --skeleton-color-bg-subnav: var(--skeleton-color-bg-neutral-subdued);
+  --skeleton-color-bg-subnav: var(--skeleton-color-bg-primary-subdued);
   --skeleton-color-bg-nav-main: var(--skeleton-color-bg-primary-subdued);
-  --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-neutral-subdued);
-  --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-base);
+  --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-primary-subdued);
+  --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-primary);
   
   --skeleton-color-border-subnav-main: var(--skeleton-color-bg-primary-extra-subdued);
   --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-primary-subdued);

@@ -4,6 +4,7 @@
 }
 /*** Accordion Styles ***/
 .accordion {
+  margin-block: 2rem;
   display: flex;
   flex-direction: column;
   filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-accordion));

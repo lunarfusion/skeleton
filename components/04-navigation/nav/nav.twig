@@ -8,10 +8,11 @@
       transparent and transparent == 'true' ? 'nav--transparent',
       size and size == 'small' ? 'nav--small',
       main and main == 'true' ? 'nav--main',
+      theme ? 'nav--' ~ theme,
     ]
   %}
 
-  {% if menu_id is not empty %}
+  {% if menu_id %}
     {% set menu_id = menu_id %}
   {% else %}
     {% set menu_id = menu_id|default('menu-' ~ random()) %}

@@ -1,0 +1,26 @@
+name: Pullquote
+description: An exact text excerpt from a publication, including a citation of the source.
+group: "Atoms"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+  type: object
+
+  properties:
+    size:
+      type: string
+      title: size
+      description: 'Pullquote size'
+      default: medium
+      enum:
+        - small
+        - medium
+        - large
+      examples:
+        - medium
+
+slots:
+  content:
+    title: Pullquote content
