@@ -1,0 +1,17 @@
+{%
+  set classes = [
+    'link-group',
+    variant and variant != 'default' ? 'link-group--' ~ variant,
+  ]
+%}
+
+{% if links %}
+  <ul{{ attributes.addClass(classes) }}>
+    {% set links = links and links is not sequence ? [links] : links %}
+    {% for link in links %}
+      <li>
+        {{ link }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

@@ -2,11 +2,11 @@
 .card {
   --skeleton-size-accent-title-card: 8px;
   --skeleton-size-gap-inner-card: 1.25rem;
-  --skeleton-size-gap-inner-card-content: 0.75rem;
+  --skeleton-size-gap-inner-card-content: 0.5rem;
   --skeleton-size-radius-card: var(--skeleton-size-radius-med);
   --skeleton-border-radius-card-title: var(--skeleton-size-radius-sm);
   --skeleton-size-text-card-summary: var(--skeleton-size-text-small);
-  --skeleton-color-accent-title: var(--skeleton-color-border-primary);
+  --skeleton-color-accent-title: var(--skeleton-color-border-secondary);
   --skeleton-color-bg-card: var(--skeleton-color-bg-neutral-extra-subdued);
   --skeleton-color-bg-card-title-hover: var(--skeleton-color-bg-primary-subdued);
   --skeleton-color-text-card-summary: var(--skeleton-color-fg-base);
@@ -22,15 +22,13 @@
   flex-direction: column-reverse;
   align-items: flex-start;
   width: 100%;
-  /* gap: var(--skeleton-size-gap-inner-card); */
   border-radius: var(--skeleton-size-radius-card);
   filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-card));
   background-color: var(--skeleton-color-bg-card);
   transition: var(--skeleton-transition-card);
   z-index: 1;
   max-inline-size: calc(1500px * 0.3);
-  /* border: 6px solid var(--skeleton-color-border-primary); */
-  
+  min-inline-size: calc(1500px * 0.2);
   
   &__content {
     display: flex;
@@ -47,7 +45,7 @@
     
     &::before,
     &::after {
-      z-index: 1;
+      z-index: 3;
       content: "";
       height: var(--skeleton-size-accent-title-card);
       width: 25%;
@@ -60,7 +58,7 @@
     }
     
     &::after {
-      width: calc(100% + 0.25rem);
+      width: calc(20% + 0.25rem);
       transform: scaleX(20%);
       transform-origin: top left;
       left: 0;
@@ -76,6 +74,10 @@
     line-height: 1.4;
     font-size: var(--skeleton-size-text-card-summary);
     color: var(--skeleton-color-text-card-summary);
+    
+    p:last-child {
+      margin-block: 0;
+    }
   }
   
   &__image {
@@ -118,6 +120,18 @@
       mix-blend-mode: color;
       transition: var(--skeleton-transition-card);
       opacity: 1;
+    }
+  }
+  
+  &__footer {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    li {
+      margin-block-end: 0.5rem;
     }
   }
   

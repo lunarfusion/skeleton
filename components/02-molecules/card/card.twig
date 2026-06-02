@@ -6,41 +6,53 @@
   ]
 %}
 
-{% if url or attributes.href %}
-  {% set tag_name = 'a' %}
-  {% set url = url|default(attributes.href) %}
-  {% set attributes = attributes.setAttribute('href', url) %}
-{% else %}
-  {% set tag_name = 'div' %}
-{% endif %}
-
-<{{ tag_name }} {{ attributes.addClass(card_classes) }}>
-
+<div{{ attributes.addClass(card_classes) }}>
   <div class="card__content">
     <div class="card__title">
       {{ title }}
     </div>
 
-   {# {% if tags %}
+   {% if card_tags %}
       <div class="card__tags">
-        {% for tag in tags %}
-          {{ tags }}
-        {% endfor %}
+        {{ card_tags }}
       </div>
-    {% endif %} #}
-    {% if summary.0 %}
+    {% endif %}
+
+    {% if summary %}
       <div class="card__summary">
         {{ summary }}
       </div>
     {% endif %}
+
+    {# {% if links %}
+      <div class="card__links">
+
+        {% for link in links %}
+
+          {% set link_attributes = link.attributes|default(create_attribute()) %}
+
+          <a class="link link--cta" {{ link_attributes.setAttribute('href', link.url) }}>
+            <span>{{ link.title }}</span>
+          </a>
+
+        {% endfor %}
+      </div>
+    {% endif %} #}
+
+
+    {% if footer %}
+      <div class="card__footer">
+        {{ footer }}
+      </div>
+    {% endif %}
+
   </div>
 
-{# if image.0 prevents the div from rentering if empty
-but also prevents the image from rendering in the component library
-how to fix? #}
-  {% if image.0 %}
+  {# {% if image.0 %} <-- this won't display the image in ui patterns #}
+  {% if image %}
     <div class="card__image">
       {{ image }}
     </div>
   {% endif %}
-</{{ tag_name }}>
+
+</div>

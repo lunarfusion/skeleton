@@ -1,21 +1,5 @@
 /*** Navigation Variables ***/
 .nav {
-  --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
-  --skeleton-color-text-nav-item-hover: var(--skeleton-color-fg-base);
-  --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
-  --skeleton-color-border-nav-item-secondary: var(--skeleton-color-border-neutral-extra-subdued);
-  --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
-  
-  /* --skeleton-color-bg-subnav: var(--skeleton-color-bg-base); */
-  --skeleton-color-bg-subnav: var(--skeleton-color-bg-primary-subdued);
-  --skeleton-color-bg-nav-main: var(--skeleton-color-bg-primary-subdued);
-  --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-primary-subdued);
-  --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-primary);
-  
-  --skeleton-color-border-subnav-main: var(--skeleton-color-bg-primary-extra-subdued);
-  --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-primary-subdued);
-  --skeleton-color-accent-nav-item: var(--skeleton-color-border-primary);
-  
   --skeleton-size-border-subnav-main: 3px;
   --skeleton-size-border-nav-list: 2px;
   --skeleton-size-nav-dropdown-icon: 1rem;
@@ -36,16 +20,48 @@
   --skeleton-transition-nav-item: var(--skeleton-transition-basic);
   
   --skeleton-border-radius-main-nav-subnav: var(--skeleton-size-radius-med);
+  
+  
+  /*** Color Theme - Default ***/
+  --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
+  --skeleton-color-text-nav-item-hover: var(--skeleton-color-fg-base);
+  --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
+  --skeleton-color-border-nav-item-secondary: var(--skeleton-color-border-neutral-extra-subdued);
+  --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
+  
+  --skeleton-color-bg-subnav: var(--skeleton-color-bg-neutral-subdued);
+  --skeleton-color-bg-nav-main: var(--skeleton-color-bg-neutral-subdued);
+  --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-neutral-subdued);
+  --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-neutral);
+  
+  --skeleton-color-border-subnav-main: var(--skeleton-color-bg-neutral-extra-subdued);
+  --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-neutral-subdued);
+  --skeleton-color-accent-nav-item: var(--skeleton-color-border-neutral);
 }
+/*** Color Theme - Primary ***/
+.nav--theme-primary {
+    --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
+    --skeleton-color-text-nav-item-hover: var(--skeleton-color-fg-base);
+    --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
+    --skeleton-color-border-nav-item-secondary: var(--skeleton-color-border-neutral-extra-subdued);
+    --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
+    
+    --skeleton-color-bg-subnav: var(--skeleton-color-bg-primary-subdued);
+    --skeleton-color-bg-nav-main: var(--skeleton-color-bg-primary-subdued);
+    --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-primary-subdued);
+    --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-primary);
+    
+    --skeleton-color-border-subnav-main: var(--skeleton-color-bg-primary-extra-subdued);
+    --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-primary-subdued);
+    --skeleton-color-accent-nav-item: var(--skeleton-color-border-primary);
+  }
 /*** Navigation Styles ***/
 .nav {
   width: 100%;
   position: relative;
-  padding-inline: 1.5rem;
   
   /* end main nav */
 }
-/* equal to padding-inline-start of block title */
 /*** UL element ***/
 .nav__list {
     position: relative;
@@ -246,13 +262,11 @@
       border: none;
     }
 /*** Variant - Size Small ***/
-.nav--small {
-    padding-inline: 0.5rem;
-  }
 .nav--small.nav--horizontal > .nav__list {
       padding-inline: 0.5rem;
     }
-.nav--small .nav__item--level-0 {
+.nav--small .nav__item,
+    .nav--small .nav__item--level-0 {
       font-size: calc(var(--skeleton-size-text-nav-level-0) * 0.75);
     }
 .nav--small .nav__item--level-1 {
@@ -262,12 +276,14 @@
       font-size: calc(var(--skeleton-size-text-nav-level-2) * 0.75);
     }
 .nav--small .nav__link {
-      padding: calc(var(--skeleton-size-space-y-nav-item) * 0.5) calc(var(--skeleton-size-space-x-nav-item) * 0.5);
+      padding: calc(var(--skeleton-size-space-y-nav-item) * 0.5) calc(var(--skeleton-size-space-x-nav-item) * 0.75);
+      font-size: inherit;
     }
 /*** Variant - Main Nav ***/
 /* we name the region so the mobile drawer does not effect sidebar nav */
 .region--header-bottom .nav--main {
     background-color: var(--skeleton-color-bg-nav-main);
+    padding-inline: 1.5rem;
     
     /* end main nav variant */
   }

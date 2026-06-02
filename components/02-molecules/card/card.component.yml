@@ -12,21 +12,13 @@ variants:
 
 props:
   type: object
-  properties:
-    url:
-      type: string
-      title: Card URL
-      format: iri-reference
-      default:
-        - http://wikipedia.com
-    modifier_class:
-      type: string
-      title: Modifier Class
-      description: Optional extra class
 
 slots:
   title:
     title: Card title text
+
+  card_tags:
+    title: Card Tags
 
   summary:
     title: Card summary text
@@ -34,5 +26,6 @@ slots:
   image:
     title: Card Image
 
-  # tags:
-  #   title: Card Tags
+  footer:
+    title: "Card footer"
+    description: "Should be button or link group."

@@ -1,0 +1,14 @@
+name: Tag
+description: Category Tag for Content
+group: "Atoms"
+status: experimental
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+  type: object
+
+  slots:
+    label:
+      title: Tag label
+      description: 'Tag label text'

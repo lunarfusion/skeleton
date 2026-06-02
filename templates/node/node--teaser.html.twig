@@ -1,0 +1,44 @@
+{%
+  set classes = [
+    'article',
+    'node',
+    'teaser'
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
+
+<article {{ attributes }}>
+    {# this is to test three level nesting, using link in links for the footer #}
+    {{ include ('skeleton:card', {
+      attributes: content_attributes,
+      summary: content.body,
+      image: content.field_image,
+      card_tags: content.field_tags,
+      variant: default,
+
+      'title': [
+        include('skeleton:title', {
+          content: label,
+          html_tag: 'h3',
+          size: 'M',
+          variant: 'card',
+        }, with_context = false),
+      ],
+
+      'footer': [
+        include('skeleton:link_group', {
+          variant: default,
+          'links': [
+            include('skeleton:link', {
+              url: url,
+              label: label,
+              variant: "cta",
+            }, with_context = false),
+          ],
+        }, with_context = false),
+      ],
+
+    }, with_context = false) }}
+</article>
+

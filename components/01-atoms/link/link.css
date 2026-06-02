@@ -22,9 +22,10 @@ li:not(.nav__item):not(.menu-item) > a {
   --skeleton-color-link-decoration-hover: var(--skeleton-color-fg-action-decoration-hover);
 }
 /*** Link Styles ***/
-.link,
+/* .link,
 p > a,
-li:not(.nav__item):not(.menu-item) > a {
+li:not(.nav__item):not(.menu-item) > a { */
+.link {
   position: relative;
   /* display: inline-block; */
   color: var(--skeleton-color-link-default);
@@ -34,7 +35,7 @@ li:not(.nav__item):not(.menu-item) > a {
   transition: var(--skeleton-transition-link);
 }
 /*** Focus Indicator ***/
-.link::before, p > a::before, li:not(.nav__item):not(.menu-item) > a::before {
+.link::before {
     position: absolute;
     margin: auto;
     content: "";
@@ -52,35 +53,23 @@ li:not(.nav__item):not(.menu-item) > a {
     opacity: 0;
   }
 .link:focus,
-  .link.focus,
-  p > a:focus,
-  p > a.focus,
-  li:not(.nav__item):not(.menu-item) > a:focus,
-  li:not(.nav__item):not(.menu-item) > a.focus {
+  .link.focus {
     color: var(--skeleton-color-link-focus);
   }
 .link:focus-visible,
-  .link.focus-visible,
-  p > a:focus-visible,
-  p > a.focus-visible,
-  li:not(.nav__item):not(.menu-item) > a:focus-visible,
-  li:not(.nav__item):not(.menu-item) > a.focus-visible {
+  .link.focus-visible {
     color: var(--skeleton-color-link-focus);
   }
-.link:focus-visible::before, .link.focus-visible::before, p > a:focus-visible::before, p > a.focus-visible::before, li:not(.nav__item):not(.menu-item) > a:focus-visible::before, li:not(.nav__item):not(.menu-item) > a.focus-visible::before {
+.link:focus-visible::before, .link.focus-visible::before {
       opacity: 1;
     }
 .link:hover,
-  .link.hover,
-  p > a:hover,
-  p > a.hover,
-  li:not(.nav__item):not(.menu-item) > a:hover,
-  li:not(.nav__item):not(.menu-item) > a.hover {
+  .link.hover {
     -webkit-text-decoration: 11% underline var(--skeleton-color-link-decoration-hover);
             text-decoration: 11% underline var(--skeleton-color-link-decoration-hover);
     color: var(--skeleton-color-link-hover);
   }
-.link:hover::before, .link.hover::before, p > a:hover::before, p > a.hover::before, li:not(.nav__item):not(.menu-item) > a:hover::before, li:not(.nav__item):not(.menu-item) > a.hover::before {
+.link:hover::before, .link.hover::before {
       background-size: 100% 100%;
     }
 .link:active,
@@ -88,58 +77,39 @@ li:not(.nav__item):not(.menu-item) > a {
   .link:focus:active,
   .link:focus-visible:active,
   .link:active:focus,
-  .link:active:focus-visible,
-  p > a:active,
-  p > a.active,
-  p > a:focus:active,
-  p > a:focus-visible:active,
-  p > a:active:focus,
-  p > a:active:focus-visible,
-  li:not(.nav__item):not(.menu-item) > a:active,
-  li:not(.nav__item):not(.menu-item) > a.active,
-  li:not(.nav__item):not(.menu-item) > a:focus:active,
-  li:not(.nav__item):not(.menu-item) > a:focus-visible:active,
-  li:not(.nav__item):not(.menu-item) > a:active:focus,
-  li:not(.nav__item):not(.menu-item) > a:active:focus-visible {
+  .link:active:focus-visible {
     color: var(--skeleton-color-link-active);
   }
 .link.disabled,
   .link.disabled:hover,
   .link:disabled,
-  .link:disabled:hover,
-  p > a.disabled,
-  p > a.disabled:hover,
-  p > a:disabled,
-  p > a:disabled:hover,
-  li:not(.nav__item):not(.menu-item) > a.disabled,
-  li:not(.nav__item):not(.menu-item) > a.disabled:hover,
-  li:not(.nav__item):not(.menu-item) > a:disabled,
-  li:not(.nav__item):not(.menu-item) > a:disabled:hover {
+  .link:disabled:hover {
     color: var(--skeleton-color-link-disabled);
     text-decoration-color: currentColor;
     pointer-events: none;
   }
-.link.disabled::before, .link.disabled:hover::before, .link:disabled::before, .link:disabled:hover::before, p > a.disabled::before, p > a.disabled:hover::before, p > a:disabled::before, p > a:disabled:hover::before, li:not(.nav__item):not(.menu-item) > a.disabled::before, li:not(.nav__item):not(.menu-item) > a.disabled:hover::before, li:not(.nav__item):not(.menu-item) > a:disabled::before, li:not(.nav__item):not(.menu-item) > a:disabled:hover::before {
+.link.disabled::before, .link.disabled:hover::before, .link:disabled::before, .link:disabled:hover::before {
       display: none;
     }
 /*** prevent focus from firing on click ***/
-.link:-webkit-focus-ring, p > a:-webkit-focus-ring, li:not(.nav__item):not(.menu-item) > a:-webkit-focus-ring {
+.link:-webkit-focus-ring {
     outline: none;
   }
 /*** VARIANT - Quiet ***/
-.link--quiet, p > a--quiet, li:not(.nav__item):not(.menu-item) > a--quiet {
+.link--quiet {
     text-decoration: none;
   }
-.link--quiet:hover, p > a--quiet:hover, li:not(.nav__item):not(.menu-item) > a--quiet:hover {
+.link--quiet:hover {
       text-decoration: none;
     }
 /*** VARIANT - CTA ***/
-.link--cta, p > a--cta, li:not(.nav__item):not(.menu-item) > a--cta {
+.link--cta {
     display: inline-block;
     padding-inline-start: 0.125rem;
     padding-inline-end: calc(var(--skeleton-icon-size-cta-link) + 0.25rem);
     font-weight: 600;
-    font-size: 120%;
+    font-size: 1.1;
+    line-height: 1.4;
     transition: var(--skeleton-transition-icon-link);
     text-decoration: none;
     background: linear-gradient(var(--skeleton-color-link-decoration) 50%, transparent 51%);
@@ -147,11 +117,11 @@ li:not(.nav__item):not(.menu-item) > a {
     background-position: 0% 115%;
     background-size: 0% 5px;
   }
-.link--cta:hover, p > a--cta:hover, li:not(.nav__item):not(.menu-item) > a--cta:hover {
+.link--cta:hover {
       text-decoration: none;
       background-size: 100% 5px;
     }
-.link--cta::after, p > a--cta::after, li:not(.nav__item):not(.menu-item) > a--cta::after {
+.link--cta::after {
       content: "\f061";
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
@@ -160,27 +130,26 @@ li:not(.nav__item):not(.menu-item) > a {
       text-rendering: auto;
       font-size: var(--skeleton-icon-size-cta-link);
       width: var(--skeleton-icon-size-cta-link);
-      height: var(--skeleton-icon-size-cta-link);
+      height: calc(var(--skeleton-icon-size-cta-link) * 1.5);
       position: absolute;
-      bottom: 0;
-      top: 0;
-      right: 0;
+      
+      inset: 0;
       margin-block: auto;
       margin-inline-start: auto;
       color: inherit;
       transition: var(--skeleton-transition-boing);
     }
-.link--cta:hover::after, p > a--cta:hover::after, li:not(.nav__item):not(.menu-item) > a--cta:hover::after {
+.link--cta:hover::after {
       transform: translateX(var(--skeleton-icon-transform-cta-link)) scale(1.1);
     }
-.link--cta.disabled::after, p > a--cta.disabled::after, li:not(.nav__item):not(.menu-item) > a--cta.disabled::after {
+.link--cta.disabled::after {
       color: inherit;
     }
 /*** VARIANT - External ***/
-.link--external, p > a--external, li:not(.nav__item):not(.menu-item) > a--external {
+.link--external {
     padding-inline-end: 1.25rem;
   }
-.link--external::after, p > a--external::after, li:not(.nav__item):not(.menu-item) > a--external::after {
+.link--external::after {
       content: "\f08e";
       font-family: "Font Awesome 5 Free";
       font-weight: 900;

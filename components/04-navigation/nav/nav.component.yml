@@ -53,11 +53,11 @@ props:
 
     theme:
       type: string
-      description: Color them,e
+      description: Color theme
       enum:
-        - default
+        - theme-default
         - theme-primary
-      default: default
+      default: theme-default
 
     transparent:
       type: boolean

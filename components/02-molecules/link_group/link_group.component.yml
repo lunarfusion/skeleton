@@ -1,0 +1,17 @@
+name: Link Group
+description: A group of hyperlinks
+status: experimental
+group: "Molecules"
+links:
+  - "https://github.com/lunarfusion/skeleton"
+
+variants:
+  horizontal:
+    title: Horizontal (default)
+  vertical:
+    title: Vertical
+
+slots:
+  links:
+    title: Links
+    description: "A list of 'link' components."

@@ -1,3 +1,7 @@
+.p-0 {
+  padding: 0;
+}
+
 .p-05 {
   padding: calc(var(--skeleton-size-gap-x) * 0.5);
 }

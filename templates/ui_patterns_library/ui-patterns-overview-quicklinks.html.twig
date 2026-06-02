@@ -12,11 +12,11 @@
     {% if groups|length > 1 %}
       {% for group_name, components in groups %}
 
-        <details class="details details--style-fa-marker">
+        <details class="details details--style-fa-marker details--theme-default" open>
           <summary class="details__summary">
             <h3 class="title title--nav mb-0 h5">{{ group_name }}</h3>
           </summary>
-          <div class="details__content">
+          <div class="details__content p-0">
 
             {# How to use nav component here? This does not print href #}
             {# {{ include ('skeleton:nav', {
@@ -26,10 +26,10 @@
               menu_name: 'ui patterns menu'
             }, with_context: false) }} #}
 
-            <nav class="nav">
+            <nav class="nav nav--small">
               <ul class="nav__list">
                 {% for component in components %}
-                  <li class="nav__item">
+                  <li class="nav__item nav__item--level-0">
                     <a class="nav__link" href="#{{ component.id }}">{{ component.name }}</a>
                   </li>
                 {% endfor %}

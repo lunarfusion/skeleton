@@ -56,12 +56,13 @@
   --skeleton-color-yellow-090: hsl(40, 100%, 90%);
   
   /*** Green ***/
-  --skeleton-color-green-010: hsl(170, 80%, 10%);
-  --skeleton-color-green-020: hsl(170, 80%, 20%);
-  --skeleton-color-green-040: hsl(170, 80%, 40%);
-  --skeleton-color-green-060: hsl(170, 80%, 60%);
-  --skeleton-color-green-080: hsl(170, 80%, 80%);
-  --skeleton-color-green-090: hsl(170, 80%, 90%);
+  --skeleton-color-green-010: hsl(195, 80%, 10%);
+  --skeleton-color-green-020: hsl(195, 80%, 20%);
+  --skeleton-color-green-040: hsl(195, 80%, 40%);
+  --skeleton-color-green-050: hsl(195, 80%, 50%);
+  --skeleton-color-green-060: hsl(195, 80%, 60%);
+  --skeleton-color-green-080: hsl(195, 80%, 80%);
+  --skeleton-color-green-090: hsl(195, 80%, 90%);
   
   /*** Blue ***/
   --skeleton-color-blue-010: hsl(220, 100%, 10%);

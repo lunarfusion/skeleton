@@ -1,7 +1,6 @@
 {{ include ('skeleton:card', {
   image: content.field_card_image,
   summary: content.field_card_summary,
-  url: paragraph.field_card_url.0.url.toString(),
   variant: default,
 
   'title': [
@@ -12,4 +11,13 @@
       variant: 'card',
       }, with_context = false),
     ],
+
+  'footer': [
+    include('skeleton:link', {
+      url: paragraph.field_card_url.0.url.toString(),
+      label: paragraph.field_card_url.0.title,
+      variant: "cta",
+    }, with_context = false),
+  ],
+
 }, with_context: false) }}

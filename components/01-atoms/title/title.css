@@ -4,7 +4,7 @@
   --skeleton-notch-calc-title: calc(100% - var(--skeleton-flag-height-title));
   
   --skeleton-size-accent-title-block: 8px;
-  --skeleton-color-accent-title: var(--skeleton-color-border-primary);
+  --skeleton-color-accent-title: var(--skeleton-color-border-secondary);
   --skeleton-size-gap-x-title: var(--skeleton-size-gap-x);
   --skeleton-border-radius-card-title: var(--skeleton-size-radius-sm);
   
@@ -24,7 +24,7 @@
 /*** Variant - Page Title ***/
 .title--page {
     /* margin-block-end: 2rem; */
-    margin-block-start: 2rem;
+    margin-block-start: 4rem;
   }
 .title--feature-page {
     margin-block-start: 2rem;

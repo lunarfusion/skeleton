@@ -1,0 +1,19 @@
+name: Horizontal (default)
+
+slots:
+  links:
+    - type: component
+      component: "skeleton:link"
+      variant: "cta"
+      props:
+        url: "https://example.com"
+      slots:
+        label: "Link 1"
+        title: "Link 1 title"
+    - type: component
+      component: "skeleton:link"
+      props:
+        url: "https://example.com"
+      slots:
+        label: "Link 2"
+        title: "Link 2 title"

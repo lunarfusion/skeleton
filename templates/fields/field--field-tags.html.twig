@@ -1,0 +1,16 @@
+{%
+  set classes = [
+    'tags-group'
+  ]
+%}
+
+<span{{ attributes.addClass(classes) }}>
+  {%- for item in items -%}
+
+    {{ include ('skeleton:tag', {
+      label: item.content,
+      url: item['#url'].toString(),
+    }, with_context: false) }}
+
+  {%- endfor -%}
+</span>

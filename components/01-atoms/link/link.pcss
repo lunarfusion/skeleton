@@ -23,9 +23,10 @@ li:not(.nav__item):not(.menu-item) > a {
 }
 
 /*** Link Styles ***/
-.link,
+/* .link,
 p > a,
-li:not(.nav__item):not(.menu-item) > a {
+li:not(.nav__item):not(.menu-item) > a { */
+.link {
   position: relative;
   /* display: inline-block; */
   color: var(--skeleton-color-link-default);
@@ -118,7 +119,8 @@ li:not(.nav__item):not(.menu-item) > a {
     padding-inline-start: 0.125rem;
     padding-inline-end: calc(var(--skeleton-icon-size-cta-link) + 0.25rem);
     font-weight: 600;
-    font-size: 120%;
+    font-size: 1.1;
+    line-height: 1.4;
     transition: var(--skeleton-transition-icon-link);
     text-decoration: none;
     background: linear-gradient(var(--skeleton-color-link-decoration) 50%, transparent 51%);
@@ -140,11 +142,10 @@ li:not(.nav__item):not(.menu-item) > a {
       text-rendering: auto;
       font-size: var(--skeleton-icon-size-cta-link);
       width: var(--skeleton-icon-size-cta-link);
-      height: var(--skeleton-icon-size-cta-link);
+      height: calc(var(--skeleton-icon-size-cta-link) * 1.5);
       position: absolute;
-      bottom: 0;
-      top: 0;
-      right: 0;
+      
+      inset: 0;
       margin-block: auto;
       margin-inline-start: auto;
       color: inherit;
