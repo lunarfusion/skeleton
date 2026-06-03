@@ -114,13 +114,17 @@
       transition: var(--skeleton-transition-card);
       opacity: 1;
     }
+.card__footer .link {
+      min-block-size: 1rem;
+      inline-size: 100%;
+    }
 .card__footer ul {
       margin: 0;
       padding: 0;
       list-style: none;
     }
 .card__footer li {
-      margin-block-end: 0.5rem;
+      margin-block: 0;
     }
 /*** Focus Indicator ***/
 .card::after {
