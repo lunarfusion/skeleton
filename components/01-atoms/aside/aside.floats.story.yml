@@ -1,7 +1,6 @@
 name: Floats
 
 props:
-  variant: Default
   width: width-40
 
 slots:

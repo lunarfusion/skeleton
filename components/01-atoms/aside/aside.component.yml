@@ -3,12 +3,6 @@ description: A portion of a document whose content is only indirectly related to
 group: "Atoms"
 status: experimental
 
-variants:
-  style-default:
-    title: Default Style
-  style-fancy:
-    title: Fancy Style
-
 props:
   type: object
   properties:

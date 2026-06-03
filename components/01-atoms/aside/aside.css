@@ -57,29 +57,6 @@
     font-size: var(--skeleton-size-text-aside-content);
     line-height: 1.6;
   }
-/*** VARIANTS - style ***/
-.aside--style-fancy::after {
-      position: absolute;
-      top: 1rem;
-      left: 0;
-      height: 1.2rem;
-      width: 1.2rem;
-      padding: 0.5rem;
-      margin: auto;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      line-height: 1;
-      color: var(--skeleton-color-fg-aside);
-      transform-origin: 50% 50%;
-      transform: translateX(calc(var(--skeleton-width-bar-aside) * -1));
-      font-family: "FontAwesome";
-      content: "\f54c";
-      background-color: var(--skeleton-color-bg-aside);
-      border-radius: 100%;
-      border: 2px solid var(--skeleton-color-border-aside);
-    }
 /*** VARIANTS - color theme ***/
 .aside--theme-primary {
     --skeleton-color-border-aside: var(--skeleton-color-border-primary-aside);
