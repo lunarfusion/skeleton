@@ -32,7 +32,6 @@
     content: "”";
     bottom: var(--skeleton-padding-pullquote);
     right: 0;
-    margin-inline-end: auto;
   }
 .pullquote--small {}
 .pullquote--large {}
