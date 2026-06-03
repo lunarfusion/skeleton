@@ -62,7 +62,7 @@ props:
               in_active_trail: false
 
     - title: "Level Zero No Children"
-      in_active_trail: true
+      in_active_trail: false
       url: 'http://wikipedia.com'
 
 
