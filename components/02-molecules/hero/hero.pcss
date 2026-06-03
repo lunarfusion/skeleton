@@ -2,50 +2,50 @@
 .hero {
   --skeleton-color-border-hero: var(--skeleton-color-border-neutral-extra-subdued);
   --skeleton-color-bg-hero: var(--skeleton-color-bg-neutral-extra-subdued);
-  
+
   --skeleton-size-block-hero-default: 350px;
   --skeleton-size-block-hero-medium: 500px;
   --skeleton-size-block-hero-tall: 650px;
-  
+
   --skeleton-size-text-hero: var(--skeleton-size-text-med);
   --skeleton-color-fg-icon-hero: var(--skeleton-color-fg-base);
-  
+
   --skeleton-color-border-primary-hero: var(--skeleton-color-border-primary);
   --skeleton-color-bg-primary-hero: var(--skeleton-color-bg-primary-subdued);
 }
 
 /*** Hero Styles ***/
 .hero {
-  --skeleton-hero-size-block: var(--skeleton-size-block-hero-default);
-  
+  --skeleton-size-hero-block: var(--skeleton-size-block-hero-default);
+
   position: relative;
   display: flex;
   flex-direction: column-reverse;
   min-inline-size: 100%;
+  inline-size: 100%;
   block-size: auto;
-  min-block-size: var(--skeleton-hero-size-block);
+  min-block-size: var(--skeleton-size-hero-block);
   background-color: var(--skeleton-color-bg-hero);
-  
+
   &__image {
     position: relative;
     overflow: hidden;
     flex: 1;
-    
+
     &::after {
       position: relative;
       display: block;
       content: "";
       width: 100%;
       height: 100%;
-      padding-block-start: calc(var(--skeleton-size-block-hero-default) * 0.5);
+      padding-block-start: calc(var(--skeleton-size-hero-block) * 0.5);
     }
-    
+
     img {
       object-fit: cover;
       object-position: top center;
       inline-size: 100%;
       block-size: 100%;
-      
       display: block;
       position: absolute;
       top: 0;
@@ -55,7 +55,7 @@
       margin: auto;
     }
   }
-  
+
   &__content {
     position: relative;
     display: flex;
@@ -65,14 +65,14 @@
     align-items: center;
     z-index: 1;
   }
-  
+
   &__content-inner {
     padding: calc(var(--skeleton-size-gap-x) * 2.5);
     display: flex;
     flex-direction: column;
     inline-size: 100%;
   }
-  
+
   &__heading {
     font-weight: 700;
     font-style: normal;
@@ -82,7 +82,7 @@
     display: flex;
     justify-content: center;
   }
-  
+
   &__text {
     font-size: var(--skeleton-size-text-hero);
     font-weight: 400;
@@ -97,97 +97,45 @@
     justify-content: center;
     color: var(--skeleton-color-fg-base);
   }
-  
+
   @media (max-width: 992px) {
     .hero__text {
       -webkit-line-clamp: unset;
       line-clamp: unset;
     }
-    
+
     .hero__content-inner {
       padding: calc(var(--skeleton-size-gap-x) * 1.5);
     }
   }
-  
-  /*** VARIANTS - style ***/
-  &--style-fancy {
-    
-    /*** decorative skull icon ***/
-    .hero__content::before {
-      position: absolute;
-      bottom: 0;
-      margin: auto;
-      height: 2rem;
-      width: 2rem;
-      padding: 0.25rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      line-height: 1;
-      color: var(--skeleton-color-fg-icon-hero);
-      font-family: "FontAwesome";
-      content: "\f54c";
-      background-color: var(--skeleton-color-bg-hero);
-      border-radius: 100%;
-      border: 2px solid var(--skeleton-color-border-hero);
-      transform-origin: 50% 50%;
-      transform: translateY(50%);
-    }
-    
-    &.hero--layout-diptych {
-      
-      .hero__content-inner {
-        padding-inline-end: 3rem;
-      }
-      
-      /*** decorative skull icon ***/
-      .hero__content::before {
-        left: auto;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        transform: translateX(50%);
-      }
-      
-      @media (max-width: 992px) {
-        & {
-          .hero__content::before {
-            bottom: auto;
-            left: 0;
-            transform: translateY(-50%) translateX(-1.75rem);
-          }
-        }
-      }
-    }
-  }
-  
+
+
   /*** VARIANTS - layouts ***/
   &--layout-diptych {
     flex-direction: row;
-    
+
     .hero__image {
       display: flex;
       flex: 1;
       justify-content: stretch;
       align-items: stretch;
     }
-    
+
     .hero__content {
       flex: 0 0 50%;
       max-inline-size: 50%;
       align-items: flex-end;
     }
-    
+
     .hero__content-inner {
       max-inline-size: 650px;
     }
-    
+
     @media (max-width: 992px) {
       & {
         flex-direction: column-reverse;
         justify-content: flex-start;
-        
+
         .hero__content {
           flex: 0 0 100%;
           max-inline-size: 100%;
@@ -195,39 +143,39 @@
           flex-grow: 0;
           flex-basis: 0;
         }
-        
+
         .hero__content-inner {
           max-inline-size: unset;
         }
       }
     }
   }
-  
+
   /*** VARIANTS - text alignment ***/
   &--text-align-start {
     text-align: start;
   }
-  
+
   &--text-align-end {
     text-align: end;
   }
-  
+
   &--text-align-center {
     text-align: center;
   }
-  
+
   /*** VARIANTS - color theme ***/
   &--theme-primary {
     --skeleton-color-border-hero: var(--skeleton-color-border-primary-hero);
     --skeleton-color-bg-hero: var(--skeleton-color-bg-primary-hero);
   }
-  
+
   /*** VARIANTS - hero height ***/
   &--height-medium {
-    --skeleton-hero-size-block: var(--skeleton-size-block-hero-medium);
+    --skeleton-size-hero-block: var(--skeleton-size-block-hero-medium);
   }
-  
+
   &--height-tall {
-    --skeleton-hero-size-block: var(--skeleton-size-block-hero-tall);
+    --skeleton-size-hero-block: var(--skeleton-size-block-hero-tall);
   }
 }

@@ -1,7 +1,6 @@
 name: Heights
 
 props:
-  variant: default
   layout: layout-default
   theme: theme-default
 
@@ -16,7 +15,7 @@ slots:
   - type: component
     component: "skeleton:title"
     slots:
-      content: "We Love Bones"
+      content: "Welcome to Skeleton Theme"
     props:
       html_tag: h1
       size: XL
@@ -36,7 +35,7 @@ library_wrapper: >
     })})} %}
     <h4 class="title title--micro">{{ height }}</h4>
     {% set height_slots = {'#slots': _story['#slots']|merge({
-      'heading': '<h1>We Love Bones</h1>',
+      'heading': '<h1>Welcome to Skeleton Theme</h1>',
       'text': "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light.",
       'image': '<img src="/themes/custom/skeleton/assets/images/placeholder-hero.jpg">',
     })} %}

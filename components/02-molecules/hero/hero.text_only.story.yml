@@ -1,14 +1,9 @@
-name: Default
+name: Text Only
 
 props:
   theme: theme-default
 
 slots:
-
-  image:
-    theme: image
-    uri: "/themes/custom/skeleton/assets/images/placeholder-hero.jpg"
-    alt: "image example"
 
   heading:
   - type: component

@@ -3,13 +3,6 @@ description: "A large banner containing an image and text which frequently prece
 status: experimental
 group: "Molecules"
 
-variants:
-  style-default:
-    title: Default style
-  style-fancy:
-    title: Fancy style
-
-
 props:
   type: object
   properties:
@@ -17,7 +10,7 @@ props:
     theme:
       title: Theme
       type: string
-      description: 'Color theme for the aside.'
+      description: 'Color theme for the hero.'
       enum:
         - theme-default
         - theme-primary
