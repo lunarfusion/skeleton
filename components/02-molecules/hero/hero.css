@@ -2,21 +2,21 @@
 .hero {
   --skeleton-color-border-hero: var(--skeleton-color-border-neutral-extra-subdued);
   --skeleton-color-bg-hero: var(--skeleton-color-bg-neutral-extra-subdued);
-
+  
   --skeleton-size-block-hero-default: 350px;
   --skeleton-size-block-hero-medium: 500px;
   --skeleton-size-block-hero-tall: 650px;
-
+  
   --skeleton-size-text-hero: var(--skeleton-size-text-med);
   --skeleton-color-fg-icon-hero: var(--skeleton-color-fg-base);
-
+  
   --skeleton-color-border-primary-hero: var(--skeleton-color-border-primary);
   --skeleton-color-bg-primary-hero: var(--skeleton-color-bg-primary-subdued);
 }
 /*** Hero Styles ***/
 .hero {
   --skeleton-size-hero-block: var(--skeleton-size-block-hero-default);
-
+  
   position: relative;
   display: flex;
   flex-direction: column-reverse;
@@ -42,8 +42,8 @@
 .hero__image img {
       -o-object-fit: cover;
          object-fit: cover;
-      -o-object-position: top center;
-         object-position: top center;
+      -o-object-position: center;
+         object-position: center;
       inline-size: 100%;
       block-size: 100%;
       display: block;
@@ -97,7 +97,7 @@
       -webkit-line-clamp: unset;
       line-clamp: unset;
     }
-
+    
     .hero .hero__content-inner {
       padding: calc(var(--skeleton-size-gap-x) * 1.5);
     }
@@ -125,7 +125,7 @@
         flex-direction: column-reverse;
         justify-content: flex-start;
       }
-
+        
         .hero--layout-diptych .hero__content {
           flex: 0 0 100%;
           max-inline-size: 100%;
@@ -133,7 +133,7 @@
           flex-grow: 0;
           flex-basis: 0;
         }
-
+        
         .hero--layout-diptych .hero__content-inner {
           max-inline-size: unset;
         }

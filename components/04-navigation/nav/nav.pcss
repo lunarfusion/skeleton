@@ -8,12 +8,12 @@
   --skeleton-size-radius-navlink: 4px;
   --skeleton-size-radius-subnav: var(--skeleton-size-radius-med);
   
-  --skeleton-size-text-nav-level-0: 1rem;
-  --skeleton-size-text-nav-level-1: 0.85rem;
-  --skeleton-size-text-nav-level-2: 0.7rem;
+  --skeleton-size-text-nav-level-0: 0.85rem;
+  --skeleton-size-text-nav-level-1: 0.75rem;
+  --skeleton-size-text-nav-level-2: 0.65rem;
   
-  --skeleton-size-space-y-nav-item: 0.75rem;
-  --skeleton-size-space-x-nav-item: 1rem;
+  --skeleton-size-space-y-nav-item: 1rem;
+  --skeleton-size-space-x-nav-item: 0.5rem;
   --skeleton-size-y-nav-item-main: 45px;
   
   --skeleton-transition-nav-icon: var(--skeleton-transition-basic);
@@ -22,22 +22,43 @@
   --skeleton-border-radius-main-nav-subnav: var(--skeleton-size-radius-med);
   
   
-  /*** Color Theme - Default ***/
+  /*** Color Theme - Default Transparent ***/
   --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
   --skeleton-color-text-nav-item-hover: var(--skeleton-color-fg-base);
   --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
   --skeleton-color-border-nav-item-secondary: var(--skeleton-color-border-neutral-extra-subdued);
   --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
   
-  --skeleton-color-bg-subnav: var(--skeleton-color-bg-neutral-subdued);
-  --skeleton-color-bg-nav-main: var(--skeleton-color-bg-neutral-subdued);
+  --skeleton-color-bg-subnav: transparent;
+  --skeleton-color-bg-nav-main: transparent;
   --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-neutral-subdued);
-  --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-neutral);
+  --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-neutral-extra-subdued);
+  
+  /* mobile */
+  --skeleton-color-bg-nav-mobile: var(--skeleton-color-bg-base);
+  --skeleton-color-border-nav-mobile: var(--skeleton-color-border-primary);
   
   --skeleton-color-border-subnav-main: var(--skeleton-color-bg-neutral-extra-subdued);
   --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-neutral-subdued);
   --skeleton-color-accent-nav-item: var(--skeleton-color-border-neutral);
   
+  /*** Color Theme - Neutral ***/
+  &--theme-neutral {
+    --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
+    --skeleton-color-text-nav-item-hover: var(--skeleton-color-fg-base);
+    --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
+    --skeleton-color-border-nav-item-secondary: var(--skeleton-color-border-neutral-extra-subdued);
+    --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
+    
+    --skeleton-color-bg-subnav: var(--skeleton-color-bg-neutral-subdued);
+    --skeleton-color-bg-nav-main: var(--skeleton-color-bg-neutral-subdued);
+    --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-neutral-subdued);
+    --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-neutral);
+    
+    --skeleton-color-border-subnav-main: var(--skeleton-color-bg-neutral-extra-subdued);
+    --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-neutral-subdued);
+    --skeleton-color-accent-nav-item: var(--skeleton-color-border-neutral);
+  }
   
   /*** Color Theme - Primary ***/
   &--theme-primary {
@@ -81,7 +102,7 @@
     /* indent child lists */
     .nav__list {
       background-color: transparent;
-      margin-inline-start: 1.5rem;
+      /* margin-inline-start: 1rem; */
     }
   }
   
@@ -123,7 +144,15 @@
     
     &--active-trail {
       font-weight: 600;
-      border-inline-start: 6px solid var(--skeleton-color-accent-nav-item);
+      border-inline-start: 5px solid var(--skeleton-color-accent-nav-item);
+      
+      .nav__item--active-trail {
+        border-inline-start: 3px solid var(--skeleton-color-accent-nav-item);
+      }
+      
+      .nav__item--active-trail .nav__item--active-trail {
+        border-inline-start: 2px solid var(--skeleton-color-accent-nav-item);
+      }
     }
   }
   
@@ -134,8 +163,6 @@
     display: inline-block;
     inline-size: 100%;
     padding: var(--skeleton-size-space-y-nav-item) var(--skeleton-size-space-x-nav-item);
-    /* make space for focus indicator */
-    margin-block: calc(var(--skeleton-size-focus-indicator) * 2);
     border: 0;
     outline: none;
     background: transparent;
@@ -204,7 +231,7 @@
   
   /*** Button ***/
   &__subnav-toggle {
-    padding-inline-start: calc(var(--skeleton-size-nav-dropdown-icon) * 2.5);
+    padding-inline-end: calc(var(--skeleton-size-nav-dropdown-icon) * 1.75);
     cursor: pointer;
     
     /*** dropdown indicator - points right when collapsed ***/
@@ -212,7 +239,7 @@
       position: absolute;
       top: 0;
       bottom: 0;
-      left: var(--skeleton-size-space-x-nav-item);
+      right: var(--skeleton-size-space-x-nav-item);
       display: inline-flex;
       justify-self: center;
       align-self: center;
@@ -236,7 +263,7 @@
       inline-size: 100%;
       transition: var(--skeleton-transition-nav-item);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      z-index: 2;
+      z-index: 9;
       
       > .nav__list {
         transform: translateY(-100%);
@@ -262,7 +289,7 @@
         > .nav__list {
           transform: translateY(0%);
           opacity: 1;
-          z-index: 2;
+          z-index: 3;
         }
       }
     }
@@ -339,7 +366,7 @@
     
     > .nav__list {
       flex-direction: row;
-      /* padding-inline: 2rem; */
+      flex-flow: row wrap;
       background-color: transparent;
       
       > .nav__item {
@@ -363,19 +390,30 @@
       border-end-start-radius: var(--skeleton-border-radius-main-nav-subnav);
       border-end-end-radius: var(--skeleton-border-radius-main-nav-subnav);
       min-inline-size: 300px;
+      overflow: hidden;
       clip-path: polygon(-10% 0, 110% 0, 110% 110%, -10% 110%);
+      margin-top: 2px;
       
       > .nav__list {
         background-color: var(--skeleton-color-bg-subnav-main);
-        /* padding: 1rem; */
         margin-inline-start: 0;
         border-end-start-radius: var(--skeleton-size-radius-subnav);
         border-end-end-radius: 8px;
         border: var(--skeleton-size-border-subnav-main) solid var(--skeleton-color-border-bottom-subnav-main);
         border-block-start: 0;
-        box-shadow:
-          var(--sn-color-shadow-1) 0px 2px var(--sn-size-shadow-1),
-          var(--sn-color-shadow-2) 0px 4px var(--sn-size-shadow-2);
+        /* box-shadow:
+var(--sn-color-shadow-1) 0px 2px var(--sn-size-shadow-1),
+var(--sn-color-shadow-2) 0px 4px var(--sn-size-shadow-2); */
+      }
+      
+      .nav__item:last-of-type,
+      .nav__link:last-of-type {
+        border-end-end-radius: inherit;
+        border-end-start-radius: inherit;
+      }
+      
+      .nav__link {
+        padding-inline: calc(var(--skeleton-size-space-x-nav-item) * 2);
       }
     }
     
@@ -387,6 +425,8 @@
         z-index: 3;
         transform: translateX(100%);
         padding-block-end: 1rem;
+        background: var(--skeleton-color-bg-nav-mobile);
+        border-block-end: 6px solid var(--skeleton-color-border-nav-mobile);
       }
       
       &.is-open {
@@ -412,9 +452,18 @@
           padding-inline: 1rem;
         }
       }
+      
+      .nav__link {
+        padding-inline: calc(var(--skeleton-size-space-x-nav-item) * 2);
+      }
     }
     
     /* end main nav variant */
+  }
+  
+  /* main secondary sidebar */
+  .region--sidebar &--main {
+    padding: 1rem 0 0 1.5rem;
   }
   
   /* end main nav */

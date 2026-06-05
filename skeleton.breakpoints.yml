@@ -1,0 +1,40 @@
+skeleton.extra_small:
+  label: extra small
+  mediaQuery: '(width <=576px)'
+  weight: 0
+  multipliers:
+    - 1x
+skeleton.small:
+  label: small
+  mediaQuery: '(width <=776px)'
+  weight: 1
+  multipliers:
+    - 1x
+skeleton.medium:
+  label: medium
+  mediaQuery: '(max-width: 994px)'
+  weight: 2
+  multipliers:
+  - 1x
+
+skeleton.images.extra_small:
+  label: extra small
+  mediaQuery: '(width <=576px)'
+  weight: 0
+  multipliers:
+  - 1x
+  group: skeleton.images
+skeleton.images.small:
+  label: small
+  mediaQuery: '(width <=776px)'
+  weight: 1
+  multipliers:
+  - 1x
+  group: skeleton.images
+skeleton.images.medium:
+  label: medium
+  mediaQuery: '(max-width: 994px)'
+  weight: 2
+  multipliers:
+  - 1x
+  group: skeleton.images

@@ -1,7 +1,6 @@
 .page {
   display: flex;
   flex-direction: column;
-  /* min-height: 100vh; */
 }
 
 .main {
@@ -12,127 +11,21 @@
 .layout {
   position: relative;
   inline-size: 100%;
-
+  
   &--banner {
     margin-block-end: 2rem;
   }
-
+  
   &--content-bottom {
     margin-block-start: 6rem;
   }
-
+  
   &--footer {
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 2rem 3rem;
     background-color: var(--skeleton-color-bg-primary);
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    gap: 2rem;
-  }
-}
-
-.block {
-  position: relative;
-
-  &--footerlogo {
-    .block__content {
-      position: relative;
-      transform: translateY(-40%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      &::after {
-        content: "";
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        margin: auto;
-        display: inline-block;
-        position: absolute;
-        background: var(--skeleton-color-bg-base);
-        z-index: -1;
-        transform: translateY(calc(var(--skeleton-size-text-lrg) * -0.5));
-      }
-    }
-
-    .block__link {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      inline-size: 100%;
-      max-inline-size: 300px;
-    }
-
-    .block__image {
-      position: relative;
-      display: inline-block;
-      background: linear-gradient(to right, var(--skeleton-color-bg-primary) 0%, var(--skeleton-color-bg-primary) 30%, 50%, var(--skeleton-color-bg-primary-subdued) 70%, var(--skeleton-color-bg-primary-subdued) 100%);
-      border-radius: 100%;
-      border: 6px solid var(--skeleton-color-bg-base);
-      padding: 0.75rem;
-      margin-block-end: 1rem;
-      max-inline-size: 100px;
-      z-index: 2;
-    }
-
-    .block__image-label {
-      color: var(--skeleton-color-fg-base);
-      position: relative;
-      font-size: var(--skeleton-size-text-lrg);
-      font-weight: 600;
-      font-family: var(--skeleton-font-serif);
-      line-height: 1;
-      background-color: var(--skeleton-color-bg-primary);
-      inline-size: 100%;
-      text-align: center;
-
-      &::before,
-      &::after {
-        content: "";
-        background: url("../images/diamond.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 32px;
-        height: 100%;
-        bottom: 0;
-        top: 0;
-        margin: auto;
-        display: inline-block;
-        position: absolute;
-      }
-
-      &::before {
-        left: 0;
-        transform: translateX(-50%);
-      }
-
-      &::after {
-        right: 0;
-        transform: translateX(50%);
-      }
-    }
-  }
-}
-
-.region {
-  position: relative;
-
-  &--sidebar-second,
-  &--sidebar-first {
-    padding-inline-start: var(--skeleton-size-gap-x);
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    margin-block-start: 4rem;
-
-    .block__content {
-      padding-inline-start: var(--skeleton-size-gap-x);
-    }
+    gap: 1rem; */
   }
 }

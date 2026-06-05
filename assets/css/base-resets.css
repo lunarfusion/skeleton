@@ -65,7 +65,7 @@ h6,
 .h6 {
   color: var(--skeleton-color-fg-base);
   font-family: var(--skeleton-font-primary);
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   font-optical-sizing: auto;
   margin-block: 0 0.5rem;
@@ -106,11 +106,11 @@ h6,
   margin-block-start: 0.5rem;
 }
 p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   margin: 0;
   margin-block-end: 1rem;
-  line-height: 1.5;
+  line-height: 1.7;
   color: var(--skeleton-color-fg-base);
   font-family: var(--skeleton-font-primary);
 }
@@ -121,7 +121,8 @@ ul,
 ol {
   margin-block: 1rem;
 }
-article li {
+article li,
+.block__content li {
   font-size: 1rem;
   font-weight: 400;
   margin: 0;

@@ -27,12 +27,12 @@ p > a,
 li:not(.nav__item):not(.menu-item) > a { */
 .link {
   position: relative;
-  /* display: inline-block; */
   color: var(--skeleton-color-link-default);
-  -webkit-text-decoration: 11% underline var(--skeleton-color-link-decoration);
-          text-decoration: 11% underline var(--skeleton-color-link-decoration);
+  -webkit-text-decoration: 1.5px underline var(--skeleton-color-link-decoration);
+          text-decoration: 1.5px underline var(--skeleton-color-link-decoration);
   font-weight: 600;
   transition: var(--skeleton-transition-link);
+  line-height: 1.6;
 }
 /*** Focus Indicator ***/
 .link::before {
@@ -65,8 +65,8 @@ li:not(.nav__item):not(.menu-item) > a { */
     }
 .link:hover,
   .link.hover {
-    -webkit-text-decoration: 11% underline var(--skeleton-color-link-decoration-hover);
-            text-decoration: 11% underline var(--skeleton-color-link-decoration-hover);
+    -webkit-text-decoration: 1.5px underline var(--skeleton-color-link-decoration-hover);
+            text-decoration: 1.5px underline var(--skeleton-color-link-decoration-hover);
     color: var(--skeleton-color-link-hover);
   }
 .link:hover::before, .link.hover::before {
@@ -112,7 +112,7 @@ li:not(.nav__item):not(.menu-item) > a { */
     line-height: 1.4;
     transition: var(--skeleton-transition-icon-link);
     text-decoration: none;
-    background: linear-gradient(var(--skeleton-color-link-decoration) 50%, transparent 51%);
+    background: linear-gradient(var(--skeleton-color-fg-action-decoration-hover) 50%, transparent 51%);
     background-repeat: no-repeat;
     background-position: 0% 115%;
     background-size: 0% 5px;

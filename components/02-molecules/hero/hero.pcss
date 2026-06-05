@@ -2,14 +2,14 @@
 .hero {
   --skeleton-color-border-hero: var(--skeleton-color-border-neutral-extra-subdued);
   --skeleton-color-bg-hero: var(--skeleton-color-bg-neutral-extra-subdued);
-
+  
   --skeleton-size-block-hero-default: 350px;
   --skeleton-size-block-hero-medium: 500px;
   --skeleton-size-block-hero-tall: 650px;
-
+  
   --skeleton-size-text-hero: var(--skeleton-size-text-med);
   --skeleton-color-fg-icon-hero: var(--skeleton-color-fg-base);
-
+  
   --skeleton-color-border-primary-hero: var(--skeleton-color-border-primary);
   --skeleton-color-bg-primary-hero: var(--skeleton-color-bg-primary-subdued);
 }
@@ -17,7 +17,7 @@
 /*** Hero Styles ***/
 .hero {
   --skeleton-size-hero-block: var(--skeleton-size-block-hero-default);
-
+  
   position: relative;
   display: flex;
   flex-direction: column-reverse;
@@ -26,12 +26,12 @@
   block-size: auto;
   min-block-size: var(--skeleton-size-hero-block);
   background-color: var(--skeleton-color-bg-hero);
-
+  
   &__image {
     position: relative;
     overflow: hidden;
     flex: 1;
-
+    
     &::after {
       position: relative;
       display: block;
@@ -40,10 +40,10 @@
       height: 100%;
       padding-block-start: calc(var(--skeleton-size-hero-block) * 0.5);
     }
-
+    
     img {
       object-fit: cover;
-      object-position: top center;
+      object-position: center;
       inline-size: 100%;
       block-size: 100%;
       display: block;
@@ -55,7 +55,7 @@
       margin: auto;
     }
   }
-
+  
   &__content {
     position: relative;
     display: flex;
@@ -65,14 +65,14 @@
     align-items: center;
     z-index: 1;
   }
-
+  
   &__content-inner {
     padding: calc(var(--skeleton-size-gap-x) * 2.5);
     display: flex;
     flex-direction: column;
     inline-size: 100%;
   }
-
+  
   &__heading {
     font-weight: 700;
     font-style: normal;
@@ -82,7 +82,7 @@
     display: flex;
     justify-content: center;
   }
-
+  
   &__text {
     font-size: var(--skeleton-size-text-hero);
     font-weight: 400;
@@ -97,45 +97,45 @@
     justify-content: center;
     color: var(--skeleton-color-fg-base);
   }
-
+  
   @media (max-width: 992px) {
     .hero__text {
       -webkit-line-clamp: unset;
       line-clamp: unset;
     }
-
+    
     .hero__content-inner {
       padding: calc(var(--skeleton-size-gap-x) * 1.5);
     }
   }
-
-
+  
+  
   /*** VARIANTS - layouts ***/
   &--layout-diptych {
     flex-direction: row;
-
+    
     .hero__image {
       display: flex;
       flex: 1;
       justify-content: stretch;
       align-items: stretch;
     }
-
+    
     .hero__content {
       flex: 0 0 50%;
       max-inline-size: 50%;
       align-items: flex-end;
     }
-
+    
     .hero__content-inner {
       max-inline-size: 650px;
     }
-
+    
     @media (max-width: 992px) {
       & {
         flex-direction: column-reverse;
         justify-content: flex-start;
-
+        
         .hero__content {
           flex: 0 0 100%;
           max-inline-size: 100%;
@@ -143,38 +143,38 @@
           flex-grow: 0;
           flex-basis: 0;
         }
-
+        
         .hero__content-inner {
           max-inline-size: unset;
         }
       }
     }
   }
-
+  
   /*** VARIANTS - text alignment ***/
   &--text-align-start {
     text-align: start;
   }
-
+  
   &--text-align-end {
     text-align: end;
   }
-
+  
   &--text-align-center {
     text-align: center;
   }
-
+  
   /*** VARIANTS - color theme ***/
   &--theme-primary {
     --skeleton-color-border-hero: var(--skeleton-color-border-primary-hero);
     --skeleton-color-bg-hero: var(--skeleton-color-bg-primary-hero);
   }
-
+  
   /*** VARIANTS - hero height ***/
   &--height-medium {
     --skeleton-size-hero-block: var(--skeleton-size-block-hero-medium);
   }
-
+  
   &--height-tall {
     --skeleton-size-hero-block: var(--skeleton-size-block-hero-tall);
   }

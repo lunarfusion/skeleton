@@ -24,22 +24,6 @@
       </div>
     {% endif %}
 
-    {# {% if links %}
-      <div class="card__links">
-
-        {% for link in links %}
-
-          {% set link_attributes = link.attributes|default(create_attribute()) %}
-
-          <a class="link link--cta" {{ link_attributes.setAttribute('href', link.url) }}>
-            <span>{{ link.title }}</span>
-          </a>
-
-        {% endfor %}
-      </div>
-    {% endif %} #}
-
-
     {% if footer %}
       <div class="card__footer">
         {{ footer }}

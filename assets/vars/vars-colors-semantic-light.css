@@ -50,7 +50,7 @@
   /*** Border - Brand ***/
   --skeleton-color-border-primary: var(--skeleton-color-violet-060);
   --skeleton-color-border-primary-inverted: var(--skeleton-color-violet-080);
-  --skeleton-color-border-secondary: var(--skeleton-color-green-060);
+  --skeleton-color-border-secondary: var(--skeleton-color-teal-060);
   
   /*** Shadows - Brand ***/
   --skeleton-color-shadow-brand: var(--skeleton-color-violet-drk-a60);
@@ -66,19 +66,19 @@
   
   /****************** SYSTEM ******************/
   /*** Focus Indicator ***/
-  --skeleton-color-focus-indicator: var(--skeleton-color-blue-060);
+  --skeleton-color-focus-indicator: var(--skeleton-color-teal-060);
   
   /*** System accent color ***/
   --skeleton-color-accent: var(--skeleton-color-violet-060);
   
   /*** Actions - Link Text ***/
   --skeleton-color-fg-action-default: var(--skeleton-color-violet-060);
-  --skeleton-color-fg-action-hover: var(--skeleton-color-blue-060);
-  --skeleton-color-fg-action-focus: var(--skeleton-color-blue-060);
+  --skeleton-color-fg-action-hover: var(--skeleton-color-teal-040);
+  --skeleton-color-fg-action-focus: var(--skeleton-color-teal-040);
   --skeleton-color-fg-action-active: var(--skeleton-color-violet-060);
   --skeleton-color-fg-action-visited: var(--skeleton-color-fg-base);
-  --skeleton-color-fg-action-decoration: var(--skeleton-color-blue-080);
-  --skeleton-color-fg-action-decoration-hover: var(--skeleton-color-violet-060);
+  --skeleton-color-fg-action-decoration: var(--skeleton-color-teal-040);
+  --skeleton-color-fg-action-decoration-hover: var(--skeleton-color-violet-070);
   
   /********* SYSTEM ALERTS *********/
   /*** Negative ***/
@@ -92,9 +92,9 @@
   --skeleton-color-bg-warning: var(--skeleton-color-yellow-090);
   
   /*** Positive ***/
-  --skeleton-color-fg-positive: var(--skeleton-color-green-020);
-  --skeleton-color-border-positive: var(--skeleton-color-green-060);
-  --skeleton-color-bg-positive: var(--skeleton-color-green-090);
+  --skeleton-color-fg-positive: var(--skeleton-color-teal-020);
+  --skeleton-color-border-positive: var(--skeleton-color-teal-060);
+  --skeleton-color-bg-positive: var(--skeleton-color-teal-090);
   
   /*** Informative ***/
   --skeleton-color-fg-informative: var(--skeleton-color-blue-040);
@@ -108,12 +108,12 @@
     
     /*** Actions - Link Text ***/
     --skeleton-color-fg-action-default: var(--skeleton-color-violet-080);
-    --skeleton-color-fg-action-hover: var(--skeleton-color-blue-080);
-    --skeleton-color-fg-action-focus: var(--skeleton-color-blue-080);
+    --skeleton-color-fg-action-hover: var(--skeleton-color-teal-080);
+    --skeleton-color-fg-action-focus: var(--skeleton-color-teal-080);
     --skeleton-color-fg-action-active: var(--skeleton-color-violet-060);
     --skeleton-color-fg-action-visited: var(--skeleton-color-fg-base);
     --skeleton-color-fg-action-disabled: var(--skeleton-color-gray-080);
-    --skeleton-color-fg-action-decoration: var(--skeleton-color-blue-080);
+    --skeleton-color-fg-action-decoration: var(--skeleton-color-teal-080);
     --skeleton-color-fg-action-decoration-hover: var(--skeleton-color-violet-080);
   }
 }

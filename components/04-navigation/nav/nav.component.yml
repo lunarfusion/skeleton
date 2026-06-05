@@ -56,6 +56,7 @@ props:
       description: Color theme
       enum:
         - theme-default
+        - theme-neutral
         - theme-primary
       default: theme-default
 
