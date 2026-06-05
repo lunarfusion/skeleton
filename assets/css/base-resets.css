@@ -121,8 +121,7 @@ ul,
 ol {
   margin-block: 1rem;
 }
-article li,
-.block__content li {
+article li {
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
