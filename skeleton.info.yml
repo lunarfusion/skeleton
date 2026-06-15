@@ -5,6 +5,7 @@ type: theme
 core_version_requirement: ^11
 base theme: false
 logo: assets/images/logo.svg
+favicon: assets/images/favicon.ico
 screenshot: assets/images/screenshot.png
 
 # Libraries
