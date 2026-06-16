@@ -4,3 +4,6 @@ skeleton:
       assets/style.css: {}
   js:
     assets/js/nav-close-menu.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

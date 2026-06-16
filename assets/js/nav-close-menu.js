@@ -1,41 +1,64 @@
 ((Drupal, once) => {
-  Drupal.skeleton_mobilenav =
-    Drupal.skeleton_mobilenav || {};
-
-  // TODO - Drupal wants this to be in the main theme library rather than nav component
-  // Because the toggle button is in a different region than the navigation?
-  // Integrate toggle button into nav component?
-
-  /**
-   *
-   * @type {Drupal~behavior}
-   *
-   * @prop {Drupal~behaviorAttach}
-   **/
   Drupal.behaviors.skeleton_mobilenav = {
 
     attach(context) {
 
       // Create open/close toggle button
-      const menuTrigger = document.getElementById("menu-toggle");
+      const menuTrigger = once('menu-toggle', '#menu-toggle', context);
 
-      // Create a variable for the menu
-      const mainMenu = document.getElementById("main-menu");
+      menuTrigger.forEach((trigger) => {
+        const mainMenu = document.getElementById('main-menu');
+        if (!mainMenu) return;
 
-      // Drupal needs this once function
-      once('.button--menu-toggle', context).forEach((nav) => {
-        // add both click and keyboard events
-        ['click', 'focus.keydown'].forEach(event => menuTrigger.addEventListener(event, showHideMenu));
+        // find menu links
+        let menuLinks = mainMenu.querySelectorAll('.nav__link');
+
+        // Add aria controls to the button
+        trigger.setAttribute('aria-controls', 'main-menu');
+        trigger.setAttribute('aria-expanded', 'false');
+
+        const showHideMenu = (event) => {
+          if (event.type === 'keydown') {
+            if (event.key !== 'Enter' && event.key !== '') return;
+            event.preventDefault();
+          }
+          // open or close the menu
+          const isOpen = mainMenu.classList.toggle('is-open');
+
+          // update aria-expanded
+          trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+
+          // toggle focusability of links
+          menuLinks.forEach((link) => {
+            link.setAttribute('tabindex', isOpen ? '0' : '-1');
+          });
+        };
+
+        // close menu on Escape key
+        const handleEscape = (event) => {
+          if (event.key === 'Escape' && mainMenu.classList.contains('is-open')) {
+            // close menu
+            mainMenu.classList.remove('is-open');
+            trigger.setAttribute('aria-expanded', 'false');
+
+            // make links unfocusable again
+            menuLinks.forEach((link) => {
+              link.setAttribute('tabindex', '-1');
+            });
+
+            // optional: return focus to the trigger button
+            trigger.focus();
+          }
+        };
+
+        // attach event to toggle button
+        trigger.addEventListener('click', showHideMenu);
+        trigger.addEventListener('keydown', showHideMenu);
+
+        // attach Escape listener once per behavior attach
+        document.addEventListener('keydown', handleEscape);
       });
 
-
-      function showHideMenu(event) {
-
-        mainMenu.classList.toggle("is-open");
-        // WIP - needs aria-hidden true/false swap
-        // how to add aria-hidden=true to menu only on mobile?
-
-      };
     },
   };
 })(Drupal, once);
