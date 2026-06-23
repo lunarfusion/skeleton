@@ -30,7 +30,7 @@
 .row--justify-center {
     justify-content: center;
   }
-@container (max-width: 994px) {
+@media (max-width: 994px) {
     .row--wrap-sm {
       flex-wrap: wrap;
     }
@@ -48,7 +48,6 @@
   inline-size: auto;
   max-inline-size: 100%;
   flex-grow: 1;
-  /* flex-basis: 0; */
   margin-block-end: var(--skeleton-size-gap-y);
 }
 .col--m0 {

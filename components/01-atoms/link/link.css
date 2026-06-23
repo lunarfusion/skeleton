@@ -5,14 +5,14 @@ li:not(.nav__item):not(.menu-item) > a {
   --skeleton-color-link-disabled: var(--skeleton-color-fg-disabled);
   --skeleton-transition-link: var(--skeleton-transition-basic);
   --skeleton-transition-icon-link: var(--skeleton-transition-boing);
-  
+
   --skeleton-icon-transform-cta-link: 0.25rem;
   --skeleton-icon-size-cta-link: 1rem;
-  
+
   --skeleton-size-gap-focus-indicator-link: var(--skeleton-size-gap-focus-indicator);
   --skeleton-color-focus-indicator-link: var(--skeleton-color-focus-indicator);
   --skeleton-border-radius-focus-indicator-link: var(--skeleton-size-radius-sm);
-  
+
   --skeleton-color-link-default: var(--skeleton-color-fg-action-default);
   --skeleton-color-link-hover: var(--skeleton-color-fg-action-hover);
   --skeleton-color-link-focus: var(--skeleton-color-fg-action-focus);
@@ -132,7 +132,7 @@ li:not(.nav__item):not(.menu-item) > a { */
       width: var(--skeleton-icon-size-cta-link);
       height: calc(var(--skeleton-icon-size-cta-link) * 1.5);
       position: absolute;
-      
+
       inset: 0;
       margin-block: auto;
       margin-inline-start: auto;

@@ -35,8 +35,8 @@
     --skeleton-color-fg-primary-inverted: var(--skeleton-color-violet-040);
     
     /*** Background - Brand ***/
-    /* --skeleton-color-bg-primary: var(--skeleton-color-violet-055);
-    --skeleton-color-bg-primary-subdued: var(--skeleton-color-violet-040); */
+    --skeleton-color-bg-primary: var(--skeleton-color-violet-050);
+    --skeleton-color-bg-primary-subdued: var(--skeleton-color-violet-040);
     
     /*** Border - Brand ***/
     --skeleton-color-border-primary: var(--skeleton-color-violet-080);

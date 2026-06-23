@@ -120,6 +120,9 @@
 .hero--layout-diptych .hero__content-inner {
       max-inline-size: 650px;
     }
+.hero--layout-diptych .hero__heading {
+      justify-content: flex-start;
+    }
 @media (max-width: 992px) {
       .hero--layout-diptych {
         flex-direction: column-reverse;

@@ -69,9 +69,6 @@
       &::before,
       &::after {
         content: "";
-        background: url("../images/diamond.svg");
-        background-repeat: no-repeat;
-        background-position: center;
         width: 32px;
         height: 100%;
         bottom: 0;
@@ -79,6 +76,10 @@
         margin: auto;
         display: inline-block;
         position: absolute;
+        background: var(--skeleton-color-bg-base);
+        mask-image: url("../images/diamond.svg");
+        mask-repeat: no-repeat;
+        mask-position: center;
       }
       
       &::before {

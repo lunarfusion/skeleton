@@ -1,4 +1,10 @@
-.article__footer {
+.article {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+  
+  .article__footer {
     font-size: var(--skeleton-size-text-small);
     display: flex;
     flex-direction: row;

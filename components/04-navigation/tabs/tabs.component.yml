@@ -6,7 +6,18 @@ links:
    - "https://github.com/lunarfusion/skeleton"
 
 props:
- type: object
+  type: object
+
+  properties:
+    position:
+      type: string
+      title: position
+      description: 'Tabs positioning'
+      default: relative
+      enum:
+        - relative
+        - absolute
+
 
 slots:
   items:

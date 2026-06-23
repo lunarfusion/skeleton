@@ -17,6 +17,12 @@
   --skeleton-color-border-primary-aside: var(--skeleton-color-border-primary);
   --skeleton-color-bg-primary-aside: var(--skeleton-color-bg-primary);
 }
+/*** Color Theme - Primary ***/
+.aside--theme-primary {
+    --skeleton-color-border-aside: var(--skeleton-color-border-primary-aside);
+    --skeleton-color-bg-aside: var(--skeleton-color-bg-primary-aside);
+    --skeleton-color-fg-aside: var(--skeleton-color-fg-white-static);
+  }
 /*** Aside Styles ***/
 .aside {
   position: relative;
@@ -56,11 +62,6 @@
 .aside__content {
     font-size: var(--skeleton-size-text-aside-content);
     line-height: 1.6;
-  }
-/*** VARIANTS - color theme ***/
-.aside--theme-primary {
-    --skeleton-color-border-aside: var(--skeleton-color-border-primary-aside);
-    --skeleton-color-bg-aside: var(--skeleton-color-bg-primary-aside);
   }
 /*** VARIANTS - float ***/
 .aside--float-left {

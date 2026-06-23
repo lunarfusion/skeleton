@@ -51,7 +51,7 @@
         {% set item_attributes = item.attributes|default(create_attribute()) %}
 
         {% if item.url %}
-          <a class="nav__link" tabindex="0" {{ item_attributes.setAttribute('href', item.url) }}>
+          <a class="nav__link" {{ item_attributes.setAttribute('href', item.url) }}>
             <span>{{ item.title }}</span>
           </a>
 
@@ -97,7 +97,7 @@
         {% set item_attributes = item.attributes|default(create_attribute()) %}
 
         {% if item.url %}
-          <a class="nav__link" tabindex="0" {{ item_attributes.setAttribute('href', item.url) }}>
+          <a class="nav__link" {{ item_attributes.setAttribute('href', item.url) }}>
             <span>{{ item.title }}</span>
           </a>
 

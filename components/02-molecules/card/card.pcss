@@ -21,14 +21,14 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
-  width: 100%;
+  inline-size: 100%;
   border-radius: var(--skeleton-size-radius-card);
   filter: drop-shadow(0 2px 6px var(--skeleton-color-shadow-card));
   background-color: var(--skeleton-color-bg-card);
   transition: var(--skeleton-transition-card);
   z-index: 1;
-  max-inline-size: calc(1500px * 0.3);
-  min-inline-size: calc(1500px * 0.2);
+  /* max-inline-size: calc(1500px * 0.3); */
+  /* min-inline-size: calc(1500px * 0.2); */
   
   &__content {
     display: flex;
@@ -163,6 +163,7 @@
   /****** VARIANTS ******/
   &--diptych {
     flex-direction: row-reverse;
+    align-items: stretch;
     
     .card__content {
       padding: var(--skeleton-size-gap-inner-card);

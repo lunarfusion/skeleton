@@ -1,6 +1,9 @@
 {% set classes = [
   'tabs',
-] %}
+  position and position != 'default' ? 'tabs--position-' ~ position
+  ]
+%}
+
 
 {# {% if primary %}
   <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>

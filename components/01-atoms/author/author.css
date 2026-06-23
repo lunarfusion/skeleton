@@ -7,3 +7,9 @@
   font-size: var(--skeleton-size-text-author);
   font-weight: 500;
 }
+.author:-moz-any-link {
+    text-decoration: none;
+  }
+.author:any-link {
+    text-decoration: none;
+  }

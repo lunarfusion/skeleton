@@ -74,7 +74,7 @@ props:
 
 libraryOverrides:
   js:
-    nav-close-submenus.js: {}
+    nav.js: {}
   dependencies:
     - core/drupal
     - core/once

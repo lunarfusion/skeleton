@@ -8,7 +8,6 @@
   <div class="ui-patterns__menu">
     <h2 class="title h3">{{ 'Components'|t }}</h2>
 
-    <div class="p-1">
     {% if groups|length > 1 %}
       {% for group_name, components in groups %}
 
@@ -40,7 +39,6 @@
         </details>
 
       {% endfor %}
-    </div>
 
     {% else %}
       <nav class="nav">

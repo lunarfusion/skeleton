@@ -131,6 +131,7 @@ article li {
 }
 a {
   color: var(--skeleton-color-fg-action-default);
+  transition: var(--skeleton-transition-basic);
 }
 a:hover {
     color: var(--skeleton-color-fg-action-hover);

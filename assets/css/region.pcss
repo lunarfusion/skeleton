@@ -7,14 +7,20 @@
   
   &--sidebar-second,
   &--sidebar-first {
-    padding-inline-start: var(--skeleton-size-gap-x);
+    padding-inline-start: calc(var(--skeleton-size-gap-x) * 2);
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    margin-block-start: 4rem;
+    margin-block-start: 6rem;
     
     .block__content {
       padding-inline-start: var(--skeleton-size-gap-x);
+    }
+    
+    
+    @media (width <=994px) {
+      padding-inline-start: var(--skeleton-size-gap-x);
+      margin-block-start: 1rem;
     }
   }
 }

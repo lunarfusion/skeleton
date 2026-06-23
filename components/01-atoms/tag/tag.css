@@ -4,9 +4,18 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-decoration: none;
   display: inline-block;
   margin: 0.25rem;
 }
+  
+  .tag a:-moz-any-link {
+    text-decoration: none;
+  }
+  
+  .tag a:any-link {
+    text-decoration: none;
+  }
   
   .tag::before {
     content: "⏺";

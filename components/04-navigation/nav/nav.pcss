@@ -3,45 +3,45 @@
   --skeleton-size-border-subnav-main: 3px;
   --skeleton-size-border-nav-list: 2px;
   --skeleton-size-nav-dropdown-icon: 1rem;
-  
+
   --skeleton-size-border-navlink: 0px;
   --skeleton-size-radius-navlink: 4px;
   --skeleton-size-radius-subnav: var(--skeleton-size-radius-med);
-  
+
   --skeleton-size-text-nav-level-0: 0.85rem;
   --skeleton-size-text-nav-level-1: 0.75rem;
   --skeleton-size-text-nav-level-2: 0.65rem;
-  
+
   --skeleton-size-space-y-nav-item: 1rem;
   --skeleton-size-space-x-nav-item: 0.5rem;
   --skeleton-size-y-nav-item-main: 45px;
-  
+
   --skeleton-transition-nav-icon: var(--skeleton-transition-basic);
   --skeleton-transition-nav-item: var(--skeleton-transition-basic);
-  
+
   --skeleton-border-radius-main-nav-subnav: var(--skeleton-size-radius-med);
-  
-  
+
   /*** Color Theme - Default Transparent ***/
   --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
   --skeleton-color-text-nav-item-hover: var(--skeleton-color-fg-base);
+  --skeleton-color-text-nav-item-active-trail: var(--skeleton-color-fg-primary);
   --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
   --skeleton-color-border-nav-item-secondary: var(--skeleton-color-border-neutral-extra-subdued);
   --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
-  
+
   --skeleton-color-bg-subnav: transparent;
   --skeleton-color-bg-nav-main: transparent;
   --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-neutral-subdued);
   --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-neutral-extra-subdued);
-  
+
   /* mobile */
   --skeleton-color-bg-nav-mobile: var(--skeleton-color-bg-base);
   --skeleton-color-border-nav-mobile: var(--skeleton-color-border-primary);
-  
+
   --skeleton-color-border-subnav-main: var(--skeleton-color-bg-neutral-extra-subdued);
   --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-neutral-subdued);
-  --skeleton-color-accent-nav-item: var(--skeleton-color-border-neutral);
-  
+  --skeleton-color-accent-nav-item: var(--skeleton-color-border-primary);
+
   /*** Color Theme - Neutral ***/
   &--theme-neutral {
     --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
@@ -49,17 +49,17 @@
     --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
     --skeleton-color-border-nav-item-secondary: var(--skeleton-color-border-neutral-extra-subdued);
     --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
-    
+
     --skeleton-color-bg-subnav: var(--skeleton-color-bg-neutral-subdued);
     --skeleton-color-bg-nav-main: var(--skeleton-color-bg-neutral-subdued);
     --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-neutral-subdued);
     --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-neutral);
-    
+
     --skeleton-color-border-subnav-main: var(--skeleton-color-bg-neutral-extra-subdued);
     --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-neutral-subdued);
     --skeleton-color-accent-nav-item: var(--skeleton-color-border-neutral);
   }
-  
+
   /*** Color Theme - Primary ***/
   &--theme-primary {
     --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
@@ -67,12 +67,12 @@
     --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
     --skeleton-color-border-nav-item-secondary: var(--skeleton-color-border-neutral-extra-subdued);
     --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
-    
+
     --skeleton-color-bg-subnav: var(--skeleton-color-bg-primary-subdued);
     --skeleton-color-bg-nav-main: var(--skeleton-color-bg-primary-subdued);
     --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-primary-subdued);
     --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-primary);
-    
+
     --skeleton-color-border-subnav-main: var(--skeleton-color-bg-primary-extra-subdued);
     --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-primary-subdued);
     --skeleton-color-accent-nav-item: var(--skeleton-color-border-primary);
@@ -85,27 +85,27 @@
 .nav {
   width: 100%;
   position: relative;
-  
+
   /*** UL element ***/
   &__list {
     position: relative;
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 0;
-    
+    padding: var(--skeleton-size-gap-focus-indicator);
+
     background-color: var(--skeleton-color-bg-subnav);
-    transition: var(--skeleton-transition-nav-item);
+    /* transition: var(--skeleton-transition-nav-item); */
     list-style-type: none;
     font-size: 0;
-    
+
     /* indent child lists */
     .nav__list {
       background-color: transparent;
       /* margin-inline-start: 1rem; */
     }
   }
-  
+
   /*** LI element ***/
   &__item {
     position: relative;
@@ -113,49 +113,50 @@
     padding: var(--skeleton-size-gap-focus-indicator);
     transition: var(--skeleton-transition-nav-item);
     box-shadow: var(--skeleton-color-border-nav-item) 0px 0.5px 0px, var(--skeleton-color-border-nav-item) 0px 0.5px 0px inset;
-    
+
     /* fg styles */
     color: var(--skeleton-color-text-nav-item);
     font-size: var(--skeleton-size-text-nav-level-0);
     line-height: 1.2;
-    
+
     &:marker {
       display: none;
     }
-    
+
     &--level-0 {
       font-size: var(--skeleton-size-text-nav-level-0);
       box-shadow: var(--skeleton-color-border-nav-item) 0px 0.5px 0px, var(--skeleton-color-border-nav-item) 0px 0.5px 0px inset;
     }
-    
+
     &--level-1 {
       font-size: var(--skeleton-size-text-nav-level-1);
       box-shadow: var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px, var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px inset;
     }
-    
+
     &--level-2 {
       font-size: var(--skeleton-size-text-nav-level-2);
       box-shadow: var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px, var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px inset;
     }
-    
+
     &:hover {
       background-color: var(--skeleton-color-bg-nav-item-hover);
     }
-    
+
     &--active-trail {
       font-weight: 600;
       border-inline-start: 5px solid var(--skeleton-color-accent-nav-item);
-      
+      color: var(--skeleton-color-text-nav-item-active-trail);
+
       .nav__item--active-trail {
         border-inline-start: 3px solid var(--skeleton-color-accent-nav-item);
       }
-      
+
       .nav__item--active-trail .nav__item--active-trail {
         border-inline-start: 2px solid var(--skeleton-color-accent-nav-item);
       }
     }
   }
-  
+
   /*** Link and Subnav Toggle Element ***/
   &__link,
   &__subnav-toggle {
@@ -175,7 +176,7 @@
     letter-spacing: 0.5px;
     text-decoration: none;
     color: inherit;
-    
+
     /*** Focus Indicator ***/
     &::after {
       position: absolute;
@@ -186,54 +187,54 @@
       z-index: -1;
       inline-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-border-navlink) * 2));
       block-size: calc(100% + (var(--skeleton-size-gap-focus-indicator) * 2) + (var(--skeleton-size-border-navlink) * 2));
-      
+
       margin-block-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-border-navlink)) * -1);
       margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-border-navlink)) * -1);
-      
+
       border-width: var(--skeleton-size-focus-indicator);
       border-style: solid;
       border-color: var(--skeleton-color-focus-indicator);
-      
+
       border-radius: calc(var(--skeleton-size-radius-navlink) + var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-border-navlink));
       opacity: 0;
     }
-    
+
     /*** Link State - Hover ***/
     &:hover {
       color: var(--skeleton-color-text-nav-item-hover);
       background-color: var(--skeleton-color-bg-nav-item-hover);
-      
+
       &::after {
         opacity: 0;
       }
     }
-    
+
     /*** State: Focus ***/
     /* use focus-visible so focus indicator does not fire on click */
     &:focus-visible {
       &::after {
         opacity: 1;
-        z-index: 1;
+        z-index: 2;
       }
     }
-    
+
     /*** prevent focus from firing on click ***/
     &:-webkit-focus-ring {
       border-color: transparent;
       outline: none;
       box-shadow: none;
     }
-    
+
     .nav__item--active-trail & {
       font-weight: 700;
     }
   }
-  
+
   /*** Button ***/
   &__subnav-toggle {
     padding-inline-end: calc(var(--skeleton-size-nav-dropdown-icon) * 1.75);
     cursor: pointer;
-    
+
     /*** dropdown indicator - points right when collapsed ***/
     &::before {
       position: absolute;
@@ -254,36 +255,36 @@
       color: var(--skeleton-color-action-nav-fg-icon);
     }
   }
-  
+
   /************ VARIANTS ************/
   /*** Variant - Collapsible ***/
   &--collapsible {
-    
+
     .nav__subnav-wrapper {
       inline-size: 100%;
-      transition: var(--skeleton-transition-nav-item);
+      /* transition: var(--skeleton-transition-nav-item); */
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       z-index: 9;
-      
+
       > .nav__list {
         transform: translateY(-100%);
         opacity: 0;
       }
     }
-    
+
     details {
-      transition: var(--skeleton-transition-nav-item);
-      
+      /* transition: var(--skeleton-transition-nav-item); */
+
       summary::marker {
         content: " ";
       }
     }
-    
+
     details:open {
       .nav__subnav-toggle::before {
         transform: rotate(0deg);
       }
-      
+
       /* TODO - animation sometimes does not animate on details open */
       .nav__subnav-wrapper {
         > .nav__list {
@@ -294,7 +295,7 @@
       }
     }
   }
-  
+
   /*** Variant - Horizontal ***/
   &--horizontal {
     > .nav__list {
@@ -302,98 +303,99 @@
       align-items: stretch;
       padding-inline: 1rem;
     }
-    
+
     .nav__item--level-0 {
       font-size: var(--skeleton-size-text-nav-level-0);
       box-shadow: var(--skeleton-color-border-nav-item) 0.5px 0px 0px, var(--skeleton-color-border-nav-item) 0.5px 0px 0px inset;
     }
-    
+
     &--active-trail {
       font-weight: 600;
       border-inline-start: 0px;
       border-block-start: 6px solid var(--skeleton-color-accent-nav-item);
     }
-    
+
     /* end horizontal variant */
   }
-  
+
   /*** Variant - Transparent Background ***/
   &--transparent {
     .nav__list {
       background-color: transparent;
     }
-    
+
     .nav__item {
       box-shadow: none;
     }
-    
+
     .nav__item--active-trail {
       border: none;
     }
   }
-  
+
   /*** Variant - Size Small ***/
   &--small {
-    
+
     &.nav--horizontal > .nav__list {
       padding-inline: 0.5rem;
     }
-    
+
     .nav__item,
     .nav__item--level-0 {
       font-size: calc(var(--skeleton-size-text-nav-level-0) * 0.75);
     }
-    
+
     .nav__item--level-1 {
       font-size: calc(var(--skeleton-size-text-nav-level-1) * 0.75);
     }
-    
+
     .nav__item--level-2 {
       font-size: calc(var(--skeleton-size-text-nav-level-2) * 0.75);
     }
-    
+
     .nav__link {
       padding: calc(var(--skeleton-size-space-y-nav-item) * 0.5) calc(var(--skeleton-size-space-x-nav-item) * 0.75);
       font-size: inherit;
     }
   }
-  
+
   /*** Variant - Main Nav ***/
   /* we name the region so the mobile drawer does not effect sidebar nav */
   .region--header-bottom &--main {
     background-color: var(--skeleton-color-bg-nav-main);
     padding-inline: 1.5rem;
-    
+
     > .nav__list {
       flex-direction: row;
       flex-flow: row wrap;
       background-color: transparent;
-      
+
       > .nav__item {
         border-block-end: 0;
         box-shadow: none;
       }
-      
+
       > .nav__item--active-trail {
         font-weight: 600;
         border-inline-start: 0px;
       }
     }
-    
+
+    /* mobile menu drawer */
     > .nav__list .nav__subnav-wrapper {
       --sn-size-shadow-1: 12px;
       --sn-size-shadow-2: 22px;
       --sn-color-shadow-1: var(--skeleton-color-shadow-brand);
       --sn-color-shadow-2: var(--skeleton-color-shadow-brand-subdued);
-      
+
       position: absolute;
       border-end-start-radius: var(--skeleton-border-radius-main-nav-subnav);
       border-end-end-radius: var(--skeleton-border-radius-main-nav-subnav);
       min-inline-size: 300px;
       overflow: hidden;
       clip-path: polygon(-10% 0, 110% 0, 110% 110%, -10% 110%);
-      margin-top: 2px;
-      
+      margin-block-start: 2px;
+
       > .nav__list {
         background-color: var(--skeleton-color-bg-subnav-main);
         margin-inline-start: 0;
@@ -405,18 +407,18 @@
 var(--sn-color-shadow-1) 0px 2px var(--sn-size-shadow-1),
 var(--sn-color-shadow-2) 0px 4px var(--sn-size-shadow-2); */
       }
-      
+
       .nav__item:last-of-type,
       .nav__link:last-of-type {
         border-end-end-radius: inherit;
         border-end-start-radius: inherit;
       }
-      
+
       .nav__link {
         padding-inline: calc(var(--skeleton-size-space-x-nav-item) * 2);
       }
     }
-    
+
     @media (max-width: 776px) {
       & {
         padding-inline: 0;
@@ -424,47 +426,45 @@ var(--sn-color-shadow-2) 0px 4px var(--sn-size-shadow-2); */
         transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
         z-index: 3;
         transform: translateX(100%);
-        padding-block-end: 1rem;
         background: var(--skeleton-color-bg-nav-mobile);
         border-block-end: 6px solid var(--skeleton-color-border-nav-mobile);
       }
-      
+
       &.is-open {
         transform: translateX(0%);
       }
-      
+
       > .nav__list {
         flex-direction: column;
-        padding-inline: 0;
       }
-      
+
       > .nav__list .nav__subnav-wrapper {
         position: relative;
         border-radius: 0;
-        
+
         > .nav__list {
           box-shadow: none;
           border: 0;
           border-radius: 0;
         }
-        
+
         > .nav__item {
           padding-inline: 1rem;
         }
       }
-      
+
       .nav__link {
         padding-inline: calc(var(--skeleton-size-space-x-nav-item) * 2);
       }
     }
-    
+
     /* end main nav variant */
   }
-  
+
   /* main secondary sidebar */
   .region--sidebar &--main {
     padding: 1rem 0 0 1.5rem;
   }
-  
+
   /* end main nav */
 }
