@@ -1,0 +1,25 @@
+uuid: e6aee29f-3bc7-48ef-a998-14b4e202baa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.supra-menu
+  module:
+    - system
+  theme:
+    - skeleton
+id: skeleton_supramenu
+theme: skeleton
+region: header_top
+weight: 0
+provider: null
+plugin: 'system_menu_block:supra-menu'
+settings:
+  id: 'system_menu_block:supra-menu'
+  label: 'Supra Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

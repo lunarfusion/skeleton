@@ -1,0 +1,20 @@
+uuid: 007af17a-9c72-47d2-93f6-85538f9dada0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - skeleton
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: skeleton_primary_admin_actions
+theme: skeleton
+region: content_top
+weight: -9
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: 98490863-e67d-48f1-be28-c851181a2d62
+langcode: en
+status: true
+dependencies: {  }
+id: card
+label: Card
+revision: false
+description: 'A navigation element with a title, optional image, optional summary, and a link to the content it references.'

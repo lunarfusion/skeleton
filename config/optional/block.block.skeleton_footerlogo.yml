@@ -1,0 +1,23 @@
+uuid: 048577cf-18a1-4def-892d-704868db2dee
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_block:fe12e96a-1260-473e-a792-1af215649cba'
+  module:
+    - block_content
+  theme:
+    - skeleton
+id: skeleton_footerlogo
+theme: skeleton
+region: footer_top
+weight: -12
+provider: null
+plugin: 'block_content:fe12e96a-1260-473e-a792-1af215649cba'
+settings:
+  id: 'block_content:fe12e96a-1260-473e-a792-1af215649cba'
+  label: 'Footer Logo'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

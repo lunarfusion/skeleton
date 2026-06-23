@@ -1,0 +1,10 @@
+uuid: 07b403fb-0017-494a-be1c-3135c6ac1b4c
+langcode: en
+status: true
+dependencies: {  }
+id: flex_row
+label: 'Flex Row'
+icon_uuid: null
+icon_default: null
+description: '(for Feature Page content type) A paragraphs section using entity-in-entities, with the field--paragraph--flex-row twig file, to create layouts for paragraphs within paragraphs.'
+behavior_plugins: {  }

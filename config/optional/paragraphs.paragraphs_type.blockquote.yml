@@ -1,0 +1,10 @@
+uuid: ccad248f-3984-4144-86f8-7912ce6a7f26
+langcode: en
+status: true
+dependencies: {  }
+id: blockquote
+label: Blockquote
+icon_uuid: null
+icon_default: null
+description: 'An exact text excerpt from a publication, including a citation of the source.'
+behavior_plugins: {  }

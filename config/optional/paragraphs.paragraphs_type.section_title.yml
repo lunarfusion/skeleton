@@ -1,0 +1,10 @@
+uuid: 3836db67-062d-4b9a-ba7f-2174fdccc655
+langcode: en
+status: true
+dependencies: {  }
+id: section_title
+label: 'Section Title'
+icon_uuid: null
+icon_default: null
+description: 'The title of a section of content. Typically an h2.'
+behavior_plugins: {  }

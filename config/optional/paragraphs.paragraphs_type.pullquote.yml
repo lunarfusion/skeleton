@@ -1,0 +1,10 @@
+uuid: cef4d16e-f2a0-40fb-bb26-4912a2c1580f
+langcode: en
+status: true
+dependencies: {  }
+id: pullquote
+label: Pullquote
+icon_uuid: null
+icon_default: null
+description: 'An enlarged piece of text pulled from nearby content on the current page.'
+behavior_plugins: {  }

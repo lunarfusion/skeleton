@@ -1,0 +1,22 @@
+uuid: 909304ff-ce5e-4414-8bd7-85bc9dbeb04b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - skeleton
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: skeleton_primary_local_tasks
+theme: skeleton
+region: content_top
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

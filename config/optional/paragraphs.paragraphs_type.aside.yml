@@ -1,0 +1,10 @@
+uuid: a20d4f87-4402-408c-b47a-49705587d9b9
+langcode: en
+status: true
+dependencies: {  }
+id: aside
+label: Aside
+icon_uuid: null
+icon_default: null
+description: "A portion of a document whose content is only indirectly related to the document's main content."
+behavior_plugins: {  }

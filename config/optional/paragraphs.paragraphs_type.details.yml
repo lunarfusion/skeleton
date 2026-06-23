@@ -1,0 +1,10 @@
+uuid: 094ab87a-0fa1-4791-a2dd-22a64df146c4
+langcode: en
+status: true
+dependencies: {  }
+id: details
+label: Details
+icon_uuid: null
+icon_default: null
+description: 'A single accordion item which displays a summary and can be selected to reveal and hide the content.'
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: 987d4c1d-4ce6-453d-b30f-e11e4f9d02da
+langcode: en
+status: true
+dependencies: {  }
+id: downloads
+label: 'Download Group'
+icon_uuid: null
+icon_default: null
+description: 'One or more files that can be downloaded.'
+behavior_plugins: {  }

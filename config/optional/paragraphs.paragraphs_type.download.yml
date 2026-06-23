@@ -1,0 +1,10 @@
+uuid: 12de5a70-a6c8-4e4d-b0fb-a13241a7da35
+langcode: en
+status: true
+dependencies: {  }
+id: download
+label: Download
+icon_uuid: null
+icon_default: null
+description: 'A downloadable file'
+behavior_plugins: {  }

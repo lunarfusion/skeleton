@@ -1,0 +1,22 @@
+uuid: ff21b405-2689-468a-84a9-afb07d166411
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - skeleton
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: skeleton_breadcrumbs
+theme: skeleton
+region: content
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

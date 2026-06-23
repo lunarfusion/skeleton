@@ -1,0 +1,41 @@
+uuid: 130f9801-29bc-4e1e-a269-627f8f818f5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block_title
+    - node
+    - system
+  theme:
+    - skeleton
+third_party_settings:
+  menu_block_title:
+    modify_title: true
+id: skeleton_mainnavigation
+theme: skeleton
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: visible
+  provider: system
+  level: 2
+  depth: null
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/admin/appearance/ui/components\r\n/components"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page

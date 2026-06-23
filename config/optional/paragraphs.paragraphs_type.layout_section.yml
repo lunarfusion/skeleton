@@ -1,0 +1,19 @@
+uuid: c2f53ae8-8ddf-4400-9707-49f86283e48d
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: layout_section
+label: 'Layout Section'
+icon_uuid: null
+icon_default: null
+description: '(for Layout Page content type) A layout section for the layout paragraphs module.'
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      four_column: 'Four column'
+      one_column: 'One column'
+      three_column: 'Three column'
+      two_column: 'Two column'

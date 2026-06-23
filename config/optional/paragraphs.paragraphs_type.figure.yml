@@ -1,0 +1,10 @@
+uuid: 82bc21b5-392e-4ddd-a98e-a89038abe8bc
+langcode: en
+status: true
+dependencies: {  }
+id: figure
+label: Figure
+icon_uuid: null
+icon_default: null
+description: 'An image with a caption.'
+behavior_plugins: {  }

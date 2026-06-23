@@ -1,0 +1,30 @@
+uuid: 36eae01a-2557-4f7a-9ccb-3bcb92bb7fc3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - skeleton
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: skeleton_page_title
+theme: skeleton
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      page: page
