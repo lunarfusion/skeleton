@@ -1,0 +1,18 @@
+uuid: a152e33b-04db-4516-b6ff-f03e4d2f861c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Layout Page'
+type: layout_page
+description: 'This is the second version of the feature page for testing the Layout Paragraphs module.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true
