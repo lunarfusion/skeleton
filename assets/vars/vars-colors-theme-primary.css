@@ -4,8 +4,7 @@
     div[class*="theme-primary"],
     nav[class*="theme-primary"],
     .theme-primary,
-    .bg-primary,
-    .bg-primary-subdued {
+    .bg-primary {
       --skeleton-color-fg-base: var(--skeleton-color-white);
       --skeleton-color-fg-inverted: var(--skeleton-color-black);
       --skeleton-color-fg-subdued: var(--skeleton-color-gray-060);

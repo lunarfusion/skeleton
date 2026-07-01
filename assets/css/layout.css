@@ -18,14 +18,11 @@
   }
 
 .layout--content-bottom {
-    margin-block-start: 6rem;
+    margin-block-end: 4rem;
   }
 
 .layout--footer {
     margin: 0;
     padding: 1rem 2rem 3rem;
     background-color: var(--skeleton-color-bg-primary);
-    /* display: flex;
-    flex-direction: column;
-    gap: 1rem; */
   }

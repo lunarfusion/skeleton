@@ -16,14 +16,11 @@
 #}
 {{ title_prefix }}
 {% if title %}
-  {# <h1{{ title_attributes }}>{{ title }}</h1> #}
-
   {{ include ('skeleton:title', {
     content: title,
     html_tag: 'h1',
     size: 'XL',
     variant: 'page',
   }, with_context: false) }}
-
 {% endif %}
 {{ title_suffix }}
