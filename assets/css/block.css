@@ -9,6 +9,10 @@
     max-inline-size: calc(33.3333% - var(--col-spacing));
   }
   
+  .block.views-element-container .block__content {
+      padding-block: 2rem;
+    }
+  
   .block--footerlogo .block__content {
       position: relative;
       transform: translateY(-40%);

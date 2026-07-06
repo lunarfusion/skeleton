@@ -46,6 +46,18 @@
   margin-block-start: 3rem;
 }
 
+.mb-1 {
+  margin-block-end: 1rem;
+}
+
+.mb-2 {
+  margin-block-end: 2rem;
+}
+
+.mb-3 {
+  margin-block-end: 3rem;
+}
+
 /*** border size ***/
 .border-1 {
   border: 1px solid currentcolor;

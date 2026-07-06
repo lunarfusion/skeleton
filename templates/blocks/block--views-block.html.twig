@@ -1,0 +1,24 @@
+{% set classes = [
+  'block'
+] %}
+
+{% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
+
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+      {{ include ('skeleton:title', {
+        content: label,
+        html_tag: 'h2',
+        size: 'L',
+        variant: 'section',
+      }, with_context: false) }}
+  {% endif %}
+  {{ title_suffix }}
+
+  <div class="block__content">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</div>
