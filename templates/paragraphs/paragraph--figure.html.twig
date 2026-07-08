@@ -1,4 +1,27 @@
- {{ include ('skeleton:figure', {
+{# v1 #}
+ {# {{ include ('skeleton:figure', {
   image: content.field_figure_image,
   caption: content.field_figure_caption,
+}, with_context: false) }} #}
+
+
+{# v2 #}
+ {{ include ('skeleton:figure', {
+  image: content.field_figure_image,
+  caption: content.field_figure_caption and not paragraph.field_figure_caption.isEmpty() ? content.field_figure_caption,
 }, with_context: false) }}
+
+
+{# v3 #}
+{# {% if not paragraph.field_figure_caption.isEmpty() %}
+  {% set caption %}
+    {{ content.field_figure_caption.0 }}
+  {% endset %}
+{% endif %}
+
+ {{ include ('skeleton:figure', {
+  image: content.field_figure_image,
+  caption: caption,
+}, with_context: false) }} #}
+
+

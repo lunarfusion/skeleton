@@ -7,8 +7,10 @@
   <div class="figure__image">
     {{ image }}
   </div>
+
+  {% if caption %}
   <figcaption class="figure__caption">
     {{ caption }}
   </figcaption>
+  {% endif %}
 </figure>
-
