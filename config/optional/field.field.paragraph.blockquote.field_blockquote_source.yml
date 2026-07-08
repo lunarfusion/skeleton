@@ -1,0 +1,19 @@
+uuid: b8dc3fbd-ab2d-45e3-a6e9-331e074a3905
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blockquote_source
+    - paragraphs.paragraphs_type.blockquote
+id: paragraph.blockquote.field_blockquote_source
+field_name: field_blockquote_source
+entity_type: paragraph
+bundle: blockquote
+label: 'Blockquote Source'
+description: 'The publication or person this excerpt is sourced from.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 6e836be2-519f-4eec-98a2-f5ba7bf2ec4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_details_content
+    - paragraphs.paragraphs_type.details
+id: paragraph.details.field_details_content
+field_name: field_details_content
+entity_type: paragraph
+bundle: details
+label: 'Details Content'
+description: 'The full content of the details component.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

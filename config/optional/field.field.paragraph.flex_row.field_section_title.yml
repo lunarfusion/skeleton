@@ -1,0 +1,19 @@
+uuid: fa56e82c-db4f-4848-8b24-4836e23bc471
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title
+    - paragraphs.paragraphs_type.flex_row
+id: paragraph.flex_row.field_section_title
+field_name: field_section_title
+entity_type: paragraph
+bundle: flex_row
+label: 'Section Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

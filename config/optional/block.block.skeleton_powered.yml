@@ -1,0 +1,22 @@
+uuid: 23efdd86-0701-4dad-8331-d98e97c2412a
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - skeleton
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: skeleton_powered
+theme: skeleton
+region: footer_bottom
+weight: -9
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

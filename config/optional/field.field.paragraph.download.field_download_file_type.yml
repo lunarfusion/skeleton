@@ -1,0 +1,23 @@
+uuid: a68fc534-e734-4a10-aa70-7f09c475a24f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_download_file_type
+    - paragraphs.paragraphs_type.download
+  module:
+    - options
+id: paragraph.download.field_download_file_type
+field_name: field_download_file_type
+entity_type: paragraph
+bundle: download
+label: 'Download File Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

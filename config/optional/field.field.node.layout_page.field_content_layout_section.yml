@@ -1,0 +1,62 @@
+uuid: 9aa32af6-a830-4ae6-b6bc-51ab1628a97a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_layout_section
+    - node.type.layout_page
+  module:
+    - entity_reference_revisions
+id: node.layout_page.field_content_layout_section
+field_name: field_content_layout_section
+entity_type: node
+bundle: layout_page
+label: 'Layout Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles: null
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 13
+        enabled: false
+      aside:
+        weight: 14
+        enabled: false
+      blockquote:
+        weight: 15
+        enabled: false
+      card:
+        weight: 16
+        enabled: false
+      details:
+        weight: 17
+        enabled: false
+      download:
+        weight: 18
+        enabled: false
+      downloads:
+        weight: 19
+        enabled: false
+      figure:
+        weight: 20
+        enabled: false
+      flex_row:
+        weight: 21
+        enabled: false
+      layout_section:
+        weight: 22
+        enabled: false
+      section_title:
+        weight: 23
+        enabled: false
+      text_content:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

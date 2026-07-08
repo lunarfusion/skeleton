@@ -1,0 +1,23 @@
+uuid: ee49cd69-b87d-4208-9db5-84563c3d1e41
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:card_group:3b01bf16-012f-42d5-a351-9c91f80784a5'
+  module:
+    - block_content
+  theme:
+    - skeleton
+id: skeleton_cardgrouptest
+theme: skeleton
+region: content_bottom
+weight: -12
+provider: null
+plugin: 'block_content:3b01bf16-012f-42d5-a351-9c91f80784a5'
+settings:
+  id: 'block_content:3b01bf16-012f-42d5-a351-9c91f80784a5'
+  label: 'You Might Also Be Interested In...'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility: {  }

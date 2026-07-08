@@ -1,0 +1,23 @@
+uuid: 697dfd40-2691-4c2d-a6c0-2021bd46e6d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background
+    - paragraphs.paragraphs_type.flex_row
+  module:
+    - options
+id: paragraph.flex_row.field_background
+field_name: field_background
+entity_type: paragraph
+bundle: flex_row
+label: Background
+description: 'Row background color.'
+required: false
+translatable: false
+default_value:
+  -
+    value: bg-default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

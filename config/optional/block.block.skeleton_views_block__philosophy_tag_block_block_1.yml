@@ -1,0 +1,24 @@
+uuid: f59f81fe-1188-40f6-82ea-d86ac71f3499
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.philosophy_tag_block
+  module:
+    - views
+  theme:
+    - skeleton
+id: skeleton_views_block__philosophy_tag_block_block_1
+theme: skeleton
+region: content_bottom
+weight: 0
+provider: null
+plugin: 'views_block:philosophy_tag_block-block_1'
+settings:
+  id: 'views_block:philosophy_tag_block-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: 3
+visibility: {  }

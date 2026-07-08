@@ -1,0 +1,22 @@
+uuid: 8cf46f42-0615-422c-9518-5fabf856be56
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - skeleton
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: skeleton_help
+theme: skeleton
+region: content_top
+weight: -10
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

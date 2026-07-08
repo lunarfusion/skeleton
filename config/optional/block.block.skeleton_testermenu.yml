@@ -1,0 +1,29 @@
+uuid: 89da2c0e-7b52-4fa5-96aa-86d33eea4c10
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.tester-menu
+  module:
+    - system
+  theme:
+    - skeleton
+id: skeleton_testermenu
+theme: skeleton
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:tester-menu'
+settings:
+  id: 'system_menu_block:tester-menu'
+  label: 'Tester Menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /admin/appearance/ui/components

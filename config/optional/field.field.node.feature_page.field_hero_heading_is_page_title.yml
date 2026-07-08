@@ -1,0 +1,23 @@
+uuid: 9609db31-748c-467a-aa94-a2f4befef7d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_heading_is_page_title
+    - node.type.feature_page
+id: node.feature_page.field_hero_heading_is_page_title
+field_name: field_hero_heading_is_page_title
+entity_type: node
+bundle: feature_page
+label: 'Hero Heading Displays Page Title'
+description: 'If the hero heading is the page title, the page title can be hidden.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'True'
+  off_label: 'False'
+field_type: boolean

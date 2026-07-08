@@ -1,0 +1,23 @@
+uuid: ab1e2950-b2f7-4ddb-8f14-e098b707293d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full_width
+    - paragraphs.paragraphs_type.flex_row
+id: paragraph.flex_row.field_full_width
+field_name: field_full_width
+entity_type: paragraph
+bundle: flex_row
+label: 'Full Width'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Full Width'
+  off_label: 'Normal Width'
+field_type: boolean

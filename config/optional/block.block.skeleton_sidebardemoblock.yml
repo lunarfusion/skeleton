@@ -1,0 +1,37 @@
+uuid: 9b1a055e-1988-4bd1-af03-a12607020617
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:df7a700c-27b8-48cc-b9ea-ce3229770a02'
+  module:
+    - block_content
+    - node
+    - system
+  theme:
+    - skeleton
+id: skeleton_sidebardemoblock
+theme: skeleton
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:df7a700c-27b8-48cc-b9ea-ce3229770a02'
+settings:
+  id: 'block_content:df7a700c-27b8-48cc-b9ea-ce3229770a02'
+  label: 'Sidebar Demo Block'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /admin/appearance/ui/components
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+      page: page

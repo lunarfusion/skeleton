@@ -1,0 +1,19 @@
+uuid: d34c3504-a5d7-43c6-8c87-8685fad72a0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pullquote_content
+    - paragraphs.paragraphs_type.pullquote
+id: paragraph.pullquote.field_pullquote_content
+field_name: field_pullquote_content
+entity_type: paragraph
+bundle: pullquote
+label: 'Pullquote Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

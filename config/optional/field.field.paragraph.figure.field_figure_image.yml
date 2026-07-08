@@ -1,0 +1,38 @@
+uuid: c9f8daa4-314a-4396-a0d6-42c81c6adaf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_figure_image
+    - paragraphs.paragraphs_type.figure
+  module:
+    - image
+id: paragraph.figure.field_figure_image
+field_name: field_figure_image
+entity_type: paragraph
+bundle: figure
+label: 'figure image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 343c83a5-e54b-494f-96f6-039bc9010b80
+    alt: placeholder
+    title: ''
+    width: 600
+    height: 400
+field_type: image

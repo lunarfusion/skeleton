@@ -1,0 +1,18 @@
+uuid: ae77a4ec-93b2-4c2e-8b0c-75933f305ba1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Feature Page'
+type: feature_page
+description: 'The first version of the feature page, using only paragraphs. For building landing pages, home pages, and feature stories which do not have sidebar navigation and whose content may take up the full browser width.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

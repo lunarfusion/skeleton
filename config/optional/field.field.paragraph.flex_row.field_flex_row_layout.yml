@@ -1,0 +1,23 @@
+uuid: 68e2a23c-6d12-4cb0-9b83-d28a9f64c093
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_flex_row_layout
+    - paragraphs.paragraphs_type.flex_row
+  module:
+    - options
+id: paragraph.flex_row.field_flex_row_layout
+field_name: field_flex_row_layout
+entity_type: paragraph
+bundle: flex_row
+label: 'Flex Row Layout'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '50_50'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: af559aba-3998-4b5a-be19-ea0642ef5aa0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6c92344b-24a1-4d23-8934-799d68dac51e'
+  module:
+    - block_content
+  theme:
+    - skeleton
+id: skeleton_footerlinklist
+theme: skeleton
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:6c92344b-24a1-4d23-8934-799d68dac51e'
+settings:
+  id: 'block_content:6c92344b-24a1-4d23-8934-799d68dac51e'
+  label: 'Footer Link List'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility: {  }

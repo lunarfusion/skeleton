@@ -1,0 +1,52 @@
+uuid: 1874c211-7233-4747-8b9f-d1b99a5d6df8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_download_item
+    - paragraphs.paragraphs_type.download
+    - paragraphs.paragraphs_type.downloads
+  module:
+    - entity_reference_revisions
+id: paragraph.downloads.field_download_item
+field_name: field_download_item
+entity_type: paragraph
+bundle: downloads
+label: 'Download Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      download: download
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 10
+        enabled: false
+      aside:
+        weight: 11
+        enabled: false
+      blockquote:
+        weight: 12
+        enabled: false
+      details:
+        weight: 13
+        enabled: false
+      download:
+        weight: 14
+        enabled: true
+      downloads:
+        weight: 9
+        enabled: false
+      figure:
+        weight: 15
+        enabled: false
+      flex_row:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

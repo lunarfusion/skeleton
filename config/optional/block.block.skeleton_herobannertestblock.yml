@@ -1,0 +1,28 @@
+uuid: 33b43a9b-32e4-47f7-a5d3-f67080dd389f
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:hero_banner:90804cba-2960-40da-986e-2c08c757a235'
+  module:
+    - block_content
+    - system
+  theme:
+    - skeleton
+id: skeleton_herobannertestblock
+theme: skeleton
+region: banner
+weight: -11
+provider: null
+plugin: 'block_content:90804cba-2960-40da-986e-2c08c757a235'
+settings:
+  id: 'block_content:90804cba-2960-40da-986e-2c08c757a235'
+  label: 'hero banner test block'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/8

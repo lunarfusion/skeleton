@@ -1,0 +1,23 @@
+uuid: abc5293a-eb30-406a-87cc-63f5be6b091f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background
+    - paragraphs.paragraphs_type.layout_section
+  module:
+    - options
+id: paragraph.layout_section.field_background
+field_name: field_background
+entity_type: paragraph
+bundle: layout_section
+label: Background
+description: 'Row background color.'
+required: false
+translatable: false
+default_value:
+  -
+    value: bg-default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: d9b06419-7a08-41de-aa18-6b91defdbb31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_layout
+    - node.type.feature_page
+  module:
+    - options
+id: node.feature_page.field_hero_layout
+field_name: field_hero_layout
+entity_type: node
+bundle: feature_page
+label: 'Hero Layout'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

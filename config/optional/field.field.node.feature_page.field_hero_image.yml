@@ -1,0 +1,38 @@
+uuid: 44eacf10-e311-42b8-b5d6-95c395246bec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_image
+    - node.type.feature_page
+  module:
+    - image
+id: node.feature_page.field_hero_image
+field_name: field_hero_image
+entity_type: node
+bundle: feature_page
+label: 'Hero Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'jpg jpeg webp'
+  max_filesize: 1mb
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: fb53edb8-252d-40c6-902c-5ed1097141dc
+    alt: placeholder
+    title: placeholder
+    width: 2000
+    height: 814
+field_type: image

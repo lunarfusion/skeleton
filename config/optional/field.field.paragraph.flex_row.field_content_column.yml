@@ -1,0 +1,73 @@
+uuid: c4140e15-a046-4716-ab08-d0d90a8fe311
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_column
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.aside
+    - paragraphs.paragraphs_type.blockquote
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.downloads
+    - paragraphs.paragraphs_type.figure
+    - paragraphs.paragraphs_type.flex_row
+    - paragraphs.paragraphs_type.text_content
+  module:
+    - entity_reference_revisions
+id: paragraph.flex_row.field_content_column
+field_name: field_content_column
+entity_type: paragraph
+bundle: flex_row
+label: 'Content Columns'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion: accordion
+      figure: figure
+      aside: aside
+      blockquote: blockquote
+      downloads: downloads
+      text_content: text_content
+      card: card
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 5
+        enabled: true
+      aside:
+        weight: 8
+        enabled: true
+      blockquote:
+        weight: 9
+        enabled: true
+      card:
+        weight: 16
+        enabled: true
+      details:
+        weight: 8
+        enabled: false
+      download:
+        weight: 13
+        enabled: false
+      downloads:
+        weight: 9
+        enabled: true
+      figure:
+        weight: 6
+        enabled: true
+      flex_row:
+        weight: 4
+        enabled: false
+      section_title:
+        weight: 22
+        enabled: false
+      text_content:
+        weight: 12
+        enabled: true
+field_type: entity_reference_revisions

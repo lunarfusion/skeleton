@@ -1,0 +1,25 @@
+uuid: b0a28721-c50d-4222-913d-ba6d97b87207
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - skeleton
+id: skeleton_mainnavigation_2
+theme: skeleton
+region: header_bottom
+weight: -10
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: true
+visibility: {  }

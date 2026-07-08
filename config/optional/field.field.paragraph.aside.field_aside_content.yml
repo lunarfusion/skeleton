@@ -1,0 +1,19 @@
+uuid: b9f8cca7-c23a-4b7d-9acd-e174adcd1390
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_aside_content
+    - paragraphs.paragraphs_type.aside
+id: paragraph.aside.field_aside_content
+field_name: field_aside_content
+entity_type: paragraph
+bundle: aside
+label: 'Aside Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

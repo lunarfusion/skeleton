@@ -1,0 +1,23 @@
+uuid: e3496a59-cacb-429b-846e-635b3a32a9af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_citation_link
+    - paragraphs.paragraphs_type.blockquote
+  module:
+    - link
+id: paragraph.blockquote.field_citation_link
+field_name: field_citation_link
+entity_type: paragraph
+bundle: blockquote
+label: 'Citation Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

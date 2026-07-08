@@ -1,0 +1,22 @@
+uuid: 826ef9cc-ba89-426d-8de9-86429634d0f6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - skeleton
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: skeleton_secondary_local_tasks
+theme: skeleton
+region: content_top
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

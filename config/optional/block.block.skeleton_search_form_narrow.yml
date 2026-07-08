@@ -1,0 +1,23 @@
+uuid: 45e93513-22bf-4321-a47e-99946bb7f3e1
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - skeleton
+_core:
+  default_config_hash: _nZjxxdypO6xrOAJkCYD81v0L7wh2zbCAVO7_C-UKIc
+id: skeleton_search_form_narrow
+theme: skeleton
+region: header_bottom
+weight: -11
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

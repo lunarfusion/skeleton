@@ -1,0 +1,28 @@
+uuid: 26e6ca43-2353-4f9b-a412-b7f6023977d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.feature_page
+  module:
+    - text
+id: node.feature_page.body
+field_name: body
+entity_type: node
+bundle: feature_page
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - basic_html
+    - full_html
+field_type: text_with_summary
