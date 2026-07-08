@@ -12,8 +12,7 @@
   font-size: 2rem;
   line-height: 1.3;
 }
-.pullquote::before,
-  .pullquote::after {
+.pullquote::before {
     content: "";
     position: absolute;
     width: 2rem;
@@ -28,10 +27,10 @@
     top: 0;
     transform: translateX(calc(var(--skeleton-padding-pullquote) * -1.5));
   }
-.pullquote::after {
+/* &::after {
     content: "”";
     bottom: var(--skeleton-padding-pullquote);
     right: 0;
-  }
+  } */
 .pullquote--small {}
 .pullquote--large {}

@@ -13,8 +13,7 @@
   font-size: 2rem;
   line-height: 1.3;
   
-  &::before,
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     width: 2rem;
@@ -31,11 +30,11 @@
     transform: translateX(calc(var(--skeleton-padding-pullquote) * -1.5));
   }
   
-  &::after {
+  /* &::after {
     content: "”";
     bottom: var(--skeleton-padding-pullquote);
     right: 0;
-  }
+  } */
   
   &--small {}
   
