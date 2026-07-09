@@ -1,0 +1,27 @@
+uuid: c679b79e-1c8c-4226-9582-ab2323250ea6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_hero_layout
+field_name: field_hero_layout
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: layout-default
+      label: Default
+    -
+      value: layout-diptych
+      label: Diptych
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

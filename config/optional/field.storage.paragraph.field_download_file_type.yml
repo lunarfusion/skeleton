@@ -1,0 +1,33 @@
+uuid: 3a3ef327-3950-4604-a231-5bfdd8825010
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_download_file_type
+field_name: field_download_file_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: default
+      label: default
+    -
+      value: image
+      label: image
+    -
+      value: zip
+      label: zip
+    -
+      value: pdf
+      label: pdf
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

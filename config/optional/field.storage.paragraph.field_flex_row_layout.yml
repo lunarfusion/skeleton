@@ -1,0 +1,36 @@
+uuid: 5618a0ff-8ada-4cf5-8216-2ee9f4577e12
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_flex_row_layout
+field_name: field_flex_row_layout
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '50_50'
+      label: '50% 50%'
+    -
+      value: '66_33'
+      label: '66%, 33%'
+    -
+      value: '33_33_33'
+      label: '33%, 33%, 33%'
+    -
+      value: '50_25_25'
+      label: '50%, 25%, 25%'
+    -
+      value: '100'
+      label: 100%
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,39 @@
+uuid: b47d6f6d-fb17-422e-878b-4c35ae174163
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_background
+field_name: field_background
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bg-default
+      label: Default
+    -
+      value: bg-primary
+      label: Primary
+    -
+      value: bg-primary-subdued
+      label: 'Primary Subdued'
+    -
+      value: bg-neutral
+      label: Neutral
+    -
+      value: bg-neutral-subdued
+      label: 'Neutral Subdued'
+    -
+      value: bg-neutral-extra-subdued
+      label: 'Neutral Extra Subdued'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

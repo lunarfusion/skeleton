@@ -1,0 +1,21 @@
+uuid: 292a0620-e2d6-4eca-b8d3-4ea7a0cf414e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - paragraphs
+id: block_content.field_card_group_cards
+field_name: field_card_group_cards
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
