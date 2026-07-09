@@ -1,0 +1,58 @@
+uuid: 5ca98db8-4181-4d1b-b44c-d034340186cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card_group
+    - field.storage.block_content.field_card_group_cards
+    - paragraphs.paragraphs_type.card
+  module:
+    - entity_reference_revisions
+id: block_content.card_group.field_card_group_cards
+field_name: field_card_group_cards
+entity_type: block_content
+bundle: card_group
+label: 'Card Group Cards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      card: card
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 11
+        enabled: false
+      aside:
+        weight: 12
+        enabled: false
+      blockquote:
+        weight: 13
+        enabled: false
+      card:
+        weight: 14
+        enabled: true
+      details:
+        weight: 15
+        enabled: false
+      download:
+        weight: 16
+        enabled: false
+      downloads:
+        weight: 17
+        enabled: false
+      figure:
+        weight: 18
+        enabled: false
+      flex_row:
+        weight: 19
+        enabled: false
+      section_title:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions
