@@ -6,10 +6,10 @@
 
 
 {# v2 #}
- {{ include ('skeleton:figure', {
+ {# {{ include ('skeleton:figure', {
   image: content.field_figure_image,
   caption: content.field_figure_caption and not paragraph.field_figure_caption.isEmpty() ? content.field_figure_caption,
-}, with_context: false) }}
+}, with_context: false) }} #}
 
 
 {# v3 #}
@@ -24,4 +24,22 @@
   caption: caption,
 }, with_context: false) }} #}
 
+{% set caption = content.field_figure_caption and not paragraph.field_figure_caption.isEmpty() ? content.field_figure_caption %}
+
+{{ dump(caption) }}
+{{ dump(caption is empty) }}
+
+{{ include('skeleton:figure', {
+  image: content.field_figure_image,
+  caption: caption,
+}, with_context: false) }}
+
+
+{# {% set debug_caption = content.field_figure_caption and not paragraph.field_figure_caption.isEmpty() ? content.field_figure_caption %}
+{{ dump(debug_caption) }}
+
+{{ include('skeleton:figure', {
+  image: content.field_figure_image,
+  caption: debug_caption,
+}, with_context: false) }} #}
 

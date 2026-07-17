@@ -8,9 +8,9 @@
     {{ image }}
   </div>
 
-  {% if caption %}
-  <figcaption class="figure__caption">
-    {{ caption }}
-  </figcaption>
+  {% if caption|render|trim %}
+    <figcaption class="figure__caption">
+      {{ caption }}
+    </figcaption>
   {% endif %}
 </figure>

@@ -15,13 +15,13 @@
   <div class="hero__content">
     <div class="hero__content-inner">
 
-      {% if heading %}
+      {% if heading|render|trim %}
         <div class="hero__heading">
           {{ heading }}
         </div>
       {% endif %}
 
-      {% if text %}
+      {% if text|render|trim %}
         <div class="hero__text">
           {{ text }}
         </div>
@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  {% if image %}
+  {% if image|render|trim %}
     <div class="hero__image">
       {{ image }}
     </div>
