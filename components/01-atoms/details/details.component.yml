@@ -12,16 +12,9 @@ variants:
     title: FontAwesome Marker Style
 
 props:
-  type: object
-  properties:
-    theme:
-      title: Theme
-      type: string
-      description: 'Color theme for the details.'
-      enum:
-        - theme-default
-        - theme-primary
-      default: theme-default
+    type: object
+    additionalProperties: false
+    properties: {}
 
 slots:
   summary_text:

@@ -7,15 +7,6 @@ props:
   type: object
   properties:
 
-    theme:
-      title: Theme
-      type: string
-      description: 'Color theme for the aside.'
-      enum:
-        - theme-default
-        - theme-primary
-      default: theme-default
-
     width:
       type: string
       enum:

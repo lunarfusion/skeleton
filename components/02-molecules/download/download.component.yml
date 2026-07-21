@@ -16,14 +16,9 @@ variants:
     title: Image file
 
 props:
-  theme:
-    title: Theme
-    type: string
-    description: 'Color theme for the download.'
-    enum:
-      - theme-default
-      - theme-primary
-    default: theme-default
+    type: object
+    additionalProperties: false
+    properties: {}
 
 slots:
   file:

@@ -6,16 +6,6 @@ group: "Molecules"
 props:
   type: object
   properties:
-
-    theme:
-      title: Theme
-      type: string
-      description: 'Color theme for the hero.'
-      enum:
-        - theme-default
-        - theme-primary
-      default: theme-default
-
     layout:
       title: Layout
       type: string
