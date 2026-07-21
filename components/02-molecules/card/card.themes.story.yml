@@ -1,0 +1,56 @@
+name: On Primary Theme
+
+slots:
+  title:
+  - type: component
+    component: 'skeleton:title'
+    props:
+      variant: card
+      size: M
+    slots:
+      content: "Title of the Card"
+
+  summary: "Card summary text xxxxx xxxxxxxx xxxx xx xxxxxxx xxxxx."
+
+  image:
+    theme: image
+    uri: "/themes/custom/skeleton/assets/images/placeholder-card.jpg"
+    alt: image example
+
+  card_tags:
+    - type: component
+      component: "skeleton:tag"
+      props:
+        type: science
+        label: "Science"
+        url: "https://example.com"
+
+  footer:
+    type: component
+    component: "skeleton:link_group"
+    props:
+      variant: default
+    slots:
+      links:
+        - type: component
+          component: "skeleton:link"
+          slots:
+            label: "Read More"
+            url: "https://example.com"
+            title: "Card Link 1 Title"
+          props:
+            variant: cta
+        - type: component
+          component: "skeleton:link"
+          slots:
+            label: "Subscribe"
+            url: "https://example.com"
+            title: "Card Link 2 Title"
+          props:
+            variant: cta
+
+
+library_wrapper: >
+  <div class="theme-primary">
+    {{ _story }}
+  </div>

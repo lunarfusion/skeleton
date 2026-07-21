@@ -35,6 +35,7 @@
     --skeleton-color-fg-primary-inverted: var(--skeleton-color-violet-040);
     
     /*** Background - Brand ***/
+    /* NOTE these are the backgrounds of theme-primary which are the same across modes */
     --skeleton-color-bg-primary: var(--skeleton-color-violet-050);
     --skeleton-color-bg-primary-subdued: var(--skeleton-color-violet-040);
     

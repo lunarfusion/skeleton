@@ -1,4 +1,4 @@
-name: Themes
+name: On Primary Theme
 
 props:
   variant: default
@@ -14,23 +14,6 @@ slots:
         url: "#"
 
 library_wrapper: >
-  {% set themes = [
-    'theme-default',
-    'theme-primary',
-  ] %}
-  {% for theme in themes %}
-  <div class="ui-patterns__story-variant ui-patterns__story-variant--fulltheme">
-    {% set theme_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
-      class: ['download download--' ~ theme]
-    })})} %}
-    <h4 class="title title--micro">{{ theme }}</h4>
-    {% set theme_slots = {'#slots': _story['#slots']|merge({
-      'label': "download_file",
-      'description': "A description of the file to be downloaded",
-      'size': "24kb",
-      'url': "#"
-    })} %}
-    {% set theme_story = _story %}
-    {{ theme_story|merge(theme_props)|merge(theme_slots) }}
-    </div>
-  {% endfor %}
+  <div class="theme-primary">
+    {{ _story }}
+  </div>

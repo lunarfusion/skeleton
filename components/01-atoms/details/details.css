@@ -12,13 +12,6 @@
   --details-transition-marker: var(--skeleton-transition-basic);
   --details-width-border: 2px;
 }
-/*** Color Theme - Primary ***/
-.details--theme-primary {
-    --details-color-text: var(--skeleton-color-fg-white-static);
-    --details-color-border: var(--skeleton-color-border-primary);
-    --details-color-background: var(--skeleton-color-bg-primary);
-    --details-color-marker: var(--skeleton-color-accent);
-  }
 /* styles for this component */
 .details {
   border: var(--details-width-border) solid var(--details-color-border);
@@ -50,6 +43,7 @@
     background-color: var(--details-color-background-content);
     font-size: 1rem;
     line-height: 1.4;
+    color: var(--details-color-text);
     display: block;
     border-end-start-radius: var(--details-border-radius);
     border-end-end-radius: var(--details-border-radius);

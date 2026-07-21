@@ -1,13 +1,16 @@
+  /* NOTE that theme colors do not shift in dark mode
+  Theme color background stays the same across modes */
   :root {
     
     /* on skeleton-color-bg-primary */
     div[class*="theme-primary"],
     nav[class*="theme-primary"],
     .theme-primary,
-    .bg-primary {
+    .bg-primary,
+    .bg-primary-subdued {
       --skeleton-color-fg-base: var(--skeleton-color-white);
       --skeleton-color-fg-inverted: var(--skeleton-color-black);
-      --skeleton-color-fg-subdued: var(--skeleton-color-gray-060);
+      --skeleton-color-fg-subdued: var(--skeleton-color-gray-080);
       --skeleton-color-fg-disabled: var(--skeleton-color-gray-050);
       
       /*** Foreground - Brand ***/
@@ -31,6 +34,8 @@
       --skeleton-color-bg-neutral: var(--skeleton-color-violet-020);
       --skeleton-color-bg-neutral-subdued: var(--skeleton-color-violet-030);
       --skeleton-color-bg-neutral-extra-subdued: var(--skeleton-color-violet-040);
+      
+      --skeleton-color-bg-base: var(--skeleton-color-violet-050);
       
       /*** Borders - Neutral ***/
       --skeleton-color-border-neutral: var(--skeleton-color-violet-080);
