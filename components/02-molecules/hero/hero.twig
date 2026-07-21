@@ -15,12 +15,13 @@
   <div class="hero__content">
     <div class="hero__content-inner">
 
-      {% if heading|render|trim %}
+      {% if heading %}
         <div class="hero__heading">
           {{ heading }}
         </div>
       {% endif %}
 
+      {# TODO - reevaluate empty render array issue 3425818 #}
       {% if text|render|trim %}
         <div class="hero__text">
           {{ text }}
@@ -29,6 +30,7 @@
     </div>
   </div>
 
+  {# TODO - reevaluate empty render array issue 3425818 #}
   {% if image|render|trim %}
     <div class="hero__image">
       {{ image }}
