@@ -8,6 +8,7 @@
     {{ image }}
   </div>
 
+  {# TODO - reevaluate empty render array issue 3425818 #}
   {% if caption|render|trim %}
     <figcaption class="figure__caption">
       {{ caption }}

@@ -15,6 +15,32 @@ In the interest of using the simplest solutions that meet the needs of site buil
 ### Drupal UI Suite
 We are using the UI Suite (https://www.drupal.org/project/ui_suite) with a focus on the UI Patterns and UI Styles modules.
 
+## SDC Empty blocks rendering
+Known bug: for non-required slots (those which should not render when empty), the correct SDC Twig code will render an empty slot.
+
+Example correct twig:
+
+```
+  {% if caption %}
+  <figcaption class="figure__caption">
+    {{ caption }}
+  </figcaption>
+{% endif %}
+```
+This will cause us to render the figcaption element even when the field that is mapped to this slot is empty. There is an open issue to correct this: https://www.drupal.org/project/drupal/issues/3425818.
+
+As a temporary fix, optional fields can be done like so in the component's Twig:
+
+```
+  {% if caption|render|trim %}
+  <figcaption class="figure__caption">
+    {{ caption }}
+  </figcaption>
+{% endif %}
+```
+
+Once a fix is available for issue 3425818, we can revert back to '{% if caption %}'.
+
 ## Starting
 'npm i'
 
