@@ -11,6 +11,11 @@ variants:
   vertical:
     title: Vertical
 
+props:
+  type: object
+  additionalProperties: false
+  properties: {}
+
 slots:
   links:
     title: Links

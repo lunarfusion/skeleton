@@ -7,6 +7,8 @@ links:
 
 props:
   type: object
+  additionalProperties: false
+  properties: {}
 
 slots:
   content:

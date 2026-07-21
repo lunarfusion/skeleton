@@ -7,8 +7,10 @@ links:
 
 props:
   type: object
+  additionalProperties: false
+  properties: {}
 
-  slots:
-    label:
-      title: Tag label
-      description: 'Tag label text'
+slots:
+  label:
+    title: Tag label
+    description: 'Tag label text'
