@@ -51,15 +51,6 @@ props:
         - small
       default: default
 
-    theme:
-      type: string
-      description: Color theme
-      enum:
-        - theme-default
-        - theme-neutral
-        - theme-primary
-      default: theme-default
-
     transparent:
       type: boolean
       description: Nav menu has a transparent background.
