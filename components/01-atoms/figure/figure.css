@@ -42,3 +42,13 @@
     font-size: var(--skeleton-size-text-figure);
     color: var(--skeleton-color-fg-figure);
   }
+/*** VARIANTS - width ***/
+.figure--width-60 {
+    inline-size: 60%;
+  }
+.figure--width-40 {
+    inline-size: 40%;
+  }
+.figure--width-30 {
+    inline-size: 30%;
+  }

@@ -4,8 +4,15 @@ group: "Atoms"
 
 props:
   type: object
-  additionalProperties: false
-  properties: {}
+  properties:
+
+    width:
+      type: string
+      enum:
+        - 'width-80'
+        - 'width-40'
+        - 'width-30'
+      default: 'width-40'
 
 slots:
   image:

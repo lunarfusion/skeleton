@@ -1,6 +1,7 @@
 {% set classes = [
   'figure',
-  variant and variant != 'default' ? variant : ''
+  variant and variant != 'default' ? variant : '',
+  width ? 'figure--' ~ width,
 ] %}
 
 <figure{{ attributes.addClass(classes) }}>
