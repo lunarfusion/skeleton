@@ -32,8 +32,7 @@
 
   </div>
 
-  {# {% if image.0 %} <-- this won't display the image in ui patterns #}
-  {% if image %}
+  {% if image|render|trim %}
     <div class="card__image">
       {{ image }}
     </div>
