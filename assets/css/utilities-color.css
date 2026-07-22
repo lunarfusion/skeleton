@@ -17,15 +17,15 @@
 
 /* neutrals */
 .bg-neutral {
-  background-color: var(--skeleton-color-bg-neutral);
+  background-color: var(--skeleton-color-bg-neutral-l1);
 }
 
 .bg-neutral-subdued {
-  background-color: var(--skeleton-color-bg-neutral-subdued);
+  background-color: var(--skeleton-color-bg-neutral-l2);
 }
 
 .bg-neutral-extra-subdued {
-  background-color: var(--skeleton-color-bg-neutral-extra-subdued);
+  background-color: var(--skeleton-color-bg-neutral-l3);
 }
 
 

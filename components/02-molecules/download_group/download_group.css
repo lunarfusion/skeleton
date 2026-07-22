@@ -1,7 +1,7 @@
 /*** Download Group Variables ***/
 .download-group {
   --skeleton-padding-download-group: 1.25rem;
-  --skeleton-color-bg-download-group: var(--skeleton-color-bg-neutral-extra-subdued);
+  --skeleton-color-bg-download-group: var(--skeleton-color-bg-neutral-l2);
   --skeleton-border-radius-download-group: var(--skeleton-size-radius-sm);
   --skeleton-color-shadow-download-group: var(--skeleton-color-shadow-neutral);
 }

@@ -32,7 +32,7 @@ Update to remove CSS as the system implementation matures
 .ui-patterns__components-item {
     max-inline-size: 100%;
     padding: 2rem;
-    background-color: var(--skeleton-color-bg-neutral-extra-subdued);
+    background-color: var(--skeleton-color-bg-neutral-l1);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -69,6 +69,7 @@ Update to remove CSS as the system implementation matures
     padding: calc(var(--skeleton-size-gap-y) * 2)var(--skeleton-size-gap-x);
     border-radius: var(--skeleton-size-radius-lrg);
     background: var(--skeleton-color-bg-base);
+    /* background-color: var(--skeleton-color-bg-neutral-l2); */
     box-shadow:
       var(--skeleton-color-shadow-neutral-subdued) 0px 1px 3px,
       var(--skeleton-color-shadow-neutral) 0px 1px 2px;

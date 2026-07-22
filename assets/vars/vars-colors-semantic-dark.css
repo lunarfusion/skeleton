@@ -17,9 +17,9 @@
     --skeleton-color-border-inverted: var(--skeleton-color-gray-090);
     
     /*** Background - Neutral ***/
-    --skeleton-color-bg-neutral: var(--skeleton-color-gray-030);
-    --skeleton-color-bg-neutral-subdued: var(--skeleton-color-gray-020);
-    --skeleton-color-bg-neutral-extra-subdued: var(--skeleton-color-gray-015);
+    --skeleton-color-bg-neutral-l1: var(--skeleton-color-gray-017);
+    --skeleton-color-bg-neutral-l2: var(--skeleton-color-gray-015);
+    --skeleton-color-bg-neutral-l3: var(--skeleton-color-gray-012);
     
     /*** Borders - Neutral ***/
     --skeleton-color-border-neutral: var(--skeleton-color-gray-080);
@@ -36,8 +36,9 @@
     
     /*** Background - Brand ***/
     /* NOTE these are the backgrounds of theme-primary which are the same across modes */
-    --skeleton-color-bg-primary: var(--skeleton-color-violet-050);
-    --skeleton-color-bg-primary-subdued: var(--skeleton-color-violet-040);
+    --skeleton-color-bg-primary: var(--skeleton-color-violet-025);
+    --skeleton-color-bg-primary-subdued: var(--skeleton-color-violet-030);
+    
     
     /*** Border - Brand ***/
     --skeleton-color-border-primary: var(--skeleton-color-violet-080);

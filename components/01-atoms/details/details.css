@@ -3,7 +3,7 @@
   /* colors */
   --details-color-text: var(--skeleton-color-fg-base);
   --details-color-border: var(--skeleton-color-border-neutral-extra-subdued);
-  --details-color-background: var(--skeleton-color-bg-neutral-extra-subdued);
+  --details-color-background: var(--skeleton-color-bg-neutral-l3);
   --details-color-background-content: var(--skeleton-color-bg-base);
   --details-color-marker: var(--skeleton-color-fg-subdued);
   

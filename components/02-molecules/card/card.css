@@ -6,12 +6,14 @@
   --skeleton-size-radius-card: var(--skeleton-size-radius-med);
   --skeleton-border-radius-card-title: var(--skeleton-size-radius-sm);
   --skeleton-size-text-card-summary: var(--skeleton-size-text-small);
+  
   --skeleton-color-accent-title: var(--skeleton-color-border-secondary);
-  --skeleton-color-bg-card: var(--skeleton-color-bg-neutral-extra-subdued);
+  --skeleton-color-bg-card: var(--skeleton-color-bg-neutral-l3);
   --skeleton-color-bg-card-title-hover: var(--skeleton-color-bg-primary-subdued);
   --skeleton-color-text-card-summary: var(--skeleton-color-fg-base);
   --skeleton-color-bg-image-overlay-card: var(--skeleton-color-bg-primary);
   --skeleton-color-shadow-card: var(--skeleton-color-shadow-neutral);
+  
   --skeleton-transition-card: var(--skeleton-transition-ease-in);
 }
 /*** Card Styles ***/
