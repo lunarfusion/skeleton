@@ -1,21 +1,19 @@
 /*** Hero Variables ***/
 .hero {
-  --skeleton-color-border-hero: var(--skeleton-color-border-neutral-extra-subdued);
-  --skeleton-color-bg-hero: var(--skeleton-color-bg-neutral-extra-subdued);
+  --skeleton-color-border-hero: var(--skeleton-color-border-primary);
+  --skeleton-color-bg-hero: var(--skeleton-color-bg-primary-subdued);
+  --skeleton-color-fg-icon-hero: var(--skeleton-color-fg-base);
+  
+  --skeleton-size-text-hero: var(--skeleton-size-text-med);
   
   --skeleton-size-block-hero-default: 350px;
   --skeleton-size-block-hero-medium: 500px;
   --skeleton-size-block-hero-tall: 650px;
-  
-  --skeleton-size-text-hero: var(--skeleton-size-text-med);
-  --skeleton-color-fg-icon-hero: var(--skeleton-color-fg-base);
-  
-  --skeleton-color-border-primary-hero: var(--skeleton-color-border-primary);
-  --skeleton-color-bg-primary-hero: var(--skeleton-color-bg-primary-subdued);
+  --skeleton-size-hero-block: var(--skeleton-size-block-hero-default);
 }
 /*** Hero Styles ***/
 .hero {
-  --skeleton-size-hero-block: var(--skeleton-size-block-hero-default);
+  
   
   position: relative;
   display: flex;
@@ -150,11 +148,6 @@
   }
 .hero--text-align-center {
     text-align: center;
-  }
-/*** VARIANTS - color theme ***/
-.hero--theme-primary {
-    --skeleton-color-border-hero: var(--skeleton-color-border-primary-hero);
-    --skeleton-color-bg-hero: var(--skeleton-color-bg-primary-hero);
   }
 /*** VARIANTS - hero height ***/
 .hero--height-medium {

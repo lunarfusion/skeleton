@@ -25,7 +25,7 @@ library_wrapper: >
     'layout-diptych',
   ] %}
   {% for layout in layouts %}
-  <div class="ui-patterns__story-variant ui-patterns__story-variant--fulltheme">
+  <div class="ui-patterns__story-variant ui-patterns__story-variant--fullwidth">
     {% set layout_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
       class: ['hero hero--' ~ layout]
     })})} %}
