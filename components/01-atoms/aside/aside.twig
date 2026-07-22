@@ -10,10 +10,9 @@
 {% set attributes = attributes.addClass(classes) %}
 
 <aside{{ attributes.addClass(classes) }}>
-
   <span class="aside__title">{{ title }}</span>
 
-  {% if summary.0 %}
+  {% if summary %}
     <span class="aside__content">{{ summary }}</span>
   {% endif %}
 </aside>
