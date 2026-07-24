@@ -14,8 +14,7 @@
       --skeleton-color-fg-disabled: var(--skeleton-color-gray-050);
       
       /*** Foreground - Brand ***/
-      --skeleton-color-fg-primary: var(--skeleton-color-violet-040);
-      --skeleton-color-fg-primary-inverted: var(--skeleton-color-violet-080);
+      --skeleton-color-fg-primary: var(--skeleton-color-violet-080);
       
       /*** System accent color ***/
       --skeleton-color-accent: var(--skeleton-color-violet-070);

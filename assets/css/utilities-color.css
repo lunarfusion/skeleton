@@ -81,10 +81,6 @@
   color: var(--skeleton-color-fg-primary);
 }
 
-.fg-primary-inverted {
-  color: var(--skeleton-color-fg-primary-inverted);
-}
-
 .fg-alert-negative {
   color: var(--skeleton-color-fg-negative);
 }

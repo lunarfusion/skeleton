@@ -22,7 +22,7 @@
   /*** Color Theme - Default Transparent ***/
   --skeleton-color-text-nav-item: var(--skeleton-color-fg-base);
   --skeleton-color-text-nav-item-hover: var(--skeleton-color-fg-base);
-  --skeleton-color-text-nav-item-active-trail: var(--skeleton-color-fg-primary);
+  --skeleton-color-text-nav-item-active-trail: var(--skeleton-color-fg-action-default);
   --skeleton-color-border-nav-item: var(--skeleton-color-border-neutral-subdued);
   --skeleton-color-border-nav-item-secondary: var(--skeleton-color-border-neutral-extra-subdued);
   --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
