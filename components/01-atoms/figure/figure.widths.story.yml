@@ -21,7 +21,6 @@ library_wrapper: >
     })})} %}
     <h4 class="title title--micro">{{ width }}</h4>
     {% set width_slots = {'#slots': _story['#slots']|merge({
-      'image': '<img src="https://picsum.photos/600/400.jpg">',
       'caption': "Figure caption text xxxxx xxxxxxxx xxxx xx xxxxxxx xxxxx.",
     })} %}
     {% set width_story = _story %}
