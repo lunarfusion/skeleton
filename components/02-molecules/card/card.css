@@ -33,6 +33,7 @@
 /* max-inline-size: calc(1500px * 0.3); */
 /* min-inline-size: calc(1500px * 0.2); */
 .card__content {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -44,26 +45,6 @@
     position: relative;
     inline-size: 100%;
   }
-.card__title::before,
-    .card__title::after {
-      z-index: 3;
-      content: "";
-      height: var(--skeleton-size-accent-title-card);
-      width: 25%;
-      position: absolute;
-      top: calc((var(--skeleton-size-gap-inner-card) * -1) - 0.25rem);
-      left: -0.25rem;
-      background-color: var(--skeleton-color-accent-title);
-      overflow: hidden;
-      border-radius: var(--skeleton-border-radius-card-title);
-    }
-.card__title::after {
-      width: calc(20% + 0.25rem);
-      transform: scaleX(20%);
-      transform-origin: top left;
-      left: 0;
-      transition: var(--skeleton-transition-card);
-    }
 .card__summary {
     display: flex;
     flex-direction: column;
