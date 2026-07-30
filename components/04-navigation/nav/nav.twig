@@ -19,7 +19,6 @@
 
 
   <nav{{ attributes.addClass(classes).setAttribute('id',menu_id) }} role="navigation" aria-label="{{ menu_name }}">
-
     {% import _self as menus %}
     {% if collapsible %}
       {{ _self.menu_links_collapsible(items, attributes, 0, menu_id, collapsible) }}

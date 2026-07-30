@@ -1,8 +1,26 @@
 .region {
   position: relative;
   
-  &--header-top {
-    background-color: var(--skeleton-color-bg-primary-subdued);
+  &--header {
+    --skeleton-space-x-inner-row: var(--skeleton-size-gap-x);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    inline-size: 100%;
+    justify-content: space-between;
+    container-type: inline-size;
+    
+    @media (width <=994px) {
+      display: block;
+      flex-direction: column;
+      
+      /* allows menu toggle placement on mobile */
+      > .block {
+        position: relative;
+        inline-size: 100%;
+        flex-grow: 1;
+      }
+    }
   }
   
   &--sidebar-second,
@@ -16,7 +34,6 @@
     .block__content {
       padding-inline-start: var(--skeleton-size-gap-x);
     }
-    
     
     @media (width <=994px) {
       padding-inline-start: var(--skeleton-size-gap-x);

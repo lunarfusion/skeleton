@@ -43,16 +43,20 @@
 
 /*** Navigation Styles ***/
 .nav {
-  width: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   position: relative;
+  display: flex;
+  align-items: center;
+  Justify-content: stretch;
   
   /*** UL element ***/
   &__list {
     position: relative;
     display: flex;
     flex-direction: column;
+    inline-size: 100%;
     margin: 0;
-    /* padding: var(--skeleton-size-gap-focus-indicator); */
     padding: 0;
     background-color: var(--skeleton-color-bg-subnav);
     list-style-type: none;
@@ -71,7 +75,7 @@
     transition: var(--skeleton-transition-nav-item);
     box-shadow: var(--skeleton-color-border-nav-item) 0px 0.5px 0px, var(--skeleton-color-border-nav-item) 0px 0.5px 0px inset;
     
-    /* fg styles */
+    /* foreground */
     color: var(--skeleton-color-text-nav-item);
     font-size: var(--skeleton-size-text-nav-level-0);
     line-height: 1.2;
@@ -120,7 +124,7 @@
     outline: none;
     background: transparent;
     transition: var(--skeleton-transition-nav-item);
-    /* fg styles */
+    /* foreground */
     text-align: start;
     line-height: inherit;
     font-size: inherit;
@@ -210,7 +214,6 @@
     
     .nav__subnav-wrapper {
       inline-size: 100%;
-      /* transition: var(--skeleton-transition-nav-item); */
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       z-index: 9;
       
@@ -221,6 +224,7 @@
     }
     
     details {
+      /* TODO - details components do not animate properly */
       /* transition: var(--skeleton-transition-nav-item); */
       
       summary::marker {
@@ -309,7 +313,7 @@
   
   /*** Variant - Main Nav ***/
   /* we name the region so the mobile drawer does not effect sidebar nav */
-  .region--header-bottom &--main {
+  header &--main {
     background-color: var(--skeleton-color-bg-nav-main);
     padding-inline: 1.5rem;
     
@@ -371,12 +375,18 @@
       }
     }
     
-    @media (max-width: 776px) {
+    @media (width <=994px) {
       & {
+        left: 0;
+        right: 0;
+        block-size: 100vh;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
         padding-inline: 0;
         position: absolute;
         transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-        z-index: 3;
+        z-index: 99;
         transform: translateX(100%);
         background: var(--skeleton-color-bg-nav-mobile);
         border-block-end: 6px solid var(--skeleton-color-border-nav-mobile);
@@ -388,6 +398,8 @@
       
       > .nav__list {
         flex-direction: column;
+        z-index: 99;
+        background: inherit;
       }
       
       > .nav__list .nav__subnav-wrapper {

@@ -1,7 +1,9 @@
 .branding {
   position: relative;
-  padding: 1.25rem 2rem;
-  background-color: var(--skeleton-color-bg-primary);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   
   &__content {
     display: flex;
@@ -10,7 +12,7 @@
   }
   
   &__logo {
-    inline-size: 100px;
+    inline-size: 80px;
   }
   
   &__sitename {
@@ -44,5 +46,9 @@
   
   @media (width <=776px) {
     padding: 1rem 0.75rem;
+  }
+  
+  @media (width <=994px) {
+    inline-size: 100%;
   }
 }

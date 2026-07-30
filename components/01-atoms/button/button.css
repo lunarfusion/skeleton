@@ -293,9 +293,12 @@
     color: var(--skeleton-color-fg-button-ghost-default);
     display: none;
   }
-@media (max-width: 776px) {
+@media (width <=994px) {
       .button--menu-toggle {
         display: block;
+        position: absolute;
+        top: 1rem;
+        right: 0;
       }
     }
 /* positioning in branding header */

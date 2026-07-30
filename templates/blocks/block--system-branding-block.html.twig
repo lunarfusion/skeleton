@@ -7,7 +7,7 @@
     variant: quiet,
   }) }}
 
-  <div class="branding theme-primary">
+  <div class="branding">
     <div class="branding__content">
     {% if site_logo %}
       <div class="branding__logo">
@@ -27,6 +27,7 @@
         {% endif %}
       </div>
     {% endif %}
+    </div>
 
     {{ include ('skeleton:button', {
       icon_only: false,
@@ -38,7 +39,6 @@
       icon: 'bars',
       input_id:'menu-toggle',
     }) }}
-    </div>
 
   </div>
 {% endblock %}
