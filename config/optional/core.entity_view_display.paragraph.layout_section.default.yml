@@ -1,0 +1,33 @@
+uuid: c89ce614-6726-4cec-bf65-57b9d561cb3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.layout_section.field_background
+    - field.field.paragraph.layout_section.field_full_width
+    - paragraphs.paragraphs_type.layout_section
+  module:
+    - options
+id: paragraph.layout_section.default
+targetEntityType: paragraph
+bundle: layout_section
+mode: default
+content:
+  field_background:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_full_width:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }

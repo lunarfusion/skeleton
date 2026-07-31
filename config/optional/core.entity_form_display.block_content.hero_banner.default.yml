@@ -1,0 +1,52 @@
+uuid: 66d26940-0c07-4f9b-a4da-19670e9c9ebd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner
+    - field.field.block_content.hero_banner.body
+    - field.field.block_content.hero_banner.field_hero_banner_heading
+    - field.field.block_content.hero_banner.field_hero_banner_image
+    - field.field.block_content.hero_banner.field_hero_banner_text
+    - image.style.thumbnail
+  module:
+    - image
+id: block_content.hero_banner.default
+targetEntityType: block_content
+bundle: hero_banner
+mode: default
+content:
+  field_hero_banner_heading:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_hero_banner_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_hero_banner_text:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true

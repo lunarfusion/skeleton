@@ -1,0 +1,38 @@
+uuid: c816cbe1-4b63-41f7-b9c5-332bfb88c073
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.people.field_image
+    - field.field.node.people.field_name
+    - field.field.node.people.field_specialty
+    - image.style.medium
+    - node.type.people
+  module:
+    - image
+    - user
+id: node.people.teaser
+targetEntityType: node
+bundle: people
+mode: teaser
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_name: true
+  field_specialty: true

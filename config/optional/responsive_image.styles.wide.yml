@@ -1,0 +1,33 @@
+uuid: 5cffd3ef-5656-4446-b200-b771d8076568
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.600
+    - image.style.800
+    - image.style.max_325x325
+    - image.style.wide
+  theme:
+    - skeleton
+_core:
+  default_config_hash: Pvik9YqtjA9ALn5ccla1mwTIE4gN5fQ-dK1B0zX0b1o
+id: wide
+label: Wide
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: wide
+    breakpoint_id: skeleton.images.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: '800'
+    breakpoint_id: skeleton.images.small
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: '600'
+    breakpoint_id: skeleton.images.extra_small
+    multiplier: 1x
+breakpoint_group: skeleton.images
+fallback_image_style: max_325x325

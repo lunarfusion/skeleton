@@ -1,4 +1,20 @@
-{{ include ('skeleton:figure', {
-  image: content.field_figure_image,
-  caption: content.field_figure_caption,
-}, with_context: false) }}
+{# {% extends 'paragraph.html.twig' %}
+{% block content %}
+  {{ include ('skeleton:figure', {
+    image: content.field_figure_image,
+    caption: content.field_figure_caption,
+  }, with_context: false) }}
+{% endblock content %} #}
+
+
+
+{% extends 'paragraph.html.twig' %}
+{% block content %}
+
+{# {{ dump(paragraph) }} #}
+
+  {{ include ('skeleton:figure', {
+    image: not paragraph.field_figure_image.isEmpty() ? content.field_figure_image,
+    caption: not paragraph.field_figure_image.isEmpty() ? content.field_figure_caption,
+  }, with_context: false) }}
+{% endblock content %}

@@ -23,12 +23,6 @@ settings:
     -
       value: bg-neutral
       label: Neutral
-    -
-      value: bg-neutral-subdued
-      label: 'Neutral Subdued'
-    -
-      value: bg-neutral-extra-subdued
-      label: 'Neutral Extra Subdued'
   allowed_values_function: ''
 module: options
 locked: false

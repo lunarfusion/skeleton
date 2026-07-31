@@ -1,0 +1,15 @@
+uuid: bbb4f12a-ee22-4421-b734-8b2d2983ab58
+langcode: en
+status: true
+dependencies: {  }
+name: '800'
+label: '800'
+effects:
+  9b9f03e3-e2a8-4260-9e8d-12728698e017:
+    uuid: 9b9f03e3-e2a8-4260-9e8d-12728698e017
+    id: image_scale
+    weight: 1
+    data:
+      width: 800
+      height: null
+      upscale: false

@@ -1,0 +1,8 @@
+uuid: 139810d8-46f7-40d9-8e27-0f0f5dd08c86
+langcode: en
+status: true
+dependencies: {  }
+id: card_group
+label: 'Card Group'
+revision: false
+description: 'A group of navigation cards with a title.'

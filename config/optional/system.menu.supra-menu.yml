@@ -1,0 +1,8 @@
+uuid: f9612bc5-beda-48e4-a359-405caa455a90
+langcode: en
+status: true
+dependencies: {  }
+id: supra-menu
+label: 'Supra Menu'
+description: ''
+locked: false

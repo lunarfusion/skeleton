@@ -10,8 +10,8 @@ dependencies:
     - skeleton
 id: skeleton_mainnavigation_2
 theme: skeleton
-region: header_bottom
-weight: -10
+region: header
+weight: -12
 provider: null
 plugin: 'system_menu_block:main'
 settings:

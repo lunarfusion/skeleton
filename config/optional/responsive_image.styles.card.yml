@@ -1,0 +1,30 @@
+uuid: e1f859ac-b375-4feb-a272-9870ae82ae50
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.600
+    - image.style.800
+    - image.style.900
+  theme:
+    - skeleton
+id: card
+label: Card
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: '900'
+    breakpoint_id: skeleton.images.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: '800'
+    breakpoint_id: skeleton.images.small
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: '600'
+    breakpoint_id: skeleton.images.extra_small
+    multiplier: 1x
+breakpoint_group: skeleton.images
+fallback_image_style: '_original image_'

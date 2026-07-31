@@ -11,7 +11,7 @@ _core:
 id: skeleton_search_form_narrow
 theme: skeleton
 region: header_bottom
-weight: -11
+weight: -12
 provider: null
 plugin: search_form_block
 settings:

@@ -1,0 +1,34 @@
+uuid: 0375cddf-925c-44e1-9945-e4b65ee1231d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.layout_section.field_background
+    - field.field.paragraph.layout_section.field_full_width
+    - paragraphs.paragraphs_type.layout_section
+id: paragraph.layout_section.default
+targetEntityType: paragraph
+bundle: layout_section
+mode: default
+content:
+  field_background:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_full_width:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  layout_paragraphs_fields:
+    weight: -200
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

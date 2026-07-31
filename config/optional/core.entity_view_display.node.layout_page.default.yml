@@ -1,0 +1,70 @@
+uuid: 45ae393f-142e-49b2-b467-7071967d5cbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.layout_page.body
+    - field.field.node.layout_page.field_content_layout_section
+    - field.field.node.layout_page.field_hero_image
+    - field.field.node.layout_page.field_hero_layout
+    - field.field.node.layout_page.field_hero_text
+    - node.type.layout_page
+  module:
+    - image
+    - layout_paragraphs
+    - options
+    - text
+    - user
+id: node.layout_page.default
+targetEntityType: node
+bundle: layout_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_content_layout_section:
+    type: layout_paragraphs
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_hero_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_hero_layout:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_hero_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

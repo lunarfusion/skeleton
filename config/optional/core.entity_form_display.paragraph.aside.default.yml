@@ -1,0 +1,32 @@
+uuid: 706ffcd9-8d32-490a-88a9-5fc5dbc77542
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.aside.field_aside_content
+    - field.field.paragraph.aside.field_aside_title
+    - paragraphs.paragraphs_type.aside
+id: paragraph.aside.default
+targetEntityType: paragraph
+bundle: aside
+mode: default
+content:
+  field_aside_content:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_aside_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

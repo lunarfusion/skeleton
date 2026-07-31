@@ -41,6 +41,7 @@
     padding: 0.25rem 0.5rem;
     font-size: var(--skeleton-size-text-figure);
     color: var(--skeleton-color-fg-figure);
+    border: 2px dashed red;
   }
 /*** VARIANTS - width ***/
 .figure--width-60 {

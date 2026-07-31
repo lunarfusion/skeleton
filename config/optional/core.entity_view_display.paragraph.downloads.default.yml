@@ -1,0 +1,33 @@
+uuid: a87f09ac-8f82-4a02-b367-daf641f36be1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.downloads.field_download_item
+    - field.field.paragraph.downloads.field_downloads_title
+    - paragraphs.paragraphs_type.downloads
+  module:
+    - entity_reference_revisions
+id: paragraph.downloads.default
+targetEntityType: paragraph
+bundle: downloads
+mode: default
+content:
+  field_download_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_downloads_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

@@ -1,0 +1,29 @@
+uuid: a731fb2e-cfe8-45b7-a574-19725c5c5a3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - menu_link_content
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  view_mode:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

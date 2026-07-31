@@ -1,0 +1,35 @@
+uuid: 360168c9-5299-45f0-8aa5-95d00ba8d68c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.figure.field_figure_caption
+    - field.field.paragraph.figure.field_figure_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.figure
+  module:
+    - image
+id: paragraph.figure.default
+targetEntityType: paragraph
+bundle: figure
+mode: default
+content:
+  field_figure_caption:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_figure_image:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

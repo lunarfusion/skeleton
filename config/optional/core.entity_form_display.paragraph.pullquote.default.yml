@@ -1,0 +1,23 @@
+uuid: 59942952-23c9-474f-b53c-71b64401f931
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pullquote.field_pullquote_content
+    - paragraphs.paragraphs_type.pullquote
+id: paragraph.pullquote.default
+targetEntityType: paragraph
+bundle: pullquote
+mode: default
+content:
+  field_pullquote_content:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

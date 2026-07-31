@@ -1,0 +1,35 @@
+uuid: a9104f8f-ea6e-4cc6-9142-0c903d599269
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.figure.field_figure_caption
+    - field.field.paragraph.figure.field_figure_image
+    - paragraphs.paragraphs_type.figure
+  module:
+    - image
+id: paragraph.figure.default
+targetEntityType: paragraph
+bundle: figure
+mode: default
+content:
+  field_figure_caption:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_figure_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
