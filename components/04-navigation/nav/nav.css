@@ -12,9 +12,8 @@
   --skeleton-size-text-nav-level-1: 0.75rem;
   --skeleton-size-text-nav-level-2: 0.65rem;
   
-  --skeleton-size-space-y-nav-item: 1rem;
+  --skeleton-size-space-y-nav-item: 0.55rem;
   --skeleton-size-space-x-nav-item: 0.5rem;
-  --skeleton-size-y-nav-item-main: 45px;
   
   --skeleton-transition-nav-icon: var(--skeleton-transition-basic);
   --skeleton-transition-nav-item: var(--skeleton-transition-basic);
