@@ -34,7 +34,13 @@
     justify-content: center;
   }
   
-  @media (max-width: 994px) {
+  @media (width <=1200px) {
+    &--wrap-md {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (width <=994px) {
     &--wrap-sm {
       flex-wrap: wrap;
     }
@@ -96,11 +102,24 @@
   
   .col,
   .col--9,
+  .col--8,
   .col--6,
   .col--4,
   .col--3 {
     flex: 0 0 100%;
     max-inline-size: 100%;
+  }
+}
+
+/* for column within column, fullwidth at wider screen */
+@media (width <=994px) {
+  .col {
+
+    .col--4,
+    .col--8 {
+      flex: 0 0 100%;
+      max-inline-size: 100%;
+    }
   }
 }
 
