@@ -77,15 +77,6 @@
     flex: 0 0 calc(75% - var(--col-spacing));
     max-inline-size: calc(75% - var(--col-spacing));
   }
-@container (max-width: 994px) {
-  
-  .col--9,
-  .col--8,
-  .col--4 {
-    flex: 0 0 100%;
-    max-inline-size: 100%;
-  }
-}
 @media (width <=776px) {
   
   .col,
