@@ -1,3 +1,11 @@
+{%
+  set classes = [
+    'article',
+    'node'
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
 
 <article{{ attributes }}>
 
@@ -18,8 +26,40 @@
     </footer>
   {% endif %}
 
+
   <div{{ content_attributes }}>
-    {{ content }}
+    <div class="container">
+
+
+        <div class="row">
+          <div class="col col--12">
+            <div class="node__title">
+              {{ include ('skeleton:title', {
+                content: label,
+                html_tag: 'h1',
+                size: 'XL',
+                variant: 'page',
+              }, with_context: false) }}
+              </div>
+            {# end node title #}
+            {{ content.field_specialty }}
+          </div>
+        </div>
+
+        <div class="row row--wrap-xs">
+          <div class="col col--4">
+            {{ content.field_image }}
+          </div>
+
+          <div class="col col--8">
+            <div class="node__body">
+              {{ content.body }}
+            </div>
+          </div>
+        </div>
+
+
+    </div>
   </div>
 
 </article>
