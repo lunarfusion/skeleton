@@ -45,7 +45,14 @@
 
   {% if header %}
     <header>
-      {{ header }}
+
+      {{ include ('skeleton:title', {
+        content: view.title,
+        html_tag: 'h1',
+        size: 'XL',
+        variant: 'page',
+      }, with_context: false) }}
+
     </header>
   {% endif %}
 

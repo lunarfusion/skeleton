@@ -42,12 +42,14 @@
 %}
 
 {% if title %}
-  {{ include ('skeleton:title', {
-    content: title,
-    html_tag: 'h3',
-    size: 'M',
-    variant: 'block',
-  }, with_context: false) }}
+  <div class="mt-3">
+    {{ include ('skeleton:title', {
+      content: title,
+      html_tag: 'h2',
+      size: 'L',
+      variant: 'section',
+    }, with_context: false) }}
+  </div>
 {% endif %}
 <div{{ attributes.addClass(classes).setAttribute('style', responsive_grid_styles|join()) }}>
   {% for item in items %}
