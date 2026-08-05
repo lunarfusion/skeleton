@@ -58,15 +58,13 @@
     margin: 0;
     margin-block-end: 1rem;
     padding-block-start: 1.5rem;
-    padding-inline-start: 1.5rem;
   }
 .title--block::before {
       content: "";
       position: absolute;
       top: 0;
-      left: 0;
       right: 0;
-      width: 100%;
+      width: calc(100% + 1rem);
       height: var(--skeleton-size-accent-title-block);
       background-color: var(--skeleton-color-accent-title);
       border-radius: calc(var(--skeleton-size-accent-title-block) * 0.5);
