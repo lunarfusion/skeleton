@@ -1,0 +1,20 @@
+uuid: a954f9ca-abc0-49b8-a6ef-2d50cff37540
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - skeleton
+id: skeleton_help_2
+theme: skeleton
+region: footer
+weight: -14
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: visible
+  provider: help
+visibility: {  }

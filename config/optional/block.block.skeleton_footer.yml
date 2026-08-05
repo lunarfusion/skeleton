@@ -1,0 +1,29 @@
+uuid: 5c7c9ce8-c409-4a9c-82e2-cf17c31c7628
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block_title
+    - system
+  theme:
+    - skeleton
+third_party_settings:
+  menu_block_title:
+    modify_title: false
+id: skeleton_footer
+theme: skeleton
+region: footer
+weight: -12
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

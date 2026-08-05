@@ -1,0 +1,23 @@
+uuid: 8c1c62d7-7c2c-4728-80a4-8016c03e9bda
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6d0c2d5f-344c-40c9-a4f1-a9d7b7a97ec4'
+  module:
+    - block_content
+  theme:
+    - skeleton
+id: skeleton_footerblock
+theme: skeleton
+region: footer
+weight: -13
+provider: null
+plugin: 'block_content:6d0c2d5f-344c-40c9-a4f1-a9d7b7a97ec4'
+settings:
+  id: 'block_content:6d0c2d5f-344c-40c9-a4f1-a9d7b7a97ec4'
+  label: 'About Skeleton'
+  label_display: visible
+  provider: block_content
+  view_mode: full
+visibility: {  }

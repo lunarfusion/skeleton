@@ -256,7 +256,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: '<h1 class="title title--page title--sizeXL">[view:title]</h1>'
+            value: ''
             format: full_html
           tokenize: false
       footer: {  }
@@ -403,20 +403,7 @@ display:
       use_more_text: more
       link_display: page_1
       link_url: ''
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: ''
-            format: full_html
-          tokenize: false
+      header: {  }
       display_extenders: {  }
       block_description: 'Tag Block'
     cache_metadata:

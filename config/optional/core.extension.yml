@@ -18,6 +18,7 @@ module:
   dblog: 0
   devel: 0
   dynamic_page_cache: 0
+  easy_breadcrumb: 0
   editor: 0
   entity_reference_revisions: 0
   field: 0
@@ -45,6 +46,7 @@ module:
   path: 0
   path_alias: 0
   responsive_image: 0
+  sdc_devel: 0
   sdc_styleguide: 0
   search: 0
   shortcut: 0
@@ -55,7 +57,10 @@ module:
   ui_icons: 0
   ui_icons_library: 0
   ui_patterns: 0
+  ui_patterns_blocks: 0
+  ui_patterns_field: 0
   ui_patterns_library: 0
+  ui_patterns_views: 0
   ui_skins: 0
   ui_styles: 0
   ui_styles_library: 0

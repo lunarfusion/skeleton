@@ -3,19 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.people.body
     - field.field.node.people.field_image
-    - field.field.node.people.field_name
     - field.field.node.people.field_specialty
     - image.style.wide
     - node.type.people
   module:
     - image
+    - text
     - user
 id: node.people.default
 targetEntityType: node
 bundle: people
 mode: default
 content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_image:
     type: image
     label: hidden
@@ -25,15 +33,7 @@ content:
       image_loading:
         attribute: eager
     third_party_settings: {  }
-    weight: 0
-    region: content
-  field_name:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_specialty:
     type: entity_reference_label
@@ -41,11 +41,11 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
 hidden: {  }

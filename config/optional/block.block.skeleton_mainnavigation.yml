@@ -39,3 +39,4 @@ visibility:
       node: '@node.node_route_context:node'
     bundles:
       page: page
+      people: people
