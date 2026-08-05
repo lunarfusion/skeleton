@@ -1,0 +1,25 @@
+{% if items %}
+{%
+  set classes = [
+    'breadcrumbs',
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes) %}
+
+<div{{ attributes }}>
+<ul class="breadcrumbs__list">
+{% for item in items %}
+    {% if item.url %}
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+    {% else %}
+        <li class="breadcrumbs__item">
+            <span class="breadcrumbs__active-page">{{ item.title }}</span>
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>
+</div>
+{% endif %}

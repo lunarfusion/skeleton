@@ -1,0 +1,5 @@
+{% if breadcrumb %}
+  {{ include('skeleton:breadcrumbs', {
+  items: breadcrumb,
+  }, with_context: false) }}
+{% endif %}

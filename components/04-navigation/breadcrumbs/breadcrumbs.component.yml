@@ -1,0 +1,13 @@
+name: Breadcrumbs
+description: "Breadcrumbs show hierarchy of information architecture for a given page."
+group: Navigation
+links:
+   - "https://github.com/lunarfusion/skeleton"
+
+props:
+  type: object
+  properties:
+    items:
+      title: Items
+      description: "The label and URL of parent pages."
+      $ref: "ui-patterns://links"
