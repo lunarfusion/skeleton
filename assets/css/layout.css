@@ -15,5 +15,15 @@
   .layout--footer {
     margin: 0;
     padding: 1rem 2rem 3rem;
-    /* background-color: var(--skeleton-color-bg-primary); */
   }
+  
+  .layout--footer .row .block {
+        --col-spacing: var(--skeleton-size-gap-x);
+        
+        flex: 0 0 calc(33.3333% - var(--col-spacing));
+        max-inline-size: calc(33.3333% - var(--col-spacing));
+      }
+  
+  .layout--footer .row .block__content p {
+          font-size: var(--skeleton-size-text-small);
+        }
