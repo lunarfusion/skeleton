@@ -1,28 +1,18 @@
-.page {
-  display: flex;
-  flex-direction: column;
-}
-
-.main {
-  flex: 1;
-  inline-size: 100%;
-}
-
 .layout {
   position: relative;
   inline-size: 100%;
   background-color: var(--skeleton-color-bg-base);
 }
-
-.layout--banner {
+  
+  .layout--banner {
     margin-block-end: 2rem;
   }
-
-.layout--content-bottom {
+  
+  .layout--content-bottom {
     margin-block-end: 4rem;
   }
-
-.layout--footer {
+  
+  .layout--footer {
     margin: 0;
     padding: 1rem 2rem 3rem;
     /* background-color: var(--skeleton-color-bg-primary); */

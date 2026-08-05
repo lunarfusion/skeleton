@@ -9,19 +9,28 @@
 
 /*** BASE ***/
 @import "css/base-resets.css";
-@import "css/flexbox.css";
-@import "css/branding.css";
+
+/*** RENDER ARRAY ***/
+@import "css/page.css";
 @import "css/layout.css";
 @import "css/region.css";
 @import "css/block.css";
 @import "css/field.css";
-@import "css/table.css";
+
+/*** OBJECTS ***/
 @import "css/node.css";
 @import "css/article.css";
-@import "css/byline.css";
 @import "css/views.css";
 
+/*** BRANDING ***/
+@import "css/branding.css";
+
+/*** CONTENT ***/
+@import "css/table.css";
+@import "css/byline.css";
+
 /*** BASE UTLITIES ***/
+@import "css/flexbox.css";
 @import "css/utilities-color.css";
 @import "css/utilities-space.css";
 @import "css/utilities-size.css";
