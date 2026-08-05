@@ -1,14 +1,21 @@
-.node__header {
+.node {
+  width: 100%;
+}
+  
+  .node__header {
     display: flex;
     flex-direction: column-reverse;
   }
+  
   .node__title {
     /* placeholder node title */
   }
+  
   .node__body {
     /* placeholder node content */
     margin-block-end: 4rem;
   }
+  
   .node--feature {
     /* placeholder feature page node */
   }
