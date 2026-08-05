@@ -31,9 +31,7 @@ library_wrapper: >
     })})} %}
     <h4 class="title title--micro">{{ layout }}</h4>
     {% set layout_slots = {'#slots': _story['#slots']|merge({
-      'heading': '<h1>Welcome to Skeleton Theme</h1>',
       'text': "Great turbulent clouds inconspicuous motes of rock and gas descended from astronomers gathered by gravity star stuff harvesting star light as a patch of light.",
-      'image': '<img src="/themes/custom/skeleton/assets/images/placeholder-hero.jpg">',
     })} %}
     {% set layout_story = _story %}
     {{ layout_story|merge(layout_props)|merge(layout_slots) }}

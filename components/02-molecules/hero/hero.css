@@ -3,9 +3,9 @@
   --skeleton-color-border-hero: var(--skeleton-color-border-primary);
   --skeleton-color-bg-hero: var(--skeleton-color-bg-primary-subdued);
   --skeleton-color-fg-icon-hero: var(--skeleton-color-fg-base);
-  
+
   --skeleton-size-text-hero: var(--skeleton-size-text-med);
-  
+
   --skeleton-size-block-hero-default: 350px;
   --skeleton-size-block-hero-medium: 500px;
   --skeleton-size-block-hero-tall: 650px;
@@ -13,8 +13,6 @@
 }
 /*** Hero Styles ***/
 .hero {
-  
-  
   position: relative;
   display: flex;
   flex-direction: column-reverse;
@@ -95,7 +93,7 @@
       -webkit-line-clamp: unset;
       line-clamp: unset;
     }
-    
+
     .hero .hero__content-inner {
       padding: calc(var(--skeleton-size-gap-x) * 1.5);
     }
@@ -111,9 +109,9 @@
       align-items: stretch;
     }
 .hero--layout-diptych .hero__content {
-      flex: 0 0 50%;
+      /* flex: 0 0 50%;
       max-inline-size: 50%;
-      align-items: flex-end;
+      align-items: flex-end; */
     }
 .hero--layout-diptych .hero__content-inner {
       max-inline-size: 650px;
@@ -126,7 +124,7 @@
         flex-direction: column-reverse;
         justify-content: flex-start;
       }
-        
+
         .hero--layout-diptych .hero__content {
           flex: 0 0 100%;
           max-inline-size: 100%;
@@ -134,7 +132,7 @@
           flex-grow: 0;
           flex-basis: 0;
         }
-        
+
         .hero--layout-diptych .hero__content-inner {
           max-inline-size: unset;
         }
