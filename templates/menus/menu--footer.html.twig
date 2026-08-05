@@ -1,0 +1,12 @@
+{% if items %}
+  {{ include ('skeleton:nav', {
+    layout: 'vertical',
+    collapsible: false,
+    transparent: true,
+    size: default,
+    items: items,
+    main: false,
+    nav_id: 'footer-nav',
+    menu_name: 'footer menu'
+  }, with_context: false) }}
+{% endif %}
