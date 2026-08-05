@@ -25,7 +25,7 @@
 }
 /*** Variant - Page Title ***/
 .title--page {
-    /* margin-block-end: 2rem; */
+    margin-block-end: 1rem;
     margin-block-start: 4rem;
   }
 .title--feature-page {
