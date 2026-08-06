@@ -298,14 +298,8 @@
         display: block;
         position: absolute;
         top: 1rem;
-        right: 0;
+        right: calc(0.5rem + var(--skeleton-size-border-button) + var(--skeleton-size-focus-indicator));
       }
-    }
-/* positioning in branding header */
-.branding .button--menu-toggle {
-      margin-block: auto;
-      margin-inline-end: 0;
-      margin-inline-start: auto;
     }
 .button--menu-toggle span {
       font-size: inherit;
