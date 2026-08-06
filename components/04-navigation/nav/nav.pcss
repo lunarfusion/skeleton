@@ -111,11 +111,6 @@
     &--active-trail {
       color: var(--skeleton-color-text-nav-item-active-trail);
     }
-    
-    &--active-trail > .nav__link {
-      font-weight: 600;
-      color: var(--skeleton-color-text-nav-item-active-trail);
-    }
   }
   
   /*** Link and Subnav Toggle Element ***/
@@ -189,6 +184,7 @@
       outline: none;
       box-shadow: none;
     }
+    
   }
   
   /*** Button ***/
@@ -212,6 +208,13 @@
       font-size: var(--skeleton-size-nav-dropdown-icon);
       color: var(--skeleton-color-action-nav-fg-icon);
     }
+  }
+  
+  .nav__item--active-trail > .nav__link,
+  .nav__item--active-trail .nav__subnav-toggle {
+    font-weight: 600;
+    color: var(--skeleton-color-text-nav-item-active-trail);
+    background-size: calc(100% - (var(--skeleton-size-underline-navlink) * 2)) var(--skeleton-size-underline-navlink);
   }
   
   /************ VARIANTS ************/

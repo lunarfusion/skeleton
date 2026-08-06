@@ -1,6 +1,7 @@
 /*** Containers Styles ***/
 .container {
   --skeleton-space-x-outter-container: calc(var(--skeleton-size-gap-x) * 2);
+  --col-spacing: var(--skeleton-size-gap-x);
   
   position: relative;
   inline-size: 100%;
@@ -14,6 +15,11 @@
     max-inline-size: 100%;
     padding: 0;
   }
+  
+  /* remove excess padding when nested - as in views */
+  .container {
+    padding: 0;
+  }
 }
 
 /*** Flex Rows ***/
@@ -23,8 +29,9 @@
   display: flex;
   flex-direction: row;
   inline-size: 100%;
-  justify-content: space-between;
   container-type: inline-size;
+  
+  gap: var(--col-spacing);
   
   &--wrap {
     flex-wrap: wrap;
@@ -55,8 +62,6 @@
 
 /*** Columns ***/
 .col {
-  --col-spacing: var(--skeleton-size-gap-x);
-  
   position: relative;
   inline-size: auto;
   max-inline-size: 100%;
@@ -73,7 +78,7 @@
   }
   
   &--3 {
-    flex: 0 0 calc(25% - var(--col-spacing));
+    flex: 0 0 25%;
     max-inline-size: calc(25% - var(--col-spacing));
   }
   
@@ -98,21 +103,9 @@
   }
 }
 
-@media (width <=776px) {
-  
-  .col,
-  .col--9,
-  .col--8,
-  .col--6,
-  .col--4,
-  .col--3 {
-    flex: 0 0 100%;
-    max-inline-size: 100%;
-  }
-}
 
 /* for column within column, fullwidth at wider screen */
-@media (width <=994px) {
+/* @media (width <=994px) {
   .col {
 
     .col--4,
@@ -121,7 +114,30 @@
       max-inline-size: 100%;
     }
   }
+} */
+
+/* medium screen */
+@media (width <=994px) {
+  .col--4 {
+    flex: 0 0 calc(50% - var(--col-spacing));
+    max-inline-size: calc(50% - var(--col-spacing));
+  }
 }
+
+/* small screen */
+@media (width <=776px) {
+  
+  .col--9,
+  .col--8,
+  .col--6,
+  .col--4,
+  .col--3 {
+    flex: 0 0 100%;
+    max-inline-size: 100%;
+  }
+  
+}
+
 
 /*** PARAGRAPH FLEX ROW LAYOUTS ***/
 .paragraph-flexrow-layout {

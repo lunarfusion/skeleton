@@ -30,8 +30,6 @@
   z-index: 1;
   
 }
-/* max-inline-size: calc(1500px * 0.3); */
-/* min-inline-size: calc(1500px * 0.2); */
 .card__content {
     position: relative;
     display: flex;
@@ -44,6 +42,10 @@
 .card__title {
     position: relative;
     inline-size: 100%;
+  }
+.card__tags {
+    display: flex;
+    flex-flow: row;
   }
 .card__summary {
     display: flex;

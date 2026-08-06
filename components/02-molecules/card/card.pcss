@@ -29,8 +29,6 @@
   background-color: var(--skeleton-color-bg-card);
   transition: var(--skeleton-transition-card);
   z-index: 1;
-  /* max-inline-size: calc(1500px * 0.3); */
-  /* min-inline-size: calc(1500px * 0.2); */
   
   &__content {
     position: relative;
@@ -45,6 +43,11 @@
   &__title {
     position: relative;
     inline-size: 100%;
+  }
+  
+  &__tags {
+    display: flex;
+    flex-flow: row;
   }
   
   &__summary {
