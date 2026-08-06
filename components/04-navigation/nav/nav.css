@@ -8,12 +8,14 @@
   --skeleton-size-radius-navlink: 4px;
   --skeleton-size-radius-subnav: var(--skeleton-size-radius-med);
   
+  --skeleton-size-underline-navlink: 6px;
+  
   --skeleton-size-text-nav-level-0: 0.85rem;
   --skeleton-size-text-nav-level-1: 0.75rem;
   --skeleton-size-text-nav-level-2: 0.65rem;
   
-  --skeleton-size-space-y-nav-item: 0.55rem;
-  --skeleton-size-space-x-nav-item: 0.5rem;
+  --skeleton-size-space-y-nav-item: 0.65rem;
+  --skeleton-size-space-x-nav-item: 0.55rem;
   
   --skeleton-transition-nav-icon: var(--skeleton-transition-basic);
   --skeleton-transition-nav-item: var(--skeleton-transition-basic);
@@ -68,32 +70,37 @@
 .nav__item {
     position: relative;
     margin: 0;
-    padding: var(--skeleton-size-gap-focus-indicator);
+    padding: var(--skeleton-size-space-y-nav-item) var(--skeleton-size-space-x-nav-item);
     transition: var(--skeleton-transition-nav-item);
-    box-shadow: var(--skeleton-color-border-nav-item) 0px 0.5px 0px, var(--skeleton-color-border-nav-item) 0px 0.5px 0px inset;
     
     /* foreground */
     color: var(--skeleton-color-text-nav-item);
     font-size: var(--skeleton-size-text-nav-level-0);
-    line-height: 1.2;
+    line-height: 1.3;
   }
 .nav__item:marker {
       display: none;
     }
 .nav__item--level-0 {
       font-size: var(--skeleton-size-text-nav-level-0);
-      box-shadow: var(--skeleton-color-border-nav-item) 0px 0.5px 0px, var(--skeleton-color-border-nav-item) 0px 0.5px 0px inset;
     }
+/* horizontal rule between items */
+.nav__item--level-0::before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 5px;
+        top: 0;
+        box-shadow: var(--skeleton-color-border-nav-item) 0px -0.5px 0px;
+      }
 .nav__item--level-1 {
       font-size: var(--skeleton-size-text-nav-level-1);
-      box-shadow: var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px, var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px inset;
+      padding-block: calc(var(--skeleton-size-space-y-nav-item) * 0.75);
     }
 .nav__item--level-2 {
       font-size: var(--skeleton-size-text-nav-level-2);
-      box-shadow: var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px, var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px inset;
-    }
-.nav__item:hover {
-      background-color: var(--skeleton-color-bg-nav-item-hover);
+      padding-block: calc(var(--skeleton-size-space-y-nav-item) * 0.25);
     }
 .nav__item--active-trail {
       color: var(--skeleton-color-text-nav-item-active-trail);
@@ -107,8 +114,7 @@
   .nav__subnav-toggle {
     position: relative;
     display: inline-block;
-    inline-size: 100%;
-    padding: var(--skeleton-size-space-y-nav-item) var(--skeleton-size-space-x-nav-item);
+    padding: var(--skeleton-size-underline-navlink);
     border: 0;
     outline: none;
     background: transparent;
@@ -121,6 +127,11 @@
     letter-spacing: 0.5px;
     text-decoration: none;
     color: inherit;
+    /* background */
+    background: linear-gradient(var(--skeleton-color-border-secondary) 50%, transparent 51%);
+    background-repeat: no-repeat;
+    background-position: var(--skeleton-size-underline-navlink) 100%;
+    background-size: 0% var(--skeleton-size-underline-navlink);
   }
 /*** Focus Indicator ***/
 .nav__link::after, .nav__subnav-toggle::after {
@@ -135,7 +146,6 @@
       
       margin-block-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-border-navlink)) * -1);
       margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-border-navlink)) * -1);
-      
       border-width: var(--skeleton-size-focus-indicator);
       border-style: solid;
       border-color: var(--skeleton-color-focus-indicator);
@@ -146,7 +156,8 @@
 /*** Link State - Hover ***/
 .nav__link:hover, .nav__subnav-toggle:hover {
       color: var(--skeleton-color-text-nav-item-hover);
-      background-color: var(--skeleton-color-bg-nav-item-hover);
+      /* background-color: var(--skeleton-color-bg-nav-item-hover); */
+      background-size: calc(100% - (var(--skeleton-size-underline-navlink) * 2)) var(--skeleton-size-underline-navlink);
     }
 .nav__link:hover::after, .nav__subnav-toggle:hover::after {
         opacity: 0;
@@ -165,19 +176,16 @@
     }
 /*** Button ***/
 .nav__subnav-toggle {
-    padding-inline-end: calc(var(--skeleton-size-nav-dropdown-icon) * 1.75);
+    padding-inline-end: calc(var(--skeleton-size-nav-dropdown-icon) * 1.25);
     cursor: pointer;
   }
 /*** dropdown indicator - points right when collapsed ***/
 .nav__subnav-toggle::before {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      right: var(--skeleton-size-space-x-nav-item);
+      right: calc(var(--skeleton-size-underline-navlink) * 0.5);
       display: inline-flex;
       justify-self: center;
       align-self: center;
-      padding: 0;
       transition: var(--skeleton-transition-nav-icon);
       transform: rotate(-90deg);
       content: "\f107";
@@ -198,8 +206,6 @@
         transform: translateY(-100%);
         opacity: 0;
       }
-/* TODO - details components do not animate properly */
-/* transition: var(--skeleton-transition-nav-item); */
 .nav--collapsible details summary::marker {
         content: " ";
       }
@@ -224,8 +230,14 @@
     }
 .nav--horizontal .nav__item--level-0 {
       font-size: var(--skeleton-size-text-nav-level-0);
-      box-shadow: var(--skeleton-color-border-nav-item) 0.5px 0px 0px, var(--skeleton-color-border-nav-item) 0.5px 0px 0px inset;
+      
     }
+.nav--horizontal .nav__item--level-0::before {
+        box-shadow: var(--skeleton-color-border-nav-item) -0.5px 0px 0px;
+        height: 100%;
+        width: 5px;
+        left: 0;
+      }
 .nav--horizontal--active-trail {
       font-weight: 600;
       border-inline-start: 0px;
@@ -235,8 +247,8 @@
 .nav--transparent .nav__list {
       background-color: transparent;
     }
-.nav--transparent .nav__item {
-      box-shadow: none;
+.nav--transparent .nav__item--level-0::before {
+      display: none;
     }
 .nav--transparent .nav__item--active-trail {
       border: none;
@@ -254,10 +266,6 @@
     }
 .nav--small .nav__item--level-2 {
       font-size: calc(var(--skeleton-size-text-nav-level-2) * 0.75);
-    }
-.nav--small .nav__link {
-      padding: calc(var(--skeleton-size-space-y-nav-item) * 0.5) calc(var(--skeleton-size-space-x-nav-item) * 0.75);
-      font-size: inherit;
     }
 /*** Variant - Main Nav ***/
 /* we name the region so the mobile drawer does not effect sidebar nav */
@@ -280,18 +288,13 @@ header .nav--main > .nav__list > .nav__item--active-trail {
         font-weight: 600;
         border-inline-start: 0px;
       }
-header .nav--main > .nav__list > .nav__item--active-trail::before {
-        display: none;
-      }
+header .nav--main .nav__item--level-0::before {
+      display: none;
+    }
 /* mobile menu drawer */
 header .nav--main > .nav__list .nav__subnav-wrapper {
       /* match border radius to focus indicator */
       --skeleton-border-radius-main-nav-subnav: calc(var(--skeleton-size-radius-navlink) + var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-border-navlink));
-      
-      --sn-size-shadow-1: 12px;
-      --sn-size-shadow-2: 22px;
-      --sn-color-shadow-1: var(--skeleton-color-shadow-brand);
-      --sn-color-shadow-2: var(--skeleton-color-shadow-brand-subdued);
       
       position: absolute;
       border-end-start-radius: var(--skeleton-border-radius-main-nav-subnav);
@@ -313,9 +316,6 @@ header .nav--main > .nav__list .nav__subnav-wrapper .nav__item:last-of-type,
       header .nav--main > .nav__list .nav__subnav-wrapper .nav__link:last-of-type {
         border-end-end-radius: inherit;
         border-end-start-radius: inherit;
-      }
-header .nav--main > .nav__list .nav__subnav-wrapper .nav__link {
-        padding-inline: calc(var(--skeleton-size-space-x-nav-item) * 2);
       }
 @media (width <=994px) {
       header .nav--main {
@@ -353,15 +353,16 @@ header .nav--main > .nav__list .nav__subnav-wrapper .nav__link {
           box-shadow: none;
           border: 0;
           border-radius: 0;
+          background: transparent;
         }
         
         header .nav--main > .nav__list .nav__subnav-wrapper > .nav__item {
           padding-inline: 1rem;
         }
-      
-      header .nav--main .nav__link {
-        padding-inline: calc(var(--skeleton-size-space-x-nav-item) * 2);
-      }
+        
+        header .nav--main > .nav__list .nav__subnav-wrapper > .nav__item--level-0::before {
+          display: inline-block;
+        }
     }
 /* main secondary sidebar */
 .region--sidebar .nav--main {

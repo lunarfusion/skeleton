@@ -8,12 +8,14 @@
   --skeleton-size-radius-navlink: 4px;
   --skeleton-size-radius-subnav: var(--skeleton-size-radius-med);
   
+  --skeleton-size-underline-navlink: 6px;
+  
   --skeleton-size-text-nav-level-0: 0.85rem;
   --skeleton-size-text-nav-level-1: 0.75rem;
   --skeleton-size-text-nav-level-2: 0.65rem;
   
-  --skeleton-size-space-y-nav-item: 0.55rem;
-  --skeleton-size-space-x-nav-item: 0.5rem;
+  --skeleton-size-space-y-nav-item: 0.65rem;
+  --skeleton-size-space-x-nav-item: 0.55rem;
   
   --skeleton-transition-nav-icon: var(--skeleton-transition-basic);
   --skeleton-transition-nav-item: var(--skeleton-transition-basic);
@@ -69,14 +71,13 @@
   &__item {
     position: relative;
     margin: 0;
-    padding: var(--skeleton-size-gap-focus-indicator);
+    padding: var(--skeleton-size-space-y-nav-item) var(--skeleton-size-space-x-nav-item);
     transition: var(--skeleton-transition-nav-item);
-    box-shadow: var(--skeleton-color-border-nav-item) 0px 0.5px 0px, var(--skeleton-color-border-nav-item) 0px 0.5px 0px inset;
     
     /* foreground */
     color: var(--skeleton-color-text-nav-item);
     font-size: var(--skeleton-size-text-nav-level-0);
-    line-height: 1.2;
+    line-height: 1.3;
     
     &:marker {
       display: none;
@@ -84,21 +85,27 @@
     
     &--level-0 {
       font-size: var(--skeleton-size-text-nav-level-0);
-      box-shadow: var(--skeleton-color-border-nav-item) 0px 0.5px 0px, var(--skeleton-color-border-nav-item) 0px 0.5px 0px inset;
+      
+      /* horizontal rule between items */
+      &::before {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 5px;
+        top: 0;
+        box-shadow: var(--skeleton-color-border-nav-item) 0px -0.5px 0px;
+      }
     }
     
     &--level-1 {
       font-size: var(--skeleton-size-text-nav-level-1);
-      box-shadow: var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px, var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px inset;
+      padding-block: calc(var(--skeleton-size-space-y-nav-item) * 0.75);
     }
     
     &--level-2 {
       font-size: var(--skeleton-size-text-nav-level-2);
-      box-shadow: var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px, var(--skeleton-color-border-nav-item-secondary) 0px 0.5px 0px inset;
-    }
-    
-    &:hover {
-      background-color: var(--skeleton-color-bg-nav-item-hover);
+      padding-block: calc(var(--skeleton-size-space-y-nav-item) * 0.25);
     }
     
     &--active-trail {
@@ -116,8 +123,7 @@
   &__subnav-toggle {
     position: relative;
     display: inline-block;
-    inline-size: 100%;
-    padding: var(--skeleton-size-space-y-nav-item) var(--skeleton-size-space-x-nav-item);
+    padding: var(--skeleton-size-underline-navlink);
     border: 0;
     outline: none;
     background: transparent;
@@ -130,6 +136,11 @@
     letter-spacing: 0.5px;
     text-decoration: none;
     color: inherit;
+    /* background */
+    background: linear-gradient(var(--skeleton-color-border-secondary) 50%, transparent 51%);
+    background-repeat: no-repeat;
+    background-position: var(--skeleton-size-underline-navlink) 100%;
+    background-size: 0% var(--skeleton-size-underline-navlink);
     
     /*** Focus Indicator ***/
     &::after {
@@ -144,7 +155,6 @@
       
       margin-block-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-border-navlink)) * -1);
       margin-inline-start: calc((var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-focus-indicator) + var(--skeleton-size-border-navlink)) * -1);
-      
       border-width: var(--skeleton-size-focus-indicator);
       border-style: solid;
       border-color: var(--skeleton-color-focus-indicator);
@@ -156,7 +166,8 @@
     /*** Link State - Hover ***/
     &:hover {
       color: var(--skeleton-color-text-nav-item-hover);
-      background-color: var(--skeleton-color-bg-nav-item-hover);
+      /* background-color: var(--skeleton-color-bg-nav-item-hover); */
+      background-size: calc(100% - (var(--skeleton-size-underline-navlink) * 2)) var(--skeleton-size-underline-navlink);
       
       &::after {
         opacity: 0;
@@ -182,19 +193,16 @@
   
   /*** Button ***/
   &__subnav-toggle {
-    padding-inline-end: calc(var(--skeleton-size-nav-dropdown-icon) * 1.75);
+    padding-inline-end: calc(var(--skeleton-size-nav-dropdown-icon) * 1.25);
     cursor: pointer;
     
     /*** dropdown indicator - points right when collapsed ***/
     &::before {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      right: var(--skeleton-size-space-x-nav-item);
+      right: calc(var(--skeleton-size-underline-navlink) * 0.5);
       display: inline-flex;
       justify-self: center;
       align-self: center;
-      padding: 0;
       transition: var(--skeleton-transition-nav-icon);
       transform: rotate(-90deg);
       content: "\f107";
@@ -222,8 +230,6 @@
     }
     
     details {
-      /* TODO - details components do not animate properly */
-      /* transition: var(--skeleton-transition-nav-item); */
       
       summary::marker {
         content: " ";
@@ -256,7 +262,14 @@
     
     .nav__item--level-0 {
       font-size: var(--skeleton-size-text-nav-level-0);
-      box-shadow: var(--skeleton-color-border-nav-item) 0.5px 0px 0px, var(--skeleton-color-border-nav-item) 0.5px 0px 0px inset;
+      
+      &::before {
+        box-shadow: var(--skeleton-color-border-nav-item) -0.5px 0px 0px;
+        height: 100%;
+        width: 5px;
+        left: 0;
+      }
+      
     }
     
     &--active-trail {
@@ -274,8 +287,8 @@
       background-color: transparent;
     }
     
-    .nav__item {
-      box-shadow: none;
+    .nav__item--level-0::before {
+      display: none;
     }
     
     .nav__item--active-trail {
@@ -302,11 +315,6 @@
     .nav__item--level-2 {
       font-size: calc(var(--skeleton-size-text-nav-level-2) * 0.75);
     }
-    
-    .nav__link {
-      padding: calc(var(--skeleton-size-space-y-nav-item) * 0.5) calc(var(--skeleton-size-space-x-nav-item) * 0.75);
-      font-size: inherit;
-    }
   }
   
   /*** Variant - Main Nav ***/
@@ -329,21 +337,16 @@
         font-weight: 600;
         border-inline-start: 0px;
       }
-      
-      > .nav__item--active-trail::before {
-        display: none;
-      }
+    }
+    
+    .nav__item--level-0::before {
+      display: none;
     }
     
     /* mobile menu drawer */
     > .nav__list .nav__subnav-wrapper {
       /* match border radius to focus indicator */
       --skeleton-border-radius-main-nav-subnav: calc(var(--skeleton-size-radius-navlink) + var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-border-navlink));
-      
-      --sn-size-shadow-1: 12px;
-      --sn-size-shadow-2: 22px;
-      --sn-color-shadow-1: var(--skeleton-color-shadow-brand);
-      --sn-color-shadow-2: var(--skeleton-color-shadow-brand-subdued);
       
       position: absolute;
       border-end-start-radius: var(--skeleton-border-radius-main-nav-subnav);
@@ -366,10 +369,6 @@
       .nav__link:last-of-type {
         border-end-end-radius: inherit;
         border-end-start-radius: inherit;
-      }
-      
-      .nav__link {
-        padding-inline: calc(var(--skeleton-size-space-x-nav-item) * 2);
       }
     }
     
@@ -408,15 +407,16 @@
           box-shadow: none;
           border: 0;
           border-radius: 0;
+          background: transparent;
         }
         
         > .nav__item {
           padding-inline: 1rem;
         }
-      }
-      
-      .nav__link {
-        padding-inline: calc(var(--skeleton-size-space-x-nav-item) * 2);
+        
+        > .nav__item--level-0::before {
+          display: inline-block;
+        }
       }
     }
     
