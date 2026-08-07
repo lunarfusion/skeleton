@@ -1,7 +1,6 @@
 /*** Containers Styles ***/
 .container {
   --skeleton-space-x-outter-container: calc(var(--skeleton-size-gap-x) * 2);
-  --col-spacing: var(--skeleton-size-gap-x);
   
   position: relative;
   inline-size: 100%;
@@ -25,6 +24,7 @@
 /*** Flex Rows ***/
 .row {
   --skeleton-space-x-inner-row: var(--skeleton-size-gap-x);
+  --col-spacing: var(--skeleton-size-gap-x);
   
   display: flex;
   flex-direction: row;

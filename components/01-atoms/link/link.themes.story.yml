@@ -1,0 +1,12 @@
+name: On Primary Theme
+
+props:
+  url: "#"
+
+slots:
+  label: "Link Label"
+
+library_wrapper: >
+  <div class="theme-primary bg-theme-primary">
+    {{ _story }}
+  </div>

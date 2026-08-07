@@ -22,11 +22,9 @@ props:
 
         - title: "Level One Active Trail"
           url: 'http://wikipedia.com'
-          in_active_trail: true
           below:
             - title: "Level Two Active Trail"
               url: 'http://wikipedia.com'
-              in_active_trail: true
 
     - title: "Level Zero"
       url: 'http://wikipedia.com'

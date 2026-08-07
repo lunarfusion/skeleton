@@ -1,5 +1,5 @@
 .tag {
-  color: var(--skeleton-color-fg-action-default);
+  color: var(--skeleton-color-link-default);
   font-size: var(--skeleton-size-text-extra-small);
   font-weight: 500;
   text-transform: uppercase;

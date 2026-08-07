@@ -10,17 +10,11 @@
   /****************** BASE ******************/
   /*** Foreground - Base ***/
   --skeleton-color-fg-base: var(--skeleton-color-black);
-  --skeleton-color-fg-inverted: var(--skeleton-color-white);
   --skeleton-color-fg-subdued: var(--skeleton-color-gray-040);
   --skeleton-color-fg-disabled: var(--skeleton-color-gray-060);
   
   /*** Background - Base ***/
   --skeleton-color-bg-base: var(--skeleton-color-gray-095);
-  --skeleton-color-bg-inverted: var(--skeleton-color-black);
-  
-  /*** Border - Base ***/
-  --skeleton-color-border-base: var(--skeleton-color-gray-010);
-  --skeleton-color-border-inverted: var(--skeleton-color-gray-090);
   
   /*** Background - Neutral ***/
   --skeleton-color-bg-neutral-l1: var(--skeleton-color-gray-085);
@@ -36,30 +30,19 @@
   --skeleton-color-shadow-neutral: var(--skeleton-color-black-a20);
   --skeleton-color-shadow-neutral-subdued: var(--skeleton-color-black-a10);
   
-  /*** Foreground - Brand ***/
-  --skeleton-color-fg-primary: var(--skeleton-color-violet-040);
-  
   /*** Background - Brand ***/
   /* NOTE these are the backgrounds of theme-primary which are the same across modes */
   --skeleton-color-bg-primary: var(--skeleton-color-violet-025);
   --skeleton-color-bg-primary-subdued: var(--skeleton-color-violet-030);
+  --skeleton-color-bg-primary-subdued-translucent: var(--skeleton-color-violet-030a);
   
   /*** Border - Brand ***/
   --skeleton-color-border-primary: var(--skeleton-color-violet-060);
-  --skeleton-color-border-primary-inverted: var(--skeleton-color-violet-080);
   --skeleton-color-border-secondary: var(--skeleton-color-teal-060);
-  
-  /*** Shadows - Brand ***/
-  --skeleton-color-shadow-brand: var(--skeleton-color-violet-drk-a60);
-  --skeleton-color-shadow-brand-subdued: var(--skeleton-color-drk-violet-a20);
   
   /****** Static ******/
   --skeleton-color-fg-white-static: var(--skeleton-color-white);
   --skeleton-color-fg-black-static: var(--skeleton-color-black);
-  --skeleton-color-bg-white-static: var(--skeleton-color-white);
-  --skeleton-color-bg-black-static: var(--skeleton-color-black);
-  --skeleton-color-border-white-static: var(--skeleton-color-white);
-  --skeleton-color-border-black-static: var(--skeleton-color-black);
   
   /****************** SYSTEM ******************/
   /*** Focus Indicator ***/
@@ -69,13 +52,13 @@
   --skeleton-color-accent: var(--skeleton-color-violet-060);
   
   /*** Actions - Link Text ***/
-  --skeleton-color-fg-action-default: var(--skeleton-color-violet-060);
-  --skeleton-color-fg-action-hover: var(--skeleton-color-teal-040);
-  --skeleton-color-fg-action-focus: var(--skeleton-color-teal-040);
-  --skeleton-color-fg-action-active: var(--skeleton-color-violet-060);
-  --skeleton-color-fg-action-visited: var(--skeleton-color-fg-base);
-  --skeleton-color-fg-action-decoration: var(--skeleton-color-teal-040);
-  --skeleton-color-fg-action-decoration-hover: var(--skeleton-color-violet-070);
+  --skeleton-color-link-default: var(--skeleton-color-violet-060);
+  --skeleton-color-link-hover: var(--skeleton-color-teal-040);
+  --skeleton-color-link-focus: var(--skeleton-color-teal-040);
+  --skeleton-color-link-active: var(--skeleton-color-violet-060);
+  --skeleton-color-link-visited: var(--skeleton-color-fg-base);
+  --skeleton-color-link-decoration: var(--skeleton-color-teal-040);
+  --skeleton-color-link-decoration-hover: var(--skeleton-color-violet-070);
   
   /********* SYSTEM ALERTS *********/
   /*** Negative ***/
@@ -97,20 +80,4 @@
   --skeleton-color-fg-informative: var(--skeleton-color-blue-040);
   --skeleton-color-border-informative: var(--skeleton-color-blue-060);
   --skeleton-color-bg-informative: var(--skeleton-color-blue-090);
-  
-  /*** Inverted Dark Background Class ***/
-  .colors-inverted {
-    --skeleton-color-fg-base: var(--skeleton-color-white);
-    --skeleton-color-fg-subdued: var(--skeleton-color-gray-080);
-    
-    /*** Actions - Link Text ***/
-    --skeleton-color-fg-action-default: var(--skeleton-color-violet-080);
-    --skeleton-color-fg-action-hover: var(--skeleton-color-teal-080);
-    --skeleton-color-fg-action-focus: var(--skeleton-color-teal-080);
-    --skeleton-color-fg-action-active: var(--skeleton-color-violet-060);
-    --skeleton-color-fg-action-visited: var(--skeleton-color-fg-base);
-    --skeleton-color-fg-action-disabled: var(--skeleton-color-gray-080);
-    --skeleton-color-fg-action-decoration: var(--skeleton-color-teal-080);
-    --skeleton-color-fg-action-decoration-hover: var(--skeleton-color-violet-080);
-  }
 }

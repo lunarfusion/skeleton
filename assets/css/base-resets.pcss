@@ -17,24 +17,24 @@ body {
   /* overflow */
   position: relative;
   overflow: hidden auto;
-
+  
   /* fix typography rough edges */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  
   /* font display */
   font-optical-sizing: auto;
   font-style: normal;
   font-family: var(--skeleton-font-primary);
-
+  
   /* color base */
   color: var(--skeleton-color-fg-base);
   background-color: var(--skeleton-color-bg-base);
-
+  
   /* ensure footer does not cover main content */
   display: flex;
-flex-direction: column;
-min-height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 *,
@@ -147,15 +147,15 @@ article li {
 }
 
 a {
-  color: var(--skeleton-color-fg-action-default);
+  color: var(--skeleton-color-link-default);
   transition: var(--skeleton-transition-basic);
-
+  
   &:hover {
-    color: var(--skeleton-color-fg-action-hover);
+    color: var(--skeleton-color-link-hover);
   }
-
+  
   &:focus {
-    color: var(--skeleton-color-fg-action-focus);
+    color: var(--skeleton-color-link-focus);
   }
 }
 

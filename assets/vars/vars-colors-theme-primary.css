@@ -9,28 +9,24 @@
     .bg-primary,
     .bg-primary-subdued {
       --skeleton-color-fg-base: var(--skeleton-color-white);
-      --skeleton-color-fg-inverted: var(--skeleton-color-black);
       --skeleton-color-fg-subdued: var(--skeleton-color-gray-080);
       --skeleton-color-fg-disabled: var(--skeleton-color-gray-050);
-      
-      /*** Foreground - Brand ***/
-      --skeleton-color-fg-primary: var(--skeleton-color-violet-080);
       
       /*** System accent color ***/
       --skeleton-color-accent: var(--skeleton-color-violet-070);
       
       /*** Actions - Link Text - copied from light mode, inverted background ***/
-      --skeleton-color-fg-action-default: var(--skeleton-color-violet-090);
-      --skeleton-color-fg-action-hover: var(--skeleton-color-teal-090);
-      --skeleton-color-fg-action-focus: var(--skeleton-color-teal-090);
-      --skeleton-color-fg-action-active: var(--skeleton-color-violet-060);
-      --skeleton-color-fg-action-visited: var(--skeleton-color-fg-base);
-      --skeleton-color-fg-action-decoration: var(--skeleton-color-teal-080);
-      --skeleton-color-fg-action-decoration-hover: var(--skeleton-color-violet-090);
+      --skeleton-color-link-default: var(--skeleton-color-violet-090);
+      --skeleton-color-link-hover: var(--skeleton-color-teal-090);
+      --skeleton-color-link-focus: var(--skeleton-color-teal-090);
+      --skeleton-color-link-active: var(--skeleton-color-violet-060);
+      --skeleton-color-link-visited: var(--skeleton-color-fg-base);
+      --skeleton-color-link-decoration: var(--skeleton-color-teal-080);
+      --skeleton-color-link-decoration-hover: var(--skeleton-color-violet-090);
       
       /*** Change neutral backgrounds so text of components is legible ***/
       /*** Background - Neutral ***/
-      --skeleton-color-bg-neutral: var(--skeleton-color-violet-020);
+      --skeleton-color-bg-neutral-l1: var(--skeleton-color-violet-020);
       --skeleton-color-bg-neutral-l2: var(--skeleton-color-violet-025);
       --skeleton-color-bg-neutral-l3: var(--skeleton-color-violet-035);
       

@@ -3,18 +3,6 @@
   background-color: var(--skeleton-color-bg-base);
 }
 
-.bg-inverted {
-  background-color: var(--skeleton-color-bg-inverted);
-}
-
-.bg-white-static {
-  background-color: var(--skeleton-color-bg-white-static);
-}
-
-.bg-black-static {
-  background-color: var(--skeleton-color-bg-black-static);
-}
-
 /* neutrals */
 .bg-neutral {
   background-color: var(--skeleton-color-bg-neutral-l1);
@@ -36,6 +24,10 @@
 
 .bg-primary-subdued {
   background-color: var(--skeleton-color-bg-primary-subdued);
+}
+
+.bg-theme-primary {
+  background-color: var(--skeleton-color-violet-050);
 }
 
 
@@ -77,10 +69,6 @@
   color: var(--skeleton-color-fg-black-static);
 }
 
-.fg-primary {
-  color: var(--skeleton-color-fg-primary);
-}
-
 .fg-alert-negative {
   color: var(--skeleton-color-fg-negative);
 }
@@ -104,18 +92,6 @@
   border: 1px solid var(--skeleton-color-border-base);
 }
 
-.border-color-inverted {
-  border: 1px solid var(--skeleton-color-border-inverted);
-}
-
-.border-color-white-static {
-  border: 1px solid var(--skeleton-color-border-white-static);
-}
-
-.border-color-black-static {
-  border: 1px solid var(--skeleton-color-border-black-static);
-}
-
 .border-color-neutral-dark {
   border: 1px solid var(--skeleton-color-border-neutral-dark);
 }
@@ -134,10 +110,6 @@
 
 .border-color-primary {
   border: 1px solid var(--skeleton-color-border-primary);
-}
-
-.border-color-primary-inverted {
-  border: 1px solid var(--skeleton-color-border-primary-inverted);
 }
 
 .border-color-alert-negative {

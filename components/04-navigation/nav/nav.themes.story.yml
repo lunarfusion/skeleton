@@ -1,4 +1,4 @@
-name: Navigation Layouts
+name: On Theme Primary
 
 props:
 
@@ -51,17 +51,6 @@ props:
             url: 'http://wikipedia.com'
 
 library_wrapper: >
-  {% set layouts = [
-    'vertical',
-    'horizontal',
-  ] %}
-  {% for layout in layouts %}
-  <div class="ui-patterns__story-variant">
-    {% set layout_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
-      class: ['nav nav--' ~ layout]
-    })})} %}
-    <h4 class="title title--micro">{{ layout }}</h4>
-    {% set layout_story = _story %}
-    {{ layout_story|merge(layout_props) }}
-    </div>
-  {% endfor %}
+  <div class="theme-primary bg-theme-primary">
+    {{ _story }}
+  </div>

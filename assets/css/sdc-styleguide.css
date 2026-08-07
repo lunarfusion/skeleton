@@ -59,19 +59,6 @@
       border: inherit;
     }
 
-.sdc-styleguide-page .sdc-styleguide-explorer__group-title,
-    .sdc-styleguide-page .sdc-styleguide-explorer h2 {
-      border-block-start: 4px solid var(--skeleton-color-border-primary-inverted);
-      font-size: 2rem;
-      line-height: 1.11;
-      padding: 0.5rem;
-      color: var(--skeleton-color-fg-base);
-    }
-
-.sdc-styleguide-page .sdc-styleguide-explorer__group-title button, .sdc-styleguide-page .sdc-styleguide-explorer h2 button {
-        color: unset;
-      }
-
 .sdc-styleguide-page .sdc-styleguide-explorer__group-components {
       background: transparent;
       box-shadow: none;
