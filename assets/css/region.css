@@ -10,22 +10,15 @@
     inline-size: 100%;
     justify-content: space-between;
     align-items: center;
-    container-type: inline-size;
   }
   
   @media (width <=994px) {
   
   .region--header {
-      display: block;
-      flex-direction: column
-      
-      /* allows menu toggle placement on mobile */
+      flex-direction: column;
+      /* realign flex for mobile nav to work */
+      align-items: initial
   }
-      .region--header > .block {
-        position: relative;
-        inline-size: 100%;
-        flex-grow: 1;
-      }
     }
   
   .region--sidebar-second,

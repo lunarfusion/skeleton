@@ -29,7 +29,6 @@
   --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
   
   --skeleton-color-bg-subnav: transparent;
-  --skeleton-color-bg-nav-main: transparent;
   --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-neutral-l2);
   --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-neutral-l3);
   
@@ -40,6 +39,11 @@
   --skeleton-color-border-subnav-main: var(--skeleton-color-bg-neutral-l3);
   --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-neutral-l2);
   --skeleton-color-accent-nav-item: var(--skeleton-color-border-primary);
+}
+
+/* wrapper for main nav */
+.nav-wrapper {
+  position: relative;
 }
 
 /*** Navigation Styles ***/
@@ -322,13 +326,15 @@
   
   /*** Variant - Main Nav ***/
   /* we name the region so the mobile drawer does not effect sidebar nav */
-  header &--main {
-    background-color: var(--skeleton-color-bg-nav-main);
+  header &--main,
+  .region--header &--main {
+    background-color: transparent;
     padding-inline: 1.5rem;
     
     > .nav__list {
       flex-direction: row;
       flex-flow: row wrap;
+      justify-content: flex-end;
       background-color: transparent;
       
       > .nav__item {
@@ -375,12 +381,22 @@
       }
     }
     
+    /* reduce vertical space of nav items on desktop */
+    @media (width >=995px) {
+      & {
+        .nav__item {
+          --skeleton-size-space-y-nav-item: 0.25rem;
+        }
+      }
+    }
+    
     @media (width <=994px) {
       & {
         left: 0;
         right: 0;
         block-size: 100vh;
         display: flex;
+        display: block;
         flex-flow: column;
         align-items: flex-start;
         padding-inline: 0;

@@ -1,10 +1,9 @@
-name: Navigation, Main Nav Mobile
+name: Navigation, Main Nav
 
 props:
   collapsible: true
-  layout: vertical
   main: true
-  main_mobile: true
+  menu_id: 'main-menu'
 
   items:
 
@@ -61,7 +60,24 @@ props:
           - title: "Level Two"
             url: 'http://wikipedia.com'
 
+slots:
+  menu_toggle:
+  - type: component
+    component: "skeleton:button"
+    variant: primary
+    props:
+      kind: menu-toggle
+      size: M
+      has_icon: true
+      icon_only: false
+      icon: 'bars'
+      input_id: 'menu-toggle'
+    slots:
+      label: "Button Text"
+
 library_wrapper: >
-  <div class="region region--header-bottom">
-    {{ _story }}
+  <div class="region region--header theme-primary bg-theme-primary">
+    <div class="block">
+      {{ _story }}
+    </div>
   </div>

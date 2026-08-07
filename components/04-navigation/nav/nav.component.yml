@@ -63,6 +63,10 @@ props:
       title: "Nav Menu items"
       $ref: "ui-patterns://links"
 
+slots:
+  menu_toggle:
+    title: Menu toggle button
+
 libraryOverrides:
   js:
     nav.js: {}

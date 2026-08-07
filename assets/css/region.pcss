@@ -9,18 +9,11 @@
     inline-size: 100%;
     justify-content: space-between;
     align-items: center;
-    container-type: inline-size;
     
     @media (width <=994px) {
-      display: block;
       flex-direction: column;
-      
-      /* allows menu toggle placement on mobile */
-      > .block {
-        position: relative;
-        inline-size: 100%;
-        flex-grow: 1;
-      }
+      /* realign flex for mobile nav to work */
+      align-items: initial;
     }
   }
   

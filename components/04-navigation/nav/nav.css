@@ -29,7 +29,6 @@
   --skeleton-color-action-nav-fg-icon: var(--skeleton-color-accent);
   
   --skeleton-color-bg-subnav: transparent;
-  --skeleton-color-bg-nav-main: transparent;
   --skeleton-color-bg-subnav-main: var(--skeleton-color-bg-neutral-l2);
   --skeleton-color-bg-nav-item-hover: var(--skeleton-color-bg-neutral-l3);
   
@@ -40,6 +39,10 @@
   --skeleton-color-border-subnav-main: var(--skeleton-color-bg-neutral-l3);
   --skeleton-color-border-bottom-subnav-main: var(--skeleton-color-bg-neutral-l2);
   --skeleton-color-accent-nav-item: var(--skeleton-color-border-primary);
+}
+/* wrapper for main nav */
+.nav-wrapper {
+  position: relative;
 }
 /*** Navigation Styles ***/
 .nav {
@@ -272,30 +275,32 @@
     }
 /*** Variant - Main Nav ***/
 /* we name the region so the mobile drawer does not effect sidebar nav */
-header .nav--main {
-    background-color: var(--skeleton-color-bg-nav-main);
+header .nav--main,
+  .region--header .nav--main {
+    background-color: transparent;
     padding-inline: 1.5rem;
     
     /* end main nav variant */
   }
-header .nav--main > .nav__list {
+header .nav--main > .nav__list, .region--header .nav--main > .nav__list {
       flex-direction: row;
       flex-flow: row wrap;
+      justify-content: flex-end;
       background-color: transparent;
     }
-header .nav--main > .nav__list > .nav__item {
+header .nav--main > .nav__list > .nav__item, .region--header .nav--main > .nav__list > .nav__item {
         border-block-end: 0;
         box-shadow: none;
       }
-header .nav--main > .nav__list > .nav__item--active-trail {
+header .nav--main > .nav__list > .nav__item--active-trail, .region--header .nav--main > .nav__list > .nav__item--active-trail {
         font-weight: 600;
         border-inline-start: 0px;
       }
-header .nav--main .nav__item--level-0::before {
+header .nav--main .nav__item--level-0::before, .region--header .nav--main .nav__item--level-0::before {
       display: none;
     }
 /* mobile menu drawer */
-header .nav--main > .nav__list .nav__subnav-wrapper {
+header .nav--main > .nav__list .nav__subnav-wrapper, .region--header .nav--main > .nav__list .nav__subnav-wrapper {
       /* match border radius to focus indicator */
       --skeleton-border-radius-main-nav-subnav: calc(var(--skeleton-size-radius-navlink) + var(--skeleton-size-gap-focus-indicator) + var(--skeleton-size-border-navlink));
       
@@ -307,7 +312,7 @@ header .nav--main > .nav__list .nav__subnav-wrapper {
       clip-path: polygon(-10% 0, 110% 0, 110% 110%, -10% 110%);
       margin-block-start: 2px;
     }
-header .nav--main > .nav__list .nav__subnav-wrapper > .nav__list {
+header .nav--main > .nav__list .nav__subnav-wrapper > .nav__list, .region--header .nav--main > .nav__list .nav__subnav-wrapper > .nav__list {
         background-color: var(--skeleton-color-bg-subnav-main);
         margin-inline-start: 0;
         border-end-start-radius: var(--skeleton-size-radius-subnav);
@@ -316,16 +321,25 @@ header .nav--main > .nav__list .nav__subnav-wrapper > .nav__list {
         border-block-start: 0;
       }
 header .nav--main > .nav__list .nav__subnav-wrapper .nav__item:last-of-type,
-      header .nav--main > .nav__list .nav__subnav-wrapper .nav__link:last-of-type {
+      header .nav--main > .nav__list .nav__subnav-wrapper .nav__link:last-of-type,
+      .region--header .nav--main > .nav__list .nav__subnav-wrapper .nav__item:last-of-type,
+      .region--header .nav--main > .nav__list .nav__subnav-wrapper .nav__link:last-of-type {
         border-end-end-radius: inherit;
         border-end-start-radius: inherit;
       }
+/* reduce vertical space of nav items on desktop */
+@media (width >=995px) {
+        header .nav--main .nav__item, .region--header .nav--main .nav__item {
+          --skeleton-size-space-y-nav-item: 0.25rem;
+        }
+    }
 @media (width <=994px) {
-      header .nav--main {
+      header .nav--main, .region--header .nav--main {
         left: 0;
         right: 0;
         block-size: 100vh;
         display: flex;
+        display: block;
         flex-flow: column;
         align-items: flex-start;
         padding-inline: 0;
@@ -337,33 +351,33 @@ header .nav--main > .nav__list .nav__subnav-wrapper .nav__item:last-of-type,
         border-block-end: 6px solid var(--skeleton-color-border-nav-mobile);
       }
       
-      header .nav--main.is-open {
+      header .nav--main.is-open, .region--header .nav--main.is-open {
         transform: translateX(0%);
       }
       
-      header .nav--main > .nav__list {
+      header .nav--main > .nav__list, .region--header .nav--main > .nav__list {
         flex-direction: column;
         z-index: 99;
         background: inherit;
       }
       
-      header .nav--main > .nav__list .nav__subnav-wrapper {
+      header .nav--main > .nav__list .nav__subnav-wrapper, .region--header .nav--main > .nav__list .nav__subnav-wrapper {
         position: relative;
         border-radius: 0;
       }
         
-        header .nav--main > .nav__list .nav__subnav-wrapper > .nav__list {
+        header .nav--main > .nav__list .nav__subnav-wrapper > .nav__list, .region--header .nav--main > .nav__list .nav__subnav-wrapper > .nav__list {
           box-shadow: none;
           border: 0;
           border-radius: 0;
           background: transparent;
         }
         
-        header .nav--main > .nav__list .nav__subnav-wrapper > .nav__item {
+        header .nav--main > .nav__list .nav__subnav-wrapper > .nav__item, .region--header .nav--main > .nav__list .nav__subnav-wrapper > .nav__item {
           padding-inline: 1rem;
         }
         
-        header .nav--main > .nav__list .nav__subnav-wrapper > .nav__item--level-0::before {
+        header .nav--main > .nav__list .nav__subnav-wrapper > .nav__item--level-0::before, .region--header .nav--main > .nav__list .nav__subnav-wrapper > .nav__item--level-0::before {
           display: inline-block;
         }
     }

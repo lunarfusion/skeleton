@@ -1,11 +1,25 @@
 {% if items %}
   {{ include ('skeleton:nav', {
-    layout: 'vertical',
     collapsible: true,
     items: items,
     main: true,
     menu_id: 'main-menu',
     menu_name: 'main menu',
     theme: 'theme-default',
+
+    'menu_toggle': [
+      include('skeleton:button', {
+        icon_only: false,
+        label: 'menu',
+        variant: empty,
+        kind: 'menu-toggle',
+        size: 'M',
+        has_icon: true,
+        icon: 'bars',
+        input_id:'menu-toggle',
+      }, with_context = false),
+    ],
   }, with_context: false) }}
 {% endif %}
+
+

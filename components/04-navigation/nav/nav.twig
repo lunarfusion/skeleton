@@ -18,61 +18,74 @@
   {% endif %}
 
 
-  <nav{{ attributes.addClass(classes).setAttribute('id',menu_id) }} role="navigation" aria-label="{{ menu_name }}">
-    {% import _self as menus %}
-    {% if collapsible %}
-      {{ _self.menu_links_collapsible(items, attributes, 0, menu_id, collapsible) }}
-    {% else %}
-      {{ _self.menu_links(items, attributes, 0, menu_id) }}
-    {% endif %}
-  </nav>
+  {# {% if main %}
+    <div class="nav-wrapper">
+      {{ menu_toggle }}
+  {% endif %} #}
+
+  {% if main %}
+    {{ menu_toggle }}
+  {% endif %}
+
+    <nav{{ attributes.addClass(classes).setAttribute('id',menu_id) }} role="navigation" aria-label="{{ menu_name }}">
+      {% import _self as menus %}
+      {% if collapsible %}
+        {{ _self.menu_links_collapsible(items, attributes, 0, menu_id, collapsible) }}
+      {% else %}
+        {{ _self.menu_links(items, attributes, 0, menu_id) }}
+      {% endif %}
+    </nav>
+
+  {# {% if main %}
+    </div>
+  {% endif %} #}
 {% endif %}
 
 
 
 {% macro menu_links(items, attributes, menu_level, menu_id) %}
-    <ul class="nav__list">
-      {% for item in items %}
+  <ul class="nav__list">
+    {% for item in items %}
 
-      {%
-        set item_classes = [
-          'nav__item',
-          'nav__item--level-' ~ menu_level,
-          item.is_expanded ? 'nav__item--expanded',
-          item.is_collapsed ? 'nav__item--collapsed',
-          item.in_active_trail ? 'nav__item--active-trail',
-          item.below ? 'nav__item--has-children' : '',
-        ]
-      %}
+    {%
+      set item_classes = [
+        'nav__item',
+        'nav__item--level-' ~ menu_level,
+        item.is_expanded ? 'nav__item--expanded',
+        item.is_collapsed ? 'nav__item--collapsed',
+        item.in_active_trail ? 'nav__item--active-trail',
+        item.below ? 'nav__item--has-children' : '',
+      ]
+    %}
 
-      <li class="{{- item_classes|join(' ')-}}">
-        {% set item_attributes = item.attributes|default(create_attribute()) %}
+    <li class="{{- item_classes|join(' ')-}}">
+      {% set item_attributes = item.attributes|default(create_attribute()) %}
 
-        {% if item.url %}
-          <a class="nav__link" {{ item_attributes.setAttribute('href', item.url) }}>
-            <span>{{ item.title }}</span>
-          </a>
+      {% if item.url %}
+        <a class="nav__link" {{ item_attributes.setAttribute('href', item.url) }}>
+          <span>{{ item.title }}</span>
+        </a>
 
-        {% else %}
-          <div class="nav__link">
-            <span>{{ item.title }}</span>
-          </div>
-        {% endif %}
+      {% else %}
+        <div class="nav__link">
+          <span>{{ item.title }}</span>
+        </div>
+      {% endif %}
 
-        {% if item.below %}
+      {% if item.below %}
 
-          {% if menu_level == 0 %}
-            <div class="nav__subnav-wrapper">
-              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-            </div>
-          {% else %}
+        {% if menu_level == 0 %}
+          <div class="nav__subnav-wrapper">
             {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-          {% endif %}
-
+          </div>
+        {% else %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
+
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
 {% endmacro %}
 
 {# Collapsible nav items contain a details accordion #}
