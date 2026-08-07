@@ -2,14 +2,18 @@
 .hero {
   --skeleton-color-border-hero: var(--skeleton-color-border-primary);
   --skeleton-color-bg-hero: var(--skeleton-color-bg-primary-subdued);
+  --skeleton-color-bg-hero-overlay: var(--skeleton-color-bg-primary-subdued-translucent);
   --skeleton-color-fg-icon-hero: var(--skeleton-color-fg-base);
-
+  
   --skeleton-size-text-hero: var(--skeleton-size-text-med);
-
+  
   --skeleton-size-block-hero-default: 350px;
   --skeleton-size-block-hero-medium: 500px;
   --skeleton-size-block-hero-tall: 650px;
   --skeleton-size-hero-block: var(--skeleton-size-block-hero-default);
+  
+  --skeleton-hero-gradient: var(--skeleton-color-bg-hero) 0%, var(--skeleton-color-bg-hero-overlay) 60%, transparent 95%;
+  
 }
 
 
@@ -23,12 +27,12 @@
   block-size: auto;
   min-block-size: var(--skeleton-size-hero-block);
   background-color: var(--skeleton-color-bg-hero);
-
+  
   &__image {
     position: relative;
     overflow: hidden;
     flex: 1;
-
+    
     &::after {
       position: relative;
       display: block;
@@ -37,7 +41,20 @@
       height: 100%;
       padding-block-start: calc(var(--skeleton-size-hero-block) * 0.5);
     }
-
+    
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      left: 0;
+      bottom: 0;
+      height: 40%;
+      width: 100%;
+      background: linear-gradient(to top, var(--skeleton-hero-gradient));
+      z-index: 1;
+      /* mix-blend-mode: overlay; */
+    }
+    
     img {
       object-fit: cover;
       object-position: center;
@@ -52,7 +69,7 @@
       margin: auto;
     }
   }
-
+  
   &__content {
     position: relative;
     display: flex;
@@ -62,14 +79,14 @@
     align-items: center;
     z-index: 1;
   }
-
+  
   &__content-inner {
     padding: calc(var(--skeleton-size-gap-x) * 2.5);
     display: flex;
     flex-direction: column;
     inline-size: 100%;
   }
-
+  
   &__heading {
     font-weight: 700;
     font-style: normal;
@@ -79,7 +96,7 @@
     display: flex;
     justify-content: center;
   }
-
+  
   &__text {
     font-size: var(--skeleton-size-text-hero);
     font-weight: 400;
@@ -94,49 +111,61 @@
     justify-content: center;
     color: var(--skeleton-color-fg-base);
   }
-
+  
   @media (max-width: 992px) {
     .hero__text {
       -webkit-line-clamp: unset;
       line-clamp: unset;
     }
-
+    
     .hero__content-inner {
       padding: calc(var(--skeleton-size-gap-x) * 1.5);
     }
   }
-
-
+  
+  
   /*** VARIANTS - layouts ***/
   &--layout-diptych {
     flex-direction: row;
-
+    
     .hero__image {
       display: flex;
-      flex: 1;
+      flex: 4;
       justify-content: stretch;
       align-items: stretch;
+      
+      &::before {
+        background: linear-gradient(to right, var(--skeleton-hero-gradient));
+        height: 100%;
+        width: 40%;
+      }
     }
-
+    
     .hero__content {
-      /* flex: 0 0 50%;
-      max-inline-size: 50%;
-      align-items: flex-end; */
+      flex: 3;
+      align-items: flex-end;
     }
-
+    
     .hero__content-inner {
       max-inline-size: 650px;
     }
-
+    
     .hero__heading {
       justify-content: flex-start;
     }
-
+    
     @media (max-width: 992px) {
       & {
         flex-direction: column-reverse;
         justify-content: flex-start;
-
+        
+        .hero__image::before {
+          bottom: 0;
+          height: 40%;
+          width: 100%;
+          background: linear-gradient(to top, var(--skeleton-hero-gradient));
+        }
+        
         .hero__content {
           flex: 0 0 100%;
           max-inline-size: 100%;
@@ -144,32 +173,32 @@
           flex-grow: 0;
           flex-basis: 0;
         }
-
+        
         .hero__content-inner {
           max-inline-size: unset;
         }
       }
     }
   }
-
+  
   /*** VARIANTS - text alignment ***/
   &--text-align-start {
     text-align: start;
   }
-
+  
   &--text-align-end {
     text-align: end;
   }
-
+  
   &--text-align-center {
     text-align: center;
   }
-
+  
   /*** VARIANTS - hero height ***/
   &--height-medium {
     --skeleton-size-hero-block: var(--skeleton-size-block-hero-medium);
   }
-
+  
   &--height-tall {
     --skeleton-size-hero-block: var(--skeleton-size-block-hero-tall);
   }

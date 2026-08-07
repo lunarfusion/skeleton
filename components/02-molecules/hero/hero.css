@@ -2,14 +2,18 @@
 .hero {
   --skeleton-color-border-hero: var(--skeleton-color-border-primary);
   --skeleton-color-bg-hero: var(--skeleton-color-bg-primary-subdued);
+  --skeleton-color-bg-hero-overlay: var(--skeleton-color-bg-primary-subdued-translucent);
   --skeleton-color-fg-icon-hero: var(--skeleton-color-fg-base);
-
+  
   --skeleton-size-text-hero: var(--skeleton-size-text-med);
-
+  
   --skeleton-size-block-hero-default: 350px;
   --skeleton-size-block-hero-medium: 500px;
   --skeleton-size-block-hero-tall: 650px;
   --skeleton-size-hero-block: var(--skeleton-size-block-hero-default);
+  
+  --skeleton-hero-gradient: var(--skeleton-color-bg-hero) 0%, var(--skeleton-color-bg-hero-overlay) 60%, transparent 95%;
+  
 }
 /*** Hero Styles ***/
 .hero {
@@ -34,6 +38,18 @@
       width: 100%;
       height: 100%;
       padding-block-start: calc(var(--skeleton-size-hero-block) * 0.5);
+    }
+.hero__image::before {
+      position: absolute;
+      display: block;
+      content: "";
+      left: 0;
+      bottom: 0;
+      height: 40%;
+      width: 100%;
+      background: linear-gradient(to top, var(--skeleton-hero-gradient));
+      z-index: 1;
+      /* mix-blend-mode: overlay; */
     }
 .hero__image img {
       -o-object-fit: cover;
@@ -93,7 +109,7 @@
       -webkit-line-clamp: unset;
       line-clamp: unset;
     }
-
+    
     .hero .hero__content-inner {
       padding: calc(var(--skeleton-size-gap-x) * 1.5);
     }
@@ -104,14 +120,18 @@
   }
 .hero--layout-diptych .hero__image {
       display: flex;
-      flex: 1;
+      flex: 4;
       justify-content: stretch;
       align-items: stretch;
     }
+.hero--layout-diptych .hero__image::before {
+        background: linear-gradient(to right, var(--skeleton-hero-gradient));
+        height: 100%;
+        width: 40%;
+      }
 .hero--layout-diptych .hero__content {
-      /* flex: 0 0 50%;
-      max-inline-size: 50%;
-      align-items: flex-end; */
+      flex: 3;
+      align-items: flex-end;
     }
 .hero--layout-diptych .hero__content-inner {
       max-inline-size: 650px;
@@ -124,7 +144,14 @@
         flex-direction: column-reverse;
         justify-content: flex-start;
       }
-
+        
+        .hero--layout-diptych .hero__image::before {
+          bottom: 0;
+          height: 40%;
+          width: 100%;
+          background: linear-gradient(to top, var(--skeleton-hero-gradient));
+        }
+        
         .hero--layout-diptych .hero__content {
           flex: 0 0 100%;
           max-inline-size: 100%;
@@ -132,7 +159,7 @@
           flex-grow: 0;
           flex-basis: 0;
         }
-
+        
         .hero--layout-diptych .hero__content-inner {
           max-inline-size: unset;
         }
