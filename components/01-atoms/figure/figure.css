@@ -11,6 +11,7 @@
   flex-direction: column;
   gap: 0.5rem;
   border: var(--skeleton-color-border-figure);
+  padding: 1.5rem;
 }
 /* add margin when in main node content */
 .field--body .figure {
@@ -18,7 +19,6 @@
   }
 .figure__image {
     padding: 0.5rem;
-    
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -52,3 +52,14 @@
 .figure--width-30 {
     inline-size: 30%;
   }
+/*** VARIANTS - height ***/
+.figure--height-full .figure__image img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      position: relative;
+    }
+.figure--height-full .figure__image::after {
+      display: none;
+    }

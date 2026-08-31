@@ -1,0 +1,31 @@
+name: Heights
+
+props:
+  width: 'width-40'
+
+slots:
+  image:
+    theme: image
+    uri: "https://picsum.photos/600/800.jpg"
+    alt: image example
+  caption: "Figure caption text xxxxx xxxxxxxx xxxx xx xxxxxxx xxxxx."
+
+
+library_wrapper: >
+  {% set heights = [
+    'height-default',
+    'height-full',
+  ] %}
+  {% for height in heights %}
+  <div class="ui-patterns__story-variant ui-patterns__story-variant--fullwidth">
+    {% set height_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+      class: ['figure figure--' ~ height]
+    })})} %}
+    <h4 class="title title--micro">{{ height }}</h4>
+    {% set height_slots = {'#slots': _story['#slots']|merge({
+      'caption': "Figure caption text xxxxx xxxxxxxx xxxx xx xxxxxxx xxxxx.",
+    })} %}
+    {% set height_story = _story %}
+    {{ height_story|merge(height_props)|merge(height_slots) }}
+    </div>
+  {% endfor %}

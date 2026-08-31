@@ -14,6 +14,12 @@ props:
         - 'width-30'
       default: 'width-40'
 
+    height:
+      type: string
+      enum:
+          - 'height-default'
+          - 'height-full'
+
 slots:
   image:
     title: Image

@@ -2,6 +2,7 @@
   'figure',
   variant and variant != 'default' ? variant : '',
   width ? 'figure--' ~ width,
+  height? 'figure--' ~ height,
 ] %}
 
 <figure{{ attributes.addClass(classes) }}>
