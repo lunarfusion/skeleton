@@ -5,18 +5,11 @@
   ]
 %}
 
-{# {% if url or attributes.href %}
-  {% set url = url|default(attributes.href) %}
-  {% set link_attributes = attributes.setAttribute('href', url) %}
-{% endif %} #}
-
 <blockquote{{ attributes.addClass(classes) }}>
   {{ content }}
 
   <cite class="blockquote__cite">
     {{ cite }}
-
     {{ link }}
-    {# <a{{ link_attributes }}>{{ link }}</a> #}
   </cite>
 </blockquote>

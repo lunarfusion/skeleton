@@ -23,7 +23,6 @@
 .blockquote__cite {
     position: relative;
     inline-size: 100%;
-    /* display: inline-block; */
     font-size: var(--skeleton-size-text-cite-blockquote);
     color: var(--skeleton-color-fg-cite-blockquote);
     text-align: end;
