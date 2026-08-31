@@ -17,6 +17,15 @@
     padding: 1rem 2rem 3rem;
   }
   
+  .layout--footer .row {
+      
+      /* .block__content {
+        p {
+          font-size: var(--skeleton-size-text-small);
+        }
+      } */
+    }
+  
   .layout--footer .row .block {
         --col-spacing: var(--skeleton-size-gap-x);
         
@@ -24,6 +33,11 @@
         max-inline-size: calc(33.3333% - var(--col-spacing));
       }
   
-  .layout--footer .row .block__content p {
-          font-size: var(--skeleton-size-text-small);
+  @media (width <=994px) {
+  
+  .layout--footer .row .block {
+          flex: 0 0 100%;
+          max-inline-size: 100%
+      }
+          ;
         }

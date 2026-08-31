@@ -1,0 +1,106 @@
+/*** Typography resets ***/
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: var(--skeleton-color-fg-base);
+  font-family: var(--skeleton-font-primary);
+  font-weight: 500;
+  font-style: normal;
+  font-optical-sizing: auto;
+  margin-block: 0 0.5rem;
+}
+
+h1,
+.h1 {
+  font-size: 3.6rem;
+  line-height: 1;
+}
+
+h2,
+.h2 {
+  font-size: 2.8rem;
+  line-height: 1.11;
+  margin-block-start: 2rem;
+}
+
+h3,
+.h3 {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-block-start: 1.25rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.7rem;
+  line-height: 1.1;
+  margin-block-start: 1rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-block-start: 0.75rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+  line-height: 1.3;
+  margin-block-start: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  margin-block-end: 1rem;
+  line-height: 1.7;
+  color: var(--skeleton-color-fg-base);
+  font-family: var(--skeleton-font-primary);
+}
+
+p.lead {
+  font-size: 1.2rem;
+}
+
+ul,
+ol {
+  margin-block: 1rem;
+}
+
+article li {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  margin-block-end: 0.5rem;
+  line-height: 1.5;
+  color: var(--skeleton-color-fg-base);
+}
+
+li::marker {
+  font-weight: 700;
+}
+
+a {
+  color: var(--skeleton-color-link-default);
+  transition: var(--skeleton-transition-basic);
+  
+  &:hover {
+    color: var(--skeleton-color-link-hover);
+  }
+  
+  &:focus {
+    color: var(--skeleton-color-link-focus);
+  }
+}

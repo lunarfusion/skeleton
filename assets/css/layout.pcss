@@ -22,13 +22,19 @@
         
         flex: 0 0 calc(33.3333% - var(--col-spacing));
         max-inline-size: calc(33.3333% - var(--col-spacing));
+        
+        @media (width <=994px) {
+          flex: 0 0 100%;
+          max-inline-size: 100%;
+          ;
+        }
       }
       
-      .block__content {
+      /* .block__content {
         p {
           font-size: var(--skeleton-size-text-small);
         }
-      }
+      } */
     }
   }
 }

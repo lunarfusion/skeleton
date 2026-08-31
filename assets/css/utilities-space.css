@@ -14,6 +14,18 @@
   padding: 2rem;
 }
 
+.py-1 {
+  padding-block: 1rem;
+}
+
+.py-2 {
+  padding-block: 2rem;
+}
+
+.px-2 {
+  paddin-inline: 2rem;
+}
+
 .m-0 {
   margin: 0;
 }
@@ -32,6 +44,14 @@
 
 .my-3 {
   margin-block: 3rem;
+}
+
+.mx-1 {
+  margin-inline: 1rem;
+}
+
+.ml-1 {
+  margin-inline-start: 1rem;
 }
 
 .mt-1 {

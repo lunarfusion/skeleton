@@ -3,7 +3,6 @@
   display: flex;
   flex-flow: column nowrap;
 }
-  /* border-block-start: 1px dotted var(--skeleton-color-border-neutral); */
   
   .field__label {
     font-weight: 400;
@@ -11,8 +10,4 @@
     letter-spacing: 1px;
     font-size: var(--skeleton-size-text-extra-small);
     color: var(--skeleton-color-fg-subdued);
-  }
-  
-  .field__body {
-    color: var(--skeleton-color-fg);
   }

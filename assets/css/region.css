@@ -21,6 +21,10 @@
   }
     }
   
+  .region--header-top {
+    justify-content: space-between;
+  }
+  
   .region--sidebar-second,
   .region--sidebar-first {
     padding-inline-start: calc(var(--skeleton-size-gap-x) * 2);

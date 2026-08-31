@@ -18,6 +18,11 @@
 .container .container {
     padding: 0;
   }
+@media (width <=994px) {
+.container {
+    --skeleton-space-x-outter-container: var(--skeleton-size-gap-x)
+}
+  }
 /*** Flex Rows ***/
 .row {
   --skeleton-space-x-inner-row: var(--skeleton-size-gap-x);
@@ -86,22 +91,16 @@
     flex: 0 0 calc(75% - var(--col-spacing));
     max-inline-size: calc(75% - var(--col-spacing));
   }
-/* for column within column, fullwidth at wider screen */
-/* @media (width <=994px) {
-  .col {
-
-    .col--4,
-    .col--8 {
-      flex: 0 0 100%;
-      max-inline-size: 100%;
-    }
-  }
-} */
 /* medium screen */
 @media (width <=994px) {
   .col--4 {
     flex: 0 0 calc(50% - var(--col-spacing));
     max-inline-size: calc(50% - var(--col-spacing));
+  }
+  
+  .col--8 {
+    flex: 0 0 100%;
+    max-inline-size: 100%;
   }
 }
 /* small screen */

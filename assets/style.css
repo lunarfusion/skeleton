@@ -25,6 +25,7 @@
 @import "css/branding.css";
 
 /*** CONTENT ***/
+@import "css/typography.css";
 @import "css/table.css";
 @import "css/byline.css";
 
@@ -34,7 +35,8 @@
 @import "css/utilities-space.css";
 @import "css/utilities-size.css";
 @import "css/utilities-alignment.css";
+@import "css/utilities-accessibility.css";
 
-/*** TEMP ***/
+/*** PATTERN LIBRARIES ***/
 @import "css/ui-patterns.css";
 @import "css/sdc-styleguide.css";
