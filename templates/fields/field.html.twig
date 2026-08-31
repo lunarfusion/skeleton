@@ -51,9 +51,10 @@
   ]
 %}
 
+
 {%
-  set body_classes = [
-    'field__body'
+  set title_classes = [
+    label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
 
@@ -61,16 +62,12 @@
   {% if multiple %}
     <div{{ attributes.addClass(classes) }}>
       {% for item in items %}
-        <div{{ attributes.addClass(body_classes) }}>
-          <span{{ item.attributes }}>{{ item.content }}</span>
-        </div>
+        <div{{ item.attributes }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(body_classes) }}>
-        <span{{ item.attributes }}>{{ item.content }}</span>
-      </div>
+      <div{{ attributes.addClass(classes) }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -80,9 +77,7 @@
       <div>
     {% endif %}
     {% for item in items %}
-      <div{{ attributes.addClass(body_classes) }}>
-        <span{{ item.attributes }}>{{ item.content }}</span>
-      </div>
+      <div{{ item.attributes }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>

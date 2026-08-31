@@ -1,12 +1,10 @@
-{% extends "block.html.twig" %}
+{% set classes = [
+  'block'
+] %}
+
+{% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
 
 {% block content %}
-
-  {{ include ('skeleton:link', {
-    label: content.field_site_slogan,
-    variant: quiet,
-  }) }}
-
   <div class="branding">
     <div class="branding__content">
     {% if site_logo %}

@@ -1,3 +1,10 @@
+{% set classes = [
+  'block',
+  'block--menu'
+] %}
+
+{% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
+
 {% if attributes.storage() %}
 <div{{ attributes }}>
 {% endif %}
