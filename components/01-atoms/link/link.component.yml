@@ -16,13 +16,23 @@ variants:
     title: External
 
 props:
-  type: object
+    type: object
+    properties:
 
-  properties:
     url:
       title: URL
       description: "The link URL."
       $ref: "ui-patterns://url"
+
+    size:
+      type: string
+      title: Link Size
+      description: "The font size of the link"
+      enum:
+        - XS
+        - S
+        - M
+      default: M
 
     disabled:
       type: boolean

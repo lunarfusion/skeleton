@@ -2,6 +2,7 @@
   set classes = [
     'link',
     variant and variant != 'default' ? 'link--' ~ variant,
+    size ? 'link--size' ~ size,
     disabled and disabled == 'true' ? 'disabled',
   ]
 %}

@@ -12,6 +12,10 @@ li:not(.nav__item):not(.menu-item) > a {
   --skeleton-size-gap-focus-indicator-link: var(--skeleton-size-gap-focus-indicator);
   --skeleton-color-focus-indicator-link: var(--skeleton-color-focus-indicator);
   --skeleton-border-radius-focus-indicator-link: var(--skeleton-size-radius-sm);
+  
+  --skeleton-size-font-extra-small-link: var(--skeleton-size-text-extra-small);
+  --skeleton-size-font-small-link: var(--skeleton-size-text-small);
+  --skeleton-size-font-medium-link: var(--skeleton-size-text-med);
 }
 
 /*** Link Styles ***/
@@ -177,5 +181,18 @@ li:not(.nav__item):not(.menu-item) > a { */
       color: inherit;
       transition: var(--skeleton-transition-basic);
     }
+  }
+  
+  /*** Variant - Sizes ***/
+  &--sizeXS {
+    font-size: var(--skeleton-size-font-extra-small-link);
+  }
+  
+  &--sizeS {
+    font-size: var(--skeleton-size-font-small-link);
+  }
+  
+  &--sizeM {
+    font-size: var(--skeleton-size-font-medium-link);
   }
 }
