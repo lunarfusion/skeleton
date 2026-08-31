@@ -30,6 +30,7 @@
 .title--page {
     margin-block-end: 1rem;
     margin-block-start: 4rem;
+    inline-size: 100%;
   }
 .title--feature-page {
     margin-block-start: 2rem;
