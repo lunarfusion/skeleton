@@ -15,16 +15,6 @@ props:
         - layout-diptych
       default: layout-default
 
-    text_alignment:
-      title: Text Alignment
-      type: string
-      description: "Which way should the text on the hero align?"
-      enum:
-        - text-align-start
-        - text-align-end
-        - text-center
-      default: text-align-start
-
     height:
       title: Hero Height
       type: string

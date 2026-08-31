@@ -89,6 +89,7 @@
     margin-block-end: 1rem;
     display: flex;
     justify-content: center;
+    text-align: center;
   }
 .hero__text {
     font-size: var(--skeleton-size-text-hero);
@@ -102,6 +103,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    text-align: center;
     color: var(--skeleton-color-fg-base);
   }
 @media (max-width: 992px) {
@@ -136,8 +138,10 @@
 .hero--layout-diptych .hero__content-inner {
       max-inline-size: 650px;
     }
-.hero--layout-diptych .hero__heading {
+.hero--layout-diptych .hero__heading,
+    .hero--layout-diptych .hero__text {
       justify-content: flex-start;
+      text-align: start;
     }
 @media (max-width: 992px) {
       .hero--layout-diptych {
@@ -164,16 +168,6 @@
           max-inline-size: unset;
         }
     }
-/*** VARIANTS - text alignment ***/
-.hero--text-align-start {
-    text-align: start;
-  }
-.hero--text-align-end {
-    text-align: end;
-  }
-.hero--text-align-center {
-    text-align: center;
-  }
 /*** VARIANTS - hero height ***/
 .hero--height-medium {
     --skeleton-size-hero-block: var(--skeleton-size-block-hero-medium);

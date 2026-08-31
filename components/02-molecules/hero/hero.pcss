@@ -95,6 +95,7 @@
     margin-block-end: 1rem;
     display: flex;
     justify-content: center;
+    text-align: center;
   }
   
   &__text {
@@ -109,6 +110,7 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    text-align: center;
     color: var(--skeleton-color-fg-base);
   }
   
@@ -150,8 +152,10 @@
       max-inline-size: 650px;
     }
     
-    .hero__heading {
+    .hero__heading,
+    .hero__text {
       justify-content: flex-start;
+      text-align: start;
     }
     
     @media (max-width: 992px) {
@@ -179,19 +183,6 @@
         }
       }
     }
-  }
-  
-  /*** VARIANTS - text alignment ***/
-  &--text-align-start {
-    text-align: start;
-  }
-  
-  &--text-align-end {
-    text-align: end;
-  }
-  
-  &--text-align-center {
-    text-align: center;
   }
   
   /*** VARIANTS - hero height ***/
