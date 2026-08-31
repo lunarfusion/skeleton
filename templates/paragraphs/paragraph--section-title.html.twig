@@ -1,5 +1,10 @@
- {{ include ('skeleton:title', {
-  html_tag: 'h2',
-  variant: 'section',
-  content: content.field_title_content,
-}, with_context: false) }}
+{% extends 'paragraph.html.twig' %}
+{% block content %}
+
+  {{ include ('skeleton:title', {
+    html_tag: 'h2',
+    variant: 'section',
+    content: content.field_title_content,
+  }, with_context: false) }}
+
+{% endblock content %}

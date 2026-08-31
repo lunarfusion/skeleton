@@ -1,26 +1,28 @@
+{% extends 'paragraph.html.twig' %}
+{% block content %}
 
-{{ include ('skeleton:card', {
-  image: content.field_card_image,
-  summary: content.field_card_summary,
-  variant: default,
+  {{ include ('skeleton:card', {
+    image: content.field_card_image,
+    summary: content.field_card_summary,
+    variant: default,
 
-  'title': [
-    include('skeleton:title', {
-      content: content.field_card_title,
-      html_tag: 'h3',
-      size: 'M',
-      variant: 'card',
+    'title': [
+      include('skeleton:title', {
+        content: content.field_card_title,
+        html_tag: 'h3',
+        size: 'M',
+        variant: 'card',
+        }, with_context = false),
+      ],
+
+    'footer': [
+      include('skeleton:link', {
+        url: paragraph.field_card_url.0.url.toString(),
+        label: paragraph.field_card_url.0.title,
+        variant: "cta",
       }, with_context = false),
     ],
 
-  'footer': [
-    include('skeleton:link', {
-      url: paragraph.field_card_url.0.url.toString(),
-      label: paragraph.field_card_url.0.title,
-      variant: "cta",
-    }, with_context = false),
-  ],
+  }, with_context: false) }}
 
-}, with_context: false) }}
-
-
+{% endblock content %}

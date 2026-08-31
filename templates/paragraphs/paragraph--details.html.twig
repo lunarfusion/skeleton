@@ -1,4 +1,9 @@
- {{ include ('skeleton:details', {
-  summary_text: content.field_details_summary,
-  content: content.field_details_content,
-}, with_context: false) }}
+{% extends 'paragraph.html.twig' %}
+{% block content %}
+
+  {{ include ('skeleton:details', {
+    summary_text: content.field_details_summary,
+    content: content.field_details_content,
+  }, with_context: false) }}
+
+{% endblock content %}

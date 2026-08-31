@@ -1,4 +1,9 @@
-{{ include ('skeleton:aside', {
-  title: content.field_aside_title,
-  summary: content.field_aside_content,
-}, with_context: false) }}
+{% extends 'paragraph.html.twig' %}
+{% block content %}
+
+  {{ include ('skeleton:aside', {
+    title: content.field_aside_title,
+    summary: content.field_aside_content,
+  }, with_context: false) }}
+
+{% endblock content %}

@@ -1,6 +1,11 @@
- {{ include ('skeleton:blockquote', {
-  content: content.field_blockquote_content,
-  cite: content.field_blockquote_source,
-  url: content.field_blockquote_url,
-  link: content.field_citation_link,
-}, with_context: false) }}
+{% extends 'paragraph.html.twig' %}
+{% block content %}
+
+  {{ include ('skeleton:blockquote', {
+    content: content.field_blockquote_content,
+    cite: content.field_blockquote_source,
+    url: content.field_blockquote_url,
+    link: content.field_citation_link,
+  }, with_context: false) }}
+
+{% endblock content %}

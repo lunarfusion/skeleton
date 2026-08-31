@@ -1,4 +1,9 @@
- {{ include ('skeleton:pullquote', {
-  content: content.field_pullquote_content,
-  size: medium,
-}, with_context: false) }}
+{% extends 'paragraph.html.twig' %}
+{% block content %}
+
+  {{ include ('skeleton:pullquote', {
+    content: content.field_pullquote_content,
+    size: medium,
+  }, with_context: false) }}
+
+{% endblock content %}

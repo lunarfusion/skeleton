@@ -1,4 +1,9 @@
-{{ include ('skeleton:download_group', {
-  title: content.field_downloads_title,
-  downloads: content.field_download_item
-}, with_context: false) }}
+{% extends 'paragraph.html.twig' %}
+{% block content %}
+
+  {{ include ('skeleton:download_group', {
+    title: content.field_downloads_title,
+    downloads: content.field_download_item
+  }, with_context: false) }}
+
+{% endblock content %}
