@@ -1,0 +1,59 @@
+{%
+  set classes = [
+    'article',
+    'node'
+  ]
+%}
+
+{% set attributes = attributes.addClass(classes|filter(v => v != '')) %}
+
+<article{{ attributes }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {# authoring information #}
+  {% if display_submitted %}
+  <div class="container row row--justify-center">
+    <div class="col col--8 m-0">
+      <footer class="article__footer">
+          <div{{ author_attributes.addClass('byline') }}>
+            <span class="byline__author">
+              {{ author_picture }}
+              {% trans %}By {{ author_name }}
+            </span>
+            <span class="byline__time">
+              <span class="sr-only">on</span> {{ date }}{% endtrans %}
+            </span>
+          </div>
+      </footer>
+    </div>
+  </div>
+  {% endif %}
+
+  {# <div{{ content_attributes }}>
+    {{ content }}
+  </div> #}
+
+  <div{{ content_attributes }}>
+  <div class="node__body">
+    <div class="container row row--justify-center">
+      <div class="col col--8 m-0">
+        {# node content #}
+        {{ content.body }}
+      </div>
+    </div>
+  </div>
+  {# end node body #}
+
+  {# paragraphs flexrow #}
+  {% if content.field_custom_section %}
+    {{ content.field_custom_section }}
+  {% endif %}
+
+</article>

@@ -31,7 +31,7 @@
             'heading': [
               include('skeleton:title', {
                 content: label,
-                html_tag: 'h1',
+                heading_level: '1',
                 size: 'XL',
               }, with_context = false),
             ],
@@ -48,7 +48,7 @@
 
               {{ include ('skeleton:title', {
                 content: label,
-                html_tag: 'h1',
+                heading_level: '1',
                 size: 'XL',
                 variant: 'page',
               }, with_context: false) }}
@@ -70,7 +70,7 @@
               'heading': [
                 include('skeleton:title', {
                   content: content.field_hero_heading,
-                  html_tag: 'span',
+                  heading_level: '2',
                   size: 'L',
                 }, with_context = false),
               ],
