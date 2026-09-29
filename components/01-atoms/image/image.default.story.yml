@@ -1,0 +1,6 @@
+name: Default
+
+props:
+  src: "https://picsum.photos/600/400.jpg"
+  alt_text: "example alt text"
+  size: M

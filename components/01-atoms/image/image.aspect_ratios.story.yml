@@ -1,0 +1,25 @@
+name: Aspect Ratios
+
+props:
+  src: "https://picsum.photos/400/400.jpg"
+  alt_text: "example alt text"
+
+library_wrapper: >
+  {% set aspect_ratios = [
+    '1x1',
+    '2x3',
+    '3x2',
+    '16x9',
+    '9x16',
+    '21x9'
+  ] %}
+  {% for aspect_ratio in aspect_ratios %}
+    <div class="ui-patterns__story-variant">
+      {% set aspect_ratio_props = {'#props': _story['#props']|merge({'attributes': create_attribute({
+        class: ['image image--aspect-ratio-' ~ aspect_ratio]
+      })})} %}
+      <h4 class="title title--micro">{{ aspect_ratio }}</h4>
+        {% set aspect_ratio_story = _story %}
+        {{ aspect_ratio_story|merge(aspect_ratio_props) }}
+    </div>
+  {% endfor %}

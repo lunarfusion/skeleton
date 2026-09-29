@@ -1,0 +1,24 @@
+.image {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+  
+  /* Aspect Ratio */
+  .image--aspect-ratio-1x1 {
+    aspect-ratio: 1 / 1;
+  }
+  .image--aspect-ratio-2x3 {
+    aspect-ratio: 2 / 3;
+  }
+  .image--aspect-ratio-3x2 {
+    aspect-ratio: 3 / 2;
+  }
+  .image--aspect-ratio-16x9 {
+    aspect-ratio: 16 / 9;
+  }
+  .image--aspect-ratio-9x16 {
+    aspect-ratio: 9 / 16;
+  }
+  .image--aspect-ratio-21x9 {
+    aspect-ratio: 21 / 9;
+  }

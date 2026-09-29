@@ -1,0 +1,9 @@
+{%
+  set classes = [
+    'image',
+    aspect_ratio ? 'image--aspect-ratio' ~ aspect_ratio,
+  ]
+%}
+
+<img{{ attributes.addClass(classes)}} src="{{ src }}" alt="{{ alt_text }}">
+

@@ -1,0 +1,32 @@
+name: Image
+description: An image
+status: experimental
+group: "Atoms"
+images:
+  - "https://github.com/lunarfusion/skeleton"
+
+props:
+    type: object
+    properties:
+
+      src:
+        title: SRC
+        description: "The image source URL"
+        $ref: "ui-patterns://url"
+
+      alt_text:
+        type: string
+        title: Alternative Text
+        description: "A description of the image for screen readers."
+
+      aspect_ratio:
+        title: Aspect ratio
+        type: string
+        enum:
+          - 1x1
+          - 2x3
+          - 3x2
+          - 16x9
+          - 9x16
+          - 21x9
+        default: 3x2
