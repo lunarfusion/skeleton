@@ -34,8 +34,11 @@
   flex-direction: row;
   inline-size: 100%;
   container-type: inline-size;
-  
   gap: var(--col-spacing);
+  
+  .container--full & {
+    padding-inline: var(--skeleton-size-gap-x);
+  }
   
   &--wrap {
     flex-wrap: wrap;
